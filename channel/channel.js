@@ -22,5 +22,5 @@ module.exports = {
         "Statistics about the review ratings taken into account for this channel."
     }
   },
-  required: [...resource, ...channelDraft.required]
+  required: [...resource.required, ...channelDraft.required]
 };
