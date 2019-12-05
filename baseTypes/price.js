@@ -1,7 +1,7 @@
-const money = require("./money");
 const baseMoney = require("./baseMoney");
-const reference = require("./reference");
 const customFields = require("./customFields");
+const money = require("./money");
+const reference = require("./reference");
 
 module.exports = {
   type: "object",

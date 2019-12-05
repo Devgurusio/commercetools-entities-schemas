@@ -1,6 +1,6 @@
-const resource = require("../common/resource");
 const customerGroupDraft = require("./customerGroupDraft");
 const customFields = require("../baseTypes/customFields");
+const resource = require("../common/resource");
 
 module.exports = {
   ...resource,

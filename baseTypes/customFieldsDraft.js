@@ -1,5 +1,5 @@
-const resourceIdentifier = require("./resourceIdentifier");
 const customFields = require("./customFields");
+const resourceIdentifier = require("./resourceIdentifier");
 
 module.exports = {
   ...customFields,

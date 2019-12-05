@@ -1,6 +1,6 @@
-const resource = require("../common/resource");
 const channelDraft = require("./channelDraft");
 const customFields = require("../baseTypes/customFields");
+const resource = require("../common/resource");
 const reviewRatingStatistics = require("../baseTypes/reviewRatingStatistics");
 
 module.exports = {

@@ -1,6 +1,6 @@
 const assetSource = require("./assetSource");
-const localizedString = require("./localizedString");
 const customFieldsDraft = require("./customFieldsDraft");
+const localizedString = require("./localizedString");
 
 module.exports = {
   type: "object",
