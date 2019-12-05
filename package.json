@@ -1,0 +1,54 @@
+{
+  "name": "commercetools-entities-schemas",
+  "version": "1.0.0",
+  "description": "Commercetools entities schemas",
+  "main": "index.js",
+  "scripts": {
+    "lint": "eslint .",
+    "lint-fix": "eslint . --fix"
+  },
+  "devDependencies": {
+    "eslint": "^5.0.0",
+    "eslint-config-prettier": "^3.3.0",
+    "eslint-plugin-prettier": "^3.0.0",
+    "prettier-eslint": "^8.8.2"
+  },
+  "eslintConfig": {
+    "root": true,
+    "env": {
+      "es6": true,
+      "node": true
+    },
+    "plugins": [
+      "prettier"
+    ],
+    "extends": [
+      "plugin:prettier/recommended",
+      "eslint:recommended"
+    ],
+    "parserOptions": {
+      "ecmaVersion": 2018
+    }
+  },
+  "eslintIgnore": [
+    "node_modules/*"
+  ],
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/DevgurusSupport/commercetools-entities-schemas.git"
+  },
+  "keywords": [
+    "commercetools",
+    "schema",
+    "validation",
+    "api",
+    "http",
+    "commerce"
+  ],
+  "author": "devgurus.io",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/DevgurusSupport/commercetools-entities-schemas/issues"
+  },
+  "homepage": "https://github.com/DevgurusSupport/commercetools-entities-schemas#readme"
+}
