@@ -1,6 +1,6 @@
 {
   "name": "commercetools-entities-schemas",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "Commercetools entities schemas",
   "main": "index.js",
   "scripts": {

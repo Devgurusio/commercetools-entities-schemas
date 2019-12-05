@@ -14,8 +14,8 @@ module.exports = {
       description: `The amount in cents (the smallest indivisible unit of the currency). 
          In order to calculate the real amount, the operation is amount = (centAmount / 10^fractionDigits)
            Example: 
-            CLP -> {centAmount = 100; fractionDigits = 0} => 100 CLP
-            PEN -> {centAmount = 100; fractionDigits = 2} => 1 PEN`
+            EUR -> {centAmount = 100; fractionDigits = 2} => 1 EUR
+            CLP -> {centAmount = 100; fractionDigits = 0} => 100 CLP`
     },
     fractionDigits: {
       type: "integer",
