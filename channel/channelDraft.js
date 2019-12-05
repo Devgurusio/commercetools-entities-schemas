@@ -1,7 +1,7 @@
-const localizedString = require("../baseTypes/localizedString");
 const address = require("../baseTypes/address");
 const customFieldsDraft = require("../baseTypes/customFieldsDraft");
 const geoJSONGeometry = require("../baseTypes/geoJSONGeometry");
+const localizedString = require("../baseTypes/localizedString");
 
 module.exports = {
   type: "object",
