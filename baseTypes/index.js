@@ -10,10 +10,12 @@ const customFields = require("./customFields");
 const customFieldsDraft = require("./customFieldsDraft");
 const date = require("./date");
 const dateTime = require("./dateTime");
+const enumValue = require("./enumValue");
 const geoJSONGeometry = require("./geoJSONGeometry");
 const image = require("./image");
 const key = require("./key");
 const lastModifiedBy = require("./lastModifiedBy");
+const localizedEnumValue = require("./localizedEnumValue");
 const localizedString = require("./localizedString");
 const money = require("./money");
 const price = require("./price");
@@ -36,10 +38,12 @@ module.exports = {
   customFieldsDraft,
   date,
   dateTime,
+  enumValue,
   geoJSONGeometry,
   image,
   key,
   lastModifiedBy,
+  localizedEnumValue,
   localizedString,
   money,
   price,
