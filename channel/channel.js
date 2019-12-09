@@ -13,13 +13,13 @@ module.exports = {
     roles: {
       ...channelDraft.properties.roles,
       description:
-        "The roles of this channel. Each channel must have at least one role."
+        "The roles of this channel. Each channel must have at least one role"
     },
     custom: customFields,
     reviewRatingStatistics: {
       ...reviewRatingStatistics,
       description:
-        "Statistics about the review ratings taken into account for this channel."
+        "Statistics about the review ratings taken into account for this channel"
     }
   },
   required: [...resource.required, ...channelDraft.required]

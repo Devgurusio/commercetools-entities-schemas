@@ -6,7 +6,7 @@ module.exports = {
   properties: {
     key: {
       type: "string",
-      description: "User - specific unique identifier for the customer group."
+      description: "User - specific unique identifier for the customer group"
     },
     groupName: { type: "string" },
     custom: customFieldsDraft

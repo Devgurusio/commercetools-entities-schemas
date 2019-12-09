@@ -6,7 +6,7 @@ module.exports = {
       type: "number",
       minimum: 0,
       maximum: 1,
-      description: "Percentage in the range of [0..1]."
+      description: "Percentage in the range of [0..1]"
     }
   },
   required: ["name", "amount"]

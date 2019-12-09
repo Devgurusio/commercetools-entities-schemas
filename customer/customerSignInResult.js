@@ -7,7 +7,7 @@ module.exports = {
     cart: {
       type: "object",
       description:
-        "A cart that is associated to the customer. Empty if the customer does not have a cart yet.",
+        "A cart that is associated to the customer. Empty if the customer does not have a cart yet",
       additionalProperties: true
     }
   },

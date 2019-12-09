@@ -10,7 +10,7 @@ module.exports = {
     key: {
       type: "string",
       description:
-        "Any arbitrary string key that uniquely identifies this channel within the project."
+        "Any arbitrary string key that uniquely identifies this channel within the project"
     },
     roles: {
       type: "array",
@@ -29,16 +29,16 @@ module.exports = {
     },
     name: {
       ...localizedString,
-      description: "A human-readable name of the channel."
+      description: "A human-readable name of the channel"
     },
     description: {
       ...localizedString,
-      description: "A human-readable description of the channel."
+      description: "A human-readable description of the channel"
     },
     address: {
       ...address,
       description:
-        "The address where this channel is located (e.g. if the channel is a physical store)."
+        "The address where this channel is located (e.g. if the channel is a physical store)"
     },
     custom: customFieldsDraft,
     geoLocation: geoJSONGeometry

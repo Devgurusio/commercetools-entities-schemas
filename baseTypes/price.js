@@ -8,12 +8,12 @@ module.exports = {
   properties: {
     id: {
       type: "string",
-      description: "The unique ID of this price."
+      description: "The unique ID of this price"
     },
     value: baseMoney,
     country: {
       type: "string",
-      description: "A two-digit country code as per ISO 3166-1 alpha-2 ."
+      description: "A two-digit country code as per ISO 3166-1 alpha-2"
     },
     customerGroup: reference,
     channel: reference,
@@ -48,7 +48,7 @@ module.exports = {
     discounted: {
       type: "object",
       description:
-        "Set if a matching ProductDiscount exists. If set, the Cart will use the discounted value for the cart price calculation. When a relative discount is applied and the fraction part of the discounted price is 0.5, the discounted price is rounded in favor of the customer with the half down rounding.",
+        "Set if a matching ProductDiscount exists. If set, the Cart will use the discounted value for the cart price calculation. When a relative discount is applied and the fraction part of the discounted price is 0.5, the discounted price is rounded in favor of the customer with the half down rounding",
       properties: {
         value: money,
         discount: reference

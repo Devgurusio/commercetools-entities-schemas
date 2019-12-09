@@ -2,24 +2,20 @@ module.exports = {
   type: "object",
   additionalProperties: true,
   description:
-    "For query responses of requests supporting paging via limit and offset, \
-    the following common top-level fields are returned",
+    "For query responses of requests supporting paging via limit and offset, the following common top-level fields are returned",
   properties: {
     offset: {
       type: "integer",
-      description:
-        "The offset supplied by the client or the server default.\
-        It is the number of elements skipped, not a page number"
+      description: `The offset supplied by the client or the server default.
+        It is the number of elements skipped, not a page number`
     },
     limit: { type: "integer" },
     count: { type: "integer" },
     total: {
       type: "integer",
-      description:
-        "The total number of results matching the query.\
-        This field is returned by default.\
-        For improved performance, calculating this field can be deactivated \
-        by using the query parameter withTotal=false."
+      description: `The total number of results matching the query.
+        This field is returned by default.
+        For improved performance, calculating this field can be deactivated by using the query parameter withTotal=false`
     },
     results: {
       type: "array",

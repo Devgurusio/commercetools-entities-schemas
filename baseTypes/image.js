@@ -3,11 +3,11 @@ module.exports = {
   properties: {
     url: {
       type: "string",
-      description: "URL of the image in its original size."
+      description: "URL of the image in its original size"
     },
     dimensions: {
       type: "object",
-      description: "Dimensions of the original image. ",
+      description: "Dimensions of the original image",
       properties: {
         w: {
           type: "integer"
@@ -20,7 +20,7 @@ module.exports = {
     label: {
       type: "string",
       description:
-        "Custom label that can be used, for example, as an image description."
+        "Custom label that can be used, for example, as an image description"
     }
   },
   additionalProperties: false,

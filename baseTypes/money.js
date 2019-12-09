@@ -7,7 +7,7 @@ module.exports = {
     },
     currencyCode: {
       type: "string",
-      description: "The currency code compliant to ISO 4217 ."
+      description: "The currency code compliant to ISO 4217"
     },
     centAmount: {
       type: "integer",

@@ -9,7 +9,7 @@ module.exports = {
     value: baseMoney,
     country: {
       type: "string",
-      description: "A two-digit country code as per ISO 3166-1 alpha-2 ."
+      description: "A two-digit country code as per ISO 3166-1 alpha-2"
     },
     customerGroup: reference,
     channel: resourceIdentifier,

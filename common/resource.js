@@ -5,10 +5,10 @@ const lastModifiedBy = require("../baseTypes/lastModifiedBy");
 module.exports = {
   type: "object",
   properties: {
-    id: { type: "string", description: "The unique ID of the customer group." },
+    id: { type: "string", description: "The unique ID of the customer group" },
     version: {
       type: "number",
-      description: "The current version of the customer group."
+      description: "The current version of the customer group"
     },
     createdAt: dateTime,
     createdBy,
