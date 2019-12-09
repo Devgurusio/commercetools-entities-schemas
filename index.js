@@ -10,6 +10,7 @@ const httpApi = require("./httpApi");
 const inventory = require("./inventory");
 const review = require("./review");
 const store = require("./store");
+const subscription = require("./subscription");
 const taxCategory = require("./taxCategory");
 
 module.exports = {
@@ -25,5 +26,6 @@ module.exports = {
   inventory,
   review,
   store,
-  taxCategory
+  taxCategory,
+  subscription
 };
