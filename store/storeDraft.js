@@ -9,7 +9,7 @@ module.exports = {
       description: "User-specific unique identifier for the store"
     },
     name: {
-      type: localizedString,
+      ...localizedString,
       description: "The name of the store"
     }
   },
