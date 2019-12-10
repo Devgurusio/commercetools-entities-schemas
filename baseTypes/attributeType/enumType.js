@@ -1,4 +1,4 @@
-const plainEnumValue = require("./plainEnumValue");
+const plainEnumValue = require("../enumValue");
 
 module.exports = {
   type: "object",

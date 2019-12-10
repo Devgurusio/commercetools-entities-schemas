@@ -1,10 +1,13 @@
-const customFields = require("./customFields");
+const fieldDefinition = require("./fieldDefinition");
 const resourceIdentifier = require("./resourceIdentifier");
 
 module.exports = {
-  ...customFields,
+  type: "object",
+  description:
+    "The representation to be sent to the server when creating a resource with custom fields",
   properties: {
-    ...customFields.properties,
-    type: resourceIdentifier
-  }
+    type: resourceIdentifier,
+    fields: fieldDefinition
+  },
+  required: ["type"]
 };

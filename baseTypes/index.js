@@ -13,6 +13,9 @@ const customFields = require("./customFields");
 const customFieldsDraft = require("./customFieldsDraft");
 const date = require("./date");
 const dateTime = require("./dateTime");
+const enumValue = require("./enumValue");
+const fieldDefinition = require("./fieldDefinition");
+const fieldType = require("./fieldType");
 const geoJSONGeometry = require("./geoJSONGeometry");
 const image = require("./image");
 const key = require("./key");
@@ -20,7 +23,6 @@ const lastModifiedBy = require("./lastModifiedBy");
 const localizedEnumValue = require("./localizedEnumValue");
 const localizedString = require("./localizedString");
 const money = require("./money");
-const plainEnumValue = require("./plainEnumValue");
 const price = require("./price");
 const priceDraft = require("./priceDraft");
 const reference = require("./reference");
@@ -45,6 +47,9 @@ module.exports = {
   customFieldsDraft,
   date,
   dateTime,
+  enumValue,
+  fieldDefinition,
+  fieldType,
   geoJSONGeometry,
   image,
   key,
@@ -52,7 +57,6 @@ module.exports = {
   localizedEnumValue,
   localizedString,
   money,
-  plainEnumValue,
   price,
   priceDraft,
   reference,
