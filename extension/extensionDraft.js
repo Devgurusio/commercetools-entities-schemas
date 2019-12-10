@@ -4,7 +4,7 @@ const trigger = require("./trigger");
 
 module.exports = {
   type: "object",
-  description: "Extension draft object",
+  description: "Representation of an Extension draft object",
   properties: {
     key,
     destination: {

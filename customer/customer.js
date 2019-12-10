@@ -16,7 +16,7 @@ const {
 module.exports = {
   ...resource,
   ...customerDraft,
-  description: "Customer object",
+  description: "Representation of a customer",
   properties: {
     ...resource.properties,
     ...properties,

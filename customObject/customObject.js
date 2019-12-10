@@ -4,7 +4,7 @@ const resource = require("../common/resource");
 module.exports = {
   ...resource,
   ...resource,
-  description: "Custom Object",
+  description: "Representation of a custom object",
   properties: {
     ...resource.properties,
     ...customObjectDraft.properties

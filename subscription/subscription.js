@@ -4,7 +4,6 @@ const subscriptionDraft = require("./subscriptionDraft");
 module.exports = {
   ...resource,
   ...subscriptionDraft,
-  type: "object",
   description: "Representation of a subscription",
   properties: {
     ...resource.properties,

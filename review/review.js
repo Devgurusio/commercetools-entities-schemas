@@ -6,7 +6,6 @@ const reviewDraft = require("./reviewDraft");
 module.exports = {
   ...resource,
   ...reviewDraft,
-  type: "object",
   description: "Representation of a review",
   properties: {
     ...resource.properties,

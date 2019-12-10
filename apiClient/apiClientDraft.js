@@ -1,6 +1,6 @@
 module.exports = {
   type: "object",
-  description: "State draft object",
+  description: "API client draft object",
   properties: {
     name: { type: "string" },
     scope: {

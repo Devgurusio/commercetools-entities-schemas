@@ -6,7 +6,6 @@ const resource = require("../common/resource");
 module.exports = {
   ...resource,
   ...inventoryDraft,
-  type: "object",
   description: "Representation of an inventory",
   properties: {
     ...resource.properties,

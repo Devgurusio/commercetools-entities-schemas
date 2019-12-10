@@ -1,22 +1,13 @@
-const dateTime = require("../baseTypes/dateTime");
+const resource = require("../common/resource");
 const storeDraft = require("./storeDraft");
 
 module.exports = {
+  ...resource,
   ...storeDraft,
-  type: "object",
-  description: "Store object",
+  description: "Representation of a store",
   properties: {
-    ...storeDraft.properties,
-    id: { type: "string" },
-    version: { type: "number" },
-    createdAt: dateTime,
-    lastModifiedAt: dateTime
+    ...resource.properties,
+    ...storeDraft.properties
   },
-  required: [
-    ...storeDraft.required,
-    "id",
-    "version",
-    "createdAt",
-    "lastModifiedAt"
-  ]
+  required: [...resource.required, ...storeDraft.required]
 };

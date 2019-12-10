@@ -9,6 +9,7 @@ const customObject = require("./customObject");
 const extension = require("./extension");
 const httpApi = require("./httpApi");
 const inventory = require("./inventory");
+const productType = require("./productType");
 const project = require("./project");
 const review = require("./review");
 const state = require("./state");
@@ -28,10 +29,11 @@ module.exports = {
   extension,
   httpApi,
   inventory,
+  productType,
   project,
   review,
   state,
   store,
-  taxCategory,
-  subscription
+  subscription,
+  taxCategory
 };

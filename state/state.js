@@ -4,7 +4,6 @@ const stateDraft = require("./stateDraft");
 module.exports = {
   ...resource,
   ...stateDraft,
-  type: "object",
   description: "Representation of a state",
   properties: {
     ...resource.properties,

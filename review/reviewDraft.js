@@ -4,7 +4,7 @@ const resourceIdentifier = require("../baseTypes/resourceIdentifier");
 
 module.exports = {
   type: "object",
-  description: "Inventory draft object",
+  description: "Review draft object",
   properties: {
     key,
     uniquenessValue: {

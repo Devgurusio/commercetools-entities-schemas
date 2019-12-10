@@ -4,7 +4,7 @@ const taxCategoryDraft = require("./taxCategoryDraft");
 module.exports = {
   ...resource,
   ...taxCategoryDraft,
-  type: "object",
+  description: "Representation of a tax category",
   properties: {
     ...resource.properties,
     ...taxCategoryDraft.properties

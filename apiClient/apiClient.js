@@ -3,7 +3,7 @@ const dateTime = require("../baseTypes/dateTime");
 
 module.exports = {
   type: "object",
-  description: "State draft object",
+  description: "Representation of an API client",
   properties: {
     id: {
       type: "string",

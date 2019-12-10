@@ -1,6 +1,6 @@
 {
   "name": "commercetools-entities-schemas",
-  "version": "1.0.8",
+  "version": "1.0.9",
   "description": "Commercetools entities schemas",
   "main": "index.js",
   "scripts": {
@@ -48,7 +48,7 @@
   "author": "devgurus.io",
   "license": "ISC",
   "bugs": {
-    "url": "https://github.com/DevgurusSupport/commercetools-entities-schemas/issues"
+    "url": "https://github.com/Devgurusio/commercetools-entities-schemas/issues"
   },
-  "homepage": "https://github.com/DevgurusSupport/commercetools-entities-schemas#readme"
+  "homepage": "https://github.com/Devgurusio/commercetools-entities-schemas#readme"
 }

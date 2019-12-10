@@ -6,8 +6,7 @@ const resource = require("../common/resource");
 module.exports = {
   ...resource,
   ...categoryDraft,
-  type: "object",
-  description: "Category object",
+  description: "Representation of a category",
   properties: {
     ...resource.properties,
     ...categoryDraft.properties,

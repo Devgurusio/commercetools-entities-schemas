@@ -2,7 +2,7 @@ const customFieldsDraft = require("../baseTypes/customFieldsDraft");
 
 module.exports = {
   type: "object",
-  description: "Customer Group Draft",
+  description: "Customer group draft",
   properties: {
     key: {
       type: "string",

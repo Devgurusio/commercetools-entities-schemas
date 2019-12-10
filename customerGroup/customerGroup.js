@@ -5,7 +5,6 @@ const resource = require("../common/resource");
 module.exports = {
   ...resource,
   ...customerGroupDraft,
-  type: "object",
   description: "Representation of a customer group",
   properties: {
     ...resource.properties,
