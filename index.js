@@ -11,6 +11,7 @@ const httpApi = require("./httpApi");
 const inventory = require("./inventory");
 const myCustomer = require("./myCustomer");
 const myShoppingList = require("./myShoppingList");
+const payment = require("./payment");
 const productType = require("./productType");
 const project = require("./project");
 const review = require("./review");
@@ -19,6 +20,7 @@ const state = require("./state");
 const store = require("./store");
 const subscription = require("./subscription");
 const taxCategory = require("./taxCategory");
+const zone = require("./zone");
 
 module.exports = {
   apiClient,
@@ -34,6 +36,7 @@ module.exports = {
   inventory,
   myCustomer,
   myShoppingList,
+  payment,
   productType,
   project,
   review,
@@ -41,5 +44,6 @@ module.exports = {
   state,
   store,
   subscription,
-  taxCategory
+  taxCategory,
+  zone
 };

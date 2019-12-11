@@ -24,6 +24,7 @@ const key = require("./key");
 const lastModifiedBy = require("./lastModifiedBy");
 const localizedEnumValue = require("./localizedEnumValue");
 const localizedString = require("./localizedString");
+const location = require("./location");
 const money = require("./money");
 const price = require("./price");
 const priceDraft = require("./priceDraft");
@@ -64,6 +65,7 @@ module.exports = {
   lastModifiedBy,
   localizedEnumValue,
   localizedString,
+  location,
   money,
   price,
   priceDraft,
