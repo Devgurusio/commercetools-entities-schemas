@@ -8,6 +8,7 @@ const transactionDraft = require("./transactionDraft");
 
 module.exports = {
   type: "object",
+  description: "Payment draft object",
   properties: {
     key,
     customer: {

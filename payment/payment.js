@@ -6,6 +6,7 @@ const transaction = require("./transaction");
 module.exports = {
   ...resource,
   ...paymentDraft,
+  description: "Representation of a payment",
   properties: {
     ...resource.properties,
     ...paymentDraft.properties,

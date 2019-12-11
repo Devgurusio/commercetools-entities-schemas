@@ -10,6 +10,7 @@ const extension = require("./extension");
 const httpApi = require("./httpApi");
 const inventory = require("./inventory");
 const myCustomer = require("./myCustomer");
+const myPayment = require("./myPayment");
 const myShoppingList = require("./myShoppingList");
 const payment = require("./payment");
 const productType = require("./productType");
@@ -35,6 +36,7 @@ module.exports = {
   httpApi,
   inventory,
   myCustomer,
+  myPayment,
   myShoppingList,
   payment,
   productType,

@@ -5,8 +5,7 @@ const textLineItemDraft = require("./textLineItemDraft");
 
 module.exports = {
   type: "object",
-  description:
-    "A MyShoppingListDraft is the object submitted as payload to the Create MyShoppingList method. The customer field of ShoppingList is automatically set with a password flow token. The anonymousId is automatically set with a token for an anonymous session. The key and slug fields can not be set",
+  description: "My shopping list draft object",
   properties: {
     name: localizedString,
     description: localizedString,
