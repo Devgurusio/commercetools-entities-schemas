@@ -1,28 +1,21 @@
+const assetDimensions = require("./assetDimensions");
+const key = require("./key");
+
 module.exports = {
   type: "object",
+  description:
+    "An AssetSource is a representation of an Asset in a specific format, e.g. a video in a certain encoding, or an image in a certain resolution",
   properties: {
     uri: {
-      type: "string"
+      type: "string",
+      format: "uri"
     },
     key: {
-      type: "string"
+      ...key,
+      description: "Must be unique within the Asset"
     },
-    dimensions: {
-      type: "object",
-      description: "Dimensions of the original asset. ",
-      properties: {
-        w: {
-          type: "integer"
-        },
-        h: {
-          type: "integer"
-        }
-      }
-    },
-    contentType: {
-      type: "string"
-    }
+    dimensions: assetDimensions,
+    contentType: { type: "string" }
   },
-  additionalProperties: false,
   required: ["uri"]
 };

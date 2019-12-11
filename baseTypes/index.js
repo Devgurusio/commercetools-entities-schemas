@@ -1,6 +1,7 @@
 const address = require("./address");
 const addressDraft = require("./addressDraft");
 const asset = require("./asset");
+const assetDimensions = require("./assetDimensions");
 const assetDraft = require("./assetDraft");
 const assetSource = require("./assetSource");
 const attribute = require("./attribute");
@@ -13,6 +14,7 @@ const customFields = require("./customFields");
 const customFieldsDraft = require("./customFieldsDraft");
 const date = require("./date");
 const dateTime = require("./dateTime");
+const discountedPrice = require("./discountedPrice");
 const enumValue = require("./enumValue");
 const fieldDefinition = require("./fieldDefinition");
 const fieldType = require("./fieldType");
@@ -25,9 +27,13 @@ const localizedString = require("./localizedString");
 const money = require("./money");
 const price = require("./price");
 const priceDraft = require("./priceDraft");
+const priceTier = require("./priceTier");
+const productVariant = require("./productVariant");
+const productVariantAvailability = require("./productVariantAvailability");
 const reference = require("./reference");
 const resourceIdentifier = require("./resourceIdentifier");
 const reviewRatingStatistics = require("./reviewRatingStatistics");
+const scopedPrice = require("./scopedPrice");
 const slug = require("./slug");
 const textInputHint = require("./textInputHint");
 
@@ -35,6 +41,7 @@ module.exports = {
   address,
   addressDraft,
   asset,
+  assetDimensions,
   assetDraft,
   assetSource,
   attribute,
@@ -47,6 +54,7 @@ module.exports = {
   customFieldsDraft,
   date,
   dateTime,
+  discountedPrice,
   enumValue,
   fieldDefinition,
   fieldType,
@@ -59,9 +67,13 @@ module.exports = {
   money,
   price,
   priceDraft,
+  priceTier,
+  productVariant,
+  productVariantAvailability,
   reference,
   resourceIdentifier,
   reviewRatingStatistics,
+  scopedPrice,
   slug,
   textInputHint
 };

@@ -2,7 +2,6 @@ const baseMoney = require("./baseMoney");
 const customFields = require("./customFields");
 const dateTime = require("./dateTime");
 const discountedPrice = require("./discountedPrice");
-const priceTier = require("./priceTier");
 const reference = require("./reference");
 
 module.exports = {
@@ -12,7 +11,10 @@ module.exports = {
       type: "string",
       description: "The unique ID of this price"
     },
-    value: baseMoney,
+    value: {
+      ...baseMoney,
+      description: "the original price value"
+    },
     country: {
       type: "string",
       description: "A two-digit country code as per ISO 3166-1 alpha-2"
@@ -29,11 +31,6 @@ module.exports = {
     validUntil: {
       ...dateTime,
       description: "Date until which the price is valid"
-    },
-    tiers: {
-      type: "array",
-      description: "Price tiers associated with the variant",
-      items: priceTier
     },
     discounted: {
       ...discountedPrice,

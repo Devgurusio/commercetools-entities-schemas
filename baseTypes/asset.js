@@ -1,28 +1,14 @@
-const assetSource = require("./assetSource");
-const localizedString = require("./localizedString");
+const assetDraft = require("./assetDraft");
+const customFields = require("./customFields");
 
 module.exports = {
-  type: "object",
+  ...assetDraft,
+  description:
+    "An Asset can be used to represent media assets, such as images, videos or PDFs",
   properties: {
-    id: {
-      type: "string"
-    },
-    key: {
-      type: "string"
-    },
-    sources: {
-      type: "array",
-      items: assetSource
-    },
-    name: localizedString,
-    description: localizedString,
-    tags: {
-      type: "array",
-      items: {
-        type: "string"
-      }
-    }
+    ...assetDraft.properties,
+    id: { type: "string" },
+    custom: customFields
   },
-  additionalProperties: false,
-  required: ["id", "sources"]
+  required: [...assetDraft.required, "id"]
 };

@@ -1,27 +1,24 @@
 const assetSource = require("./assetSource");
 const customFieldsDraft = require("./customFieldsDraft");
+const key = require("./key");
 const localizedString = require("./localizedString");
 
 module.exports = {
   type: "object",
   properties: {
-    key: {
-      type: "string"
-    },
+    key,
     sources: {
       type: "array",
-      items: assetSource
+      items: assetSource,
+      minItems: 1
     },
     name: localizedString,
     description: localizedString,
     tags: {
       type: "array",
-      items: {
-        type: "string"
-      }
+      items: { type: "string" }
     },
     custom: customFieldsDraft
   },
-  additionalProperties: false,
   required: ["sources"]
 };
