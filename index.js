@@ -14,6 +14,7 @@ const myPayment = require("./myPayment");
 const myShoppingList = require("./myShoppingList");
 const payment = require("./payment");
 const product = require("./product");
+const productDiscount = require("./productDiscount");
 const productProjection = require("./productProjection");
 const productType = require("./productType");
 const project = require("./project");
@@ -42,6 +43,7 @@ module.exports = {
   myShoppingList,
   payment,
   product,
+  productDiscount,
   productProjection,
   productType,
   project,
