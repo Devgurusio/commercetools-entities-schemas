@@ -9,9 +9,11 @@ const attributeConstraint = require("./attributeConstraint");
 const attributeDefinition = require("./attributeDefinition");
 const attributeType = require("./attributeType");
 const baseMoney = require("./baseMoney");
+const categoryOrderHints = require("./categoryOrderHints");
 const createdBy = require("./createdBy");
 const customFields = require("./customFields");
 const customFieldsDraft = require("./customFieldsDraft");
+const customTokenizer = require("./customTokenizer");
 const date = require("./date");
 const dateTime = require("./dateTime");
 const discountedPrice = require("./discountedPrice");
@@ -29,14 +31,21 @@ const money = require("./money");
 const price = require("./price");
 const priceDraft = require("./priceDraft");
 const priceTier = require("./priceTier");
+const productCatalogData = require("./productCatalogData");
+const productData = require("./productData");
 const productVariant = require("./productVariant");
 const productVariantAvailability = require("./productVariantAvailability");
+const productVariantDraft = require("./productVariantDraft");
 const reference = require("./reference");
 const resourceIdentifier = require("./resourceIdentifier");
 const reviewRatingStatistics = require("./reviewRatingStatistics");
 const scopedPrice = require("./scopedPrice");
+const searchKeyword = require("./searchKeyword");
+const searchKeywords = require("./searchKeywords");
 const slug = require("./slug");
+const suggestTokenizer = require("./suggestTokenizer");
 const textInputHint = require("./textInputHint");
+const whitespaceTokenizer = require("./whitespaceTokenizer");
 
 module.exports = {
   address,
@@ -50,9 +59,11 @@ module.exports = {
   attributeDefinition,
   attributeType,
   baseMoney,
+  categoryOrderHints,
   createdBy,
   customFields,
   customFieldsDraft,
+  customTokenizer,
   date,
   dateTime,
   discountedPrice,
@@ -70,12 +81,19 @@ module.exports = {
   price,
   priceDraft,
   priceTier,
+  productCatalogData,
+  productData,
   productVariant,
   productVariantAvailability,
+  productVariantDraft,
   reference,
   resourceIdentifier,
   reviewRatingStatistics,
   scopedPrice,
+  searchKeyword,
+  searchKeywords,
   slug,
-  textInputHint
+  suggestTokenizer,
+  textInputHint,
+  whitespaceTokenizer
 };
