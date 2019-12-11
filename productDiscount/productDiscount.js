@@ -9,7 +9,7 @@ module.exports = {
   properties: {
     ...resource.properties,
     ...productDiscountDraft.properties,
-    reference: {
+    references: {
       type: "array",
       description:
         "The platform will generate this array from the predicate. It contains the references of all the resources that are addressed in the predicate",
