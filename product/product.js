@@ -6,6 +6,7 @@ const reviewRatingStatistics = require("../baseTypes/reviewRatingStatistics");
 
 module.exports = {
   ...resource,
+  description: "Representation of a product",
   properties: {
     ...resource.properties,
     key,
