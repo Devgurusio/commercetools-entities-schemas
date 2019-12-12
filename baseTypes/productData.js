@@ -10,7 +10,8 @@ module.exports = {
   properties: {
     name: localizedString,
     categories: {
-      ...reference,
+      type: "array",
+      items: reference,
       description: "References to categories the product is in"
     },
     categoryOrderHints,

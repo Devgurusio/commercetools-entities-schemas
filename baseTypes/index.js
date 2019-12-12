@@ -7,6 +7,7 @@ const assetSource = require("./assetSource");
 const attribute = require("./attribute");
 const attributeConstraint = require("./attributeConstraint");
 const attributeDefinition = require("./attributeDefinition");
+const attributeDraft = require("./attributeDraft");
 const attributeType = require("./attributeType");
 const baseMoney = require("./baseMoney");
 const categoryOrderHints = require("./categoryOrderHints");
@@ -57,6 +58,7 @@ module.exports = {
   attribute,
   attributeConstraint,
   attributeDefinition,
+  attributeDraft,
   attributeType,
   baseMoney,
   categoryOrderHints,

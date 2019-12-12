@@ -1,4 +1,3 @@
-const fieldDefinition = require("./fieldDefinition");
 const resourceIdentifier = require("./resourceIdentifier");
 
 module.exports = {
@@ -7,7 +6,11 @@ module.exports = {
     "The representation to be sent to the server when creating a resource with custom fields",
   properties: {
     type: resourceIdentifier,
-    fields: fieldDefinition
+    fields: {
+      type: ["string", "number", "object", "array", "boolean", "null"],
+      description:
+        "A valid JSON object, based on the FieldDefinitions of the Type"
+    }
   },
   required: ["type"]
 };
