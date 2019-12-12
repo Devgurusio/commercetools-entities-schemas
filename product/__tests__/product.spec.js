@@ -2274,9 +2274,6 @@ describe("product", () => {
         },
         lastVariantId: 29
       };
-    });
-
-    beforeAll(() => {
       ajv = Ajv();
     });
 

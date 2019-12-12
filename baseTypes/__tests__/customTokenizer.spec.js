@@ -1,18 +1,15 @@
 const Ajv = require("ajv");
-const schema = require("../attribute");
+const schema = require("../customTokenizer");
 
-describe("attribute", () => {
+describe("customTokenizer", () => {
   let ajv;
   let data;
   let valid;
 
   describe("when success", () => {
-    describe("when string value", () => {
+    describe("when only required fields", () => {
       beforeAll(() => {
-        data = {
-          name: "attributeName",
-          value: "string"
-        };
+        data = { type: "custom" };
         ajv = Ajv();
       });
 
@@ -25,65 +22,11 @@ describe("attribute", () => {
       });
     });
 
-    describe("when number value", () => {
+    describe("when all fields", () => {
       beforeAll(() => {
         data = {
-          name: "attributeName",
-          value: 13
-        };
-        ajv = Ajv();
-      });
-
-      beforeEach(() => {
-        valid = ajv.validate(schema, data);
-      });
-
-      test("should be valid", () => {
-        expect(valid).toBeTruthy();
-      });
-    });
-
-    describe("when object value", () => {
-      beforeAll(() => {
-        data = {
-          name: "attributeName",
-          value: { key: "value" }
-        };
-        ajv = Ajv();
-      });
-
-      beforeEach(() => {
-        valid = ajv.validate(schema, data);
-      });
-
-      test("should be valid", () => {
-        expect(valid).toBeTruthy();
-      });
-    });
-
-    describe("when array value", () => {
-      beforeAll(() => {
-        data = {
-          name: "attributeName",
-          value: [{ key: "value" }]
-        };
-        ajv = Ajv();
-      });
-
-      beforeEach(() => {
-        valid = ajv.validate(schema, data);
-      });
-
-      test("should be valid", () => {
-        expect(valid).toBeTruthy();
-      });
-    });
-
-    describe("when boolean value", () => {
-      beforeAll(() => {
-        data = {
-          name: "attributeName",
-          value: true
+          type: "custom",
+          inputs: ["customToken1", "customToken2"]
         };
         ajv = Ajv();
       });
@@ -99,10 +42,10 @@ describe("attribute", () => {
   });
 
   describe("when error", () => {
-    describe("when missing name property", () => {
+    describe("when missing type property", () => {
       beforeAll(() => {
         data = {
-          value: true
+          inputs: ["customToken1", "customToken2"]
         };
         ajv = Ajv();
       });
@@ -116,10 +59,47 @@ describe("attribute", () => {
       });
     });
 
-    describe("when missing value property", () => {
+    describe("when type property is not an allowed one", () => {
       beforeAll(() => {
         data = {
-          name: "attributeName"
+          type: { type: "notAllowedType" },
+          inputs: ["customToken1", "customToken2"]
+        };
+        ajv = Ajv();
+      });
+
+      beforeEach(() => {
+        valid = ajv.validate(schema, data);
+      });
+
+      test("should not be valid", () => {
+        expect(valid).toBeFalsy();
+      });
+    });
+
+    describe("when inputs property is not an array", () => {
+      beforeAll(() => {
+        data = {
+          type: "custom",
+          inputs: "customToken1"
+        };
+        ajv = Ajv();
+      });
+
+      beforeEach(() => {
+        valid = ajv.validate(schema, data);
+      });
+
+      test("should not be valid", () => {
+        expect(valid).toBeFalsy();
+      });
+    });
+
+    describe("when inputs property array doesn not contain strings", () => {
+      beforeAll(() => {
+        data = {
+          type: "custom",
+          inputs: [1]
         };
         ajv = Ajv();
       });

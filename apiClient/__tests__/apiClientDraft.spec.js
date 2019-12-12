@@ -13,9 +13,6 @@ describe("apiClientDraft", () => {
           name: "my-api-client",
           scope: "scope"
         };
-      });
-
-      beforeAll(() => {
         ajv = Ajv();
       });
 
@@ -35,9 +32,6 @@ describe("apiClientDraft", () => {
           scope: "scope",
           deleteDaysAfterCreation: 10
         };
-      });
-
-      beforeAll(() => {
         ajv = Ajv();
       });
 
@@ -58,9 +52,6 @@ describe("apiClientDraft", () => {
           scope: "scope",
           deleteDaysAfterCreation: 10
         };
-      });
-
-      beforeAll(() => {
         ajv = Ajv();
       });
 
@@ -79,9 +70,6 @@ describe("apiClientDraft", () => {
           name: "my-api-client",
           deleteDaysAfterCreation: 10
         };
-      });
-
-      beforeAll(() => {
         ajv = Ajv();
       });
 

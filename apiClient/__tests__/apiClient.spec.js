@@ -14,9 +14,6 @@ describe("apiClient", () => {
           name: "my-api-client",
           scope: "scope"
         };
-      });
-
-      beforeAll(() => {
         ajv = Ajv();
       });
 
@@ -39,9 +36,6 @@ describe("apiClient", () => {
           lastUsedAt: "2019-11-19",
           secret: "secret"
         };
-      });
-
-      beforeAll(() => {
         ajv = Ajv();
       });
 
@@ -65,9 +59,6 @@ describe("apiClient", () => {
           lastUsedAt: "2019-11-19",
           secret: "secret"
         };
-      });
-
-      beforeAll(() => {
         ajv = Ajv();
       });
 
@@ -89,9 +80,6 @@ describe("apiClient", () => {
           lastUsedAt: "2019-11-19",
           secret: "secret"
         };
-      });
-
-      beforeAll(() => {
         ajv = Ajv();
       });
 
@@ -113,9 +101,6 @@ describe("apiClient", () => {
           lastUsedAt: "2019-11-19",
           secret: "secret"
         };
-      });
-
-      beforeAll(() => {
         ajv = Ajv();
       });
 

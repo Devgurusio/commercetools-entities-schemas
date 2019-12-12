@@ -12,9 +12,6 @@ describe("addressDraft", () => {
         data = {
           country: "ES"
         };
-      });
-
-      beforeAll(() => {
         ajv = Ajv();
       });
 
@@ -54,9 +51,6 @@ describe("addressDraft", () => {
           additionalAddressInfo: "additionalAddressInfo",
           externalId: "externalId"
         };
-      });
-
-      beforeAll(() => {
         ajv = Ajv();
       });
 
@@ -97,9 +91,6 @@ describe("addressDraft", () => {
           additionalAddressInfo: "additionalAddressInfo",
           externalId: "externalId"
         };
-      });
-
-      beforeAll(() => {
         ajv = Ajv();
       });
 

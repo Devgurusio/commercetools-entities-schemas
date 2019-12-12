@@ -28,7 +28,6 @@ module.exports = {
       description: "Price tiers associated with the variant",
       items: {
         type: "object",
-        additionalProperties: true,
         properties: {
           minimumQuantity: {
             type: "integer",

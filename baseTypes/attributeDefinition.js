@@ -45,7 +45,8 @@ module.exports = {
       type: "boolean",
       description:
         "Whether the attribute’s values should generally be enabled in product search. This determines whether the value is stored in products for matching terms in the context of full-text search queries and can be used in facets & filters as part of product search queries. The exact features that are enabled/disabled with this flag depend on the concrete attribute type and are described there. The max size of a searchable field is restricted to 10922 characters. This constraint is enforced at both product creation and product update. If the length of the input exceeds the maximum size an InvalidField error is returned"
-    }
+    },
+    displayGroup: { type: "string" }
   },
   required: ["type", "name", "label", "isRequired"]
 };

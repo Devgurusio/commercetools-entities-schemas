@@ -10,9 +10,6 @@ describe("attributeConstraint", () => {
     describe('when attribute constraint is "None"', () => {
       beforeAll(() => {
         data = "None";
-      });
-
-      beforeAll(() => {
         ajv = Ajv();
       });
 
@@ -28,9 +25,6 @@ describe("attributeConstraint", () => {
     describe('when attribute constraint is "Unique"', () => {
       beforeAll(() => {
         data = "Unique";
-      });
-
-      beforeAll(() => {
         ajv = Ajv();
       });
 
@@ -46,9 +40,6 @@ describe("attributeConstraint", () => {
     describe('when attribute constraint is "CombinationUnique"', () => {
       beforeAll(() => {
         data = "CombinationUnique";
-      });
-
-      beforeAll(() => {
         ajv = Ajv();
       });
 
@@ -64,9 +55,6 @@ describe("attributeConstraint", () => {
     describe('when attribute constraint is "SameForAll"', () => {
       beforeAll(() => {
         data = "SameForAll";
-      });
-
-      beforeAll(() => {
         ajv = Ajv();
       });
 
@@ -84,9 +72,6 @@ describe("attributeConstraint", () => {
     describe("when attribute constraint is not an allowed value", () => {
       beforeAll(() => {
         data = "NonValidConstraint";
-      });
-
-      beforeAll(() => {
         ajv = Ajv();
       });
 

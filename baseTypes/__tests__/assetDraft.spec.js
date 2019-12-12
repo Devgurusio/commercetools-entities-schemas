@@ -23,9 +23,6 @@ describe("assetDraft", () => {
           ],
           name: { en: "asset name", es: "nombre del asset" }
         };
-      });
-
-      beforeAll(() => {
         ajv = Ajv();
       });
 
@@ -65,9 +62,6 @@ describe("assetDraft", () => {
             }
           }
         };
-      });
-
-      beforeAll(() => {
         ajv = Ajv();
       });
 
@@ -98,9 +92,6 @@ describe("assetDraft", () => {
             }
           }
         };
-      });
-
-      beforeAll(() => {
         ajv = Ajv();
       });
 
@@ -130,9 +121,6 @@ describe("assetDraft", () => {
             }
           }
         };
-      });
-
-      beforeAll(() => {
         ajv = Ajv();
       });
 
@@ -171,9 +159,6 @@ describe("assetDraft", () => {
             }
           }
         };
-      });
-
-      beforeAll(() => {
         ajv = Ajv();
       });
 
