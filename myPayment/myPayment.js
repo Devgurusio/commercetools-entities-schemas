@@ -1,6 +1,6 @@
 const customFields = require("../baseTypes/customFields");
 const money = require("../baseTypes/money");
-const paymentMethodInfo = require("./paymentMethodInfo");
+const paymentMethodInfo = require("../payment/paymentMethodInfo");
 const reference = require("../baseTypes/reference");
 const transaction = require("../payment/transaction");
 

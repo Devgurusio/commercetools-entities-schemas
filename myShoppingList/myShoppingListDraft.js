@@ -1,7 +1,7 @@
 const customFieldsDraft = require("../baseTypes/customFieldsDraft");
-const lineItemDraft = require("./lineItemDraft");
+const lineItemDraft = require("../shoppingList/lineItemDraft");
 const localizedString = require("../baseTypes/localizedString");
-const textLineItemDraft = require("./textLineItemDraft");
+const textLineItemDraft = require("../shoppingList/textLineItemDraft");
 
 module.exports = {
   type: "object",

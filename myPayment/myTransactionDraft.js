@@ -1,6 +1,6 @@
 const dateTime = require("../baseTypes/dateTime");
 const money = require("../baseTypes/money");
-const transactionType = require("./transactionType");
+const transactionType = require("../payment/transactionType");
 
 module.exports = {
   type: "object",

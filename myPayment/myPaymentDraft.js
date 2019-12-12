@@ -1,7 +1,7 @@
 const customFieldsDraft = require("../baseTypes/customFieldsDraft");
 const money = require("../baseTypes/money");
 const myTransactionDraft = require("./myTransactionDraft");
-const paymentMethodInfo = require("./paymentMethodInfo");
+const paymentMethodInfo = require("../payment/paymentMethodInfo");
 
 module.exports = {
   type: "object",
