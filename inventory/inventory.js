@@ -16,5 +16,5 @@ module.exports = {
     },
     custom: customFields
   },
-  required: [...inventoryDraft.this.required, ...resource.required]
+  required: [...inventoryDraft.required, ...resource.required]
 };
