@@ -4,12 +4,12 @@ const textLineItemDraft = require("./textLineItemDraft");
 module.exports = {
   ...textLineItemDraft,
   properties: {
-    ...textLineItemDraft,
+    ...textLineItemDraft.properties,
     id: {
       type: "string",
       description: "The unique ID of this TextLineItem"
     },
     custom: customFields
   },
-  required: [textLineItemDraft.required, "quantity", "addedAt"]
+  required: [...textLineItemDraft.required, "quantity", "addedAt"]
 };

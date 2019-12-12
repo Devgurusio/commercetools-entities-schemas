@@ -19,7 +19,7 @@ module.exports = {
       description: "ID of an existing Product"
     },
     variantId: {
-      type: "string",
+      type: "number",
       description: `If present it defines an existing ProductVariant of the product.
         If absent it refers to the current master variant of the product`
     },

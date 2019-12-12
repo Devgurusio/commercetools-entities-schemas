@@ -1,16 +1,20 @@
 {
   "name": "commercetools-entities-schemas",
-  "version": "1.0.18",
+  "version": "1.0.5",
   "description": "Commercetools entities schemas",
   "main": "index.js",
   "scripts": {
     "lint": "eslint .",
-    "lint-fix": "eslint . --fix"
+    "lint-fix": "eslint . --fix",
+    "test": "jest"
   },
   "devDependencies": {
+    "ajv": "^6.10.2",
     "eslint": "^5.0.0",
     "eslint-config-prettier": "^3.3.0",
+    "eslint-plugin-jest": "^23.1.1",
     "eslint-plugin-prettier": "^3.0.0",
+    "jest": "^24.9.0",
     "prettier-eslint": "^8.8.2"
   },
   "eslintConfig": {
@@ -50,5 +54,11 @@
   "bugs": {
     "url": "https://github.com/Devgurusio/commercetools-entities-schemas/issues"
   },
-  "homepage": "https://github.com/Devgurusio/commercetools-entities-schemas#readme"
+  "homepage": "https://github.com/Devgurusio/commercetools-entities-schemas#readme",
+  "jest": {
+    "clearMocks": true,
+    "collectCoverage": true,
+    "coverageDirectory": "coverage",
+    "testEnvironment": "node"
+  }
 }

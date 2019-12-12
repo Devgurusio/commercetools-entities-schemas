@@ -23,5 +23,5 @@ module.exports = {
         "For money type it’s equal to the number of default fraction digits for a currency, can be omitted since it’s always equal to currency fraction digits"
     }
   },
-  required: ["currencyCode", "centAmount", "fractionDigits"]
+  required: ["currencyCode", "centAmount"]
 };
