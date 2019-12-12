@@ -100,13 +100,15 @@ describe("shoppingList", () => {
     beforeAll(() => {
       ajv = Ajv();
     });
+
     beforeEach(() => {
       valid = ajv.validate(schema, data);
     });
+
     test("should be valid", () => {
       console.log(valid);
       console.log(ajv.errors);
-      expect(valid).toBeTrue();
+      expect(valid).toBeTruthy();
     });
   });
 });

@@ -19,10 +19,10 @@ module.exports = {
   additionalProperties: true,
   oneOf: [
     {
-      required: ["typeId", "id"]
+      required: ["id"]
     },
     {
-      required: ["typeId", "key"]
+      required: ["key"]
     }
   ]
 };

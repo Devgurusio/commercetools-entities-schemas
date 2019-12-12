@@ -20,5 +20,5 @@ module.exports = {
     },
     custom: customFieldsDraft
   },
-  required: ["sources"]
+  required: ["name", "sources"]
 };

@@ -1,5 +1,6 @@
 const asset = require("../baseTypes/asset");
 const categoryDraft = require("./categoryDraft");
+const customFields = require("../baseTypes/customFields");
 const reference = require("../baseTypes/reference");
 const resource = require("../common/resource");
 
@@ -20,7 +21,8 @@ module.exports = {
       type: "array",
       description: "Array of Assets",
       items: asset
-    }
+    },
+    custom: customFields
   },
   required: [...resource.required, ...categoryDraft.required]
 };
