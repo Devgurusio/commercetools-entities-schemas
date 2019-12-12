@@ -1,7 +1,7 @@
 const Ajv = require("ajv");
-const schema = require("../assetDimensions");
+const schema = require("../enumValue");
 
-describe("assetDimensions", () => {
+describe("enumValue", () => {
   let ajv;
   let data;
   let valid;
@@ -9,8 +9,8 @@ describe("assetDimensions", () => {
   describe("when success", () => {
     beforeAll(() => {
       data = {
-        w: 640,
-        h: 480
+        key: "key",
+        label: "label"
       };
       ajv = Ajv();
     });
@@ -25,9 +25,11 @@ describe("assetDimensions", () => {
   });
 
   describe("when error", () => {
-    describe("when missing w property", () => {
+    describe("when missing key property", () => {
       beforeAll(() => {
-        data = { h: 480 };
+        data = {
+          label: "label"
+        };
         ajv = Ajv();
       });
 
@@ -40,9 +42,11 @@ describe("assetDimensions", () => {
       });
     });
 
-    describe("when missing h property", () => {
+    describe("when missing label property", () => {
       beforeAll(() => {
-        data = { w: 640 };
+        data = {
+          key: "key"
+        };
         ajv = Ajv();
       });
 

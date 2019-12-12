@@ -59,9 +59,6 @@ describe("shoppingList", () => {
         },
         assets: []
       };
-    });
-
-    beforeAll(() => {
       ajv = Ajv();
     });
 

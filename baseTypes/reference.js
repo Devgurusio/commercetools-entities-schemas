@@ -10,8 +10,11 @@ module.exports = {
     typeId: {
       type: "string",
       description: "The typeId of the reference"
+    },
+    obj: {
+      type: "object",
+      additionalProperties: true
     }
   },
-  additionalProperties: false,
   required: ["id", "typeId"]
 };

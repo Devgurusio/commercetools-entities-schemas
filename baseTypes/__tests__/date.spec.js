@@ -1,17 +1,14 @@
 const Ajv = require("ajv");
-const schema = require("../assetDimensions");
+const schema = require("../date");
 
-describe("assetDimensions", () => {
+describe("date", () => {
   let ajv;
   let data;
   let valid;
 
   describe("when success", () => {
     beforeAll(() => {
-      data = {
-        w: 640,
-        h: 480
-      };
+      data = "1983-08-17";
       ajv = Ajv();
     });
 
@@ -25,9 +22,9 @@ describe("assetDimensions", () => {
   });
 
   describe("when error", () => {
-    describe("when missing w property", () => {
+    describe("when data has no date format", () => {
       beforeAll(() => {
-        data = { h: 480 };
+        data = "sometext";
         ajv = Ajv();
       });
 
@@ -40,9 +37,9 @@ describe("assetDimensions", () => {
       });
     });
 
-    describe("when missing h property", () => {
+    describe("when data is a datetime", () => {
       beforeAll(() => {
-        data = { w: 640 };
+        data = "1983-08-17T17:00:00Z";
         ajv = Ajv();
       });
 

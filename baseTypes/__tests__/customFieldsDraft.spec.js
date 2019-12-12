@@ -1,7 +1,7 @@
 const Ajv = require("ajv");
-const schema = require("../assetSource");
+const schema = require("../customFieldsDraft");
 
-describe("assetSource", () => {
+describe("customFieldsDraft", () => {
   let ajv;
   let data;
   let valid;
@@ -10,7 +10,9 @@ describe("assetSource", () => {
     describe("when only required fields", () => {
       beforeAll(() => {
         data = {
-          uri: "http://localhost:3000/my-asset"
+          type: {
+            key: "my-key"
+          }
         };
         ajv = Ajv();
       });
@@ -27,13 +29,12 @@ describe("assetSource", () => {
     describe("when all fields", () => {
       beforeAll(() => {
         data = {
-          uri: "http://localhost:3000/my-asset",
-          key: "key",
-          dimensions: {
-            w: 640,
-            h: 480
+          type: {
+            key: "my-key"
           },
-          contentType: "image/jpeg"
+          fields: {
+            description: "my description"
+          }
         };
         ajv = Ajv();
       });
@@ -49,15 +50,12 @@ describe("assetSource", () => {
   });
 
   describe("when error", () => {
-    describe("when missing uri property", () => {
+    describe("when missing type property", () => {
       beforeAll(() => {
         data = {
-          key: "key",
-          dimensions: {
-            w: 640,
-            h: 480
-          },
-          contentType: "image/jpeg"
+          fields: {
+            description: "my description"
+          }
         };
         ajv = Ajv();
       });

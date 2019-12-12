@@ -22,6 +22,7 @@ const enumValue = require("./enumValue");
 const fieldDefinition = require("./fieldDefinition");
 const fieldType = require("./fieldType");
 const geoJSONGeometry = require("./geoJSONGeometry");
+const highPrecisionMoney = require("./highPrecisionMoney");
 const image = require("./image");
 const key = require("./key");
 const lastModifiedBy = require("./lastModifiedBy");
@@ -73,6 +74,7 @@ module.exports = {
   fieldDefinition,
   fieldType,
   geoJSONGeometry,
+  highPrecisionMoney,
   image,
   key,
   lastModifiedBy,

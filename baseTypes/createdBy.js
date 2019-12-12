@@ -2,7 +2,6 @@ const reference = require("./reference");
 
 module.exports = {
   type: "object",
-  additionalProperties: false,
   properties: {
     clientId: {
       type: "string",

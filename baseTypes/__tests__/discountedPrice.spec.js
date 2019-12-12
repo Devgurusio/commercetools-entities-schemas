@@ -1,7 +1,7 @@
 const Ajv = require("ajv");
-const schema = require("../assetDimensions");
+const schema = require("../discountedPrice");
 
-describe("assetDimensions", () => {
+describe("discountedPrice", () => {
   let ajv;
   let data;
   let valid;
@@ -9,8 +9,14 @@ describe("assetDimensions", () => {
   describe("when success", () => {
     beforeAll(() => {
       data = {
-        w: 640,
-        h: 480
+        value: {
+          currencyCode: "EUR",
+          centAmount: 4200
+        },
+        discount: {
+          typeId: "product",
+          id: "7217f75f-5931-42f0-8029-9dd51513c221"
+        }
       };
       ajv = Ajv();
     });
@@ -25,9 +31,14 @@ describe("assetDimensions", () => {
   });
 
   describe("when error", () => {
-    describe("when missing w property", () => {
+    describe("when missing value property", () => {
       beforeAll(() => {
-        data = { h: 480 };
+        data = {
+          discount: {
+            typeId: "product",
+            id: "7217f75f-5931-42f0-8029-9dd51513c221"
+          }
+        };
         ajv = Ajv();
       });
 
@@ -40,9 +51,14 @@ describe("assetDimensions", () => {
       });
     });
 
-    describe("when missing h property", () => {
+    describe("when missing discount property", () => {
       beforeAll(() => {
-        data = { w: 640 };
+        data = {
+          value: {
+            currencyCode: "EUR",
+            centAmount: 4200
+          }
+        };
         ajv = Ajv();
       });
 

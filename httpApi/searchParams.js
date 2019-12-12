@@ -1,6 +1,5 @@
 module.exports = {
   type: "object",
-  additionalProperties: false,
   description: "Parameters accepted in CommerceTools queries",
   properties: {
     page: {

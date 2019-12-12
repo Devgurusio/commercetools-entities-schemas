@@ -21,9 +21,6 @@ describe("project", () => {
         },
         version: 21
       };
-    });
-
-    beforeAll(() => {
       ajv = Ajv();
     });
 

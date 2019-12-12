@@ -95,9 +95,6 @@ describe("shoppingList", () => {
         ],
         textLineItems: []
       };
-    });
-
-    beforeAll(() => {
       ajv = Ajv();
     });
 
