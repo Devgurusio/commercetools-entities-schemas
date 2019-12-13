@@ -7,10 +7,7 @@ module.exports = {
   description:
     "Field definitions describe custom fields and allow you to define some meta-information associated with the field",
   properties: {
-    type: {
-      description: "Describes the type of the field",
-      ...fieldType
-    },
+    type: fieldType,
     name: {
       type: "string",
       pattern: "[-a-zA-Z0-9_]{2,36}",

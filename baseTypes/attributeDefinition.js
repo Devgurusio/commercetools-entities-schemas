@@ -8,10 +8,7 @@ module.exports = {
   description:
     "Attribute definitions describe a product attribute and allow you to define some meta-information associated with the attribute (like whether it should be searchable or its constraints)",
   properties: {
-    type: {
-      ...attributeType,
-      description: "Describes the type of the attribute"
-    },
+    type: attributeType,
     name: {
       type: "string",
       description: `The unique name of the attribute used in the API. The name must be between two and 256 characters long and can contain the ASCII letters A to Z in lowercase or uppercase, digits, underscores (_) and the hyphen-minus (-).
