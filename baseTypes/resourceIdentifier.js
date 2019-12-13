@@ -16,13 +16,12 @@ module.exports = {
       description: "The typeId of the reference"
     }
   },
-  additionalProperties: true,
   oneOf: [
     {
-      required: ["typeId", "id"]
+      required: ["id"]
     },
     {
-      required: ["typeId", "key"]
+      required: ["key"]
     }
   ]
 };

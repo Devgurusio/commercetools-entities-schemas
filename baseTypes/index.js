@@ -7,6 +7,7 @@ const assetSource = require("./assetSource");
 const attribute = require("./attribute");
 const attributeConstraint = require("./attributeConstraint");
 const attributeDefinition = require("./attributeDefinition");
+const attributeDraft = require("./attributeDraft");
 const attributeType = require("./attributeType");
 const baseMoney = require("./baseMoney");
 const categoryOrderHints = require("./categoryOrderHints");
@@ -21,6 +22,7 @@ const enumValue = require("./enumValue");
 const fieldDefinition = require("./fieldDefinition");
 const fieldType = require("./fieldType");
 const geoJSONGeometry = require("./geoJSONGeometry");
+const highPrecisionMoney = require("./highPrecisionMoney");
 const image = require("./image");
 const key = require("./key");
 const lastModifiedBy = require("./lastModifiedBy");
@@ -57,6 +59,7 @@ module.exports = {
   attribute,
   attributeConstraint,
   attributeDefinition,
+  attributeDraft,
   attributeType,
   baseMoney,
   categoryOrderHints,
@@ -71,6 +74,7 @@ module.exports = {
   fieldDefinition,
   fieldType,
   geoJSONGeometry,
+  highPrecisionMoney,
   image,
   key,
   lastModifiedBy,
