@@ -8,7 +8,7 @@ const moneyType = require("./moneyType");
 const numberType = require("./numberType");
 const referenceType = require("./referenceType");
 const setType = require("./setType");
-const textType = require("./textType");
+const stringType = require("./stringType");
 const timeType = require("./timeType");
 
 module.exports = {
@@ -23,7 +23,7 @@ module.exports = {
     numberType,
     referenceType,
     setType,
-    textType,
+    stringType,
     timeType
   ]
 };
