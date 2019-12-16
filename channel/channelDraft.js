@@ -1,6 +1,7 @@
 const address = require("../baseTypes/address");
 const customFieldsDraft = require("../baseTypes/customFieldsDraft");
 const geoJSONGeometry = require("../baseTypes/geoJSONGeometry");
+const key = require("../baseTypes/key");
 const localizedString = require("../baseTypes/localizedString");
 
 module.exports = {
@@ -8,7 +9,7 @@ module.exports = {
   description: "Channel draft object",
   properties: {
     key: {
-      type: "string",
+      ...key,
       description:
         "Any arbitrary string key that uniquely identifies this channel within the project"
     },
