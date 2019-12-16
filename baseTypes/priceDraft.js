@@ -1,7 +1,10 @@
 const baseMoney = require("./baseMoney");
+const customFieldsDraft = require("./customFieldsDraft");
+const dateTime = require("./dateTime");
+const discountedPrice = require("./discountedPrice");
+const priceTier = require("./priceTier");
 const reference = require("./reference");
 const resourceIdentifier = require("./resourceIdentifier");
-const customFieldsDraft = require("./customFieldsDraft");
 
 module.exports = {
   type: "object",
@@ -13,32 +16,25 @@ module.exports = {
     },
     customerGroup: reference,
     channel: resourceIdentifier,
-    validFrom: {
-      type: "string",
+    discounted: {
+      ...discountedPrice,
       description:
-        "Date from which the price is valid. Format YYYY-MM-DDThh:mm:ss.sssZ"
+        "Set if a matching ProductDiscount exists. If set, the Cart will use the discounted value for the cart price calculation. When a relative discount is applied and the fraction part of the discounted price is 0.5, the discounted price is rounded in favor of the customer with the half down rounding"
+    },
+    validFrom: {
+      ...dateTime,
+      description: "Date from which the price is valid"
     },
     validUntil: {
-      type: "string",
-      description:
-        "Date until which the price is valid. Format YYYY-MM-DDThh:mm:ss.sssZ"
+      ...dateTime,
+      description: "Date until which the price is valid"
     },
     tiers: {
       type: "array",
       description: "Price tiers associated with the variant",
-      items: {
-        type: "object",
-        properties: {
-          minimumQuantity: {
-            type: "integer",
-            description:
-              "The minimum quantity this price tier is valid for, always greater than or equal to 2"
-          },
-          value: baseMoney
-        },
-        required: ["minimumQuantity", "value"]
-      }
+      items: priceTier
     },
     custom: customFieldsDraft
-  }
+  },
+  required: ["value"]
 };

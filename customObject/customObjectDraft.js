@@ -6,8 +6,10 @@ module.exports = {
   properties: {
     container: {
       type: "String",
-      pattern: "[-_~.a-zA-Z0-9]+",
-      description: "A namespace to group custom objects"
+      description: "A namespace to group custom objects",
+      pattern: "^[a-zA-Z0-9-_~]+$",
+      minLength: 2,
+      maxLength: 256
     },
     key: {
       ...key,

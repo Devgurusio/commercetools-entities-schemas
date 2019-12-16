@@ -1,5 +1,5 @@
 const assetDraft = require("./assetDraft");
-const attributeDraft = require("./attributeDraft");
+const attribute = require("./attribute");
 const image = require("./image");
 const key = require("./key");
 const priceDraft = require("./priceDraft");
@@ -42,7 +42,7 @@ module.exports = {
         - for SetType attributes the entire set object is to be used as value
         - for NestedType attributes the list of values of all attributes of the nested product is to be used as value
         - for ReferenceType attributes the Reference object is to be used as value`,
-      items: attributeDraft
+      items: attribute
     }
   }
 };

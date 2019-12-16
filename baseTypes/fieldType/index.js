@@ -7,9 +7,9 @@ const localizedStringType = require("./localizedStringType");
 const moneyType = require("./moneyType");
 const numberType = require("./numberType");
 const referenceType = require("./referenceType");
-const setType = require("./setType");
 const stringType = require("./stringType");
 const timeType = require("./timeType");
+const setType = require("./setType");
 
 module.exports = {
   oneOf: [

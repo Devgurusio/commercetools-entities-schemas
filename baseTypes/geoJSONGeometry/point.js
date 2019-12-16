@@ -1,4 +1,4 @@
-const point = {
+module.exports = {
   type: "object",
   description: "Point Geometry",
   properties: {
@@ -14,10 +14,6 @@ const point = {
       maxItems: 2,
       items: { type: "number" }
     }
-  }
-};
-
-module.exports = {
-  type: "object",
-  ...point
+  },
+  required: ["type", "coordinates"]
 };

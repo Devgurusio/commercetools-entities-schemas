@@ -21,7 +21,13 @@ module.exports = {
     ratingsDistribution: {
       type: "object",
       description: `The full distribution of the ratings.
-        The keys are the different ratings and the values are the count of reviews having this rating. Only the used ratings appear in this object.`
+        The keys are the different ratings and the values are the count of reviews having this rating. Only the used ratings appear in this object.`,
+      patternProperties: {
+        "^.+$": {
+          type: "number",
+          description: "Count of reviews having this rating"
+        }
+      }
     }
   }
 };

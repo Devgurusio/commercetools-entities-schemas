@@ -8,6 +8,11 @@ module.exports = {
     "en-US": "example"
   },
   patternProperties: {
-    "^.+$": { type: "string", pattern: "[-a-zA-Z0-9_]{2,256}" }
+    "^.+$": {
+      type: "string",
+      pattern: "^[a-zA-Z0-9-_]+$",
+      minLength: 2,
+      maxLength: 256
+    }
   }
 };
