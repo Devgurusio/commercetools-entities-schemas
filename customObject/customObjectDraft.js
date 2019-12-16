@@ -5,7 +5,7 @@ module.exports = {
   description: "Custom Object draft object",
   properties: {
     container: {
-      type: "String",
+      type: "string",
       description: "A namespace to group custom objects",
       pattern: "^[a-zA-Z0-9-_~]+$",
       minLength: 2,
