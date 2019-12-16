@@ -2282,8 +2282,6 @@ describe("product", () => {
     });
 
     test("should be valid", () => {
-      console.log(valid);
-      console.log(ajv.errors);
       expect(valid).toBeTruthy();
     });
   });

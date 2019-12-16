@@ -19,5 +19,6 @@ module.exports = {
       type: "boolean",
       description: "Whether the staged data is different from the current data"
     }
-  }
+  },
+  required: ["published", "current", "staged", "hasStagedChanges"]
 };

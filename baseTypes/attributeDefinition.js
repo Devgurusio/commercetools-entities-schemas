@@ -13,7 +13,9 @@ module.exports = {
       type: "string",
       description: `The unique name of the attribute used in the API. The name must be between two and 256 characters long and can contain the ASCII letters A to Z in lowercase or uppercase, digits, underscores (_) and the hyphen-minus (-).
         When using the same name for an attribute in two or more product types all fields of the AttributeDefinition of this attribute need to be the same across the product types, otherwise an AttributeDefinitionAlreadyExists error code will be returned. An exception to this are the values of an enum or lenum type and sets thereof`,
-      pattern: "[-a-zA-Z0-9_]{2,256}"
+      pattern: "^[a-zA-Z0-9-_]+$",
+      minLength: 2,
+      maxLength: 256
     },
     label: {
       ...localizedString,

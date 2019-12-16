@@ -10,10 +10,12 @@ module.exports = {
     type: fieldType,
     name: {
       type: "string",
-      pattern: "[-a-zA-Z0-9_]{2,36}",
       description: `The name of the field.
         The name must be between two and 36 characters long and can contain the ASCII letters A to Z in lowercase or uppercase, digits, underscores (_) and the hyphen-minus (-).
-        The name must be unique for a given resource type ID. In case there is a field with the same name in another type it has to have the same FieldType also`
+        The name must be unique for a given resource type ID. In case there is a field with the same name in another type it has to have the same FieldType also`,
+      pattern: "^[a-zA-Z0-9-_]+$",
+      minLength: 2,
+      maxLength: 36
     },
     label: {
       ...localizedString,
