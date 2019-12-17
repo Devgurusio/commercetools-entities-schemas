@@ -13,5 +13,6 @@ module.exports = {
       ...transactionState,
       description: "The state of this transaction."
     }
-  }
+  },
+  required: [...transactionDraft.required, "id"]
 };
