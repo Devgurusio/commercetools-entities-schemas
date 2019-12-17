@@ -45,7 +45,8 @@ describe("resource", () => {
               typeId: "user",
               id: "d0cc3195-5d4c-4f35-90d7-950ba7b0034b"
             }
-          }
+          },
+          lastMessageSequenceNumber: 1
         };
         ajv = Ajv();
       });
@@ -78,7 +79,8 @@ describe("resource", () => {
               typeId: "user",
               id: "d0cc3195-5d4c-4f35-90d7-950ba7b0034b"
             }
-          }
+          },
+          lastMessageSequenceNumber: 1
         };
         ajv = Ajv();
       });
@@ -109,7 +111,8 @@ describe("resource", () => {
               typeId: "user",
               id: "d0cc3195-5d4c-4f35-90d7-950ba7b0034b"
             }
-          }
+          },
+          lastMessageSequenceNumber: 1
         };
         ajv = Ajv();
       });
@@ -140,7 +143,8 @@ describe("resource", () => {
               typeId: "user",
               id: "d0cc3195-5d4c-4f35-90d7-950ba7b0034b"
             }
-          }
+          },
+          lastMessageSequenceNumber: 1
         };
         ajv = Ajv();
       });
@@ -171,7 +175,8 @@ describe("resource", () => {
               typeId: "user",
               id: "d0cc3195-5d4c-4f35-90d7-950ba7b0034b"
             }
-          }
+          },
+          lastMessageSequenceNumber: 1
         };
         ajv = Ajv();
       });

@@ -1,5 +1,5 @@
-const customerDraft = require("./customerDraft");
+const myCustomerDraft = require("./myCustomerDraft");
 
 module.exports = {
-  customerDraft
+  myCustomerDraft
 };

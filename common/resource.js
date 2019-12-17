@@ -13,7 +13,8 @@ module.exports = {
     createdAt: dateTime,
     createdBy,
     lastModifiedAt: dateTime,
-    lastModifiedBy
+    lastModifiedBy,
+    lastMessageSequenceNumber: { type: "number" }
   },
   required: ["id", "version", "createdAt", "lastModifiedAt"]
 };
