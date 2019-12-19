@@ -54,5 +54,6 @@ module.exports = {
     messages: messagesConfiguration,
     shippingRateInputType,
     externalOAuth
-  }
+  },
+  required: ["version", "key", "createdAt", "name"]
 };
