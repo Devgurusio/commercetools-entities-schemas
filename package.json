@@ -1,12 +1,15 @@
 {
   "name": "commercetools-entities-schemas",
-  "version": "1.0.9",
+  "version": "1.0.10",
   "description": "Commercetools entities schemas",
   "main": "index.js",
   "scripts": {
     "lint": "eslint .",
     "lint-fix": "eslint . --fix",
-    "test": "jest"
+    "test": "jest",
+    "publish:patch": "npm version patch && npm publish",
+    "publish:minor": "npm version minor && npm publish",
+    "publish:major": "npm version major && npm publish"
   },
   "devDependencies": {
     "ajv": "^6.10.2",
@@ -41,7 +44,7 @@
   ],
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/DevgurusSupport/commercetools-entities-schemas.git"
+    "url": "git+https://github.com/Devgurusio/commercetools-entities-schemas.git"
   },
   "keywords": [
     "commercetools",
