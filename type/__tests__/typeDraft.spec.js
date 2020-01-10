@@ -50,7 +50,6 @@ describe("typeDraft", () => {
       });
 
       test("should be valid", () => {
-        console.log(ajv.errors);
         expect(valid).toBeTruthy();
       });
     });
