@@ -5,7 +5,7 @@ module.exports = {
   properties: {
     type: {
       type: "string",
-      enum: "relative"
+      enum: ["relative"]
     },
     permyriad: {
       type: "number",

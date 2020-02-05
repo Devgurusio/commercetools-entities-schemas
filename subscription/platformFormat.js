@@ -5,7 +5,7 @@ module.exports = {
   properties: {
     type: {
       type: "string",
-      enum: "Platform"
+      enum: ["Platform"]
     }
   },
   required: ["type"]

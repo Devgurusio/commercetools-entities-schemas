@@ -5,7 +5,7 @@ module.exports = {
   properties: {
     type: {
       type: "string",
-      enum: "SQS"
+      enum: ["SQS"]
     },
     queueUrl: { type: "string" },
     accessKey: { type: "string" },

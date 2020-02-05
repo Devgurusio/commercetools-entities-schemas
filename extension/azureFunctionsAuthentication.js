@@ -4,11 +4,11 @@ module.exports = {
   properties: {
     type: {
       type: "string",
-      enum: "AzureFunctions"
+      enum: ["AzureFunctions"]
     },
     key: {
       type: "string",
-      description: `TPartially hidden on retrieval.
+      description: `Partially hidden on retrieval.
         See the Azure Functions documentation. To protect your Azure Function, set its authLevel to function and provide the functions key here. The commercetools platform will set the x-functions-key header.
         To protect the secret key from being exposed, please remove the code parameter and the secret key from the url, e.g. do not use:
         https://foo.azurewebsites.net/api/bar?code=secret

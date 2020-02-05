@@ -5,7 +5,7 @@ module.exports = {
   properties: {
     type: {
       type: "string",
-      enum: "AzureServiceBus"
+      enum: ["AzureServiceBus"]
     },
     connectionString: {
       type: "string",

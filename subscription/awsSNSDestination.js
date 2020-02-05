@@ -5,7 +5,7 @@ module.exports = {
   properties: {
     type: {
       type: "string",
-      enum: "SNS"
+      enum: ["SNS"]
     },
     topicArn: { type: "string" },
     accessKey: { type: "string" },

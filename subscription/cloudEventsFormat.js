@@ -6,7 +6,7 @@ module.exports = {
   properties: {
     type: {
       type: "string",
-      enum: "CloudEvents"
+      enum: ["CloudEvents"]
     },
     cloudEventsVersion: { type: "string" }
   },

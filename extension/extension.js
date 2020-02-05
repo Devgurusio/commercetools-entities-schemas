@@ -3,7 +3,7 @@ const resource = require("../common/resource");
 
 module.exports = {
   ...resource,
-  ...resource,
+  ...extensionDraft,
   description: "API Extension",
   properties: {
     ...resource.properties,

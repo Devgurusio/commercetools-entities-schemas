@@ -5,7 +5,7 @@ module.exports = {
   properties: {
     type: {
       type: "string",
-      enum: "GoogleCloudPubSub"
+      enum: ["GoogleCloudPubSub"]
     },
     projectId: {
       type: "string",

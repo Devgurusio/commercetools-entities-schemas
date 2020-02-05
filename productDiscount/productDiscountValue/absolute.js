@@ -7,7 +7,7 @@ module.exports = {
   properties: {
     type: {
       type: "string",
-      enum: "absolute"
+      enum: ["absolute"]
     },
     money: {
       type: "array",

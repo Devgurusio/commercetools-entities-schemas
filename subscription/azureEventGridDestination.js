@@ -5,7 +5,7 @@ module.exports = {
   properties: {
     type: {
       type: "string",
-      enum: "EventGrid"
+      enum: ["EventGrid"]
     },
     uri: {
       type: "string",

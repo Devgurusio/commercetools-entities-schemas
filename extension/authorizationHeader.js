@@ -4,7 +4,7 @@ module.exports = {
   properties: {
     type: {
       type: "string",
-      enum: "AuthorizationHeader"
+      enum: ["AuthorizationHeader"]
     },
     headerValue: {
       type: "string",
