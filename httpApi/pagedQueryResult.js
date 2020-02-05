@@ -1,6 +1,5 @@
 module.exports = {
   type: "object",
-  additionalProperties: true,
   description:
     "For query responses of requests supporting paging via limit and offset, the following common top-level fields are returned",
   properties: {
@@ -38,5 +37,6 @@ module.exports = {
       additionalProperties: true
     }
   },
-  required: ["offset", "limit", "count", "total", "results"]
+  required: ["offset", "limit", "count", "total", "results"],
+  additionalProperties: true
 };
