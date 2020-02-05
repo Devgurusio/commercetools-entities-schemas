@@ -52,5 +52,5 @@ module.exports = {
         "Statistics about the review ratings taken into account for this product"
     }
   },
-  required: [resource.properties, "productType", "name", "slug"]
+  required: [...resource.required, "productType", "name", "slug"]
 };
