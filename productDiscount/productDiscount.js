@@ -1,4 +1,5 @@
 const productDiscountDraft = require("./productDiscountDraft");
+const key = require("../baseTypes/key");
 const reference = require("../baseTypes/reference");
 const resource = require("../common/resource");
 
@@ -9,6 +10,7 @@ module.exports = {
   properties: {
     ...resource.properties,
     ...productDiscountDraft.properties,
+    key,
     references: {
       type: "array",
       description:
