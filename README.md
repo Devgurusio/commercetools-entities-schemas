@@ -4,57 +4,57 @@ Reusable commercetools entities schemas definitions
 
 ## Docs
 
-- ##### baseTypes
-  - address
-  - addressDraft
-  - asset
-  - assetSource
-  - attribute
-  - baseMoney
-  - createdBy
-  - customFields
-  - dateTime
-  - image
-  - lastModifiedBy
-  - priceDraft
-  - reference
-  - resourceIdentifier
-  - geoJSONGeometry
-  - localizedString
-  - money
-  - reviewRatingStatistics
-  - assetDraft
-  - customFieldsDraft
-  - date
-  - key
-  - price
-  - slug
-- ##### categories
-  - category
-  - categoryDraft
-- ##### channel
-  - channel
-  - channelDraft
-- ##### customer
-  - customer
-  - customerDraft
-  - customerSignInResult
-  - customerToken
-- ##### customerGroup
-  - customerGroup
-  - customerGroupDraft
-- ##### httpApi
-  - pagedQueryResult
-  - searchParams
-- ##### store
-  - store
-  - storeDraft
-- ##### taxCategory
-  - subRate
-  - taxCategory
-  - taxCategoryDraft
-  - taxRate
-  - taxRateDraft
+-   ##### baseTypes
+-   address
+-   addressDraft
+-   asset
+-   assetSource
+-   attribute
+-   baseMoney
+-   createdBy
+-   customFields
+-   dateTime
+-   image
+-   lastModifiedBy
+-   priceDraft
+-   reference
+-   resourceIdentifier
+-   geoJSONGeometry
+-   localizedString
+-   money
+-   reviewRatingStatistics
+-   assetDraft
+-   customFieldsDraft
+-   date
+-   key
+-   price
+-   slug
+-   ##### categories
+-   category
+-   categoryDraft
+-   ##### channel
+-   channel
+-   channelDraft
+-   ##### customer
+-   customer
+-   customerDraft
+-   customerSignInResult
+-   customerToken
+-   ##### customerGroup
+-   customerGroup
+-   customerGroupDraft
+-   ##### httpApi
+-   pagedQueryResult
+-   searchParams
+-   ##### store
+-   store
+-   storeDraft
+-   ##### taxCategory
+-   subRate
+-   taxCategory
+-   taxCategoryDraft
+-   taxRate
+-   taxRateDraft
 
 <a name="install"></a>
 
