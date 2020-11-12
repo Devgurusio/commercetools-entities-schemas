@@ -6,6 +6,7 @@
   "scripts": {
     "lint": "eslint .",
     "lint-fix": "eslint . --fix",
+    "lint-md": "remark -f .",
     "test": "jest",
     "publish:patch": "npm version patch && npm publish",
     "publish:minor": "npm version minor && npm publish",
