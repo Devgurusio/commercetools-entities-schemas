@@ -1,19 +1,19 @@
-const Ajv = require("ajv");
-const schema = require("../productVariantAvailability");
+const Ajv = require('ajv');
+const schema = require('../productVariantAvailability');
 
-describe("productVariantAvailability", () => {
+describe('productVariantAvailability', () => {
   let ajv;
   let data;
   let valid;
 
-  describe("when success", () => {
+  describe('when success', () => {
     beforeAll(() => {
       data = {
         isOnStock: true,
         restockableInDays: 3,
         availableQuantity: 501,
         channels: {
-          "f74b4e9f-2c01-4178-9ba5-bf6d6167a597": {
+          'f74b4e9f-2c01-4178-9ba5-bf6d6167a597': {
             isOnStock: true,
             restockableInDays: 3,
             availableQuantity: 501
@@ -27,7 +27,7 @@ describe("productVariantAvailability", () => {
       valid = ajv.validate(schema, data);
     });
 
-    test("should be valid", () => {
+    test('should be valid', () => {
       expect(valid).toBeTruthy();
     });
   });

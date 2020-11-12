@@ -1,14 +1,14 @@
-const Ajv = require("ajv");
-const schema = require("../cartScore");
+const Ajv = require('ajv');
+const schema = require('../cartScore');
 
-describe("cartScore", () => {
+describe('cartScore', () => {
   let ajv;
   let data;
   let valid;
 
-  describe("when success", () => {
+  describe('when success', () => {
     beforeAll(() => {
-      data = { type: "CartScore" };
+      data = { type: 'CartScore' };
       ajv = Ajv();
     });
 
@@ -16,15 +16,15 @@ describe("cartScore", () => {
       valid = ajv.validate(schema, data);
     });
 
-    test("should be valid", () => {
+    test('should be valid', () => {
       expect(valid).toBeTruthy();
     });
   });
 
-  describe("when error", () => {
-    describe("when type is not allowed value", () => {
+  describe('when error', () => {
+    describe('when type is not allowed value', () => {
       beforeAll(() => {
-        data = { type: "notAllowedValue" };
+        data = { type: 'notAllowedValue' };
         ajv = Ajv();
       });
 
@@ -32,7 +32,7 @@ describe("cartScore", () => {
         valid = ajv.validate(schema, data);
       });
 
-      test("should not be valid", () => {
+      test('should not be valid', () => {
         expect(valid).toBeFalsy();
       });
     });

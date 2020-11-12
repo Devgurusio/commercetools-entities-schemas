@@ -1,7 +1,7 @@
 module.exports = {
-  type: "object",
+  type: 'object',
   properties: {
-    resourceTypeId: { type: "string" }
+    resourceTypeId: { type: 'string' }
   },
-  required: ["resourceTypeId"]
+  required: ['resourceTypeId']
 };

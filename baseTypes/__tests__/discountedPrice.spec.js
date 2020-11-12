@@ -1,21 +1,21 @@
-const Ajv = require("ajv");
-const schema = require("../discountedPrice");
+const Ajv = require('ajv');
+const schema = require('../discountedPrice');
 
-describe("discountedPrice", () => {
+describe('discountedPrice', () => {
   let ajv;
   let data;
   let valid;
 
-  describe("when success", () => {
+  describe('when success', () => {
     beforeAll(() => {
       data = {
         value: {
-          currencyCode: "EUR",
+          currencyCode: 'EUR',
           centAmount: 4200
         },
         discount: {
-          typeId: "product",
-          id: "7217f75f-5931-42f0-8029-9dd51513c221"
+          typeId: 'product',
+          id: '7217f75f-5931-42f0-8029-9dd51513c221'
         }
       };
       ajv = Ajv();
@@ -25,18 +25,18 @@ describe("discountedPrice", () => {
       valid = ajv.validate(schema, data);
     });
 
-    test("should be valid", () => {
+    test('should be valid', () => {
       expect(valid).toBeTruthy();
     });
   });
 
-  describe("when error", () => {
-    describe("when missing value property", () => {
+  describe('when error', () => {
+    describe('when missing value property', () => {
       beforeAll(() => {
         data = {
           discount: {
-            typeId: "product",
-            id: "7217f75f-5931-42f0-8029-9dd51513c221"
+            typeId: 'product',
+            id: '7217f75f-5931-42f0-8029-9dd51513c221'
           }
         };
         ajv = Ajv();
@@ -46,16 +46,16 @@ describe("discountedPrice", () => {
         valid = ajv.validate(schema, data);
       });
 
-      test("should not be valid", () => {
+      test('should not be valid', () => {
         expect(valid).toBeFalsy();
       });
     });
 
-    describe("when missing discount property", () => {
+    describe('when missing discount property', () => {
       beforeAll(() => {
         data = {
           value: {
-            currencyCode: "EUR",
+            currencyCode: 'EUR',
             centAmount: 4200
           }
         };
@@ -66,7 +66,7 @@ describe("discountedPrice", () => {
         valid = ajv.validate(schema, data);
       });
 
-      test("should not be valid", () => {
+      test('should not be valid', () => {
         expect(valid).toBeFalsy();
       });
     });

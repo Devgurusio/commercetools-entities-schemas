@@ -1,21 +1,21 @@
-const reference = require("../baseTypes/reference");
+const reference = require('../baseTypes/reference');
 
 module.exports = {
-  type: "object",
+  type: 'object',
   properties: {
     interfaceCode: {
-      type: "string",
+      type: 'string',
       description:
-        "A code describing the current status returned by the interface that processes the payment"
+        'A code describing the current status returned by the interface that processes the payment'
     },
     interfaceText: {
-      type: "string",
+      type: 'string',
       description:
-        "A text describing the current status returned by the interface that processes the payment"
+        'A text describing the current status returned by the interface that processes the payment'
     },
     state: {
       ...reference,
-      description: "Reference to a State"
+      description: 'Reference to a State'
     }
   }
 };

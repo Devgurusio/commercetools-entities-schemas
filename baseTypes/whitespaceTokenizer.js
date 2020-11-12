@@ -1,12 +1,12 @@
 module.exports = {
-  type: "object",
+  type: 'object',
   description:
-    "Whitespace tokenizer creates tokens by splitting the SearchKeyword text field by whitespaces",
+    'Whitespace tokenizer creates tokens by splitting the SearchKeyword text field by whitespaces',
   properties: {
     type: {
-      type: "string",
-      enum: ["whitespace"]
+      type: 'string',
+      enum: ['whitespace']
     }
   },
-  required: ["type"]
+  required: ['type']
 };

@@ -1,24 +1,24 @@
 module.exports = {
-  type: "object",
+  type: 'object',
   properties: {
     url: {
-      type: "string",
-      description: "URL of the image in its original size",
-      format: "uri"
+      type: 'string',
+      description: 'URL of the image in its original size',
+      format: 'uri'
     },
     dimensions: {
-      type: "object",
-      description: "Dimensions of the original image",
+      type: 'object',
+      description: 'Dimensions of the original image',
       properties: {
-        w: { type: "number" },
-        h: { type: "number" }
+        w: { type: 'number' },
+        h: { type: 'number' }
       }
     },
     label: {
-      type: "string",
+      type: 'string',
       description:
-        "Custom label that can be used, for example, as an image description"
+        'Custom label that can be used, for example, as an image description'
     }
   },
-  required: ["url", "dimensions"]
+  required: ['url', 'dimensions']
 };

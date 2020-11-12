@@ -1,17 +1,17 @@
 module.exports = {
-  type: "object",
+  type: 'object',
   properties: {
     type: {
-      type: "string",
-      description: "String with value centPrecision",
-      enum: ["highPrecision"]
+      type: 'string',
+      description: 'String with value centPrecision',
+      enum: ['highPrecision']
     },
     currencyCode: {
-      type: "string",
-      description: "The currency code compliant to ISO 4217"
+      type: 'string',
+      description: 'The currency code compliant to ISO 4217'
     },
     centAmount: {
-      type: "number",
+      type: 'number',
       description: `The amount in cents (the smallest indivisible unit of the currency). 
          In order to calculate the real amount, the operation is amount = (centAmount / 10^fractionDigits)
            Example: 
@@ -19,7 +19,7 @@ module.exports = {
             CLP -> {centAmount = 100; fractionDigits = 0} => 100 CLP`
     },
     preciseAmount: {
-      type: "number",
+      type: 'number',
       description: `The amount in 1 / (10 * fractionDigits) of a currency. Here are some examples:
         | preciseAmount | fractionDigits  | result    |
         | 123456        | 3               | 123.456   |
@@ -27,10 +27,10 @@ module.exports = {
         | 123456        | 7               | 0.0123456 |`
     },
     fractionDigits: {
-      type: "number",
+      type: 'number',
       description:
-        "For money type it’s equal to the number of default fraction digits for a currency, can be omitted since it’s always equal to currency fraction digits"
+        'For money type it’s equal to the number of default fraction digits for a currency, can be omitted since it’s always equal to currency fraction digits'
     }
   },
-  required: ["type", "currencyCode", "centAmount", "fractionDigits"]
+  required: ['type', 'currencyCode', 'centAmount', 'fractionDigits']
 };

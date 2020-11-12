@@ -1,16 +1,16 @@
-const Ajv = require("ajv");
-const schema = require("../location");
+const Ajv = require('ajv');
+const schema = require('../location');
 
-describe("location", () => {
+describe('location', () => {
   let ajv;
   let data;
   let valid;
 
-  describe("when success", () => {
-    describe("when only required fields", () => {
+  describe('when success', () => {
+    describe('when only required fields', () => {
       beforeAll(() => {
         data = {
-          country: "ES"
+          country: 'ES'
         };
         ajv = Ajv();
       });
@@ -19,16 +19,16 @@ describe("location", () => {
         valid = ajv.validate(schema, data);
       });
 
-      test("should be valid", () => {
+      test('should be valid', () => {
         expect(valid).toBeTruthy();
       });
     });
 
-    describe("when all fields", () => {
+    describe('when all fields', () => {
       beforeAll(() => {
         data = {
-          country: "ES",
-          state: "NY"
+          country: 'ES',
+          state: 'NY'
         };
         ajv = Ajv();
       });
@@ -37,17 +37,17 @@ describe("location", () => {
         valid = ajv.validate(schema, data);
       });
 
-      test("should be valid", () => {
+      test('should be valid', () => {
         expect(valid).toBeTruthy();
       });
     });
   });
 
-  describe("when error", () => {
-    describe("when missing country property", () => {
+  describe('when error', () => {
+    describe('when missing country property', () => {
       beforeAll(() => {
         data = {
-          state: "NY"
+          state: 'NY'
         };
         ajv = Ajv();
       });
@@ -56,7 +56,7 @@ describe("location", () => {
         valid = ajv.validate(schema, data);
       });
 
-      test("should not be valid", () => {
+      test('should not be valid', () => {
         expect(valid).toBeFalsy();
       });
     });

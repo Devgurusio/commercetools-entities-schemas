@@ -1,17 +1,17 @@
-const Ajv = require("ajv");
-const schema = require("../httpDestinationAuthentication");
+const Ajv = require('ajv');
+const schema = require('../httpDestinationAuthentication');
 
-describe("httpDestinationAuthentication", () => {
+describe('httpDestinationAuthentication', () => {
   let ajv;
   let data;
   let valid;
 
-  describe("when success", () => {
-    describe("when httpDestinationAuthentication is authorizationHeader", () => {
+  describe('when success', () => {
+    describe('when httpDestinationAuthentication is authorizationHeader', () => {
       beforeAll(() => {
         data = {
-          type: "AuthorizationHeader",
-          headerValue: "headerValue"
+          type: 'AuthorizationHeader',
+          headerValue: 'headerValue'
         };
         ajv = Ajv();
       });
@@ -20,16 +20,16 @@ describe("httpDestinationAuthentication", () => {
         valid = ajv.validate(schema, data);
       });
 
-      test("should be valid", () => {
+      test('should be valid', () => {
         expect(valid).toBeTruthy();
       });
     });
 
-    describe("when httpDestinationAuthentication is azureFunctionsAuthentication", () => {
+    describe('when httpDestinationAuthentication is azureFunctionsAuthentication', () => {
       beforeAll(() => {
         data = {
-          type: "AzureFunctions",
-          key: "key"
+          type: 'AzureFunctions',
+          key: 'key'
         };
         ajv = Ajv();
       });
@@ -38,17 +38,17 @@ describe("httpDestinationAuthentication", () => {
         valid = ajv.validate(schema, data);
       });
 
-      test("should be valid", () => {
+      test('should be valid', () => {
         expect(valid).toBeTruthy();
       });
     });
   });
 
-  describe("when error", () => {
-    describe("when is not oneOf [authorizationHeader, azureFunctionsAuthentication]", () => {
+  describe('when error', () => {
+    describe('when is not oneOf [authorizationHeader, azureFunctionsAuthentication]', () => {
       beforeAll(() => {
         data = {
-          type: "invalidType"
+          type: 'invalidType'
         };
         ajv = Ajv();
       });
@@ -57,7 +57,7 @@ describe("httpDestinationAuthentication", () => {
         valid = ajv.validate(schema, data);
       });
 
-      test("should not be valid", () => {
+      test('should not be valid', () => {
         expect(valid).toBeFalsy();
       });
     });

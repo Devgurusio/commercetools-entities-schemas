@@ -1,18 +1,18 @@
 module.exports = {
-  type: "object",
+  type: 'object',
   description:
-    "AWS SNS can be used to push messages to AWS Lambda, HTTP endpoints (webhooks) or fan-out messages to SQS queues",
+    'AWS SNS can be used to push messages to AWS Lambda, HTTP endpoints (webhooks) or fan-out messages to SQS queues',
   properties: {
     type: {
-      type: "string",
-      enum: ["SNS"]
+      type: 'string',
+      enum: ['SNS']
     },
-    topicArn: { type: "string" },
-    accessKey: { type: "string" },
+    topicArn: { type: 'string' },
+    accessKey: { type: 'string' },
     accessSecret: {
-      type: "string",
-      description: "Partially hidden on retrieval"
+      type: 'string',
+      description: 'Partially hidden on retrieval'
     }
   },
-  required: ["type", "topicArn", "accessKey", "accessSecret"]
+  required: ['type', 'topicArn', 'accessKey', 'accessSecret']
 };

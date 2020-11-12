@@ -1,15 +1,15 @@
-const Ajv = require("ajv");
-const schema = require("../cartClassification");
+const Ajv = require('ajv');
+const schema = require('../cartClassification');
 
-describe("cartClassification", () => {
+describe('cartClassification', () => {
   let ajv;
   let data;
   let valid;
 
-  describe("when success", () => {
-    describe("when only required fields", () => {
+  describe('when success', () => {
+    describe('when only required fields', () => {
       beforeAll(() => {
-        data = { type: "CartClassification" };
+        data = { type: 'CartClassification' };
         ajv = Ajv();
       });
 
@@ -17,21 +17,21 @@ describe("cartClassification", () => {
         valid = ajv.validate(schema, data);
       });
 
-      test("should be valid", () => {
+      test('should be valid', () => {
         expect(valid).toBeTruthy();
       });
     });
 
-    describe("when all fields", () => {
+    describe('when all fields', () => {
       beforeAll(() => {
         data = {
-          type: "CartClassification",
+          type: 'CartClassification',
           values: [
             {
-              key: "key",
+              key: 'key',
               label: {
-                en: "Key label",
-                es: "Etiquieta"
+                en: 'Key label',
+                es: 'Etiquieta'
               }
             }
           ]
@@ -43,22 +43,22 @@ describe("cartClassification", () => {
         valid = ajv.validate(schema, data);
       });
 
-      test("should be valid", () => {
+      test('should be valid', () => {
         expect(valid).toBeTruthy();
       });
     });
   });
 
-  describe("when error", () => {
-    describe("when missing type property", () => {
+  describe('when error', () => {
+    describe('when missing type property', () => {
       beforeAll(() => {
         data = {
           values: [
             {
-              key: "key",
+              key: 'key',
               label: {
-                en: "Key label",
-                es: "Etiquieta"
+                en: 'Key label',
+                es: 'Etiquieta'
               }
             }
           ]
@@ -70,21 +70,21 @@ describe("cartClassification", () => {
         valid = ajv.validate(schema, data);
       });
 
-      test("should not be valid", () => {
+      test('should not be valid', () => {
         expect(valid).toBeFalsy();
       });
     });
 
-    describe("when type is not allowed value", () => {
+    describe('when type is not allowed value', () => {
       beforeAll(() => {
         data = {
-          type: "notAllowedValue",
+          type: 'notAllowedValue',
           values: [
             {
-              key: "key",
+              key: 'key',
               label: {
-                en: "Key label",
-                es: "Etiquieta"
+                en: 'Key label',
+                es: 'Etiquieta'
               }
             }
           ]
@@ -96,7 +96,7 @@ describe("cartClassification", () => {
         valid = ajv.validate(schema, data);
       });
 
-      test("should not be valid", () => {
+      test('should not be valid', () => {
         expect(valid).toBeFalsy();
       });
     });

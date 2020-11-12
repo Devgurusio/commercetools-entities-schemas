@@ -1,15 +1,15 @@
-const Ajv = require("ajv");
-const schema = require("../customerGroupDraft");
+const Ajv = require('ajv');
+const schema = require('../customerGroupDraft');
 
-describe("customerGroupDraft", () => {
+describe('customerGroupDraft', () => {
   let ajv;
   let data;
   let valid;
 
-  describe("when success", () => {
-    describe("when only required fields", () => {
+  describe('when success', () => {
+    describe('when only required fields', () => {
       beforeAll(() => {
-        data = { groupName: "groupName" };
+        data = { groupName: 'groupName' };
         ajv = Ajv();
       });
 
@@ -17,23 +17,23 @@ describe("customerGroupDraft", () => {
         valid = ajv.validate(schema, data);
       });
 
-      test("should be valid", () => {
+      test('should be valid', () => {
         expect(valid).toBeTruthy();
       });
     });
 
-    describe("when all fields", () => {
+    describe('when all fields', () => {
       beforeAll(() => {
         data = {
-          key: "key",
-          groupName: "groupName",
+          key: 'key',
+          groupName: 'groupName',
           custom: {
             type: {
-              typeId: "product",
-              id: "f74b4e9f-2c01-4178-9ba5-bf6d6167a597"
+              typeId: 'product',
+              id: 'f74b4e9f-2c01-4178-9ba5-bf6d6167a597'
             },
             fields: {
-              description: "my description"
+              description: 'my description'
             }
           }
         };
@@ -44,24 +44,24 @@ describe("customerGroupDraft", () => {
         valid = ajv.validate(schema, data);
       });
 
-      test("should be valid", () => {
+      test('should be valid', () => {
         expect(valid).toBeTruthy();
       });
     });
   });
 
-  describe("when error", () => {
-    describe("when missing groupName property", () => {
+  describe('when error', () => {
+    describe('when missing groupName property', () => {
       beforeAll(() => {
         data = {
-          key: "key",
+          key: 'key',
           custom: {
             type: {
-              typeId: "product",
-              id: "f74b4e9f-2c01-4178-9ba5-bf6d6167a597"
+              typeId: 'product',
+              id: 'f74b4e9f-2c01-4178-9ba5-bf6d6167a597'
             },
             fields: {
-              description: "my description"
+              description: 'my description'
             }
           }
         };
@@ -72,7 +72,7 @@ describe("customerGroupDraft", () => {
         valid = ajv.validate(schema, data);
       });
 
-      test("should not be valid", () => {
+      test('should not be valid', () => {
         expect(valid).toBeFalsy();
       });
     });

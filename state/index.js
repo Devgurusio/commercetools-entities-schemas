@@ -1,5 +1,5 @@
-const state = require("./state");
-const stateDraft = require("./stateDraft");
+const state = require('./state');
+const stateDraft = require('./stateDraft');
 
 module.exports = {
   state,

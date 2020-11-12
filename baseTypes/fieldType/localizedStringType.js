@@ -1,7 +1,7 @@
 module.exports = {
-  type: "object",
+  type: 'object',
   properties: {
-    name: { type: "string", enum: ["LocalizedString"] }
+    name: { type: 'string', enum: ['LocalizedString'] }
   },
-  required: ["name"]
+  required: ['name']
 };

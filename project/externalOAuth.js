@@ -1,16 +1,16 @@
 module.exports = {
-  type: "object",
+  type: 'object',
   description:
-    "Represents a RFC 7662 compliant OAuth2 Token Introspection endpoint",
+    'Represents a RFC 7662 compliant OAuth2 Token Introspection endpoint',
   properties: {
     url: {
-      type: "string",
-      format: "uri"
+      type: 'string',
+      format: 'uri'
     },
     authorizationHeader: {
-      type: "string",
-      description: "Partially hidden on retrieval"
+      type: 'string',
+      description: 'Partially hidden on retrieval'
     }
   },
-  required: ["url", "authorizationHeader"]
+  required: ['url', 'authorizationHeader']
 };

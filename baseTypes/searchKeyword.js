@@ -1,11 +1,11 @@
-const suggestTokenizer = require("./suggestTokenizer");
+const suggestTokenizer = require('./suggestTokenizer');
 
 module.exports = {
-  type: "object",
+  type: 'object',
   properties: {
     text: {
-      type: "string",
-      description: "Text to return in the result of a suggest query"
+      type: 'string',
+      description: 'Text to return in the result of a suggest query'
     },
     suggestTokenizer: {
       ...suggestTokenizer,
@@ -13,5 +13,5 @@ module.exports = {
         If no tokenizer is defined, the text is used as as single token`
     }
   },
-  required: ["text"]
+  required: ['text']
 };

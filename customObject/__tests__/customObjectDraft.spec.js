@@ -1,18 +1,18 @@
-const Ajv = require("ajv");
-const schema = require("../customObjectDraft");
+const Ajv = require('ajv');
+const schema = require('../customObjectDraft');
 
-describe("customObjectDraft", () => {
+describe('customObjectDraft', () => {
   let ajv;
   let data;
   let valid;
 
-  describe("when success", () => {
-    describe("when only required fields", () => {
+  describe('when success', () => {
+    describe('when only required fields', () => {
       beforeAll(() => {
         data = {
-          container: "container",
-          key: "key",
-          value: { some: "value" }
+          container: 'container',
+          key: 'key',
+          value: { some: 'value' }
         };
         ajv = Ajv();
       });
@@ -21,17 +21,17 @@ describe("customObjectDraft", () => {
         valid = ajv.validate(schema, data);
       });
 
-      test("should be valid", () => {
+      test('should be valid', () => {
         expect(valid).toBeTruthy();
       });
     });
 
-    describe("when all fields", () => {
+    describe('when all fields', () => {
       beforeAll(() => {
         data = {
-          container: "container",
-          key: "key",
-          value: { some: "value" },
+          container: 'container',
+          key: 'key',
+          value: { some: 'value' },
           version: 1
         };
         ajv = Ajv();
@@ -41,18 +41,18 @@ describe("customObjectDraft", () => {
         valid = ajv.validate(schema, data);
       });
 
-      test("should be valid", () => {
+      test('should be valid', () => {
         expect(valid).toBeTruthy();
       });
     });
   });
 
-  describe("when error", () => {
-    describe("when missing container property", () => {
+  describe('when error', () => {
+    describe('when missing container property', () => {
       beforeAll(() => {
         data = {
-          key: "key",
-          value: { some: "value" },
+          key: 'key',
+          value: { some: 'value' },
           version: 1
         };
         ajv = Ajv();
@@ -62,16 +62,16 @@ describe("customObjectDraft", () => {
         valid = ajv.validate(schema, data);
       });
 
-      test("should not be valid", () => {
+      test('should not be valid', () => {
         expect(valid).toBeFalsy();
       });
     });
 
-    describe("when missing container property", () => {
+    describe('when missing container property', () => {
       beforeAll(() => {
         data = {
-          container: "container",
-          value: { some: "value" },
+          container: 'container',
+          value: { some: 'value' },
           version: 1
         };
         ajv = Ajv();
@@ -81,16 +81,16 @@ describe("customObjectDraft", () => {
         valid = ajv.validate(schema, data);
       });
 
-      test("should not be valid", () => {
+      test('should not be valid', () => {
         expect(valid).toBeFalsy();
       });
     });
 
-    describe("when missing value property", () => {
+    describe('when missing value property', () => {
       beforeAll(() => {
         data = {
-          container: "container",
-          key: "key",
+          container: 'container',
+          key: 'key',
           version: 1
         };
         ajv = Ajv();
@@ -100,7 +100,7 @@ describe("customObjectDraft", () => {
         valid = ajv.validate(schema, data);
       });
 
-      test("should not be valid", () => {
+      test('should not be valid', () => {
         expect(valid).toBeFalsy();
       });
     });

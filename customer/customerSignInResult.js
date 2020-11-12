@@ -1,14 +1,14 @@
-const customer = require("./customer");
+const customer = require('./customer');
 
 module.exports = {
-  type: "object",
+  type: 'object',
   properties: {
     customer,
     cart: {
-      type: "object",
+      type: 'object',
       description:
-        "A cart that is associated to the customer. Empty if the customer does not have a cart yet"
+        'A cart that is associated to the customer. Empty if the customer does not have a cart yet'
     }
   },
-  required: ["customer"]
+  required: ['customer']
 };

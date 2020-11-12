@@ -1,15 +1,15 @@
-const Ajv = require("ajv");
-const schema = require("../attributeConstraint");
+const Ajv = require('ajv');
+const schema = require('../attributeConstraint');
 
-describe("attributeConstraint", () => {
+describe('attributeConstraint', () => {
   let ajv;
   let data;
   let valid;
 
-  describe("when success", () => {
+  describe('when success', () => {
     describe('when attribute constraint is "None"', () => {
       beforeAll(() => {
-        data = "None";
+        data = 'None';
         ajv = Ajv();
       });
 
@@ -17,14 +17,14 @@ describe("attributeConstraint", () => {
         valid = ajv.validate(schema, data);
       });
 
-      test("should be valid", () => {
+      test('should be valid', () => {
         expect(valid).toBeTruthy();
       });
     });
 
     describe('when attribute constraint is "Unique"', () => {
       beforeAll(() => {
-        data = "Unique";
+        data = 'Unique';
         ajv = Ajv();
       });
 
@@ -32,14 +32,14 @@ describe("attributeConstraint", () => {
         valid = ajv.validate(schema, data);
       });
 
-      test("should be valid", () => {
+      test('should be valid', () => {
         expect(valid).toBeTruthy();
       });
     });
 
     describe('when attribute constraint is "CombinationUnique"', () => {
       beforeAll(() => {
-        data = "CombinationUnique";
+        data = 'CombinationUnique';
         ajv = Ajv();
       });
 
@@ -47,14 +47,14 @@ describe("attributeConstraint", () => {
         valid = ajv.validate(schema, data);
       });
 
-      test("should be valid", () => {
+      test('should be valid', () => {
         expect(valid).toBeTruthy();
       });
     });
 
     describe('when attribute constraint is "SameForAll"', () => {
       beforeAll(() => {
-        data = "SameForAll";
+        data = 'SameForAll';
         ajv = Ajv();
       });
 
@@ -62,16 +62,16 @@ describe("attributeConstraint", () => {
         valid = ajv.validate(schema, data);
       });
 
-      test("should be valid", () => {
+      test('should be valid', () => {
         expect(valid).toBeTruthy();
       });
     });
   });
 
-  describe("when error", () => {
-    describe("when attribute constraint is not an allowed value", () => {
+  describe('when error', () => {
+    describe('when attribute constraint is not an allowed value', () => {
       beforeAll(() => {
-        data = "NonValidConstraint";
+        data = 'NonValidConstraint';
         ajv = Ajv();
       });
 
@@ -79,7 +79,7 @@ describe("attributeConstraint", () => {
         valid = ajv.validate(schema, data);
       });
 
-      test("should not be valid", () => {
+      test('should not be valid', () => {
         expect(valid).toBeFalsy();
       });
     });

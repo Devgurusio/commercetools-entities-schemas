@@ -1,29 +1,29 @@
-const Ajv = require("ajv");
-const schema = require("../searchKeywords");
+const Ajv = require('ajv');
+const schema = require('../searchKeywords');
 
-describe("searchKeywords", () => {
+describe('searchKeywords', () => {
   let ajv;
   let data;
   let valid;
 
-  describe("when success", () => {
+  describe('when success', () => {
     beforeAll(() => {
       data = {
         en: [
           {
-            text: "text",
+            text: 'text',
             suggestTokenizer: {
-              type: "whitespace"
+              type: 'whitespace'
             }
           },
           {
-            text: "text2",
+            text: 'text2',
             suggestTokenizer: {
-              type: "custom"
+              type: 'custom'
             }
           },
           {
-            text: "text3"
+            text: 'text3'
           }
         ]
       };
@@ -34,7 +34,7 @@ describe("searchKeywords", () => {
       valid = ajv.validate(schema, data);
     });
 
-    test("should be valid", () => {
+    test('should be valid', () => {
       expect(valid).toBeTruthy();
     });
   });

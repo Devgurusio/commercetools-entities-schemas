@@ -1,16 +1,16 @@
-const Ajv = require("ajv");
-const schema = require("../nestedType");
+const Ajv = require('ajv');
+const schema = require('../nestedType');
 
-describe("nestedType", () => {
+describe('nestedType', () => {
   let ajv;
   let data;
   let valid;
 
-  describe("when success", () => {
+  describe('when success', () => {
     beforeAll(() => {
       data = {
-        name: "nested",
-        typeReference: "cart"
+        name: 'nested',
+        typeReference: 'cart'
       };
       ajv = Ajv();
     });
@@ -19,15 +19,15 @@ describe("nestedType", () => {
       valid = ajv.validate(schema, data);
     });
 
-    test("should be valid", () => {
+    test('should be valid', () => {
       expect(valid).toBeTruthy();
     });
   });
 
-  describe("when error", () => {
-    describe("when missing name property", () => {
+  describe('when error', () => {
+    describe('when missing name property', () => {
       beforeAll(() => {
-        data = { typeReference: "cart" };
+        data = { typeReference: 'cart' };
         ajv = Ajv();
       });
 
@@ -35,16 +35,16 @@ describe("nestedType", () => {
         valid = ajv.validate(schema, data);
       });
 
-      test("should be valid", () => {
+      test('should be valid', () => {
         expect(valid).toBeFalsy();
       });
     });
 
-    describe("when name property is not an allowed one", () => {
+    describe('when name property is not an allowed one', () => {
       beforeAll(() => {
         data = {
-          name: "NotAllowedName",
-          typeReference: "cart"
+          name: 'NotAllowedName',
+          typeReference: 'cart'
         };
         ajv = Ajv();
       });
@@ -53,14 +53,14 @@ describe("nestedType", () => {
         valid = ajv.validate(schema, data);
       });
 
-      test("should be valid", () => {
+      test('should be valid', () => {
         expect(valid).toBeFalsy();
       });
     });
 
-    describe("when missing typeReference property", () => {
+    describe('when missing typeReference property', () => {
       beforeAll(() => {
-        data = { name: "nested" };
+        data = { name: 'nested' };
         ajv = Ajv();
       });
 
@@ -68,7 +68,7 @@ describe("nestedType", () => {
         valid = ajv.validate(schema, data);
       });
 
-      test("should be valid", () => {
+      test('should be valid', () => {
         expect(valid).toBeFalsy();
       });
     });

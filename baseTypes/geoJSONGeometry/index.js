@@ -1,4 +1,4 @@
-const point = require("./point");
+const point = require('./point');
 
 module.exports = {
   oneOf: [point]

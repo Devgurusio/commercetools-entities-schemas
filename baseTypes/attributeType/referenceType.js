@@ -1,9 +1,9 @@
 module.exports = {
-  type: "object",
+  type: 'object',
   properties: {
-    name: { type: "string", enum: ["reference"] },
+    name: { type: 'string', enum: ['reference'] },
     referenceTypeId: {
-      type: "string",
+      type: 'string',
       description: `The name of the resource type that the value should reference. Supported values are:
         - "cart"
         - "category"
@@ -19,5 +19,5 @@ module.exports = {
         - "zone"`
     }
   },
-  required: ["name", "referenceTypeId"]
+  required: ['name', 'referenceTypeId']
 };

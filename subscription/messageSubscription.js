@@ -1,8 +1,8 @@
 module.exports = {
-  type: "object",
+  type: 'object',
   properties: {
-    resourceTypeId: { type: "string" },
-    types: { type: "array", items: { type: "string" } }
+    resourceTypeId: { type: 'string' },
+    types: { type: 'array', items: { type: 'string' } }
   },
-  required: ["resourceTypeId"]
+  required: ['resourceTypeId']
 };

@@ -1,12 +1,12 @@
-const dateTime = require("../baseTypes/dateTime");
-const customFieldsDraft = require("../baseTypes/customFieldsDraft");
+const dateTime = require('../baseTypes/dateTime');
+const customFieldsDraft = require('../baseTypes/customFieldsDraft');
 
 const lineItemDraft = {
-  type: "object",
+  type: 'object',
   properties: {
     quantity: {
-      type: "number",
-      description: "Defaults to 1"
+      type: 'number',
+      description: 'Defaults to 1'
     },
     addedAt: dateTime,
     custom: customFieldsDraft
@@ -18,16 +18,16 @@ const selectionByIDs = {
   properties: {
     ...lineItemDraft.properties,
     productId: {
-      type: "string",
-      description: "ID of an existing Product"
+      type: 'string',
+      description: 'ID of an existing Product'
     },
     variantId: {
-      type: "number",
+      type: 'number',
       description:
-        "If present it defines an existing ProductVariant of the product. If absent it refers to the current master variant of the product"
+        'If present it defines an existing ProductVariant of the product. If absent it refers to the current master variant of the product'
     }
   },
-  required: ["productId"]
+  required: ['productId']
 };
 
 const selectionBySKU = {
@@ -35,11 +35,11 @@ const selectionBySKU = {
   properties: {
     ...lineItemDraft.properties,
     sku: {
-      type: "string",
-      description: "SKU of an existing ProductVariant"
+      type: 'string',
+      description: 'SKU of an existing ProductVariant'
     }
   },
-  required: ["sku"]
+  required: ['sku']
 };
 
 module.exports = {

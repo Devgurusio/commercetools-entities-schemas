@@ -1,15 +1,15 @@
-const Ajv = require("ajv");
-const schema = require("../transactionType");
+const Ajv = require('ajv');
+const schema = require('../transactionType');
 
-describe("transactionType", () => {
+describe('transactionType', () => {
   let ajv;
   let data;
   let valid;
 
-  describe("when success", () => {
-    describe("when Authorization", () => {
+  describe('when success', () => {
+    describe('when Authorization', () => {
       beforeAll(() => {
-        data = "Authorization";
+        data = 'Authorization';
         ajv = Ajv();
       });
 
@@ -17,14 +17,14 @@ describe("transactionType", () => {
         valid = ajv.validate(schema, data);
       });
 
-      test("should be valid", () => {
+      test('should be valid', () => {
         expect(valid).toBeTruthy();
       });
     });
 
-    describe("when CancelAuthorization", () => {
+    describe('when CancelAuthorization', () => {
       beforeAll(() => {
-        data = "CancelAuthorization";
+        data = 'CancelAuthorization';
         ajv = Ajv();
       });
 
@@ -32,14 +32,14 @@ describe("transactionType", () => {
         valid = ajv.validate(schema, data);
       });
 
-      test("should be valid", () => {
+      test('should be valid', () => {
         expect(valid).toBeTruthy();
       });
     });
 
-    describe("when SuChargeccess", () => {
+    describe('when SuChargeccess', () => {
       beforeAll(() => {
-        data = "SuChargeccess";
+        data = 'SuChargeccess';
         ajv = Ajv();
       });
 
@@ -47,14 +47,14 @@ describe("transactionType", () => {
         valid = ajv.validate(schema, data);
       });
 
-      test("should be valid", () => {
+      test('should be valid', () => {
         expect(valid).toBeTruthy();
       });
     });
 
-    describe("when Refund", () => {
+    describe('when Refund', () => {
       beforeAll(() => {
-        data = "Refund";
+        data = 'Refund';
         ajv = Ajv();
       });
 
@@ -62,14 +62,14 @@ describe("transactionType", () => {
         valid = ajv.validate(schema, data);
       });
 
-      test("should be valid", () => {
+      test('should be valid', () => {
         expect(valid).toBeTruthy();
       });
     });
 
-    describe("when Chargeback", () => {
+    describe('when Chargeback', () => {
       beforeAll(() => {
-        data = "Chargeback";
+        data = 'Chargeback';
         ajv = Ajv();
       });
 
@@ -77,16 +77,16 @@ describe("transactionType", () => {
         valid = ajv.validate(schema, data);
       });
 
-      test("should be valid", () => {
+      test('should be valid', () => {
         expect(valid).toBeTruthy();
       });
     });
   });
 
-  describe("when error", () => {
-    describe("when value is not an allowed one", () => {
+  describe('when error', () => {
+    describe('when value is not an allowed one', () => {
       beforeAll(() => {
-        data = "nonAllowedValue";
+        data = 'nonAllowedValue';
         ajv = Ajv();
       });
 
@@ -94,7 +94,7 @@ describe("transactionType", () => {
         valid = ajv.validate(schema, data);
       });
 
-      test("should be valid", () => {
+      test('should be valid', () => {
         expect(valid).toBeFalsy();
       });
     });

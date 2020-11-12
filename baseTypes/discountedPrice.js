@@ -1,11 +1,11 @@
-const money = require("./money");
-const reference = require("./reference");
+const money = require('./money');
+const reference = require('./reference');
 
 module.exports = {
-  type: "object",
+  type: 'object',
   properties: {
     value: money,
     discount: reference
   },
-  required: ["value", "discount"]
+  required: ['value', 'discount']
 };

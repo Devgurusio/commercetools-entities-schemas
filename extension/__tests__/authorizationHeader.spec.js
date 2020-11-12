@@ -1,16 +1,16 @@
-const Ajv = require("ajv");
-const schema = require("../authorizationHeader");
+const Ajv = require('ajv');
+const schema = require('../authorizationHeader');
 
-describe("authorizationHeader", () => {
+describe('authorizationHeader', () => {
   let ajv;
   let data;
   let valid;
 
-  describe("when success", () => {
+  describe('when success', () => {
     beforeAll(() => {
       data = {
-        type: "AuthorizationHeader",
-        headerValue: "headerValue"
+        type: 'AuthorizationHeader',
+        headerValue: 'headerValue'
       };
       ajv = Ajv();
     });
@@ -19,16 +19,16 @@ describe("authorizationHeader", () => {
       valid = ajv.validate(schema, data);
     });
 
-    test("should be valid", () => {
+    test('should be valid', () => {
       expect(valid).toBeTruthy();
     });
   });
 
-  describe("when error", () => {
-    describe("when missing type property", () => {
+  describe('when error', () => {
+    describe('when missing type property', () => {
       beforeAll(() => {
         data = {
-          headerValue: "headerValue"
+          headerValue: 'headerValue'
         };
         ajv = Ajv();
       });
@@ -37,15 +37,15 @@ describe("authorizationHeader", () => {
         valid = ajv.validate(schema, data);
       });
 
-      test("should not be valid", () => {
+      test('should not be valid', () => {
         expect(valid).toBeFalsy();
       });
     });
 
-    describe("when missing headerValue", () => {
+    describe('when missing headerValue', () => {
       beforeAll(() => {
         data = {
-          type: "AuthorizationHeader"
+          type: 'AuthorizationHeader'
         };
         ajv = Ajv();
       });
@@ -54,16 +54,16 @@ describe("authorizationHeader", () => {
         valid = ajv.validate(schema, data);
       });
 
-      test("should not be valid", () => {
+      test('should not be valid', () => {
         expect(valid).toBeFalsy();
       });
     });
 
-    describe("when type is not valid", () => {
+    describe('when type is not valid', () => {
       beforeAll(() => {
         data = {
-          type: "invalidType",
-          headerValue: "headerValue"
+          type: 'invalidType',
+          headerValue: 'headerValue'
         };
         ajv = Ajv();
       });
@@ -72,7 +72,7 @@ describe("authorizationHeader", () => {
         valid = ajv.validate(schema, data);
       });
 
-      test("should not be valid", () => {
+      test('should not be valid', () => {
         expect(valid).toBeFalsy();
       });
     });

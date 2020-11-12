@@ -1,20 +1,20 @@
-const Ajv = require("ajv");
-const schema = require("../");
+const Ajv = require('ajv');
+const schema = require('../');
 
-describe("productDiscountValue", () => {
+describe('productDiscountValue', () => {
   let ajv;
   let data;
   let valid;
 
-  describe("when success", () => {
-    describe("when productDiscountValue is absolute", () => {
+  describe('when success', () => {
+    describe('when productDiscountValue is absolute', () => {
       beforeAll(() => {
         data = {
-          type: "absolute",
+          type: 'absolute',
           money: [
             {
-              type: "centPrecision",
-              currencyCode: "EUR",
+              type: 'centPrecision',
+              currencyCode: 'EUR',
               centAmount: 390,
               fractionDigits: 2
             }
@@ -27,15 +27,15 @@ describe("productDiscountValue", () => {
         valid = ajv.validate(schema, data);
       });
 
-      test("should be valid", () => {
+      test('should be valid', () => {
         expect(valid).toBeTruthy();
       });
     });
 
-    describe("when productDiscountValue is external", () => {
+    describe('when productDiscountValue is external', () => {
       beforeAll(() => {
         data = {
-          type: "external"
+          type: 'external'
         };
         ajv = Ajv();
       });
@@ -44,15 +44,15 @@ describe("productDiscountValue", () => {
         valid = ajv.validate(schema, data);
       });
 
-      test("should be valid", () => {
+      test('should be valid', () => {
         expect(valid).toBeTruthy();
       });
     });
 
-    describe("when productDiscountValue is relative", () => {
+    describe('when productDiscountValue is relative', () => {
       beforeAll(() => {
         data = {
-          type: "relative",
+          type: 'relative',
           permyriad: 1000
         };
         ajv = Ajv();
@@ -62,17 +62,17 @@ describe("productDiscountValue", () => {
         valid = ajv.validate(schema, data);
       });
 
-      test("should be valid", () => {
+      test('should be valid', () => {
         expect(valid).toBeTruthy();
       });
     });
   });
 
-  describe("when error", () => {
-    describe("when productDiscountValue is not oneOf [absolute, external, relative]", () => {
+  describe('when error', () => {
+    describe('when productDiscountValue is not oneOf [absolute, external, relative]', () => {
       beforeAll(() => {
         data = {
-          type: "invalidType"
+          type: 'invalidType'
         };
         ajv = Ajv();
       });
@@ -81,7 +81,7 @@ describe("productDiscountValue", () => {
         valid = ajv.validate(schema, data);
       });
 
-      test("should not be valid", () => {
+      test('should not be valid', () => {
         expect(valid).toBeFalsy();
       });
     });

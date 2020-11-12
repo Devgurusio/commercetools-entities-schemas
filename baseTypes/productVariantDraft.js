@@ -1,38 +1,38 @@
-const assetDraft = require("./assetDraft");
-const attribute = require("./attribute");
-const image = require("./image");
-const key = require("./key");
-const priceDraft = require("./priceDraft");
+const assetDraft = require('./assetDraft');
+const attribute = require('./attribute');
+const image = require('./image');
+const key = require('./key');
+const priceDraft = require('./priceDraft');
 
 module.exports = {
-  type: "object",
+  type: 'object',
   properties: {
     sku: {
-      type: "string",
-      description: "The unique SKU of the variant"
+      type: 'string',
+      description: 'The unique SKU of the variant'
     },
     key: {
       ...key,
-      description: "User-specific unique identifier for the variant"
+      description: 'User-specific unique identifier for the variant'
     },
     prices: {
-      type: "array",
+      type: 'array',
       description:
-        "The prices of the variant. The prices does not contain two prices for the same price scope (same currency, country, customer group and channel)",
+        'The prices of the variant. The prices does not contain two prices for the same price scope (same currency, country, customer group and channel)',
       items: priceDraft
     },
     images: {
-      type: "array",
+      type: 'array',
       description:
-        "External images for the variant draft. You can also upload images to use the commercetools platform’s Content Delivery Network",
+        'External images for the variant draft. You can also upload images to use the commercetools platform’s Content Delivery Network',
       items: image
     },
     assets: {
-      type: "array",
+      type: 'array',
       items: assetDraft
     },
     attributes: {
-      type: "array",
+      type: 'array',
       description: `The AttributeType determines the format for the attribute value to be provided, in particular:
         - for EnumType and LocalizableEnumType attributes:
           - either only the key of the EnumValue or of the LocalizedEnumValue is to be used as value

@@ -1,12 +1,12 @@
-const Ajv = require("ajv");
-const schema = require("../assetDimensions");
+const Ajv = require('ajv');
+const schema = require('../assetDimensions');
 
-describe("assetDimensions", () => {
+describe('assetDimensions', () => {
   let ajv;
   let data;
   let valid;
 
-  describe("when success", () => {
+  describe('when success', () => {
     beforeAll(() => {
       data = {
         w: 640,
@@ -19,13 +19,13 @@ describe("assetDimensions", () => {
       valid = ajv.validate(schema, data);
     });
 
-    test("should be valid", () => {
+    test('should be valid', () => {
       expect(valid).toBeTruthy();
     });
   });
 
-  describe("when error", () => {
-    describe("when missing w property", () => {
+  describe('when error', () => {
+    describe('when missing w property', () => {
       beforeAll(() => {
         data = { h: 480 };
         ajv = Ajv();
@@ -35,12 +35,12 @@ describe("assetDimensions", () => {
         valid = ajv.validate(schema, data);
       });
 
-      test("should not be valid", () => {
+      test('should not be valid', () => {
         expect(valid).toBeFalsy();
       });
     });
 
-    describe("when missing h property", () => {
+    describe('when missing h property', () => {
       beforeAll(() => {
         data = { w: 640 };
         ajv = Ajv();
@@ -50,7 +50,7 @@ describe("assetDimensions", () => {
         valid = ajv.validate(schema, data);
       });
 
-      test("should not be valid", () => {
+      test('should not be valid', () => {
         expect(valid).toBeFalsy();
       });
     });

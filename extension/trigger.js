@@ -1,13 +1,13 @@
 module.exports = {
-  type: "object",
+  type: 'object',
   properties: {
-    resourceTypeId: { type: "string" },
+    resourceTypeId: { type: 'string' },
     actions: {
-      type: "array",
+      type: 'array',
       items: {
-        type: "string"
+        type: 'string'
       }
     }
   },
-  required: ["resourceTypeId", "actions"]
+  required: ['resourceTypeId', 'actions']
 };

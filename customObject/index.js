@@ -1,5 +1,5 @@
-const customObject = require("./customObject");
-const customObjectDraft = require("./customObjectDraft");
+const customObject = require('./customObject');
+const customObjectDraft = require('./customObjectDraft');
 
 module.exports = {
   customObject,

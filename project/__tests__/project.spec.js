@@ -1,19 +1,19 @@
-const Ajv = require("ajv");
-const schema = require("../project");
+const Ajv = require('ajv');
+const schema = require('../project');
 
-describe("project", () => {
+describe('project', () => {
   let ajv;
   let data;
   let valid;
 
-  describe("when success", () => {
-    describe("when only required fields", () => {
+  describe('when success', () => {
+    describe('when only required fields', () => {
       beforeAll(() => {
         data = {
           version: 21,
-          key: "stylex-test",
-          createdAt: "2017-09-19T17:41:52.494Z",
-          name: "customizer-test"
+          key: 'stylex-test',
+          createdAt: '2017-09-19T17:41:52.494Z',
+          name: 'customizer-test'
         };
         ajv = Ajv();
       });
@@ -22,54 +22,54 @@ describe("project", () => {
         valid = ajv.validate(schema, data);
       });
 
-      test("should be valid", () => {
+      test('should be valid', () => {
         expect(valid).toBeTruthy();
       });
     });
 
-    describe("when all fields", () => {
+    describe('when all fields', () => {
       beforeAll(() => {
         data = {
           version: 21,
-          key: "stylex-test",
-          createdAt: "2017-09-19T17:41:52.494Z",
+          key: 'stylex-test',
+          createdAt: '2017-09-19T17:41:52.494Z',
           createdBy: {
             user: {
-              typeId: "user",
-              id: "d0cc3195-5d4c-4f35-90d7-950ba7b0034b"
+              typeId: 'user',
+              id: 'd0cc3195-5d4c-4f35-90d7-950ba7b0034b'
             }
           },
-          lastModifiedAt: "2017-09-19T17:41:52.494Z",
+          lastModifiedAt: '2017-09-19T17:41:52.494Z',
           lastModifiedBy: {
             user: {
-              typeId: "user",
-              id: "d0cc3195-5d4c-4f35-90d7-950ba7b0034b"
+              typeId: 'user',
+              id: 'd0cc3195-5d4c-4f35-90d7-950ba7b0034b'
             }
           },
-          name: "customizer-test",
-          countries: ["ES", "US"],
-          currencies: ["EUR", "USD", "CAD", "ARS"],
-          languages: ["en"],
-          trialUntil: "2090-01",
+          name: 'customizer-test',
+          countries: ['ES', 'US'],
+          currencies: ['EUR', 'USD', 'CAD', 'ARS'],
+          languages: ['en'],
+          trialUntil: '2090-01',
           messages: {
             enabled: true,
             deleteDaysAfterCreation: 15
           },
           shippingRateInputType: {
-            type: "CartClassification",
+            type: 'CartClassification',
             values: [
               {
-                key: "key",
+                key: 'key',
                 label: {
-                  en: "Key label",
-                  es: "Etiquieta"
+                  en: 'Key label',
+                  es: 'Etiquieta'
                 }
               }
             ]
           },
           externalOAuth: {
-            url: "http://localhost:3000",
-            authorizationHeader: "authorizationHeader"
+            url: 'http://localhost:3000',
+            authorizationHeader: 'authorizationHeader'
           }
         };
         ajv = Ajv();
@@ -79,55 +79,55 @@ describe("project", () => {
         valid = ajv.validate(schema, data);
       });
 
-      test("should be valid", () => {
+      test('should be valid', () => {
         expect(valid).toBeTruthy();
       });
     });
   });
 
-  describe("when error", () => {
-    describe("when missing version property", () => {
+  describe('when error', () => {
+    describe('when missing version property', () => {
       beforeAll(() => {
         data = {
-          key: "stylex-test",
-          createdAt: "2017-09-19T17:41:52.494Z",
+          key: 'stylex-test',
+          createdAt: '2017-09-19T17:41:52.494Z',
           createdBy: {
             user: {
-              typeId: "user",
-              id: "d0cc3195-5d4c-4f35-90d7-950ba7b0034b"
+              typeId: 'user',
+              id: 'd0cc3195-5d4c-4f35-90d7-950ba7b0034b'
             }
           },
-          lastModifiedAt: "2017-09-19T17:41:52.494Z",
+          lastModifiedAt: '2017-09-19T17:41:52.494Z',
           lastModifiedBy: {
             user: {
-              typeId: "user",
-              id: "d0cc3195-5d4c-4f35-90d7-950ba7b0034b"
+              typeId: 'user',
+              id: 'd0cc3195-5d4c-4f35-90d7-950ba7b0034b'
             }
           },
-          name: "customizer-test",
-          countries: ["ES", "US"],
-          currencies: ["EUR", "USD", "CAD", "ARS"],
-          languages: ["en"],
-          trialUntil: "2090-01",
+          name: 'customizer-test',
+          countries: ['ES', 'US'],
+          currencies: ['EUR', 'USD', 'CAD', 'ARS'],
+          languages: ['en'],
+          trialUntil: '2090-01',
           messages: {
             enabled: true,
             deleteDaysAfterCreation: 15
           },
           shippingRateInputType: {
-            type: "CartClassification",
+            type: 'CartClassification',
             values: [
               {
-                key: "key",
+                key: 'key',
                 label: {
-                  en: "Key label",
-                  es: "Etiquieta"
+                  en: 'Key label',
+                  es: 'Etiquieta'
                 }
               }
             ]
           },
           externalOAuth: {
-            url: "http://localhost:3000",
-            authorizationHeader: "authorizationHeader"
+            url: 'http://localhost:3000',
+            authorizationHeader: 'authorizationHeader'
           }
         };
         ajv = Ajv();
@@ -137,53 +137,53 @@ describe("project", () => {
         valid = ajv.validate(schema, data);
       });
 
-      test("should not be valid", () => {
+      test('should not be valid', () => {
         expect(valid).toBeFalsy();
       });
     });
 
-    describe("when missing key property", () => {
+    describe('when missing key property', () => {
       beforeAll(() => {
         data = {
           version: 21,
-          createdAt: "2017-09-19T17:41:52.494Z",
+          createdAt: '2017-09-19T17:41:52.494Z',
           createdBy: {
             user: {
-              typeId: "user",
-              id: "d0cc3195-5d4c-4f35-90d7-950ba7b0034b"
+              typeId: 'user',
+              id: 'd0cc3195-5d4c-4f35-90d7-950ba7b0034b'
             }
           },
-          lastModifiedAt: "2017-09-19T17:41:52.494Z",
+          lastModifiedAt: '2017-09-19T17:41:52.494Z',
           lastModifiedBy: {
             user: {
-              typeId: "user",
-              id: "d0cc3195-5d4c-4f35-90d7-950ba7b0034b"
+              typeId: 'user',
+              id: 'd0cc3195-5d4c-4f35-90d7-950ba7b0034b'
             }
           },
-          name: "customizer-test",
-          countries: ["ES", "US"],
-          currencies: ["EUR", "USD", "CAD", "ARS"],
-          languages: ["en"],
-          trialUntil: "2090-01",
+          name: 'customizer-test',
+          countries: ['ES', 'US'],
+          currencies: ['EUR', 'USD', 'CAD', 'ARS'],
+          languages: ['en'],
+          trialUntil: '2090-01',
           messages: {
             enabled: true,
             deleteDaysAfterCreation: 15
           },
           shippingRateInputType: {
-            type: "CartClassification",
+            type: 'CartClassification',
             values: [
               {
-                key: "key",
+                key: 'key',
                 label: {
-                  en: "Key label",
-                  es: "Etiquieta"
+                  en: 'Key label',
+                  es: 'Etiquieta'
                 }
               }
             ]
           },
           externalOAuth: {
-            url: "http://localhost:3000",
-            authorizationHeader: "authorizationHeader"
+            url: 'http://localhost:3000',
+            authorizationHeader: 'authorizationHeader'
           }
         };
         ajv = Ajv();
@@ -193,53 +193,53 @@ describe("project", () => {
         valid = ajv.validate(schema, data);
       });
 
-      test("should not be valid", () => {
+      test('should not be valid', () => {
         expect(valid).toBeFalsy();
       });
     });
 
-    describe("when missing createdAt property", () => {
+    describe('when missing createdAt property', () => {
       beforeAll(() => {
         data = {
           version: 21,
-          key: "stylex-test",
+          key: 'stylex-test',
           createdBy: {
             user: {
-              typeId: "user",
-              id: "d0cc3195-5d4c-4f35-90d7-950ba7b0034b"
+              typeId: 'user',
+              id: 'd0cc3195-5d4c-4f35-90d7-950ba7b0034b'
             }
           },
-          lastModifiedAt: "2017-09-19T17:41:52.494Z",
+          lastModifiedAt: '2017-09-19T17:41:52.494Z',
           lastModifiedBy: {
             user: {
-              typeId: "user",
-              id: "d0cc3195-5d4c-4f35-90d7-950ba7b0034b"
+              typeId: 'user',
+              id: 'd0cc3195-5d4c-4f35-90d7-950ba7b0034b'
             }
           },
-          name: "customizer-test",
-          countries: ["ES", "US"],
-          currencies: ["EUR", "USD", "CAD", "ARS"],
-          languages: ["en"],
-          trialUntil: "2090-01",
+          name: 'customizer-test',
+          countries: ['ES', 'US'],
+          currencies: ['EUR', 'USD', 'CAD', 'ARS'],
+          languages: ['en'],
+          trialUntil: '2090-01',
           messages: {
             enabled: true,
             deleteDaysAfterCreation: 15
           },
           shippingRateInputType: {
-            type: "CartClassification",
+            type: 'CartClassification',
             values: [
               {
-                key: "key",
+                key: 'key',
                 label: {
-                  en: "Key label",
-                  es: "Etiquieta"
+                  en: 'Key label',
+                  es: 'Etiquieta'
                 }
               }
             ]
           },
           externalOAuth: {
-            url: "http://localhost:3000",
-            authorizationHeader: "authorizationHeader"
+            url: 'http://localhost:3000',
+            authorizationHeader: 'authorizationHeader'
           }
         };
         ajv = Ajv();
@@ -249,53 +249,53 @@ describe("project", () => {
         valid = ajv.validate(schema, data);
       });
 
-      test("should not be valid", () => {
+      test('should not be valid', () => {
         expect(valid).toBeFalsy();
       });
     });
 
-    describe("when missing name property", () => {
+    describe('when missing name property', () => {
       beforeAll(() => {
         data = {
           version: 21,
-          key: "stylex-test",
-          createdAt: "2017-09-19T17:41:52.494Z",
+          key: 'stylex-test',
+          createdAt: '2017-09-19T17:41:52.494Z',
           createdBy: {
             user: {
-              typeId: "user",
-              id: "d0cc3195-5d4c-4f35-90d7-950ba7b0034b"
+              typeId: 'user',
+              id: 'd0cc3195-5d4c-4f35-90d7-950ba7b0034b'
             }
           },
-          lastModifiedAt: "2017-09-19T17:41:52.494Z",
+          lastModifiedAt: '2017-09-19T17:41:52.494Z',
           lastModifiedBy: {
             user: {
-              typeId: "user",
-              id: "d0cc3195-5d4c-4f35-90d7-950ba7b0034b"
+              typeId: 'user',
+              id: 'd0cc3195-5d4c-4f35-90d7-950ba7b0034b'
             }
           },
-          countries: ["ES", "US"],
-          currencies: ["EUR", "USD", "CAD", "ARS"],
-          languages: ["en"],
-          trialUntil: "2090-01",
+          countries: ['ES', 'US'],
+          currencies: ['EUR', 'USD', 'CAD', 'ARS'],
+          languages: ['en'],
+          trialUntil: '2090-01',
           messages: {
             enabled: true,
             deleteDaysAfterCreation: 15
           },
           shippingRateInputType: {
-            type: "CartClassification",
+            type: 'CartClassification',
             values: [
               {
-                key: "key",
+                key: 'key',
                 label: {
-                  en: "Key label",
-                  es: "Etiquieta"
+                  en: 'Key label',
+                  es: 'Etiquieta'
                 }
               }
             ]
           },
           externalOAuth: {
-            url: "http://localhost:3000",
-            authorizationHeader: "authorizationHeader"
+            url: 'http://localhost:3000',
+            authorizationHeader: 'authorizationHeader'
           }
         };
         ajv = Ajv();
@@ -305,7 +305,7 @@ describe("project", () => {
         valid = ajv.validate(schema, data);
       });
 
-      test("should not be valid", () => {
+      test('should not be valid', () => {
         expect(valid).toBeFalsy();
       });
     });

@@ -1,17 +1,17 @@
-const attributeDefinition = require("../baseTypes/attributeDefinition");
-const key = require("../baseTypes/key");
+const attributeDefinition = require('../baseTypes/attributeDefinition');
+const key = require('../baseTypes/key');
 
 module.exports = {
-  type: "object",
-  description: "Product type draft object",
+  type: 'object',
+  description: 'Product type draft object',
   properties: {
-    name: { type: "string" },
+    name: { type: 'string' },
     key,
-    description: { type: "string" },
+    description: { type: 'string' },
     attributes: {
-      type: "array",
+      type: 'array',
       items: attributeDefinition
     }
   },
-  required: ["name", "description"]
+  required: ['name', 'description']
 };

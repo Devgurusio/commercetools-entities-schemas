@@ -1,15 +1,15 @@
-const Ajv = require("ajv");
-const schema = require("../transactionState");
+const Ajv = require('ajv');
+const schema = require('../transactionState');
 
-describe("transactionState", () => {
+describe('transactionState', () => {
   let ajv;
   let data;
   let valid;
 
-  describe("when success", () => {
-    describe("when Initial", () => {
+  describe('when success', () => {
+    describe('when Initial', () => {
       beforeAll(() => {
-        data = "Initial";
+        data = 'Initial';
         ajv = Ajv();
       });
 
@@ -17,14 +17,14 @@ describe("transactionState", () => {
         valid = ajv.validate(schema, data);
       });
 
-      test("should be valid", () => {
+      test('should be valid', () => {
         expect(valid).toBeTruthy();
       });
     });
 
-    describe("when Pending", () => {
+    describe('when Pending', () => {
       beforeAll(() => {
-        data = "Pending";
+        data = 'Pending';
         ajv = Ajv();
       });
 
@@ -32,14 +32,14 @@ describe("transactionState", () => {
         valid = ajv.validate(schema, data);
       });
 
-      test("should be valid", () => {
+      test('should be valid', () => {
         expect(valid).toBeTruthy();
       });
     });
 
-    describe("when Success", () => {
+    describe('when Success', () => {
       beforeAll(() => {
-        data = "Success";
+        data = 'Success';
         ajv = Ajv();
       });
 
@@ -47,14 +47,14 @@ describe("transactionState", () => {
         valid = ajv.validate(schema, data);
       });
 
-      test("should be valid", () => {
+      test('should be valid', () => {
         expect(valid).toBeTruthy();
       });
     });
 
-    describe("when Failure", () => {
+    describe('when Failure', () => {
       beforeAll(() => {
-        data = "Failure";
+        data = 'Failure';
         ajv = Ajv();
       });
 
@@ -62,16 +62,16 @@ describe("transactionState", () => {
         valid = ajv.validate(schema, data);
       });
 
-      test("should be valid", () => {
+      test('should be valid', () => {
         expect(valid).toBeTruthy();
       });
     });
   });
 
-  describe("when error", () => {
-    describe("when value is not an allowed one", () => {
+  describe('when error', () => {
+    describe('when value is not an allowed one', () => {
       beforeAll(() => {
-        data = "nonAllowedValue";
+        data = 'nonAllowedValue';
         ajv = Ajv();
       });
 
@@ -79,7 +79,7 @@ describe("transactionState", () => {
         valid = ajv.validate(schema, data);
       });
 
-      test("should be valid", () => {
+      test('should be valid', () => {
         expect(valid).toBeFalsy();
       });
     });

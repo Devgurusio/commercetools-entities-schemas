@@ -1,14 +1,14 @@
-const Ajv = require("ajv");
-const schema = require("../whitespaceTokenizer");
+const Ajv = require('ajv');
+const schema = require('../whitespaceTokenizer');
 
-describe("whitespaceTokenizer", () => {
+describe('whitespaceTokenizer', () => {
   let ajv;
   let data;
   let valid;
 
-  describe("when success", () => {
+  describe('when success', () => {
     beforeAll(() => {
-      data = { type: "whitespace" };
+      data = { type: 'whitespace' };
       ajv = Ajv();
     });
 
@@ -16,15 +16,15 @@ describe("whitespaceTokenizer", () => {
       valid = ajv.validate(schema, data);
     });
 
-    test("should be valid", () => {
+    test('should be valid', () => {
       expect(valid).toBeTruthy();
     });
   });
 
-  describe("when error", () => {
-    describe("when type is not whitespace", () => {
+  describe('when error', () => {
+    describe('when type is not whitespace', () => {
       beforeAll(() => {
-        data = { type: "notAllowedWhitespace" };
+        data = { type: 'notAllowedWhitespace' };
         ajv = Ajv();
       });
 
@@ -32,7 +32,7 @@ describe("whitespaceTokenizer", () => {
         valid = ajv.validate(schema, data);
       });
 
-      test("should be valid", () => {
+      test('should be valid', () => {
         expect(valid).toBeFalsy();
       });
     });

@@ -1,16 +1,16 @@
-const Ajv = require("ajv");
-const schema = require("../externalOAuth");
+const Ajv = require('ajv');
+const schema = require('../externalOAuth');
 
-describe("externalOAuth", () => {
+describe('externalOAuth', () => {
   let ajv;
   let data;
   let valid;
 
-  describe("when success", () => {
+  describe('when success', () => {
     beforeAll(() => {
       data = {
-        url: "http://localhost:3000",
-        authorizationHeader: "authorizationHeader"
+        url: 'http://localhost:3000',
+        authorizationHeader: 'authorizationHeader'
       };
       ajv = Ajv();
     });
@@ -19,15 +19,15 @@ describe("externalOAuth", () => {
       valid = ajv.validate(schema, data);
     });
 
-    test("should be valid", () => {
+    test('should be valid', () => {
       expect(valid).toBeTruthy();
     });
   });
 
-  describe("when error", () => {
-    describe("when missing url property", () => {
+  describe('when error', () => {
+    describe('when missing url property', () => {
       beforeAll(() => {
-        data = { authorizationHeader: "authorizationHeader" };
+        data = { authorizationHeader: 'authorizationHeader' };
         ajv = Ajv();
       });
 
@@ -35,16 +35,16 @@ describe("externalOAuth", () => {
         valid = ajv.validate(schema, data);
       });
 
-      test("should not be valid", () => {
+      test('should not be valid', () => {
         expect(valid).toBeFalsy();
       });
     });
 
-    describe("when url is not an uri", () => {
+    describe('when url is not an uri', () => {
       beforeAll(() => {
         data = {
-          url: "notAnURI",
-          authorizationHeader: "authorizationHeader"
+          url: 'notAnURI',
+          authorizationHeader: 'authorizationHeader'
         };
         ajv = Ajv();
       });
@@ -53,14 +53,14 @@ describe("externalOAuth", () => {
         valid = ajv.validate(schema, data);
       });
 
-      test("should not be valid", () => {
+      test('should not be valid', () => {
         expect(valid).toBeFalsy();
       });
     });
 
-    describe("when missing authorizationHeader property", () => {
+    describe('when missing authorizationHeader property', () => {
       beforeAll(() => {
-        data = { url: "http://localhost:3000" };
+        data = { url: 'http://localhost:3000' };
         ajv = Ajv();
       });
 
@@ -68,7 +68,7 @@ describe("externalOAuth", () => {
         valid = ajv.validate(schema, data);
       });
 
-      test("should not be valid", () => {
+      test('should not be valid', () => {
         expect(valid).toBeFalsy();
       });
     });

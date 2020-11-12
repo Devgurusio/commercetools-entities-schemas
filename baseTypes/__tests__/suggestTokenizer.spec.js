@@ -1,16 +1,16 @@
-const Ajv = require("ajv");
-const schema = require("../suggestTokenizer");
+const Ajv = require('ajv');
+const schema = require('../suggestTokenizer');
 
-describe("suggestTokenizer", () => {
+describe('suggestTokenizer', () => {
   let ajv;
   let data;
   let valid;
 
-  describe("when success", () => {
-    describe("when custom tokenizer", () => {
-      describe("when only required fields", () => {
+  describe('when success', () => {
+    describe('when custom tokenizer', () => {
+      describe('when only required fields', () => {
         beforeAll(() => {
-          data = { type: "custom" };
+          data = { type: 'custom' };
           ajv = Ajv();
         });
 
@@ -18,16 +18,16 @@ describe("suggestTokenizer", () => {
           valid = ajv.validate(schema, data);
         });
 
-        test("should be valid", () => {
+        test('should be valid', () => {
           expect(valid).toBeTruthy();
         });
       });
 
-      describe("when all fields", () => {
+      describe('when all fields', () => {
         beforeAll(() => {
           data = {
-            type: "custom",
-            inputs: ["input1", "imput2"]
+            type: 'custom',
+            inputs: ['input1', 'imput2']
           };
           ajv = Ajv();
         });
@@ -36,15 +36,15 @@ describe("suggestTokenizer", () => {
           valid = ajv.validate(schema, data);
         });
 
-        test("should be valid", () => {
+        test('should be valid', () => {
           expect(valid).toBeTruthy();
         });
       });
     });
 
-    describe("when whitespace tokenizer", () => {
+    describe('when whitespace tokenizer', () => {
       beforeAll(() => {
-        data = { type: "whitespace" };
+        data = { type: 'whitespace' };
         ajv = Ajv();
       });
 
@@ -52,16 +52,16 @@ describe("suggestTokenizer", () => {
         valid = ajv.validate(schema, data);
       });
 
-      test("should be valid", () => {
+      test('should be valid', () => {
         expect(valid).toBeTruthy();
       });
     });
   });
 
-  describe("when error", () => {
-    describe("when type is not custom or whitespace", () => {
+  describe('when error', () => {
+    describe('when type is not custom or whitespace', () => {
       beforeAll(() => {
-        data = { type: "notAllowedWhitespace" };
+        data = { type: 'notAllowedWhitespace' };
         ajv = Ajv();
       });
 
@@ -69,7 +69,7 @@ describe("suggestTokenizer", () => {
         valid = ajv.validate(schema, data);
       });
 
-      test("should be valid", () => {
+      test('should be valid', () => {
         expect(valid).toBeFalsy();
       });
     });

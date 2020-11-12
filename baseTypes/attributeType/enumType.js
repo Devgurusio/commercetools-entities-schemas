@@ -1,10 +1,10 @@
-const plainEnumValue = require("../enumValue");
+const plainEnumValue = require('../enumValue');
 
 module.exports = {
-  type: "object",
+  type: 'object',
   properties: {
-    name: { type: "string", enum: ["enum"] },
-    values: { type: "array", items: plainEnumValue }
+    name: { type: 'string', enum: ['enum'] },
+    values: { type: 'array', items: plainEnumValue }
   },
-  required: ["name"]
+  required: ['name']
 };

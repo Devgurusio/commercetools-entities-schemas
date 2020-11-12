@@ -1,25 +1,25 @@
-const key = require("../baseTypes/key");
+const key = require('../baseTypes/key');
 
 module.exports = {
-  type: "object",
-  description: "Custom Object draft object",
+  type: 'object',
+  description: 'Custom Object draft object',
   properties: {
     container: {
-      type: "string",
-      description: "A namespace to group custom objects",
-      pattern: "^[a-zA-Z0-9-_~]+$",
+      type: 'string',
+      description: 'A namespace to group custom objects',
+      pattern: '^[a-zA-Z0-9-_~]+$',
       minLength: 2,
       maxLength: 256
     },
     key: {
       ...key,
       description:
-        "A user-defined key that is unique within the given container"
+        'A user-defined key that is unique within the given container'
     },
     value: {
-      type: ["number", "string", "boolean", "array", "object"]
+      type: ['number', 'string', 'boolean', 'array', 'object']
     },
-    version: { type: "number" }
+    version: { type: 'number' }
   },
-  required: ["container", "key", "value"]
+  required: ['container', 'key', 'value']
 };

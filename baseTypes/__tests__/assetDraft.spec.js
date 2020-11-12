@@ -1,27 +1,27 @@
-const Ajv = require("ajv");
-const schema = require("../assetDraft");
+const Ajv = require('ajv');
+const schema = require('../assetDraft');
 
-describe("assetDraft", () => {
+describe('assetDraft', () => {
   let ajv;
   let data;
   let valid;
 
-  describe("when success", () => {
-    describe("when only required fields", () => {
+  describe('when success', () => {
+    describe('when only required fields', () => {
       beforeAll(() => {
         data = {
           sources: [
             {
-              uri: "http://localhost:3000/my-asset",
-              key: "key",
+              uri: 'http://localhost:3000/my-asset',
+              key: 'key',
               dimensions: {
                 w: 640,
                 h: 480
               },
-              contentType: "image/jpeg"
+              contentType: 'image/jpeg'
             }
           ],
-          name: { en: "asset name", es: "nombre del asset" }
+          name: { en: 'asset name', es: 'nombre del asset' }
         };
         ajv = Ajv();
       });
@@ -30,35 +30,35 @@ describe("assetDraft", () => {
         valid = ajv.validate(schema, data);
       });
 
-      test("should be valid", () => {
+      test('should be valid', () => {
         expect(valid).toBeTruthy();
       });
     });
 
-    describe("when all fields", () => {
+    describe('when all fields', () => {
       beforeAll(() => {
         data = {
-          key: "key",
+          key: 'key',
           sources: [
             {
-              uri: "http://localhost:3000/my-asset",
-              key: "key",
+              uri: 'http://localhost:3000/my-asset',
+              key: 'key',
               dimensions: {
                 w: 640,
                 h: 480
               },
-              contentType: "image/jpeg"
+              contentType: 'image/jpeg'
             }
           ],
-          name: { en: "asset name", es: "nombre del asset" },
-          description: { en: "asset description", es: "descripción del asset" },
-          tags: ["images", "myasset"],
+          name: { en: 'asset name', es: 'nombre del asset' },
+          description: { en: 'asset description', es: 'descripción del asset' },
+          tags: ['images', 'myasset'],
           custom: {
             type: {
-              key: "my-category"
+              key: 'my-category'
             },
             fields: {
-              description: "my description"
+              description: 'my description'
             }
           }
         };
@@ -69,26 +69,26 @@ describe("assetDraft", () => {
         valid = ajv.validate(schema, data);
       });
 
-      test("should be valid", () => {
+      test('should be valid', () => {
         expect(valid).toBeTruthy();
       });
     });
   });
 
-  describe("when error", () => {
-    describe("when missing sources property", () => {
+  describe('when error', () => {
+    describe('when missing sources property', () => {
       beforeAll(() => {
         data = {
-          key: "key",
-          name: { en: "asset name", es: "nombre del asset" },
-          description: { en: "asset description", es: "descripción del asset" },
-          tags: ["images", "myasset"],
+          key: 'key',
+          name: { en: 'asset name', es: 'nombre del asset' },
+          description: { en: 'asset description', es: 'descripción del asset' },
+          tags: ['images', 'myasset'],
           custom: {
             type: {
-              key: "my-category"
+              key: 'my-category'
             },
             fields: {
-              description: "my description"
+              description: 'my description'
             }
           }
         };
@@ -99,25 +99,25 @@ describe("assetDraft", () => {
         valid = ajv.validate(schema, data);
       });
 
-      test("should not be valid", () => {
+      test('should not be valid', () => {
         expect(valid).toBeFalsy();
       });
     });
 
-    describe("when sources property is empty", () => {
+    describe('when sources property is empty', () => {
       beforeAll(() => {
         data = {
-          key: "key",
+          key: 'key',
           sources: [],
-          name: { en: "asset name", es: "nombre del asset" },
-          description: { en: "asset description", es: "descripción del asset" },
-          tags: ["images", "myasset"],
+          name: { en: 'asset name', es: 'nombre del asset' },
+          description: { en: 'asset description', es: 'descripción del asset' },
+          tags: ['images', 'myasset'],
           custom: {
             type: {
-              key: "my-category"
+              key: 'my-category'
             },
             fields: {
-              description: "my description"
+              description: 'my description'
             }
           }
         };
@@ -128,34 +128,34 @@ describe("assetDraft", () => {
         valid = ajv.validate(schema, data);
       });
 
-      test("should not be valid", () => {
+      test('should not be valid', () => {
         expect(valid).toBeFalsy();
       });
     });
 
-    describe("when missing name property", () => {
+    describe('when missing name property', () => {
       beforeAll(() => {
         data = {
-          key: "key",
+          key: 'key',
           sources: [
             {
-              uri: "http://localhost:3000/my-asset",
-              key: "key",
+              uri: 'http://localhost:3000/my-asset',
+              key: 'key',
               dimensions: {
                 w: 640,
                 h: 480
               },
-              contentType: "image/jpeg"
+              contentType: 'image/jpeg'
             }
           ],
-          description: { en: "asset description", es: "descripción del asset" },
-          tags: ["images", "myasset"],
+          description: { en: 'asset description', es: 'descripción del asset' },
+          tags: ['images', 'myasset'],
           custom: {
             type: {
-              key: "my-category"
+              key: 'my-category'
             },
             fields: {
-              description: "my description"
+              description: 'my description'
             }
           }
         };
@@ -166,7 +166,7 @@ describe("assetDraft", () => {
         valid = ajv.validate(schema, data);
       });
 
-      test("should not be valid", () => {
+      test('should not be valid', () => {
         expect(valid).toBeFalsy();
       });
     });

@@ -1,15 +1,15 @@
-const Ajv = require("ajv");
-const schema = require("../textInputHint");
+const Ajv = require('ajv');
+const schema = require('../textInputHint');
 
-describe("textInputHint", () => {
+describe('textInputHint', () => {
   let ajv;
   let data;
   let valid;
 
-  describe("when success", () => {
-    describe("when value is SingleLine", () => {
+  describe('when success', () => {
+    describe('when value is SingleLine', () => {
       beforeAll(() => {
-        data = "SingleLine";
+        data = 'SingleLine';
         ajv = Ajv();
       });
 
@@ -17,14 +17,14 @@ describe("textInputHint", () => {
         valid = ajv.validate(schema, data);
       });
 
-      test("should be valid", () => {
+      test('should be valid', () => {
         expect(valid).toBeTruthy();
       });
     });
 
-    describe("when value is MultiLine", () => {
+    describe('when value is MultiLine', () => {
       beforeAll(() => {
-        data = "SingleLine";
+        data = 'SingleLine';
         ajv = Ajv();
       });
 
@@ -32,16 +32,16 @@ describe("textInputHint", () => {
         valid = ajv.validate(schema, data);
       });
 
-      test("should be valid", () => {
+      test('should be valid', () => {
         expect(valid).toBeTruthy();
       });
     });
   });
 
-  describe("when error", () => {
-    describe("when value is not an allowed one", () => {
+  describe('when error', () => {
+    describe('when value is not an allowed one', () => {
       beforeAll(() => {
-        data = "notAllowedValue";
+        data = 'notAllowedValue';
         ajv = Ajv();
       });
 
@@ -49,7 +49,7 @@ describe("textInputHint", () => {
         valid = ajv.validate(schema, data);
       });
 
-      test("should be valid", () => {
+      test('should be valid', () => {
         expect(valid).toBeFalsy();
       });
     });

@@ -1,15 +1,15 @@
-const Ajv = require("ajv");
-const schema = require("../shippingRateInputType");
+const Ajv = require('ajv');
+const schema = require('../shippingRateInputType');
 
-describe("shippingRateInputType", () => {
+describe('shippingRateInputType', () => {
   let ajv;
   let data;
   let valid;
 
-  describe("when success", () => {
-    describe("when CartValue", () => {
+  describe('when success', () => {
+    describe('when CartValue', () => {
       beforeAll(() => {
-        data = { type: "CartValue" };
+        data = { type: 'CartValue' };
         ajv = Ajv();
       });
 
@@ -17,21 +17,21 @@ describe("shippingRateInputType", () => {
         valid = ajv.validate(schema, data);
       });
 
-      test("should be valid", () => {
+      test('should be valid', () => {
         expect(valid).toBeTruthy();
       });
     });
 
-    describe("when CartClassification", () => {
+    describe('when CartClassification', () => {
       beforeAll(() => {
         data = {
-          type: "CartClassification",
+          type: 'CartClassification',
           values: [
             {
-              key: "key",
+              key: 'key',
               label: {
-                en: "Key label",
-                es: "Etiquieta"
+                en: 'Key label',
+                es: 'Etiquieta'
               }
             }
           ]
@@ -43,14 +43,14 @@ describe("shippingRateInputType", () => {
         valid = ajv.validate(schema, data);
       });
 
-      test("should be valid", () => {
+      test('should be valid', () => {
         expect(valid).toBeTruthy();
       });
     });
 
-    describe("when CartScore", () => {
+    describe('when CartScore', () => {
       beforeAll(() => {
-        data = { type: "CartScore" };
+        data = { type: 'CartScore' };
         ajv = Ajv();
       });
 
@@ -58,16 +58,16 @@ describe("shippingRateInputType", () => {
         valid = ajv.validate(schema, data);
       });
 
-      test("should be valid", () => {
+      test('should be valid', () => {
         expect(valid).toBeTruthy();
       });
     });
   });
 
-  describe("when error", () => {
-    describe("when type is not allowed value", () => {
+  describe('when error', () => {
+    describe('when type is not allowed value', () => {
       beforeAll(() => {
-        data = { type: "notAllowedValue" };
+        data = { type: 'notAllowedValue' };
         ajv = Ajv();
       });
 
@@ -75,7 +75,7 @@ describe("shippingRateInputType", () => {
         valid = ajv.validate(schema, data);
       });
 
-      test("should not be valid", () => {
+      test('should not be valid', () => {
         expect(valid).toBeFalsy();
       });
     });

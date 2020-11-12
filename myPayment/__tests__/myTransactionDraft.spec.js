@@ -1,19 +1,19 @@
-const Ajv = require("ajv");
-const schema = require("../myTransactionDraft");
+const Ajv = require('ajv');
+const schema = require('../myTransactionDraft');
 
-describe("myTransactionDraft", () => {
+describe('myTransactionDraft', () => {
   let ajv;
   let data;
   let valid;
 
-  describe("when success", () => {
-    describe("when only required fields", () => {
+  describe('when success', () => {
+    describe('when only required fields', () => {
       beforeAll(() => {
         data = {
-          type: "Authorization",
+          type: 'Authorization',
           amount: {
-            type: "centPrecision",
-            currencyCode: "EUR",
+            type: 'centPrecision',
+            currencyCode: 'EUR',
             centAmount: 390,
             fractionDigits: 2
           }
@@ -25,23 +25,23 @@ describe("myTransactionDraft", () => {
         valid = ajv.validate(schema, data);
       });
 
-      test("should be valid", () => {
+      test('should be valid', () => {
         expect(valid).toBeTruthy();
       });
     });
 
-    describe("when all fields", () => {
+    describe('when all fields', () => {
       beforeAll(() => {
         data = {
-          timestamp: "2017-10-04T14:31:41.643Z",
-          type: "Authorization",
+          timestamp: '2017-10-04T14:31:41.643Z',
+          type: 'Authorization',
           amount: {
-            type: "centPrecision",
-            currencyCode: "EUR",
+            type: 'centPrecision',
+            currencyCode: 'EUR',
             centAmount: 390,
             fractionDigits: 2
           },
-          interactionId: "interactionId"
+          interactionId: 'interactionId'
         };
         ajv = Ajv();
       });
@@ -50,24 +50,24 @@ describe("myTransactionDraft", () => {
         valid = ajv.validate(schema, data);
       });
 
-      test("should be valid", () => {
+      test('should be valid', () => {
         expect(valid).toBeTruthy();
       });
     });
   });
 
-  describe("when error", () => {
-    describe("when missing type property", () => {
+  describe('when error', () => {
+    describe('when missing type property', () => {
       beforeAll(() => {
         data = {
-          timestamp: "2017-10-04T14:31:41.643Z",
+          timestamp: '2017-10-04T14:31:41.643Z',
           amount: {
-            type: "centPrecision",
-            currencyCode: "EUR",
+            type: 'centPrecision',
+            currencyCode: 'EUR',
             centAmount: 390,
             fractionDigits: 2
           },
-          interactionId: "interactionId"
+          interactionId: 'interactionId'
         };
         ajv = Ajv();
       });
@@ -76,23 +76,23 @@ describe("myTransactionDraft", () => {
         valid = ajv.validate(schema, data);
       });
 
-      test("should not be valid", () => {
+      test('should not be valid', () => {
         expect(valid).toBeFalsy();
       });
     });
 
-    describe("when type property is not an allowed one", () => {
+    describe('when type property is not an allowed one', () => {
       beforeAll(() => {
         data = {
-          timestamp: "2017-10-04T14:31:41.643Z",
-          type: "notAllowedType",
+          timestamp: '2017-10-04T14:31:41.643Z',
+          type: 'notAllowedType',
           amount: {
-            type: "centPrecision",
-            currencyCode: "EUR",
+            type: 'centPrecision',
+            currencyCode: 'EUR',
             centAmount: 390,
             fractionDigits: 2
           },
-          interactionId: "interactionId"
+          interactionId: 'interactionId'
         };
         ajv = Ajv();
       });
@@ -101,17 +101,17 @@ describe("myTransactionDraft", () => {
         valid = ajv.validate(schema, data);
       });
 
-      test("should not be valid", () => {
+      test('should not be valid', () => {
         expect(valid).toBeFalsy();
       });
     });
 
-    describe("when missing amount property", () => {
+    describe('when missing amount property', () => {
       beforeAll(() => {
         data = {
-          timestamp: "2017-10-04T14:31:41.643Z",
-          type: "Authorization",
-          interactionId: "interactionId"
+          timestamp: '2017-10-04T14:31:41.643Z',
+          type: 'Authorization',
+          interactionId: 'interactionId'
         };
         ajv = Ajv();
       });
@@ -120,7 +120,7 @@ describe("myTransactionDraft", () => {
         valid = ajv.validate(schema, data);
       });
 
-      test("should not be valid", () => {
+      test('should not be valid', () => {
         expect(valid).toBeFalsy();
       });
     });

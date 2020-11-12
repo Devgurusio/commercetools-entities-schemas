@@ -1,10 +1,10 @@
-const localizedEnumValue = require("../localizedEnumValue");
+const localizedEnumValue = require('../localizedEnumValue');
 
 module.exports = {
-  type: "object",
+  type: 'object',
   properties: {
-    name: { type: "string", enum: ["lenum"] },
-    values: { type: "array", items: localizedEnumValue }
+    name: { type: 'string', enum: ['lenum'] },
+    values: { type: 'array', items: localizedEnumValue }
   },
-  required: ["name"]
+  required: ['name']
 };

@@ -1,18 +1,18 @@
-const transactionDraft = require("./transactionDraft");
-const transactionState = require("./transactionState");
+const transactionDraft = require('./transactionDraft');
+const transactionState = require('./transactionState');
 
 module.exports = {
   ...transactionDraft,
   properties: {
     ...transactionDraft.properties,
     id: {
-      type: "string",
-      description: "The unique ID of this object"
+      type: 'string',
+      description: 'The unique ID of this object'
     },
     state: {
       ...transactionState,
-      description: "The state of this transaction."
+      description: 'The state of this transaction.'
     }
   },
-  required: [...transactionDraft.required, "id"]
+  required: [...transactionDraft.required, 'id']
 };

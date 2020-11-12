@@ -1,17 +1,17 @@
-const Ajv = require("ajv");
-const schema = require("../localizedString");
+const Ajv = require('ajv');
+const schema = require('../localizedString');
 
-describe("localizedString", () => {
+describe('localizedString', () => {
   let ajv;
   let data;
   let valid;
 
-  describe("when success", () => {
+  describe('when success', () => {
     beforeAll(() => {
       data = {
-        en: "example",
-        es: "ejemplo",
-        "en-US": "example"
+        en: 'example',
+        es: 'ejemplo',
+        'en-US': 'example'
       };
       ajv = Ajv();
     });
@@ -20,16 +20,16 @@ describe("localizedString", () => {
       valid = ajv.validate(schema, data);
     });
 
-    test("should be valid", () => {
+    test('should be valid', () => {
       expect(valid).toBeTruthy();
     });
   });
 
-  describe("when error", () => {
-    describe("when value is not string", () => {
+  describe('when error', () => {
+    describe('when value is not string', () => {
       beforeAll(() => {
         data = {
-          en: "example",
+          en: 'example',
           es: 7
         };
         ajv = Ajv();
@@ -39,7 +39,7 @@ describe("localizedString", () => {
         valid = ajv.validate(schema, data);
       });
 
-      test("should not be valid", () => {
+      test('should not be valid', () => {
         expect(valid).toBeFalsy();
       });
     });

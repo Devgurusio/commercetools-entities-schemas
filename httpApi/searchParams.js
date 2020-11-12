@@ -1,26 +1,26 @@
 module.exports = {
-  type: "object",
-  description: "Parameters accepted in CommerceTools queries",
+  type: 'object',
+  description: 'Parameters accepted in CommerceTools queries',
   properties: {
     page: {
-      type: "integer",
-      description: "Page number to retrieve",
+      type: 'integer',
+      description: 'Page number to retrieve',
       minimum: 1,
       default: 1
     },
     perPage: {
-      type: "integer",
-      description: "Number of items to retrieve on one page",
+      type: 'integer',
+      description: 'Number of items to retrieve on one page',
       minimum: 1,
       maximum: 500,
       default: 20
     },
-    sortBy: { type: "string", description: "Field name to apply the sort" },
+    sortBy: { type: 'string', description: 'Field name to apply the sort' },
     sortDirection: {
-      type: "string",
-      description: "Direction of order to apply",
-      enum: ["asc", "desc"],
-      default: "asc"
+      type: 'string',
+      description: 'Direction of order to apply',
+      enum: ['asc', 'desc'],
+      default: 'asc'
     }
   }
 };

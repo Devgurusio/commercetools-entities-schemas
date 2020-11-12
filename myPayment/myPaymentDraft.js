@@ -1,24 +1,24 @@
-const customFieldsDraft = require("../baseTypes/customFieldsDraft");
-const money = require("../baseTypes/money");
-const myTransactionDraft = require("./myTransactionDraft");
-const paymentMethodInfo = require("../payment/paymentMethodInfo");
+const customFieldsDraft = require('../baseTypes/customFieldsDraft');
+const money = require('../baseTypes/money');
+const myTransactionDraft = require('./myTransactionDraft');
+const paymentMethodInfo = require('../payment/paymentMethodInfo');
 
 module.exports = {
-  type: "object",
-  description: "My payment draft object",
+  type: 'object',
+  description: 'My payment draft object',
   properties: {
     amountPlanned: {
       ...money,
       description:
-        "How much money this payment intends to receive from the customer. The value usually matches the cart or order gross total"
+        'How much money this payment intends to receive from the customer. The value usually matches the cart or order gross total'
     },
     paymentMethodInfo,
     custom: customFieldsDraft,
     transaction: {
       ...myTransactionDraft,
       description:
-        "A list of financial transactions of the Authorization or Charge TransactionTypes"
+        'A list of financial transactions of the Authorization or Charge TransactionTypes'
     }
   },
-  required: ["amountPlanned"]
+  required: ['amountPlanned']
 };
