@@ -13,35 +13,16 @@
   },
   "devDependencies": {
     "ajv": "^6.10.2",
-    "eslint": "^5.0.0",
-    "eslint-config-prettier": "^3.3.0",
-    "eslint-plugin-jest": "^23.1.1",
-    "eslint-plugin-prettier": "^3.0.0",
-    "jest": "^24.9.0",
-    "prettier-eslint": "^8.8.2"
+    "eslint": "^7.13.0",
+    "eslint-config-prettier": "^6.15.0",
+    "eslint-plugin-jest": "^24.1.3",
+    "eslint-plugin-prettier": "^3.1.4",
+    "jest": "^26.6.0",
+    "prettier-eslint": "^11.0.0",
+    "husky": "^4.3.0",
+    "remark-cli": "^9.0.0",
+    "remark-preset-lint-recommended": "^5.0.0"
   },
-  "eslintConfig": {
-    "root": true,
-    "env": {
-      "es6": true,
-      "jest/globals": true,
-      "node": true
-    },
-    "plugins": [
-      "jest",
-      "prettier"
-    ],
-    "extends": [
-      "plugin:prettier/recommended",
-      "eslint:recommended"
-    ],
-    "parserOptions": {
-      "ecmaVersion": 2018
-    }
-  },
-  "eslintIgnore": [
-    "node_modules/*"
-  ],
   "repository": {
     "type": "git",
     "url": "git+https://github.com/Devgurusio/commercetools-entities-schemas.git"
@@ -60,10 +41,14 @@
     "url": "https://github.com/Devgurusio/commercetools-entities-schemas/issues"
   },
   "homepage": "https://github.com/Devgurusio/commercetools-entities-schemas#readme",
-  "jest": {
-    "clearMocks": true,
-    "collectCoverage": true,
-    "coverageDirectory": "coverage",
-    "testEnvironment": "node"
+  "husky": {
+    "hooks": {
+      "pre-commit": "npm run lint-fix && npm run lint-md && npm test"
+    }
+  },
+  "remarkConfig": {
+    "plugins": [
+      "remark-preset-lint-recommended"
+    ]
   }
 }
