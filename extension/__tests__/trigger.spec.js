@@ -1,16 +1,16 @@
-const Ajv = require("ajv");
-const schema = require("../trigger");
+const Ajv = require('ajv');
+const schema = require('../trigger');
 
-describe("trigger", () => {
+describe('trigger', () => {
   let ajv;
   let data;
   let valid;
 
-  describe("when success", () => {
+  describe('when success', () => {
     beforeAll(() => {
       data = {
-        resourceTypeId: "cart",
-        actions: ["Create", "Update"]
+        resourceTypeId: 'cart',
+        actions: ['Create', 'Update']
       };
       ajv = Ajv();
     });
@@ -19,16 +19,16 @@ describe("trigger", () => {
       valid = ajv.validate(schema, data);
     });
 
-    test("should be valid", () => {
+    test('should be valid', () => {
       expect(valid).toBeTruthy();
     });
   });
 
-  describe("when error", () => {
-    describe("when missing resourceTypeId property", () => {
+  describe('when error', () => {
+    describe('when missing resourceTypeId property', () => {
       beforeAll(() => {
         data = {
-          actions: ["Create", "Update"]
+          actions: ['Create', 'Update']
         };
         ajv = Ajv();
       });
@@ -37,15 +37,15 @@ describe("trigger", () => {
         valid = ajv.validate(schema, data);
       });
 
-      test("should not be valid", () => {
+      test('should not be valid', () => {
         expect(valid).toBeFalsy();
       });
     });
 
-    describe("when missing actions property", () => {
+    describe('when missing actions property', () => {
       beforeAll(() => {
         data = {
-          resourceTypeId: "cart"
+          resourceTypeId: 'cart'
         };
         ajv = Ajv();
       });
@@ -54,7 +54,7 @@ describe("trigger", () => {
         valid = ajv.validate(schema, data);
       });
 
-      test("should not be valid", () => {
+      test('should not be valid', () => {
         expect(valid).toBeFalsy();
       });
     });

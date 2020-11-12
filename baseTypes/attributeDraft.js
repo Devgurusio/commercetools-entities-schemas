@@ -1,10 +1,10 @@
-const attributeDefinition = require("./attributeDefinition");
+const attributeDefinition = require('./attributeDefinition');
 
 module.exports = {
-  type: "object",
+  type: 'object',
   properties: {
-    name: { type: "string" },
+    name: { type: 'string' },
     value: attributeDefinition
   },
-  required: ["name", "value"]
+  required: ['name', 'value']
 };

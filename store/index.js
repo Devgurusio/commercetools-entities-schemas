@@ -1,5 +1,5 @@
-const store = require("./store");
-const storeDraft = require("./storeDraft");
+const store = require('./store');
+const storeDraft = require('./storeDraft');
 
 module.exports = {
   store,

@@ -1,10 +1,10 @@
-const productTypeDraft = require("./productTypeDraft");
-const resource = require("../common/resource");
+const productTypeDraft = require('./productTypeDraft');
+const resource = require('../common/resource');
 
 module.exports = {
   ...resource,
   ...productTypeDraft,
-  description: "Representation of a product type",
+  description: 'Representation of a product type',
   properties: {
     ...resource.properties,
     ...productTypeDraft.properties

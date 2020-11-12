@@ -1,17 +1,17 @@
-const Ajv = require("ajv");
-const schema = require("../attribute");
+const Ajv = require('ajv');
+const schema = require('../attribute');
 
-describe("attribute", () => {
+describe('attribute', () => {
   let ajv;
   let data;
   let valid;
 
-  describe("when success", () => {
-    describe("when string value", () => {
+  describe('when success', () => {
+    describe('when string value', () => {
       beforeAll(() => {
         data = {
-          name: "attributeName",
-          value: "string"
+          name: 'attributeName',
+          value: 'string'
         };
         ajv = Ajv();
       });
@@ -20,15 +20,15 @@ describe("attribute", () => {
         valid = ajv.validate(schema, data);
       });
 
-      test("should be valid", () => {
+      test('should be valid', () => {
         expect(valid).toBeTruthy();
       });
     });
 
-    describe("when number value", () => {
+    describe('when number value', () => {
       beforeAll(() => {
         data = {
-          name: "attributeName",
+          name: 'attributeName',
           value: 13
         };
         ajv = Ajv();
@@ -38,16 +38,16 @@ describe("attribute", () => {
         valid = ajv.validate(schema, data);
       });
 
-      test("should be valid", () => {
+      test('should be valid', () => {
         expect(valid).toBeTruthy();
       });
     });
 
-    describe("when object value", () => {
+    describe('when object value', () => {
       beforeAll(() => {
         data = {
-          name: "attributeName",
-          value: { key: "value" }
+          name: 'attributeName',
+          value: { key: 'value' }
         };
         ajv = Ajv();
       });
@@ -56,16 +56,16 @@ describe("attribute", () => {
         valid = ajv.validate(schema, data);
       });
 
-      test("should be valid", () => {
+      test('should be valid', () => {
         expect(valid).toBeTruthy();
       });
     });
 
-    describe("when array value", () => {
+    describe('when array value', () => {
       beforeAll(() => {
         data = {
-          name: "attributeName",
-          value: [{ key: "value" }]
+          name: 'attributeName',
+          value: [{ key: 'value' }]
         };
         ajv = Ajv();
       });
@@ -74,15 +74,15 @@ describe("attribute", () => {
         valid = ajv.validate(schema, data);
       });
 
-      test("should be valid", () => {
+      test('should be valid', () => {
         expect(valid).toBeTruthy();
       });
     });
 
-    describe("when boolean value", () => {
+    describe('when boolean value', () => {
       beforeAll(() => {
         data = {
-          name: "attributeName",
+          name: 'attributeName',
           value: true
         };
         ajv = Ajv();
@@ -92,14 +92,14 @@ describe("attribute", () => {
         valid = ajv.validate(schema, data);
       });
 
-      test("should be valid", () => {
+      test('should be valid', () => {
         expect(valid).toBeTruthy();
       });
     });
   });
 
-  describe("when error", () => {
-    describe("when missing name property", () => {
+  describe('when error', () => {
+    describe('when missing name property', () => {
       beforeAll(() => {
         data = {
           value: true
@@ -111,15 +111,15 @@ describe("attribute", () => {
         valid = ajv.validate(schema, data);
       });
 
-      test("should not be valid", () => {
+      test('should not be valid', () => {
         expect(valid).toBeFalsy();
       });
     });
 
-    describe("when missing value property", () => {
+    describe('when missing value property', () => {
       beforeAll(() => {
         data = {
-          name: "attributeName"
+          name: 'attributeName'
         };
         ajv = Ajv();
       });
@@ -128,7 +128,7 @@ describe("attribute", () => {
         valid = ajv.validate(schema, data);
       });
 
-      test("should not be valid", () => {
+      test('should not be valid', () => {
         expect(valid).toBeFalsy();
       });
     });

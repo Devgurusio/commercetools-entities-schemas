@@ -1,15 +1,15 @@
-const Ajv = require("ajv");
-const schema = require("../enumType");
+const Ajv = require('ajv');
+const schema = require('../enumType');
 
-describe("enumType", () => {
+describe('enumType', () => {
   let ajv;
   let data;
   let valid;
 
-  describe("when success", () => {
-    describe("when only required fields", () => {
+  describe('when success', () => {
+    describe('when only required fields', () => {
       beforeAll(() => {
-        data = { name: "Enum" };
+        data = { name: 'Enum' };
         ajv = Ajv();
       });
 
@@ -17,16 +17,16 @@ describe("enumType", () => {
         valid = ajv.validate(schema, data);
       });
 
-      test("should be valid", () => {
+      test('should be valid', () => {
         expect(valid).toBeTruthy();
       });
     });
 
-    describe("when all fields", () => {
+    describe('when all fields', () => {
       beforeAll(() => {
         data = {
-          name: "Enum",
-          values: [{ key: "key", label: "label" }]
+          name: 'Enum',
+          values: [{ key: 'key', label: 'label' }]
         };
         ajv = Ajv();
       });
@@ -35,16 +35,16 @@ describe("enumType", () => {
         valid = ajv.validate(schema, data);
       });
 
-      test("should be valid", () => {
+      test('should be valid', () => {
         expect(valid).toBeTruthy();
       });
     });
   });
 
-  describe("when error", () => {
-    describe("when missing name property", () => {
+  describe('when error', () => {
+    describe('when missing name property', () => {
       beforeAll(() => {
-        data = { values: [{ key: "key", label: "label" }] };
+        data = { values: [{ key: 'key', label: 'label' }] };
         ajv = Ajv();
       });
 
@@ -52,16 +52,16 @@ describe("enumType", () => {
         valid = ajv.validate(schema, data);
       });
 
-      test("should be valid", () => {
+      test('should be valid', () => {
         expect(valid).toBeFalsy();
       });
     });
 
-    describe("when name property is not an allowed one", () => {
+    describe('when name property is not an allowed one', () => {
       beforeAll(() => {
         data = {
-          name: "NotAllowedName",
-          values: [{ key: "key", label: "label" }]
+          name: 'NotAllowedName',
+          values: [{ key: 'key', label: 'label' }]
         };
         ajv = Ajv();
       });
@@ -70,16 +70,16 @@ describe("enumType", () => {
         valid = ajv.validate(schema, data);
       });
 
-      test("should be valid", () => {
+      test('should be valid', () => {
         expect(valid).toBeFalsy();
       });
     });
 
-    describe("when values property are not valid enum values", () => {
+    describe('when values property are not valid enum values', () => {
       beforeAll(() => {
         data = {
-          name: "Enum",
-          values: [{ key: "key" }]
+          name: 'Enum',
+          values: [{ key: 'key' }]
         };
         ajv = Ajv();
       });
@@ -88,7 +88,7 @@ describe("enumType", () => {
         valid = ajv.validate(schema, data);
       });
 
-      test("should be valid", () => {
+      test('should be valid', () => {
         expect(valid).toBeFalsy();
       });
     });

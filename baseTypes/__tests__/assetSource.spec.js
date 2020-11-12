@@ -1,16 +1,16 @@
-const Ajv = require("ajv");
-const schema = require("../assetSource");
+const Ajv = require('ajv');
+const schema = require('../assetSource');
 
-describe("assetSource", () => {
+describe('assetSource', () => {
   let ajv;
   let data;
   let valid;
 
-  describe("when success", () => {
-    describe("when only required fields", () => {
+  describe('when success', () => {
+    describe('when only required fields', () => {
       beforeAll(() => {
         data = {
-          uri: "http://localhost:3000/my-asset"
+          uri: 'http://localhost:3000/my-asset'
         };
         ajv = Ajv();
       });
@@ -19,21 +19,21 @@ describe("assetSource", () => {
         valid = ajv.validate(schema, data);
       });
 
-      test("should be valid", () => {
+      test('should be valid', () => {
         expect(valid).toBeTruthy();
       });
     });
 
-    describe("when all fields", () => {
+    describe('when all fields', () => {
       beforeAll(() => {
         data = {
-          uri: "http://localhost:3000/my-asset",
-          key: "key",
+          uri: 'http://localhost:3000/my-asset',
+          key: 'key',
           dimensions: {
             w: 640,
             h: 480
           },
-          contentType: "image/jpeg"
+          contentType: 'image/jpeg'
         };
         ajv = Ajv();
       });
@@ -42,22 +42,22 @@ describe("assetSource", () => {
         valid = ajv.validate(schema, data);
       });
 
-      test("should be valid", () => {
+      test('should be valid', () => {
         expect(valid).toBeTruthy();
       });
     });
   });
 
-  describe("when error", () => {
-    describe("when missing uri property", () => {
+  describe('when error', () => {
+    describe('when missing uri property', () => {
       beforeAll(() => {
         data = {
-          key: "key",
+          key: 'key',
           dimensions: {
             w: 640,
             h: 480
           },
-          contentType: "image/jpeg"
+          contentType: 'image/jpeg'
         };
         ajv = Ajv();
       });
@@ -66,7 +66,7 @@ describe("assetSource", () => {
         valid = ajv.validate(schema, data);
       });
 
-      test("should not be valid", () => {
+      test('should not be valid', () => {
         expect(valid).toBeFalsy();
       });
     });

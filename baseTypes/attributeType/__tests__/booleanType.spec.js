@@ -1,14 +1,14 @@
-const Ajv = require("ajv");
-const schema = require("../booleanType");
+const Ajv = require('ajv');
+const schema = require('../booleanType');
 
-describe("booleanType", () => {
+describe('booleanType', () => {
   let ajv;
   let data;
   let valid;
 
-  describe("when success", () => {
+  describe('when success', () => {
     beforeAll(() => {
-      data = { name: "boolean" };
+      data = { name: 'boolean' };
       ajv = Ajv();
     });
 
@@ -16,13 +16,13 @@ describe("booleanType", () => {
       valid = ajv.validate(schema, data);
     });
 
-    test("should be valid", () => {
+    test('should be valid', () => {
       expect(valid).toBeTruthy();
     });
   });
 
-  describe("when error", () => {
-    describe("when missing name property", () => {
+  describe('when error', () => {
+    describe('when missing name property', () => {
       beforeAll(() => {
         data = {};
         ajv = Ajv();
@@ -32,14 +32,14 @@ describe("booleanType", () => {
         valid = ajv.validate(schema, data);
       });
 
-      test("should be valid", () => {
+      test('should be valid', () => {
         expect(valid).toBeFalsy();
       });
     });
 
-    describe("when name property is not an allowed one", () => {
+    describe('when name property is not an allowed one', () => {
       beforeAll(() => {
-        data = { name: "NotAllowedName" };
+        data = { name: 'NotAllowedName' };
         ajv = Ajv();
       });
 
@@ -47,7 +47,7 @@ describe("booleanType", () => {
         valid = ajv.validate(schema, data);
       });
 
-      test("should be valid", () => {
+      test('should be valid', () => {
         expect(valid).toBeFalsy();
       });
     });

@@ -1,20 +1,20 @@
-const Ajv = require("ajv");
-const schema = require("../channel");
+const Ajv = require('ajv');
+const schema = require('../channel');
 
-describe("channel", () => {
+describe('channel', () => {
   let ajv;
   let data;
   let valid;
 
-  describe("when success", () => {
-    describe("when only required fields", () => {
+  describe('when success', () => {
+    describe('when only required fields', () => {
       beforeAll(() => {
         data = {
-          id: "d0cc3195-5d4c-4f35-90d7-950ba7b0034b",
+          id: 'd0cc3195-5d4c-4f35-90d7-950ba7b0034b',
           version: 1,
-          createdAt: "2017-10-04T14:31:41.643Z",
-          lastModifiedAt: "2017-10-04T14:31:41.643Z",
-          key: "key"
+          createdAt: '2017-10-04T14:31:41.643Z',
+          lastModifiedAt: '2017-10-04T14:31:41.643Z',
+          key: 'key'
         };
         ajv = Ajv();
       });
@@ -23,58 +23,58 @@ describe("channel", () => {
         valid = ajv.validate(schema, data);
       });
 
-      test("should be valid", () => {
+      test('should be valid', () => {
         expect(valid).toBeTruthy();
       });
     });
 
-    describe("when all fields", () => {
+    describe('when all fields', () => {
       beforeAll(() => {
         data = {
-          id: "d0cc3195-5d4c-4f35-90d7-950ba7b0034b",
+          id: 'd0cc3195-5d4c-4f35-90d7-950ba7b0034b',
           version: 1,
-          createdAt: "2017-10-04T14:31:41.643Z",
-          lastModifiedAt: "2017-10-04T14:31:41.643Z",
-          key: "key",
-          roles: ["InventorySupply", "Primary"],
-          name: { en: "Channel name" },
-          description: { en: "Channel description" },
+          createdAt: '2017-10-04T14:31:41.643Z',
+          lastModifiedAt: '2017-10-04T14:31:41.643Z',
+          key: 'key',
+          roles: ['InventorySupply', 'Primary'],
+          name: { en: 'Channel name' },
+          description: { en: 'Channel description' },
           address: {
-            key: "my-address",
-            title: "Baron",
-            salutation: "Mr.",
-            firstName: "Sherlok",
-            lastName: "Holmes",
-            streetName: "Baker St.",
-            streetNumber: "221B",
-            additionalStreetInfo: "additionalStreetInfo",
-            postalCode: "10012",
-            city: "London",
-            region: "region",
-            state: "state",
-            country: "UK",
-            company: "company",
-            department: "department",
-            building: "building",
-            apartment: "apartment",
-            pOBox: "pOBox",
-            phone: "phone",
-            email: "email",
-            fax: "fax",
-            additionalAddressInfo: "additionalAddressInfo",
-            externalId: "externalId"
+            key: 'my-address',
+            title: 'Baron',
+            salutation: 'Mr.',
+            firstName: 'Sherlok',
+            lastName: 'Holmes',
+            streetName: 'Baker St.',
+            streetNumber: '221B',
+            additionalStreetInfo: 'additionalStreetInfo',
+            postalCode: '10012',
+            city: 'London',
+            region: 'region',
+            state: 'state',
+            country: 'UK',
+            company: 'company',
+            department: 'department',
+            building: 'building',
+            apartment: 'apartment',
+            pOBox: 'pOBox',
+            phone: 'phone',
+            email: 'email',
+            fax: 'fax',
+            additionalAddressInfo: 'additionalAddressInfo',
+            externalId: 'externalId'
           },
           custom: {
             type: {
-              typeId: "product",
-              id: "f74b4e9f-2c01-4178-9ba5-bf6d6167a597"
+              typeId: 'product',
+              id: 'f74b4e9f-2c01-4178-9ba5-bf6d6167a597'
             },
             fields: {
-              description: "my description"
+              description: 'my description'
             }
           },
           geoLocation: {
-            type: "Point",
+            type: 'Point',
             coordinates: [35.2366173, -6.6724601]
           }
         };
@@ -85,59 +85,59 @@ describe("channel", () => {
         valid = ajv.validate(schema, data);
       });
 
-      test("should be valid", () => {
+      test('should be valid', () => {
         expect(valid).toBeTruthy();
       });
     });
   });
 
-  describe("when error", () => {
-    describe("when missing id property", () => {
+  describe('when error', () => {
+    describe('when missing id property', () => {
       beforeAll(() => {
         data = {
           version: 1,
-          createdAt: "2017-10-04T14:31:41.643Z",
-          lastModifiedAt: "2017-10-04T14:31:41.643Z",
-          key: "key",
-          roles: ["InventorySupply", "Primary"],
-          name: { en: "Channel name" },
-          description: { en: "Channel description" },
+          createdAt: '2017-10-04T14:31:41.643Z',
+          lastModifiedAt: '2017-10-04T14:31:41.643Z',
+          key: 'key',
+          roles: ['InventorySupply', 'Primary'],
+          name: { en: 'Channel name' },
+          description: { en: 'Channel description' },
           address: {
-            key: "my-address",
-            title: "Baron",
-            salutation: "Mr.",
-            firstName: "Sherlok",
-            lastName: "Holmes",
-            streetName: "Baker St.",
-            streetNumber: "221B",
-            additionalStreetInfo: "additionalStreetInfo",
-            postalCode: "10012",
-            city: "London",
-            region: "region",
-            state: "state",
-            country: "UK",
-            company: "company",
-            department: "department",
-            building: "building",
-            apartment: "apartment",
-            pOBox: "pOBox",
-            phone: "phone",
-            email: "email",
-            fax: "fax",
-            additionalAddressInfo: "additionalAddressInfo",
-            externalId: "externalId"
+            key: 'my-address',
+            title: 'Baron',
+            salutation: 'Mr.',
+            firstName: 'Sherlok',
+            lastName: 'Holmes',
+            streetName: 'Baker St.',
+            streetNumber: '221B',
+            additionalStreetInfo: 'additionalStreetInfo',
+            postalCode: '10012',
+            city: 'London',
+            region: 'region',
+            state: 'state',
+            country: 'UK',
+            company: 'company',
+            department: 'department',
+            building: 'building',
+            apartment: 'apartment',
+            pOBox: 'pOBox',
+            phone: 'phone',
+            email: 'email',
+            fax: 'fax',
+            additionalAddressInfo: 'additionalAddressInfo',
+            externalId: 'externalId'
           },
           custom: {
             type: {
-              typeId: "product",
-              id: "f74b4e9f-2c01-4178-9ba5-bf6d6167a597"
+              typeId: 'product',
+              id: 'f74b4e9f-2c01-4178-9ba5-bf6d6167a597'
             },
             fields: {
-              description: "my description"
+              description: 'my description'
             }
           },
           geoLocation: {
-            type: "Point",
+            type: 'Point',
             coordinates: [35.2366173, -6.6724601]
           }
         };
@@ -148,57 +148,57 @@ describe("channel", () => {
         valid = ajv.validate(schema, data);
       });
 
-      test("should not be valid", () => {
+      test('should not be valid', () => {
         expect(valid).toBeFalsy();
       });
     });
 
-    describe("when missing version property", () => {
+    describe('when missing version property', () => {
       beforeAll(() => {
         data = {
-          id: "d0cc3195-5d4c-4f35-90d7-950ba7b0034b",
-          createdAt: "2017-10-04T14:31:41.643Z",
-          lastModifiedAt: "2017-10-04T14:31:41.643Z",
-          key: "key",
-          roles: ["InventorySupply", "Primary"],
-          name: { en: "Channel name" },
-          description: { en: "Channel description" },
+          id: 'd0cc3195-5d4c-4f35-90d7-950ba7b0034b',
+          createdAt: '2017-10-04T14:31:41.643Z',
+          lastModifiedAt: '2017-10-04T14:31:41.643Z',
+          key: 'key',
+          roles: ['InventorySupply', 'Primary'],
+          name: { en: 'Channel name' },
+          description: { en: 'Channel description' },
           address: {
-            key: "my-address",
-            title: "Baron",
-            salutation: "Mr.",
-            firstName: "Sherlok",
-            lastName: "Holmes",
-            streetName: "Baker St.",
-            streetNumber: "221B",
-            additionalStreetInfo: "additionalStreetInfo",
-            postalCode: "10012",
-            city: "London",
-            region: "region",
-            state: "state",
-            country: "UK",
-            company: "company",
-            department: "department",
-            building: "building",
-            apartment: "apartment",
-            pOBox: "pOBox",
-            phone: "phone",
-            email: "email",
-            fax: "fax",
-            additionalAddressInfo: "additionalAddressInfo",
-            externalId: "externalId"
+            key: 'my-address',
+            title: 'Baron',
+            salutation: 'Mr.',
+            firstName: 'Sherlok',
+            lastName: 'Holmes',
+            streetName: 'Baker St.',
+            streetNumber: '221B',
+            additionalStreetInfo: 'additionalStreetInfo',
+            postalCode: '10012',
+            city: 'London',
+            region: 'region',
+            state: 'state',
+            country: 'UK',
+            company: 'company',
+            department: 'department',
+            building: 'building',
+            apartment: 'apartment',
+            pOBox: 'pOBox',
+            phone: 'phone',
+            email: 'email',
+            fax: 'fax',
+            additionalAddressInfo: 'additionalAddressInfo',
+            externalId: 'externalId'
           },
           custom: {
             type: {
-              typeId: "product",
-              id: "f74b4e9f-2c01-4178-9ba5-bf6d6167a597"
+              typeId: 'product',
+              id: 'f74b4e9f-2c01-4178-9ba5-bf6d6167a597'
             },
             fields: {
-              description: "my description"
+              description: 'my description'
             }
           },
           geoLocation: {
-            type: "Point",
+            type: 'Point',
             coordinates: [35.2366173, -6.6724601]
           }
         };
@@ -209,57 +209,57 @@ describe("channel", () => {
         valid = ajv.validate(schema, data);
       });
 
-      test("should not be valid", () => {
+      test('should not be valid', () => {
         expect(valid).toBeFalsy();
       });
     });
 
-    describe("when missing createdAt property", () => {
+    describe('when missing createdAt property', () => {
       beforeAll(() => {
         data = {
-          id: "d0cc3195-5d4c-4f35-90d7-950ba7b0034b",
+          id: 'd0cc3195-5d4c-4f35-90d7-950ba7b0034b',
           version: 1,
-          lastModifiedAt: "2017-10-04T14:31:41.643Z",
-          key: "key",
-          roles: ["InventorySupply", "Primary"],
-          name: { en: "Channel name" },
-          description: { en: "Channel description" },
+          lastModifiedAt: '2017-10-04T14:31:41.643Z',
+          key: 'key',
+          roles: ['InventorySupply', 'Primary'],
+          name: { en: 'Channel name' },
+          description: { en: 'Channel description' },
           address: {
-            key: "my-address",
-            title: "Baron",
-            salutation: "Mr.",
-            firstName: "Sherlok",
-            lastName: "Holmes",
-            streetName: "Baker St.",
-            streetNumber: "221B",
-            additionalStreetInfo: "additionalStreetInfo",
-            postalCode: "10012",
-            city: "London",
-            region: "region",
-            state: "state",
-            country: "UK",
-            company: "company",
-            department: "department",
-            building: "building",
-            apartment: "apartment",
-            pOBox: "pOBox",
-            phone: "phone",
-            email: "email",
-            fax: "fax",
-            additionalAddressInfo: "additionalAddressInfo",
-            externalId: "externalId"
+            key: 'my-address',
+            title: 'Baron',
+            salutation: 'Mr.',
+            firstName: 'Sherlok',
+            lastName: 'Holmes',
+            streetName: 'Baker St.',
+            streetNumber: '221B',
+            additionalStreetInfo: 'additionalStreetInfo',
+            postalCode: '10012',
+            city: 'London',
+            region: 'region',
+            state: 'state',
+            country: 'UK',
+            company: 'company',
+            department: 'department',
+            building: 'building',
+            apartment: 'apartment',
+            pOBox: 'pOBox',
+            phone: 'phone',
+            email: 'email',
+            fax: 'fax',
+            additionalAddressInfo: 'additionalAddressInfo',
+            externalId: 'externalId'
           },
           custom: {
             type: {
-              typeId: "product",
-              id: "f74b4e9f-2c01-4178-9ba5-bf6d6167a597"
+              typeId: 'product',
+              id: 'f74b4e9f-2c01-4178-9ba5-bf6d6167a597'
             },
             fields: {
-              description: "my description"
+              description: 'my description'
             }
           },
           geoLocation: {
-            type: "Point",
+            type: 'Point',
             coordinates: [35.2366173, -6.6724601]
           }
         };
@@ -270,57 +270,57 @@ describe("channel", () => {
         valid = ajv.validate(schema, data);
       });
 
-      test("should not be valid", () => {
+      test('should not be valid', () => {
         expect(valid).toBeFalsy();
       });
     });
 
-    describe("when missing lastModifiedAt property", () => {
+    describe('when missing lastModifiedAt property', () => {
       beforeAll(() => {
         data = {
-          id: "d0cc3195-5d4c-4f35-90d7-950ba7b0034b",
+          id: 'd0cc3195-5d4c-4f35-90d7-950ba7b0034b',
           version: 1,
-          createdAt: "2017-10-04T14:31:41.643Z",
-          key: "key",
-          roles: ["InventorySupply", "Primary"],
-          name: { en: "Channel name" },
-          description: { en: "Channel description" },
+          createdAt: '2017-10-04T14:31:41.643Z',
+          key: 'key',
+          roles: ['InventorySupply', 'Primary'],
+          name: { en: 'Channel name' },
+          description: { en: 'Channel description' },
           address: {
-            key: "my-address",
-            title: "Baron",
-            salutation: "Mr.",
-            firstName: "Sherlok",
-            lastName: "Holmes",
-            streetName: "Baker St.",
-            streetNumber: "221B",
-            additionalStreetInfo: "additionalStreetInfo",
-            postalCode: "10012",
-            city: "London",
-            region: "region",
-            state: "state",
-            country: "UK",
-            company: "company",
-            department: "department",
-            building: "building",
-            apartment: "apartment",
-            pOBox: "pOBox",
-            phone: "phone",
-            email: "email",
-            fax: "fax",
-            additionalAddressInfo: "additionalAddressInfo",
-            externalId: "externalId"
+            key: 'my-address',
+            title: 'Baron',
+            salutation: 'Mr.',
+            firstName: 'Sherlok',
+            lastName: 'Holmes',
+            streetName: 'Baker St.',
+            streetNumber: '221B',
+            additionalStreetInfo: 'additionalStreetInfo',
+            postalCode: '10012',
+            city: 'London',
+            region: 'region',
+            state: 'state',
+            country: 'UK',
+            company: 'company',
+            department: 'department',
+            building: 'building',
+            apartment: 'apartment',
+            pOBox: 'pOBox',
+            phone: 'phone',
+            email: 'email',
+            fax: 'fax',
+            additionalAddressInfo: 'additionalAddressInfo',
+            externalId: 'externalId'
           },
           custom: {
             type: {
-              typeId: "product",
-              id: "f74b4e9f-2c01-4178-9ba5-bf6d6167a597"
+              typeId: 'product',
+              id: 'f74b4e9f-2c01-4178-9ba5-bf6d6167a597'
             },
             fields: {
-              description: "my description"
+              description: 'my description'
             }
           },
           geoLocation: {
-            type: "Point",
+            type: 'Point',
             coordinates: [35.2366173, -6.6724601]
           }
         };
@@ -331,57 +331,57 @@ describe("channel", () => {
         valid = ajv.validate(schema, data);
       });
 
-      test("should not be valid", () => {
+      test('should not be valid', () => {
         expect(valid).toBeFalsy();
       });
     });
 
-    describe("when missing key property", () => {
+    describe('when missing key property', () => {
       beforeAll(() => {
         data = {
-          id: "d0cc3195-5d4c-4f35-90d7-950ba7b0034b",
+          id: 'd0cc3195-5d4c-4f35-90d7-950ba7b0034b',
           version: 1,
-          createdAt: "2017-10-04T14:31:41.643Z",
-          lastModifiedAt: "2017-10-04T14:31:41.643Z",
-          roles: ["InventorySupply", "Primary"],
-          name: { en: "Channel name" },
-          description: { en: "Channel description" },
+          createdAt: '2017-10-04T14:31:41.643Z',
+          lastModifiedAt: '2017-10-04T14:31:41.643Z',
+          roles: ['InventorySupply', 'Primary'],
+          name: { en: 'Channel name' },
+          description: { en: 'Channel description' },
           address: {
-            key: "my-address",
-            title: "Baron",
-            salutation: "Mr.",
-            firstName: "Sherlok",
-            lastName: "Holmes",
-            streetName: "Baker St.",
-            streetNumber: "221B",
-            additionalStreetInfo: "additionalStreetInfo",
-            postalCode: "10012",
-            city: "London",
-            region: "region",
-            state: "state",
-            country: "UK",
-            company: "company",
-            department: "department",
-            building: "building",
-            apartment: "apartment",
-            pOBox: "pOBox",
-            phone: "phone",
-            email: "email",
-            fax: "fax",
-            additionalAddressInfo: "additionalAddressInfo",
-            externalId: "externalId"
+            key: 'my-address',
+            title: 'Baron',
+            salutation: 'Mr.',
+            firstName: 'Sherlok',
+            lastName: 'Holmes',
+            streetName: 'Baker St.',
+            streetNumber: '221B',
+            additionalStreetInfo: 'additionalStreetInfo',
+            postalCode: '10012',
+            city: 'London',
+            region: 'region',
+            state: 'state',
+            country: 'UK',
+            company: 'company',
+            department: 'department',
+            building: 'building',
+            apartment: 'apartment',
+            pOBox: 'pOBox',
+            phone: 'phone',
+            email: 'email',
+            fax: 'fax',
+            additionalAddressInfo: 'additionalAddressInfo',
+            externalId: 'externalId'
           },
           custom: {
             type: {
-              typeId: "product",
-              id: "f74b4e9f-2c01-4178-9ba5-bf6d6167a597"
+              typeId: 'product',
+              id: 'f74b4e9f-2c01-4178-9ba5-bf6d6167a597'
             },
             fields: {
-              description: "my description"
+              description: 'my description'
             }
           },
           geoLocation: {
-            type: "Point",
+            type: 'Point',
             coordinates: [35.2366173, -6.6724601]
           }
         };
@@ -392,7 +392,7 @@ describe("channel", () => {
         valid = ajv.validate(schema, data);
       });
 
-      test("should not be valid", () => {
+      test('should not be valid', () => {
         expect(valid).toBeFalsy();
       });
     });

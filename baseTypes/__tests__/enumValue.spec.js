@@ -1,16 +1,16 @@
-const Ajv = require("ajv");
-const schema = require("../enumValue");
+const Ajv = require('ajv');
+const schema = require('../enumValue');
 
-describe("enumValue", () => {
+describe('enumValue', () => {
   let ajv;
   let data;
   let valid;
 
-  describe("when success", () => {
+  describe('when success', () => {
     beforeAll(() => {
       data = {
-        key: "key",
-        label: "label"
+        key: 'key',
+        label: 'label'
       };
       ajv = Ajv();
     });
@@ -19,16 +19,16 @@ describe("enumValue", () => {
       valid = ajv.validate(schema, data);
     });
 
-    test("should be valid", () => {
+    test('should be valid', () => {
       expect(valid).toBeTruthy();
     });
   });
 
-  describe("when error", () => {
-    describe("when missing key property", () => {
+  describe('when error', () => {
+    describe('when missing key property', () => {
       beforeAll(() => {
         data = {
-          label: "label"
+          label: 'label'
         };
         ajv = Ajv();
       });
@@ -37,15 +37,15 @@ describe("enumValue", () => {
         valid = ajv.validate(schema, data);
       });
 
-      test("should not be valid", () => {
+      test('should not be valid', () => {
         expect(valid).toBeFalsy();
       });
     });
 
-    describe("when missing label property", () => {
+    describe('when missing label property', () => {
       beforeAll(() => {
         data = {
-          key: "key"
+          key: 'key'
         };
         ajv = Ajv();
       });
@@ -54,7 +54,7 @@ describe("enumValue", () => {
         valid = ajv.validate(schema, data);
       });
 
-      test("should not be valid", () => {
+      test('should not be valid', () => {
         expect(valid).toBeFalsy();
       });
     });

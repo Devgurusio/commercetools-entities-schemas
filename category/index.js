@@ -1,5 +1,5 @@
-const category = require("./category");
-const categoryDraft = require("./categoryDraft");
+const category = require('./category');
+const categoryDraft = require('./categoryDraft');
 
 module.exports = {
   category,

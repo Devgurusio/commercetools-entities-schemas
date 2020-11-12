@@ -1,17 +1,17 @@
-const key = require("../baseTypes/key");
-const location = require("../baseTypes/location");
+const key = require('../baseTypes/key');
+const location = require('../baseTypes/location');
 
 module.exports = {
-  type: "object",
-  description: "Zone draft object",
+  type: 'object',
+  description: 'Zone draft object',
   properties: {
     key,
-    name: { type: "string" },
-    description: { type: "string" },
+    name: { type: 'string' },
+    description: { type: 'string' },
     locations: {
-      type: "array",
+      type: 'array',
       items: location
     }
   },
-  required: ["name"]
+  required: ['name']
 };

@@ -1,13 +1,13 @@
-const Ajv = require("ajv");
-const schema = require("../paymentMethodInfo");
+const Ajv = require('ajv');
+const schema = require('../paymentMethodInfo');
 
-describe("paymentMethodInfo", () => {
+describe('paymentMethodInfo', () => {
   let ajv;
   let data;
   let valid;
 
-  describe("when success", () => {
-    describe("when only required fields", () => {
+  describe('when success', () => {
+    describe('when only required fields', () => {
       beforeAll(() => {
         data = {};
         ajv = Ajv();
@@ -17,17 +17,17 @@ describe("paymentMethodInfo", () => {
         valid = ajv.validate(schema, data);
       });
 
-      test("should be valid", () => {
+      test('should be valid', () => {
         expect(valid).toBeTruthy();
       });
     });
 
-    describe("when all fields", () => {
+    describe('when all fields', () => {
       beforeAll(() => {
         data = {
-          paymentInterface: "paymentInterface",
-          method: "Credit Card",
-          name: { en: "Credit Card", es: "Tarjeta de Crédito" }
+          paymentInterface: 'paymentInterface',
+          method: 'Credit Card',
+          name: { en: 'Credit Card', es: 'Tarjeta de Crédito' }
         };
         ajv = Ajv();
       });
@@ -36,7 +36,7 @@ describe("paymentMethodInfo", () => {
         valid = ajv.validate(schema, data);
       });
 
-      test("should be valid", () => {
+      test('should be valid', () => {
         expect(valid).toBeTruthy();
       });
     });

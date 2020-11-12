@@ -1,17 +1,17 @@
-const Ajv = require("ajv");
-const schema = require("../httpDestination");
+const Ajv = require('ajv');
+const schema = require('../httpDestination');
 
-describe("httpDestination", () => {
+describe('httpDestination', () => {
   let ajv;
   let data;
   let valid;
 
-  describe("when success", () => {
-    describe("when only required fields", () => {
+  describe('when success', () => {
+    describe('when only required fields', () => {
       beforeAll(() => {
         data = {
-          type: "HTTP",
-          url: "http://localhost"
+          type: 'HTTP',
+          url: 'http://localhost'
         };
         ajv = Ajv();
       });
@@ -20,20 +20,20 @@ describe("httpDestination", () => {
         valid = ajv.validate(schema, data);
       });
 
-      test("should be valid", () => {
+      test('should be valid', () => {
         expect(valid).toBeTruthy();
       });
     });
 
-    describe("when all fields", () => {
-      describe("when authentication is authorizationHeader", () => {
+    describe('when all fields', () => {
+      describe('when authentication is authorizationHeader', () => {
         beforeAll(() => {
           data = {
-            type: "HTTP",
-            url: "http://localhost",
+            type: 'HTTP',
+            url: 'http://localhost',
             authentication: {
-              type: "AuthorizationHeader",
-              headerValue: "headerValue"
+              type: 'AuthorizationHeader',
+              headerValue: 'headerValue'
             }
           };
           ajv = Ajv();
@@ -43,19 +43,19 @@ describe("httpDestination", () => {
           valid = ajv.validate(schema, data);
         });
 
-        test("should be valid", () => {
+        test('should be valid', () => {
           expect(valid).toBeTruthy();
         });
       });
 
-      describe("when authentication is azureFunctionsAuthentication", () => {
+      describe('when authentication is azureFunctionsAuthentication', () => {
         beforeAll(() => {
           data = {
-            type: "HTTP",
-            url: "http://localhost",
+            type: 'HTTP',
+            url: 'http://localhost',
             authentication: {
-              type: "AzureFunctions",
-              key: "key"
+              type: 'AzureFunctions',
+              key: 'key'
             }
           };
           ajv = Ajv();
@@ -65,18 +65,18 @@ describe("httpDestination", () => {
           valid = ajv.validate(schema, data);
         });
 
-        test("should be valid", () => {
+        test('should be valid', () => {
           expect(valid).toBeTruthy();
         });
       });
     });
   });
 
-  describe("when error", () => {
-    describe("when missing type property", () => {
+  describe('when error', () => {
+    describe('when missing type property', () => {
       beforeAll(() => {
         data = {
-          url: "http://localhost"
+          url: 'http://localhost'
         };
         ajv = Ajv();
       });
@@ -85,15 +85,15 @@ describe("httpDestination", () => {
         valid = ajv.validate(schema, data);
       });
 
-      test("should not be valid", () => {
+      test('should not be valid', () => {
         expect(valid).toBeFalsy();
       });
     });
 
-    describe("when missing url", () => {
+    describe('when missing url', () => {
       beforeAll(() => {
         data = {
-          type: "HTTP"
+          type: 'HTTP'
         };
         ajv = Ajv();
       });
@@ -102,16 +102,16 @@ describe("httpDestination", () => {
         valid = ajv.validate(schema, data);
       });
 
-      test("should not be valid", () => {
+      test('should not be valid', () => {
         expect(valid).toBeFalsy();
       });
     });
 
-    describe("when authorization is not valid", () => {
+    describe('when authorization is not valid', () => {
       beforeAll(() => {
         data = {
-          type: "invalidType",
-          url: "http://localhost"
+          type: 'invalidType',
+          url: 'http://localhost'
         };
         ajv = Ajv();
       });
@@ -120,20 +120,20 @@ describe("httpDestination", () => {
         valid = ajv.validate(schema, data);
       });
 
-      test("should not be valid", () => {
+      test('should not be valid', () => {
         expect(valid).toBeFalsy();
       });
     });
 
-    describe("when authorization is not oneOf [authorizationHeader, azureFunctionsAuthentication]", () => {
+    describe('when authorization is not oneOf [authorizationHeader, azureFunctionsAuthentication]', () => {
       beforeAll(() => {
         data = {
-          type: "HTTP",
-          url: "http://localhost",
+          type: 'HTTP',
+          url: 'http://localhost',
           authentication: {
-            type: "invalidType",
-            headerValue: "headerValue",
-            key: "key"
+            type: 'invalidType',
+            headerValue: 'headerValue',
+            key: 'key'
           }
         };
         ajv = Ajv();
@@ -143,7 +143,7 @@ describe("httpDestination", () => {
         valid = ajv.validate(schema, data);
       });
 
-      test("should not be valid", () => {
+      test('should not be valid', () => {
         expect(valid).toBeFalsy();
       });
     });

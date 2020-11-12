@@ -1,16 +1,16 @@
-const Ajv = require("ajv");
-const schema = require("../azureFunctionsAuthentication");
+const Ajv = require('ajv');
+const schema = require('../azureFunctionsAuthentication');
 
-describe("azureFunctionsAuthentication", () => {
+describe('azureFunctionsAuthentication', () => {
   let ajv;
   let data;
   let valid;
 
-  describe("when success", () => {
+  describe('when success', () => {
     beforeAll(() => {
       data = {
-        type: "AzureFunctions",
-        key: "key"
+        type: 'AzureFunctions',
+        key: 'key'
       };
       ajv = Ajv();
     });
@@ -19,16 +19,16 @@ describe("azureFunctionsAuthentication", () => {
       valid = ajv.validate(schema, data);
     });
 
-    test("should be valid", () => {
+    test('should be valid', () => {
       expect(valid).toBeTruthy();
     });
   });
 
-  describe("when error", () => {
-    describe("when missing type property", () => {
+  describe('when error', () => {
+    describe('when missing type property', () => {
       beforeAll(() => {
         data = {
-          key: "key"
+          key: 'key'
         };
         ajv = Ajv();
       });
@@ -37,15 +37,15 @@ describe("azureFunctionsAuthentication", () => {
         valid = ajv.validate(schema, data);
       });
 
-      test("should not be valid", () => {
+      test('should not be valid', () => {
         expect(valid).toBeFalsy();
       });
     });
 
-    describe("when missing key", () => {
+    describe('when missing key', () => {
       beforeAll(() => {
         data = {
-          type: "AzureFunctions"
+          type: 'AzureFunctions'
         };
         ajv = Ajv();
       });
@@ -54,16 +54,16 @@ describe("azureFunctionsAuthentication", () => {
         valid = ajv.validate(schema, data);
       });
 
-      test("should not be valid", () => {
+      test('should not be valid', () => {
         expect(valid).toBeFalsy();
       });
     });
 
-    describe("when type is not valid", () => {
+    describe('when type is not valid', () => {
       beforeAll(() => {
         data = {
-          type: "invalidType",
-          headerValue: "headerValue"
+          type: 'invalidType',
+          headerValue: 'headerValue'
         };
         ajv = Ajv();
       });
@@ -72,7 +72,7 @@ describe("azureFunctionsAuthentication", () => {
         valid = ajv.validate(schema, data);
       });
 
-      test("should not be valid", () => {
+      test('should not be valid', () => {
         expect(valid).toBeFalsy();
       });
     });

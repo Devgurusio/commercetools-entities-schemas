@@ -1,15 +1,15 @@
-const Ajv = require("ajv");
-const schema = require("../relative");
+const Ajv = require('ajv');
+const schema = require('../relative');
 
-describe("relative", () => {
+describe('relative', () => {
   let ajv;
   let data;
   let valid;
 
-  describe("when success", () => {
+  describe('when success', () => {
     beforeAll(() => {
       data = {
-        type: "relative",
+        type: 'relative',
         permyriad: 1000
       };
       ajv = Ajv();
@@ -19,13 +19,13 @@ describe("relative", () => {
       valid = ajv.validate(schema, data);
     });
 
-    test("should be valid", () => {
+    test('should be valid', () => {
       expect(valid).toBeTruthy();
     });
   });
 
-  describe("when error", () => {
-    describe("when missing type property", () => {
+  describe('when error', () => {
+    describe('when missing type property', () => {
       beforeAll(() => {
         data = {
           permyriad: 1000
@@ -37,15 +37,15 @@ describe("relative", () => {
         valid = ajv.validate(schema, data);
       });
 
-      test("should not be valid", () => {
+      test('should not be valid', () => {
         expect(valid).toBeFalsy();
       });
     });
 
-    describe("when missing permyriad property", () => {
+    describe('when missing permyriad property', () => {
       beforeAll(() => {
         data = {
-          type: "relative"
+          type: 'relative'
         };
         ajv = Ajv();
       });
@@ -54,15 +54,15 @@ describe("relative", () => {
         valid = ajv.validate(schema, data);
       });
 
-      test("should not be valid", () => {
+      test('should not be valid', () => {
         expect(valid).toBeFalsy();
       });
     });
 
-    describe("when type is not valid", () => {
+    describe('when type is not valid', () => {
       beforeAll(() => {
         data = {
-          type: "invalidType",
+          type: 'invalidType',
           permyriad: 1000
         };
         ajv = Ajv();
@@ -72,7 +72,7 @@ describe("relative", () => {
         valid = ajv.validate(schema, data);
       });
 
-      test("should not be valid", () => {
+      test('should not be valid', () => {
         expect(valid).toBeFalsy();
       });
     });

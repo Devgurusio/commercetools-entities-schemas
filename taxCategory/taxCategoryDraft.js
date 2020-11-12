@@ -1,16 +1,16 @@
-const taxRateDraft = require("./taxRateDraft");
+const taxRateDraft = require('./taxRateDraft');
 
 module.exports = {
-  type: "object",
-  description: "Tax category draft object",
+  type: 'object',
+  description: 'Tax category draft object',
   properties: {
-    name: { type: "string" },
-    key: { type: "string" },
-    description: { type: "string" },
+    name: { type: 'string' },
+    key: { type: 'string' },
+    description: { type: 'string' },
     rates: {
-      type: "array",
+      type: 'array',
       items: taxRateDraft
     }
   },
-  required: ["name"]
+  required: ['name']
 };

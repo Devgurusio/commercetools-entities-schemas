@@ -1,17 +1,17 @@
-const Ajv = require("ajv");
-const schema = require("../apiClientDraft");
+const Ajv = require('ajv');
+const schema = require('../apiClientDraft');
 
-describe("apiClientDraft", () => {
+describe('apiClientDraft', () => {
   let ajv;
   let data;
   let valid;
 
-  describe("when success", () => {
-    describe("when only required fields", () => {
+  describe('when success', () => {
+    describe('when only required fields', () => {
       beforeAll(() => {
         data = {
-          name: "my-api-client",
-          scope: "scope"
+          name: 'my-api-client',
+          scope: 'scope'
         };
         ajv = Ajv();
       });
@@ -20,16 +20,16 @@ describe("apiClientDraft", () => {
         valid = ajv.validate(schema, data);
       });
 
-      test("should be valid", () => {
+      test('should be valid', () => {
         expect(valid).toBeTruthy();
       });
     });
 
-    describe("when all fields", () => {
+    describe('when all fields', () => {
       beforeAll(() => {
         data = {
-          name: "my-api-client",
-          scope: "scope",
+          name: 'my-api-client',
+          scope: 'scope',
           deleteDaysAfterCreation: 10
         };
         ajv = Ajv();
@@ -39,17 +39,17 @@ describe("apiClientDraft", () => {
         valid = ajv.validate(schema, data);
       });
 
-      test("should be valid", () => {
+      test('should be valid', () => {
         expect(valid).toBeTruthy();
       });
     });
   });
 
-  describe("when error", () => {
-    describe("when missing name property", () => {
+  describe('when error', () => {
+    describe('when missing name property', () => {
       beforeAll(() => {
         data = {
-          scope: "scope",
+          scope: 'scope',
           deleteDaysAfterCreation: 10
         };
         ajv = Ajv();
@@ -59,15 +59,15 @@ describe("apiClientDraft", () => {
         valid = ajv.validate(schema, data);
       });
 
-      test("should not be valid", () => {
+      test('should not be valid', () => {
         expect(valid).toBeFalsy();
       });
     });
 
-    describe("when missing scope property", () => {
+    describe('when missing scope property', () => {
       beforeAll(() => {
         data = {
-          name: "my-api-client",
+          name: 'my-api-client',
           deleteDaysAfterCreation: 10
         };
         ajv = Ajv();
@@ -77,7 +77,7 @@ describe("apiClientDraft", () => {
         valid = ajv.validate(schema, data);
       });
 
-      test("should not be valid", () => {
+      test('should not be valid', () => {
         expect(valid).toBeFalsy();
       });
     });

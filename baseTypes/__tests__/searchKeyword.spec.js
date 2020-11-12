@@ -1,15 +1,15 @@
-const Ajv = require("ajv");
-const schema = require("../searchKeyword");
+const Ajv = require('ajv');
+const schema = require('../searchKeyword');
 
-describe("searchKeyword", () => {
+describe('searchKeyword', () => {
   let ajv;
   let data;
   let valid;
 
-  describe("when success", () => {
-    describe("when only required fields", () => {
+  describe('when success', () => {
+    describe('when only required fields', () => {
       beforeAll(() => {
-        data = { text: "text" };
+        data = { text: 'text' };
         ajv = Ajv();
       });
 
@@ -17,17 +17,17 @@ describe("searchKeyword", () => {
         valid = ajv.validate(schema, data);
       });
 
-      test("should be valid", () => {
+      test('should be valid', () => {
         expect(valid).toBeTruthy();
       });
     });
 
-    describe("when all fields", () => {
+    describe('when all fields', () => {
       beforeAll(() => {
         data = {
-          text: "text",
+          text: 'text',
           suggestTokenizer: {
-            type: "whitespace"
+            type: 'whitespace'
           }
         };
         ajv = Ajv();
@@ -37,18 +37,18 @@ describe("searchKeyword", () => {
         valid = ajv.validate(schema, data);
       });
 
-      test("should be valid", () => {
+      test('should be valid', () => {
         expect(valid).toBeTruthy();
       });
     });
   });
 
-  describe("when error", () => {
-    describe("when missing text property", () => {
+  describe('when error', () => {
+    describe('when missing text property', () => {
       beforeAll(() => {
         data = {
           suggestTokenizer: {
-            type: "whitespace"
+            type: 'whitespace'
           }
         };
         ajv = Ajv();
@@ -58,7 +58,7 @@ describe("searchKeyword", () => {
         valid = ajv.validate(schema, data);
       });
 
-      test("should not be valid", () => {
+      test('should not be valid', () => {
         expect(valid).toBeFalsy();
       });
     });

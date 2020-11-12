@@ -1,17 +1,17 @@
-const Ajv = require("ajv");
-const schema = require("../typeDraft");
+const Ajv = require('ajv');
+const schema = require('../typeDraft');
 
-describe("typeDraft", () => {
+describe('typeDraft', () => {
   let ajv;
   let data;
   let valid;
 
-  describe("when success", () => {
-    describe("when only required fields", () => {
+  describe('when success', () => {
+    describe('when only required fields', () => {
       beforeAll(() => {
         data = {
-          key: "key",
-          name: { en: "name", es: "nombre" }
+          key: 'key',
+          name: { en: 'name', es: 'nombre' }
         };
         ajv = Ajv();
       });
@@ -20,25 +20,25 @@ describe("typeDraft", () => {
         valid = ajv.validate(schema, data);
       });
 
-      test("should be valid", () => {
+      test('should be valid', () => {
         expect(valid).toBeTruthy();
       });
     });
 
-    describe("when all fields", () => {
+    describe('when all fields', () => {
       beforeAll(() => {
         data = {
-          key: "key",
-          name: { en: "name", es: "nombre" },
-          description: { en: "description", es: "description" },
-          resourceTypeIds: ["asset"],
+          key: 'key',
+          name: { en: 'name', es: 'nombre' },
+          description: { en: 'description', es: 'description' },
+          resourceTypeIds: ['asset'],
           fieldDefinitions: [
             {
-              type: { name: "String" },
-              name: "test-fieldDefinition",
-              label: { en: "Test Field Definition " },
+              type: { name: 'String' },
+              name: 'test-fieldDefinition',
+              label: { en: 'Test Field Definition ' },
               required: false,
-              inputHint: "SingleLine"
+              inputHint: 'SingleLine'
             }
           ]
         };
@@ -49,26 +49,26 @@ describe("typeDraft", () => {
         valid = ajv.validate(schema, data);
       });
 
-      test("should be valid", () => {
+      test('should be valid', () => {
         expect(valid).toBeTruthy();
       });
     });
   });
 
-  describe("when error", () => {
-    describe("when missing key property", () => {
+  describe('when error', () => {
+    describe('when missing key property', () => {
       beforeAll(() => {
         data = {
-          name: { en: "name", es: "nombre" },
-          description: { en: "description", es: "description" },
-          resourceTypeIds: ["asset"],
+          name: { en: 'name', es: 'nombre' },
+          description: { en: 'description', es: 'description' },
+          resourceTypeIds: ['asset'],
           fieldDefinitions: [
             {
-              type: { name: "String" },
-              name: "test-fieldDefinition",
-              label: { en: "Test Field Definition " },
+              type: { name: 'String' },
+              name: 'test-fieldDefinition',
+              label: { en: 'Test Field Definition ' },
               required: false,
-              inputHint: "SingleLine"
+              inputHint: 'SingleLine'
             }
           ]
         };
@@ -79,24 +79,24 @@ describe("typeDraft", () => {
         valid = ajv.validate(schema, data);
       });
 
-      test("should not be valid", () => {
+      test('should not be valid', () => {
         expect(valid).toBeFalsy();
       });
     });
 
-    describe("when missing name property", () => {
+    describe('when missing name property', () => {
       beforeAll(() => {
         data = {
-          key: "key",
-          description: { en: "description", es: "description" },
-          resourceTypeIds: ["asset"],
+          key: 'key',
+          description: { en: 'description', es: 'description' },
+          resourceTypeIds: ['asset'],
           fieldDefinitions: [
             {
-              type: { name: "String" },
-              name: "test-fieldDefinition",
-              label: { en: "Test Field Definition " },
+              type: { name: 'String' },
+              name: 'test-fieldDefinition',
+              label: { en: 'Test Field Definition ' },
               required: false,
-              inputHint: "SingleLine"
+              inputHint: 'SingleLine'
             }
           ]
         };
@@ -107,7 +107,7 @@ describe("typeDraft", () => {
         valid = ajv.validate(schema, data);
       });
 
-      test("should not be valid", () => {
+      test('should not be valid', () => {
         expect(valid).toBeFalsy();
       });
     });

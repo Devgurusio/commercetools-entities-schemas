@@ -1,17 +1,17 @@
-const Ajv = require("ajv");
-const schema = require("../baseMoney");
+const Ajv = require('ajv');
+const schema = require('../baseMoney');
 
-describe("baseMoney", () => {
+describe('baseMoney', () => {
   let ajv;
   let data;
   let valid;
 
-  describe("when success", () => {
-    describe("when centPrecision", () => {
-      describe("when only required fields", () => {
+  describe('when success', () => {
+    describe('when centPrecision', () => {
+      describe('when only required fields', () => {
         beforeAll(() => {
           data = {
-            currencyCode: "EUR",
+            currencyCode: 'EUR',
             centAmount: 4200
           };
         });
@@ -24,16 +24,16 @@ describe("baseMoney", () => {
           valid = ajv.validate(schema, data);
         });
 
-        test("should be valid", () => {
+        test('should be valid', () => {
           expect(valid).toBeTruthy();
         });
       });
 
-      describe("when all fields", () => {
+      describe('when all fields', () => {
         beforeAll(() => {
           data = {
-            type: "centPrecision",
-            currencyCode: "EUR",
+            type: 'centPrecision',
+            currencyCode: 'EUR',
             centAmount: 4200,
             fractionDigits: 2
           };
@@ -47,18 +47,18 @@ describe("baseMoney", () => {
           valid = ajv.validate(schema, data);
         });
 
-        test("should be valid", () => {
+        test('should be valid', () => {
           expect(valid).toBeTruthy();
         });
       });
     });
 
-    describe("when highPrecision", () => {
-      describe("when only required fields", () => {
+    describe('when highPrecision', () => {
+      describe('when only required fields', () => {
         beforeAll(() => {
           data = {
-            type: "highPrecision",
-            currencyCode: "EUR",
+            type: 'highPrecision',
+            currencyCode: 'EUR',
             centAmount: 4200,
             fractionDigits: 2
           };
@@ -72,16 +72,16 @@ describe("baseMoney", () => {
           valid = ajv.validate(schema, data);
         });
 
-        test("should be valid", () => {
+        test('should be valid', () => {
           expect(valid).toBeTruthy();
         });
       });
 
-      describe("when all fields", () => {
+      describe('when all fields', () => {
         beforeAll(() => {
           data = {
-            type: "highPrecision",
-            currencyCode: "EUR",
+            type: 'highPrecision',
+            currencyCode: 'EUR',
             centAmount: 4200,
             preciseAmount: 42,
             fractionDigits: 2
@@ -96,18 +96,18 @@ describe("baseMoney", () => {
           valid = ajv.validate(schema, data);
         });
 
-        test("should be valid", () => {
+        test('should be valid', () => {
           expect(valid).toBeTruthy();
         });
       });
     });
   });
 
-  describe("when error", () => {
+  describe('when error', () => {
     beforeAll(() => {
       data = data = {
-        type: "nonExistingType",
-        currencyCode: "EUR",
+        type: 'nonExistingType',
+        currencyCode: 'EUR',
         centAmount: 4200
       };
       ajv = Ajv();
@@ -117,7 +117,7 @@ describe("baseMoney", () => {
       valid = ajv.validate(schema, data);
     });
 
-    test("should not be valid", () => {
+    test('should not be valid', () => {
       expect(valid).toBeFalsy();
     });
   });

@@ -1,24 +1,24 @@
-const productData = require("./productData");
+const productData = require('./productData');
 
 module.exports = {
-  type: "object",
+  type: 'object',
   properties: {
     published: {
-      type: "boolean",
-      description: "Whether the product is published"
+      type: 'boolean',
+      description: 'Whether the product is published'
     },
     current: {
       ...productData,
-      description: "The current data of the product"
+      description: 'The current data of the product'
     },
     staged: {
       ...productData,
-      description: "The staged data of the product"
+      description: 'The staged data of the product'
     },
     hasStagedChanges: {
-      type: "boolean",
-      description: "Whether the staged data is different from the current data"
+      type: 'boolean',
+      description: 'Whether the staged data is different from the current data'
     }
   },
-  required: ["published", "current", "staged", "hasStagedChanges"]
+  required: ['published', 'current', 'staged', 'hasStagedChanges']
 };

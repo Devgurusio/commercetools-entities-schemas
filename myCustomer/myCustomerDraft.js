@@ -1,50 +1,50 @@
-const addressDraft = require("../baseTypes/addressDraft");
-const customFieldsDraft = require("../baseTypes/customFieldsDraft");
-const date = require("../baseTypes/date");
+const addressDraft = require('../baseTypes/addressDraft');
+const customFieldsDraft = require('../baseTypes/customFieldsDraft');
+const date = require('../baseTypes/date');
 
 module.exports = {
-  type: "object",
-  description: "My customer draft object",
+  type: 'object',
+  description: 'My customer draft object',
   properties: {
     email: {
-      type: "string",
+      type: 'string',
       description:
-        "Stored in given case. For the uniqueness check, it is treated as case-insensitive",
-      format: "email"
+        'Stored in given case. For the uniqueness check, it is treated as case-insensitive',
+      format: 'email'
     },
     password: {
-      type: "string",
-      description: "Customer password"
+      type: 'string',
+      description: 'Customer password'
     },
-    firstName: { type: "string" },
-    lastName: { type: "string" },
-    middleName: { type: "string" },
-    title: { type: "string" },
-    salutation: { type: "string" },
+    firstName: { type: 'string' },
+    lastName: { type: 'string' },
+    middleName: { type: 'string' },
+    title: { type: 'string' },
+    salutation: { type: 'string' },
     dateOfBirth: date,
-    companyName: { type: "string" },
-    vatId: { type: "string" },
+    companyName: { type: 'string' },
+    vatId: { type: 'string' },
     addresses: {
-      type: "array",
-      description: "Array of AddressDraft",
+      type: 'array',
+      description: 'Array of AddressDraft',
       items: addressDraft
     },
     defaultBillingAddress: {
-      type: "number",
+      type: 'number',
       description: `The index of the address in the addresses array.
         The defaultBillingAddressId of the customer will be set to the ID of that address`
     },
     defaultShippingAddress: {
-      type: "number",
+      type: 'number',
       description: `The index of the address in the addresses array.
         The defaultShippingAddressId of the customer will be set to the ID of that address`
     },
     custom: customFieldsDraft,
     locale: {
-      type: "string",
+      type: 'string',
       description: `String conforming to IETF language tag.
         Must be one of the languages supported for this project`
     }
   },
-  required: ["email", "password"]
+  required: ['email', 'password']
 };

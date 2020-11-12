@@ -1,13 +1,13 @@
 module.exports = {
-  type: "object",
+  type: 'object',
   properties: {
     country: {
-      type: "string",
-      description: "A two-digit country code as per ISO 3166-1 alpha-2"
+      type: 'string',
+      description: 'A two-digit country code as per ISO 3166-1 alpha-2'
     },
     state: {
-      type: "string"
+      type: 'string'
     }
   },
-  required: ["country"]
+  required: ['country']
 };

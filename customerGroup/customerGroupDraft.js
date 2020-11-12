@@ -1,15 +1,15 @@
-const customFieldsDraft = require("../baseTypes/customFieldsDraft");
+const customFieldsDraft = require('../baseTypes/customFieldsDraft');
 
 module.exports = {
-  type: "object",
-  description: "Customer group draft",
+  type: 'object',
+  description: 'Customer group draft',
   properties: {
     key: {
-      type: "string",
-      description: "User - specific unique identifier for the customer group"
+      type: 'string',
+      description: 'User - specific unique identifier for the customer group'
     },
-    groupName: { type: "string" },
+    groupName: { type: 'string' },
     custom: customFieldsDraft
   },
-  required: ["groupName"]
+  required: ['groupName']
 };

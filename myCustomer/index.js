@@ -1,4 +1,4 @@
-const myCustomerDraft = require("./myCustomerDraft");
+const myCustomerDraft = require('./myCustomerDraft');
 
 module.exports = {
   myCustomerDraft

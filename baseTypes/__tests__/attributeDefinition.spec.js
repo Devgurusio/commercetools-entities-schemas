@@ -1,18 +1,18 @@
-const Ajv = require("ajv");
-const schema = require("../attributeDefinition");
+const Ajv = require('ajv');
+const schema = require('../attributeDefinition');
 
-describe("attributeDefinition", () => {
+describe('attributeDefinition', () => {
   let ajv;
   let data;
   let valid;
 
-  describe("when success", () => {
-    describe("when only required fields", () => {
+  describe('when success', () => {
+    describe('when only required fields', () => {
       beforeAll(() => {
         data = {
-          type: { name: "number" },
-          name: "customizableWithAccessoryVariant",
-          label: { en: "Customizable with accessory variant" },
+          type: { name: 'number' },
+          name: 'customizableWithAccessoryVariant',
+          label: { en: 'Customizable with accessory variant' },
           isRequired: true
         };
         ajv = Ajv();
@@ -22,23 +22,23 @@ describe("attributeDefinition", () => {
         valid = ajv.validate(schema, data);
       });
 
-      test("should be valid", () => {
+      test('should be valid', () => {
         expect(valid).toBeTruthy();
       });
     });
 
-    describe("when all fields", () => {
+    describe('when all fields', () => {
       beforeAll(() => {
         data = {
-          type: { name: "number" },
-          name: "customizableWithAccessoryVariant",
-          label: { en: "Customizable with accessory variant" },
+          type: { name: 'number' },
+          name: 'customizableWithAccessoryVariant',
+          label: { en: 'Customizable with accessory variant' },
           isRequired: true,
-          attributeConstraint: "None",
-          inputTip: { en: "inputTip", es: "inputTip" },
-          inputHint: "SingleLine",
+          attributeConstraint: 'None',
+          inputTip: { en: 'inputTip', es: 'inputTip' },
+          inputHint: 'SingleLine',
           isSearchable: true,
-          displayGroup: "Other"
+          displayGroup: 'Other'
         };
         ajv = Ajv();
       });
@@ -47,24 +47,24 @@ describe("attributeDefinition", () => {
         valid = ajv.validate(schema, data);
       });
 
-      test("should be valid", () => {
+      test('should be valid', () => {
         expect(valid).toBeTruthy();
       });
     });
   });
 
-  describe("when error", () => {
-    describe("when missing type property", () => {
+  describe('when error', () => {
+    describe('when missing type property', () => {
       beforeAll(() => {
         data = {
-          name: "customizableWithAccessoryVariant",
-          label: { en: "Customizable with accessory variant" },
+          name: 'customizableWithAccessoryVariant',
+          label: { en: 'Customizable with accessory variant' },
           isRequired: true,
-          attributeConstraint: "None",
-          inputTip: { en: "inputTip", es: "inputTip" },
-          inputHint: "SingleLine",
+          attributeConstraint: 'None',
+          inputTip: { en: 'inputTip', es: 'inputTip' },
+          inputHint: 'SingleLine',
           isSearchable: true,
-          displayGroup: "Other"
+          displayGroup: 'Other'
         };
         ajv = Ajv();
       });
@@ -73,22 +73,22 @@ describe("attributeDefinition", () => {
         valid = ajv.validate(schema, data);
       });
 
-      test("should not be valid", () => {
+      test('should not be valid', () => {
         expect(valid).toBeFalsy();
       });
     });
 
-    describe("when missing name property", () => {
+    describe('when missing name property', () => {
       beforeAll(() => {
         data = {
-          type: { name: "number" },
-          label: { en: "Customizable with accessory variant" },
+          type: { name: 'number' },
+          label: { en: 'Customizable with accessory variant' },
           isRequired: true,
-          attributeConstraint: "None",
-          inputTip: { en: "inputTip", es: "inputTip" },
-          inputHint: "SingleLine",
+          attributeConstraint: 'None',
+          inputTip: { en: 'inputTip', es: 'inputTip' },
+          inputHint: 'SingleLine',
           isSearchable: true,
-          displayGroup: "Other"
+          displayGroup: 'Other'
         };
         ajv = Ajv();
       });
@@ -97,22 +97,22 @@ describe("attributeDefinition", () => {
         valid = ajv.validate(schema, data);
       });
 
-      test("should not be valid", () => {
+      test('should not be valid', () => {
         expect(valid).toBeFalsy();
       });
     });
 
-    describe("when missing label property", () => {
+    describe('when missing label property', () => {
       beforeAll(() => {
         data = {
-          type: { name: "number" },
-          name: "customizableWithAccessoryVariant",
+          type: { name: 'number' },
+          name: 'customizableWithAccessoryVariant',
           isRequired: true,
-          attributeConstraint: "None",
-          inputTip: { en: "inputTip", es: "inputTip" },
-          inputHint: "SingleLine",
+          attributeConstraint: 'None',
+          inputTip: { en: 'inputTip', es: 'inputTip' },
+          inputHint: 'SingleLine',
           isSearchable: true,
-          displayGroup: "Other"
+          displayGroup: 'Other'
         };
         ajv = Ajv();
       });
@@ -121,22 +121,22 @@ describe("attributeDefinition", () => {
         valid = ajv.validate(schema, data);
       });
 
-      test("should not be valid", () => {
+      test('should not be valid', () => {
         expect(valid).toBeFalsy();
       });
     });
 
-    describe("when missing isRequired property", () => {
+    describe('when missing isRequired property', () => {
       beforeAll(() => {
         data = {
-          type: { name: "number" },
-          name: "customizableWithAccessoryVariant",
-          label: { en: "Customizable with accessory variant" },
-          attributeConstraint: "None",
-          inputTip: { en: "inputTip", es: "inputTip" },
-          inputHint: "SingleLine",
+          type: { name: 'number' },
+          name: 'customizableWithAccessoryVariant',
+          label: { en: 'Customizable with accessory variant' },
+          attributeConstraint: 'None',
+          inputTip: { en: 'inputTip', es: 'inputTip' },
+          inputHint: 'SingleLine',
           isSearchable: true,
-          displayGroup: "Other"
+          displayGroup: 'Other'
         };
         ajv = Ajv();
       });
@@ -145,7 +145,7 @@ describe("attributeDefinition", () => {
         valid = ajv.validate(schema, data);
       });
 
-      test("should not be valid", () => {
+      test('should not be valid', () => {
         expect(valid).toBeFalsy();
       });
     });

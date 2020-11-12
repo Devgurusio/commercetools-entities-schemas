@@ -1,17 +1,17 @@
 module.exports = {
-  type: "object",
-  description: "API client draft object",
+  type: 'object',
+  description: 'API client draft object',
   properties: {
-    name: { type: "string" },
+    name: { type: 'string' },
     scope: {
-      type: "string",
-      description: "A whitespace separated list of the OAuth scopes"
+      type: 'string',
+      description: 'A whitespace separated list of the OAuth scopes'
     },
     deleteDaysAfterCreation: {
-      type: "integer",
+      type: 'integer',
       description:
-        "If set, the client will be deleted after the specified amount of days"
+        'If set, the client will be deleted after the specified amount of days'
     }
   },
-  required: ["name", "scope"]
+  required: ['name', 'scope']
 };

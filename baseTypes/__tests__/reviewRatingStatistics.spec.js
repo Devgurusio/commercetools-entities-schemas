@@ -1,12 +1,12 @@
-const Ajv = require("ajv");
-const schema = require("../reviewRatingStatistics");
+const Ajv = require('ajv');
+const schema = require('../reviewRatingStatistics');
 
-describe("reviewRatingStatistics", () => {
+describe('reviewRatingStatistics', () => {
   let ajv;
   let data;
   let valid;
 
-  describe("when success", () => {
+  describe('when success', () => {
     beforeAll(() => {
       data = {
         averageRating: 4.42892,
@@ -14,13 +14,13 @@ describe("reviewRatingStatistics", () => {
         lowestRating: 1,
         count: 401,
         ratingsDistribution: {
-          "1": 3,
-          "2": 7,
-          "3": 59,
-          "4": 169,
-          "5": 74,
-          "6": 87,
-          "7": 2
+          1: 3,
+          2: 7,
+          3: 59,
+          4: 169,
+          5: 74,
+          6: 87,
+          7: 2
         }
       };
       ajv = Ajv();
@@ -30,7 +30,7 @@ describe("reviewRatingStatistics", () => {
       valid = ajv.validate(schema, data);
     });
 
-    test("should be valid", () => {
+    test('should be valid', () => {
       expect(valid).toBeTruthy();
     });
   });

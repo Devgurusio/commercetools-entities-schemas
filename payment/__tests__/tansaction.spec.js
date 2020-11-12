@@ -1,20 +1,20 @@
-const Ajv = require("ajv");
-const schema = require("../transaction");
+const Ajv = require('ajv');
+const schema = require('../transaction');
 
-describe("transaction", () => {
+describe('transaction', () => {
   let ajv;
   let data;
   let valid;
 
-  describe("when success", () => {
-    describe("when only required fields", () => {
+  describe('when success', () => {
+    describe('when only required fields', () => {
       beforeAll(() => {
         data = {
-          id: "74d32d79-aa32-44c8-8f2e-74132890310b",
-          type: "Authorization",
+          id: '74d32d79-aa32-44c8-8f2e-74132890310b',
+          type: 'Authorization',
           amount: {
-            type: "centPrecision",
-            currencyCode: "EUR",
+            type: 'centPrecision',
+            currencyCode: 'EUR',
             centAmount: 390,
             fractionDigits: 2
           }
@@ -26,25 +26,25 @@ describe("transaction", () => {
         valid = ajv.validate(schema, data);
       });
 
-      test("should be valid", () => {
+      test('should be valid', () => {
         expect(valid).toBeTruthy();
       });
     });
 
-    describe("when all fields", () => {
+    describe('when all fields', () => {
       beforeAll(() => {
         data = {
-          id: "74d32d79-aa32-44c8-8f2e-74132890310b",
-          timestamp: "2017-10-04T14:31:41.643Z",
-          type: "Authorization",
+          id: '74d32d79-aa32-44c8-8f2e-74132890310b',
+          timestamp: '2017-10-04T14:31:41.643Z',
+          type: 'Authorization',
           amount: {
-            type: "centPrecision",
-            currencyCode: "EUR",
+            type: 'centPrecision',
+            currencyCode: 'EUR',
             centAmount: 390,
             fractionDigits: 2
           },
-          interactionId: "interactionId",
-          state: "Initial"
+          interactionId: 'interactionId',
+          state: 'Initial'
         };
         ajv = Ajv();
       });
@@ -53,26 +53,26 @@ describe("transaction", () => {
         valid = ajv.validate(schema, data);
       });
 
-      test("should be valid", () => {
+      test('should be valid', () => {
         expect(valid).toBeTruthy();
       });
     });
   });
 
-  describe("when error", () => {
-    describe("when missing id property", () => {
+  describe('when error', () => {
+    describe('when missing id property', () => {
       beforeAll(() => {
         data = {
-          timestamp: "2017-10-04T14:31:41.643Z",
-          type: "Authorization",
+          timestamp: '2017-10-04T14:31:41.643Z',
+          type: 'Authorization',
           amount: {
-            type: "centPrecision",
-            currencyCode: "EUR",
+            type: 'centPrecision',
+            currencyCode: 'EUR',
             centAmount: 390,
             fractionDigits: 2
           },
-          interactionId: "interactionId",
-          state: "Initial"
+          interactionId: 'interactionId',
+          state: 'Initial'
         };
         ajv = Ajv();
       });
@@ -81,24 +81,24 @@ describe("transaction", () => {
         valid = ajv.validate(schema, data);
       });
 
-      test("should not be valid", () => {
+      test('should not be valid', () => {
         expect(valid).toBeFalsy();
       });
     });
 
-    describe("when missing type property", () => {
+    describe('when missing type property', () => {
       beforeAll(() => {
         data = {
-          id: "74d32d79-aa32-44c8-8f2e-74132890310b",
-          timestamp: "2017-10-04T14:31:41.643Z",
+          id: '74d32d79-aa32-44c8-8f2e-74132890310b',
+          timestamp: '2017-10-04T14:31:41.643Z',
           amount: {
-            type: "centPrecision",
-            currencyCode: "EUR",
+            type: 'centPrecision',
+            currencyCode: 'EUR',
             centAmount: 390,
             fractionDigits: 2
           },
-          interactionId: "interactionId",
-          state: "Initial"
+          interactionId: 'interactionId',
+          state: 'Initial'
         };
         ajv = Ajv();
       });
@@ -107,25 +107,25 @@ describe("transaction", () => {
         valid = ajv.validate(schema, data);
       });
 
-      test("should not be valid", () => {
+      test('should not be valid', () => {
         expect(valid).toBeFalsy();
       });
     });
 
-    describe("when type property is not an allowed one", () => {
+    describe('when type property is not an allowed one', () => {
       beforeAll(() => {
         data = {
-          id: "74d32d79-aa32-44c8-8f2e-74132890310b",
-          timestamp: "2017-10-04T14:31:41.643Z",
-          type: "notAllowedType",
+          id: '74d32d79-aa32-44c8-8f2e-74132890310b',
+          timestamp: '2017-10-04T14:31:41.643Z',
+          type: 'notAllowedType',
           amount: {
-            type: "centPrecision",
-            currencyCode: "EUR",
+            type: 'centPrecision',
+            currencyCode: 'EUR',
             centAmount: 390,
             fractionDigits: 2
           },
-          interactionId: "interactionId",
-          state: "Initial"
+          interactionId: 'interactionId',
+          state: 'Initial'
         };
         ajv = Ajv();
       });
@@ -134,19 +134,19 @@ describe("transaction", () => {
         valid = ajv.validate(schema, data);
       });
 
-      test("should not be valid", () => {
+      test('should not be valid', () => {
         expect(valid).toBeFalsy();
       });
     });
 
-    describe("when missing amount property", () => {
+    describe('when missing amount property', () => {
       beforeAll(() => {
         data = {
-          id: "74d32d79-aa32-44c8-8f2e-74132890310b",
-          timestamp: "2017-10-04T14:31:41.643Z",
-          type: "Authorization",
-          interactionId: "interactionId",
-          state: "Initial"
+          id: '74d32d79-aa32-44c8-8f2e-74132890310b',
+          timestamp: '2017-10-04T14:31:41.643Z',
+          type: 'Authorization',
+          interactionId: 'interactionId',
+          state: 'Initial'
         };
         ajv = Ajv();
       });
@@ -155,25 +155,25 @@ describe("transaction", () => {
         valid = ajv.validate(schema, data);
       });
 
-      test("should not be valid", () => {
+      test('should not be valid', () => {
         expect(valid).toBeFalsy();
       });
     });
 
-    describe("when state property is not an allowed one", () => {
+    describe('when state property is not an allowed one', () => {
       beforeAll(() => {
         data = {
-          id: "74d32d79-aa32-44c8-8f2e-74132890310b",
-          timestamp: "2017-10-04T14:31:41.643Z",
-          type: "Authorization",
+          id: '74d32d79-aa32-44c8-8f2e-74132890310b',
+          timestamp: '2017-10-04T14:31:41.643Z',
+          type: 'Authorization',
           amount: {
-            type: "centPrecision",
-            currencyCode: "EUR",
+            type: 'centPrecision',
+            currencyCode: 'EUR',
             centAmount: 390,
             fractionDigits: 2
           },
-          interactionId: "interactionId",
-          state: "notAllowedType"
+          interactionId: 'interactionId',
+          state: 'notAllowedType'
         };
         ajv = Ajv();
       });
@@ -182,7 +182,7 @@ describe("transaction", () => {
         valid = ajv.validate(schema, data);
       });
 
-      test("should not be valid", () => {
+      test('should not be valid', () => {
         expect(valid).toBeFalsy();
       });
     });

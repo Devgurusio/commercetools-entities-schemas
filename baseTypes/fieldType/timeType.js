@@ -1,7 +1,7 @@
 module.exports = {
-  type: "object",
+  type: 'object',
   properties: {
-    name: { type: "string", enum: ["Time"] }
+    name: { type: 'string', enum: ['Time'] }
   },
-  required: ["name"]
+  required: ['name']
 };

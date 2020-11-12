@@ -1,15 +1,15 @@
-const Ajv = require("ajv");
-const schema = require("../index");
+const Ajv = require('ajv');
+const schema = require('../index');
 
-describe("fieldType", () => {
+describe('fieldType', () => {
   let ajv;
   let data;
   let valid;
 
-  describe("when success", () => {
-    describe("when Boolean", () => {
+  describe('when success', () => {
+    describe('when Boolean', () => {
       beforeAll(() => {
-        data = { name: "Boolean" };
+        data = { name: 'Boolean' };
         ajv = Ajv();
       });
 
@@ -17,14 +17,14 @@ describe("fieldType", () => {
         valid = ajv.validate(schema, data);
       });
 
-      test("should be valid", () => {
+      test('should be valid', () => {
         expect(valid).toBeTruthy();
       });
     });
 
-    describe("when DateTime", () => {
+    describe('when DateTime', () => {
       beforeAll(() => {
-        data = { name: "DateTime" };
+        data = { name: 'DateTime' };
         ajv = Ajv();
       });
 
@@ -32,14 +32,14 @@ describe("fieldType", () => {
         valid = ajv.validate(schema, data);
       });
 
-      test("should be valid", () => {
+      test('should be valid', () => {
         expect(valid).toBeTruthy();
       });
     });
 
-    describe("when Date", () => {
+    describe('when Date', () => {
       beforeAll(() => {
-        data = { name: "Date" };
+        data = { name: 'Date' };
         ajv = Ajv();
       });
 
@@ -47,16 +47,16 @@ describe("fieldType", () => {
         valid = ajv.validate(schema, data);
       });
 
-      test("should be valid", () => {
+      test('should be valid', () => {
         expect(valid).toBeTruthy();
       });
     });
 
-    describe("when Enum", () => {
+    describe('when Enum', () => {
       beforeAll(() => {
         data = {
-          name: "Enum",
-          values: [{ key: "key", label: "label" }]
+          name: 'Enum',
+          values: [{ key: 'key', label: 'label' }]
         };
         ajv = Ajv();
       });
@@ -65,16 +65,16 @@ describe("fieldType", () => {
         valid = ajv.validate(schema, data);
       });
 
-      test("should be valid", () => {
+      test('should be valid', () => {
         expect(valid).toBeTruthy();
       });
     });
 
-    describe("when LocalizedEnum", () => {
+    describe('when LocalizedEnum', () => {
       beforeAll(() => {
         data = {
-          name: "LocalizedEnum",
-          values: [{ key: "key", label: { en: "label", es: "etiqueta" } }]
+          name: 'LocalizedEnum',
+          values: [{ key: 'key', label: { en: 'label', es: 'etiqueta' } }]
         };
         ajv = Ajv();
       });
@@ -83,14 +83,14 @@ describe("fieldType", () => {
         valid = ajv.validate(schema, data);
       });
 
-      test("should be valid", () => {
+      test('should be valid', () => {
         expect(valid).toBeTruthy();
       });
     });
 
-    describe("when LocalizedString", () => {
+    describe('when LocalizedString', () => {
       beforeAll(() => {
-        data = { name: "LocalizedString" };
+        data = { name: 'LocalizedString' };
         ajv = Ajv();
       });
 
@@ -98,14 +98,14 @@ describe("fieldType", () => {
         valid = ajv.validate(schema, data);
       });
 
-      test("should be valid", () => {
+      test('should be valid', () => {
         expect(valid).toBeTruthy();
       });
     });
 
-    describe("when Money", () => {
+    describe('when Money', () => {
       beforeAll(() => {
-        data = { name: "Money" };
+        data = { name: 'Money' };
         ajv = Ajv();
       });
 
@@ -113,14 +113,14 @@ describe("fieldType", () => {
         valid = ajv.validate(schema, data);
       });
 
-      test("should be valid", () => {
+      test('should be valid', () => {
         expect(valid).toBeTruthy();
       });
     });
 
-    describe("when Number", () => {
+    describe('when Number', () => {
       beforeAll(() => {
-        data = { name: "Number" };
+        data = { name: 'Number' };
         ajv = Ajv();
       });
 
@@ -128,16 +128,16 @@ describe("fieldType", () => {
         valid = ajv.validate(schema, data);
       });
 
-      test("should be valid", () => {
+      test('should be valid', () => {
         expect(valid).toBeTruthy();
       });
     });
 
-    describe("when Reference", () => {
+    describe('when Reference', () => {
       beforeAll(() => {
         data = {
-          name: "Reference",
-          referenceTypeId: "cart"
+          name: 'Reference',
+          referenceTypeId: 'cart'
         };
         ajv = Ajv();
       });
@@ -146,16 +146,16 @@ describe("fieldType", () => {
         valid = ajv.validate(schema, data);
       });
 
-      test("should be valid", () => {
+      test('should be valid', () => {
         expect(valid).toBeTruthy();
       });
     });
 
-    describe("when Set", () => {
+    describe('when Set', () => {
       beforeAll(() => {
         data = {
-          name: "Set",
-          elementType: { name: "Boolean" }
+          name: 'Set',
+          elementType: { name: 'Boolean' }
         };
         ajv = Ajv();
       });
@@ -164,14 +164,14 @@ describe("fieldType", () => {
         valid = ajv.validate(schema, data);
       });
 
-      test("should be valid", () => {
+      test('should be valid', () => {
         expect(valid).toBeTruthy();
       });
     });
 
-    describe("when String", () => {
+    describe('when String', () => {
       beforeAll(() => {
-        data = { name: "String" };
+        data = { name: 'String' };
         ajv = Ajv();
       });
 
@@ -179,14 +179,14 @@ describe("fieldType", () => {
         valid = ajv.validate(schema, data);
       });
 
-      test("should be valid", () => {
+      test('should be valid', () => {
         expect(valid).toBeTruthy();
       });
     });
 
-    describe("when Time", () => {
+    describe('when Time', () => {
       beforeAll(() => {
-        data = { name: "Time" };
+        data = { name: 'Time' };
         ajv = Ajv();
       });
 
@@ -194,16 +194,16 @@ describe("fieldType", () => {
         valid = ajv.validate(schema, data);
       });
 
-      test("should be valid", () => {
+      test('should be valid', () => {
         expect(valid).toBeTruthy();
       });
     });
   });
 
-  describe("when error", () => {
-    describe("when name property is not an allowed one", () => {
+  describe('when error', () => {
+    describe('when name property is not an allowed one', () => {
       beforeAll(() => {
-        data = { name: "NotAllowedName" };
+        data = { name: 'NotAllowedName' };
         ajv = Ajv();
       });
 
@@ -211,7 +211,7 @@ describe("fieldType", () => {
         valid = ajv.validate(schema, data);
       });
 
-      test("should not be valid", () => {
+      test('should not be valid', () => {
         expect(valid).toBeFalsy();
       });
     });

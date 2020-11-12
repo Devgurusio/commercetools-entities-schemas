@@ -1,22 +1,22 @@
-const dateTime = require("../baseTypes/dateTime");
+const dateTime = require('../baseTypes/dateTime');
 
 module.exports = {
-  type: "object",
-  description: "",
+  type: 'object',
+  description: '',
   properties: {
-    id: { type: "string" },
-    customerId: { type: "string" },
+    id: { type: 'string' },
+    customerId: { type: 'string' },
     createdAt: dateTime,
     lastModifiedAt: dateTime,
     expiresAt: dateTime,
-    value: { type: "string" }
+    value: { type: 'string' }
   },
   required: [
-    "id",
-    "customerId",
-    "createdAt",
-    "lastModifiedAt",
-    "expiresAt",
-    "value"
+    'id',
+    'customerId',
+    'createdAt',
+    'lastModifiedAt',
+    'expiresAt',
+    'value'
   ]
 };

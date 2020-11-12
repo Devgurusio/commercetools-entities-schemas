@@ -1,15 +1,15 @@
-const Ajv = require("ajv");
-const schema = require("../external");
+const Ajv = require('ajv');
+const schema = require('../external');
 
-describe("external", () => {
+describe('external', () => {
   let ajv;
   let data;
   let valid;
 
-  describe("when success", () => {
+  describe('when success', () => {
     beforeAll(() => {
       data = {
-        type: "external"
+        type: 'external'
       };
       ajv = Ajv();
     });
@@ -18,13 +18,13 @@ describe("external", () => {
       valid = ajv.validate(schema, data);
     });
 
-    test("should be valid", () => {
+    test('should be valid', () => {
       expect(valid).toBeTruthy();
     });
   });
 
-  describe("when error", () => {
-    describe("when missing type property", () => {
+  describe('when error', () => {
+    describe('when missing type property', () => {
       beforeAll(() => {
         data = {};
         ajv = Ajv();
@@ -34,15 +34,15 @@ describe("external", () => {
         valid = ajv.validate(schema, data);
       });
 
-      test("should not be valid", () => {
+      test('should not be valid', () => {
         expect(valid).toBeFalsy();
       });
     });
 
-    describe("when type is not valid", () => {
+    describe('when type is not valid', () => {
       beforeAll(() => {
         data = {
-          type: "invalidType"
+          type: 'invalidType'
         };
         ajv = Ajv();
       });
@@ -51,7 +51,7 @@ describe("external", () => {
         valid = ajv.validate(schema, data);
       });
 
-      test("should not be valid", () => {
+      test('should not be valid', () => {
         expect(valid).toBeFalsy();
       });
     });

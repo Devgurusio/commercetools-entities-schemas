@@ -1,4 +1,4 @@
 module.exports = {
-  type: "string",
-  enum: ["SingleLine", "MultiLine"]
+  type: 'string',
+  enum: ['SingleLine', 'MultiLine']
 };

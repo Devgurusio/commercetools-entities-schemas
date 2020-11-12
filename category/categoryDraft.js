@@ -1,13 +1,13 @@
-const assetDraft = require("../baseTypes/assetDraft");
-const customFieldsDraft = require("../baseTypes/customFieldsDraft");
-const key = require("../baseTypes/key");
-const localizedString = require("../baseTypes/localizedString");
-const resourceIdentifier = require("../baseTypes/resourceIdentifier");
-const slug = require("../baseTypes/slug");
+const assetDraft = require('../baseTypes/assetDraft');
+const customFieldsDraft = require('../baseTypes/customFieldsDraft');
+const key = require('../baseTypes/key');
+const localizedString = require('../baseTypes/localizedString');
+const resourceIdentifier = require('../baseTypes/resourceIdentifier');
+const slug = require('../baseTypes/slug');
 
 module.exports = {
-  type: "object",
-  description: "Category draft object",
+  type: 'object',
+  description: 'Category draft object',
   properties: {
     key: {
       ...key,
@@ -27,20 +27,20 @@ module.exports = {
         Must match the pattern [-a-zA-Z0-9_]{2,256} human-readable identifiers usually used as deep-link URL to the related category. Each slug is unique across a project, but a category can have the same slug for different languages`
     },
     orderHint: {
-      type: "string",
+      type: 'string',
       description: `An attribute as base for a custom category order in one level.
         A random value will be assigned by API if not set`
     },
-    externalId: { type: "string" },
+    externalId: { type: 'string' },
     metaTitle: localizedString,
     metaDescription: localizedString,
     metaKeywords: localizedString,
     custom: customFieldsDraft,
     assets: {
-      type: "array",
-      description: "Array of AssetDraft",
+      type: 'array',
+      description: 'Array of AssetDraft',
       items: assetDraft
     }
   },
-  required: ["name", "slug"]
+  required: ['name', 'slug']
 };

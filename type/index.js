@@ -1,5 +1,5 @@
-const type = require("./type");
-const typeDraft = require("./typeDraft");
+const type = require('./type');
+const typeDraft = require('./typeDraft');
 
 module.exports = {
   type,

@@ -1,16 +1,16 @@
-const fieldDefinition = require("../baseTypes/fieldDefinition");
-const key = require("../baseTypes/key");
-const localizedString = require("../baseTypes/localizedString");
+const fieldDefinition = require('../baseTypes/fieldDefinition');
+const key = require('../baseTypes/key');
+const localizedString = require('../baseTypes/localizedString');
 
 module.exports = {
-  type: "object",
-  description: "Type draft object",
+  type: 'object',
+  description: 'Type draft object',
   properties: {
     key,
     name: localizedString,
     description: localizedString,
     resourceTypeIds: {
-      type: "array",
+      type: 'array',
       description: `The IDs of the resources that can be customized with this type
         - Asset:                        asset
         - Categories:                   category
@@ -30,12 +30,12 @@ module.exports = {
         - ShoppingList:                 shopping-list
         - ShoppingList TextLineItem:  	shopping-list-text-line-item
         - Reviews:                    	review`,
-      items: { type: "string" }
+      items: { type: 'string' }
     },
     fieldDefinitions: {
-      type: "array",
+      type: 'array',
       items: fieldDefinition
     }
   },
-  required: ["key", "name"]
+  required: ['key', 'name']
 };

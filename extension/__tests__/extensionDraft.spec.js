@@ -1,23 +1,23 @@
-const Ajv = require("ajv");
-const schema = require("../extensionDraft");
+const Ajv = require('ajv');
+const schema = require('../extensionDraft');
 
-describe("extensionDraft", () => {
+describe('extensionDraft', () => {
   let ajv;
   let data;
   let valid;
 
-  describe("when success", () => {
-    describe("when only required fields", () => {
+  describe('when success', () => {
+    describe('when only required fields', () => {
       beforeAll(() => {
         data = {
           destination: {
-            type: "HTTP",
-            url: "http://localhost"
+            type: 'HTTP',
+            url: 'http://localhost'
           },
           triggers: [
             {
-              resourceTypeId: "cart",
-              actions: ["Create", "Update"]
+              resourceTypeId: 'cart',
+              actions: ['Create', 'Update']
             }
           ]
         };
@@ -28,23 +28,23 @@ describe("extensionDraft", () => {
         valid = ajv.validate(schema, data);
       });
 
-      test("should be valid", () => {
+      test('should be valid', () => {
         expect(valid).toBeTruthy();
       });
     });
 
-    describe("when all fields", () => {
+    describe('when all fields', () => {
       beforeAll(() => {
         data = {
-          key: "key",
+          key: 'key',
           destination: {
-            type: "HTTP",
-            url: "http://localhost"
+            type: 'HTTP',
+            url: 'http://localhost'
           },
           triggers: [
             {
-              resourceTypeId: "cart",
-              actions: ["Create", "Update"]
+              resourceTypeId: 'cart',
+              actions: ['Create', 'Update']
             }
           ],
           timeoutInMs: 2000
@@ -56,21 +56,21 @@ describe("extensionDraft", () => {
         valid = ajv.validate(schema, data);
       });
 
-      test("should be valid", () => {
+      test('should be valid', () => {
         expect(valid).toBeTruthy();
       });
     });
   });
 
-  describe("when error", () => {
-    describe("when missing destination property", () => {
+  describe('when error', () => {
+    describe('when missing destination property', () => {
       beforeAll(() => {
         data = {
-          key: "key",
+          key: 'key',
           triggers: [
             {
-              resourceTypeId: "cart",
-              actions: ["Create", "Update"]
+              resourceTypeId: 'cart',
+              actions: ['Create', 'Update']
             }
           ],
           timeoutInMs: 2000
@@ -82,18 +82,18 @@ describe("extensionDraft", () => {
         valid = ajv.validate(schema, data);
       });
 
-      test("should not be valid", () => {
+      test('should not be valid', () => {
         expect(valid).toBeFalsy();
       });
     });
 
-    describe("when missing triggers property", () => {
+    describe('when missing triggers property', () => {
       beforeAll(() => {
         data = {
-          key: "key",
+          key: 'key',
           destination: {
-            type: "HTTP",
-            url: "http://localhost"
+            type: 'HTTP',
+            url: 'http://localhost'
           },
           timeoutInMs: 2000
         };
@@ -104,7 +104,7 @@ describe("extensionDraft", () => {
         valid = ajv.validate(schema, data);
       });
 
-      test("should not be valid", () => {
+      test('should not be valid', () => {
         expect(valid).toBeFalsy();
       });
     });

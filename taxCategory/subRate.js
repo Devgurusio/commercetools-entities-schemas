@@ -1,13 +1,13 @@
 module.exports = {
-  type: "object",
+  type: 'object',
   properties: {
-    name: { type: "string" },
+    name: { type: 'string' },
     amount: {
-      type: "number",
+      type: 'number',
       minimum: 0,
       maximum: 1,
-      description: "Percentage in the range of [0..1]"
+      description: 'Percentage in the range of [0..1]'
     }
   },
-  required: ["name", "amount"]
+  required: ['name', 'amount']
 };

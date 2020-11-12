@@ -1,17 +1,17 @@
-const Ajv = require("ajv");
-const schema = require("../priceTier");
+const Ajv = require('ajv');
+const schema = require('../priceTier');
 
-describe("priceTier", () => {
+describe('priceTier', () => {
   let ajv;
   let data;
   let valid;
 
-  describe("when success", () => {
+  describe('when success', () => {
     beforeAll(() => {
       data = {
         minimumQuantity: 3,
         value: {
-          currencyCode: "EUR",
+          currencyCode: 'EUR',
           centAmount: 400
         }
       };
@@ -22,17 +22,17 @@ describe("priceTier", () => {
       valid = ajv.validate(schema, data);
     });
 
-    test("should be valid", () => {
+    test('should be valid', () => {
       expect(valid).toBeTruthy();
     });
   });
 
-  describe("when error", () => {
-    describe("when missing minimumQuantity property", () => {
+  describe('when error', () => {
+    describe('when missing minimumQuantity property', () => {
       beforeAll(() => {
         data = {
           value: {
-            currencyCode: "EUR",
+            currencyCode: 'EUR',
             centAmount: 400
           }
         };
@@ -43,12 +43,12 @@ describe("priceTier", () => {
         valid = ajv.validate(schema, data);
       });
 
-      test("should not be valid", () => {
+      test('should not be valid', () => {
         expect(valid).toBeFalsy();
       });
     });
 
-    describe("when missing value property", () => {
+    describe('when missing value property', () => {
       beforeAll(() => {
         data = {
           minimumQuantity: 3
@@ -60,7 +60,7 @@ describe("priceTier", () => {
         valid = ajv.validate(schema, data);
       });
 
-      test("should not be valid", () => {
+      test('should not be valid', () => {
         expect(valid).toBeFalsy();
       });
     });

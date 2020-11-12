@@ -1,39 +1,39 @@
-const customFields = require("../baseTypes/customFields");
-const dateTime = require("../baseTypes/dateTime");
-const localizedString = require("../baseTypes/localizedString");
-const productVariant = require("../baseTypes/productVariant");
+const customFields = require('../baseTypes/customFields');
+const dateTime = require('../baseTypes/dateTime');
+const localizedString = require('../baseTypes/localizedString');
+const productVariant = require('../baseTypes/productVariant');
 
-const reference = require("../baseTypes/reference");
+const reference = require('../baseTypes/reference');
 
 module.exports = {
-  type: "object",
+  type: 'object',
   description:
-    "A line item is a reference to a ProductVariant in a Product in its current version",
+    'A line item is a reference to a ProductVariant in a Product in its current version',
   properties: {
     id: {
-      type: "string",
-      description: "The unique Id of this LineItem"
+      type: 'string',
+      description: 'The unique Id of this LineItem'
     },
     productId: {
-      type: "string",
-      description: "ID of an existing Product"
+      type: 'string',
+      description: 'ID of an existing Product'
     },
     variantId: {
-      type: "number",
+      type: 'number',
       description: `If present it defines an existing ProductVariant of the product.
         If absent it refers to the current master variant of the product`
     },
     productType: {
       ...reference,
-      description: "Refers to the product type of the product"
+      description: 'Refers to the product type of the product'
     },
     quantity: {
-      type: "number"
+      type: 'number'
     },
     custom: customFields,
     addedAt: {
       ...dateTime,
-      description: "When the line item was added to the shopping list"
+      description: 'When the line item was added to the shopping list'
     },
     name: {
       ...localizedString,
@@ -48,12 +48,12 @@ module.exports = {
     },
     productSlug: {
       ...localizedString,
-      description: "Slug of the current ProductData"
+      description: 'Slug of the current ProductData'
     },
     variant: {
       ...productVariant,
-      description: "Current product variant"
+      description: 'Current product variant'
     }
   },
-  required: ["id", "productId", "productType", "quantity", "addedAt", "name"]
+  required: ['id', 'productId', 'productType', 'quantity', 'addedAt', 'name']
 };
