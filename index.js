@@ -6,6 +6,7 @@ const common = require('./common');
 const customer = require('./customer');
 const customerGroup = require('./customerGroup');
 const customObject = require('./customObject');
+const discountCode = require('./discountCode');
 const extension = require('./extension');
 const httpApi = require('./httpApi');
 const inventory = require('./inventory');
@@ -35,6 +36,7 @@ module.exports = {
   customer,
   customerGroup,
   customObject,
+  discountCode,
   extension,
   httpApi,
   inventory,
