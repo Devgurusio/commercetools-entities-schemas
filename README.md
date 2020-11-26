@@ -55,6 +55,8 @@ Reusable commercetools entities schemas definitions
 -   taxCategoryDraft
 -   taxRate
 -   taxRateDraft
+-   ##### discount
+-   discountCode
 
 <a name="install"></a>
 
