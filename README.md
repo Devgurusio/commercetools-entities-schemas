@@ -29,6 +29,8 @@ Reusable commercetools entities schemas definitions
 -   key
 -   price
 -   slug
+-   ##### general purpose
+-   message
 -   ##### categories
 -   category
 -   categoryDraft
