@@ -1,7 +1,7 @@
 const Ajv = require('ajv');
 const schema = require('../userProvidedIdentifiers');
 
-describe('textInputHint', () => {
+describe('message', () => {
   let ajv;
   let data;
   let valid;
