@@ -14,5 +14,5 @@ module.exports = {
       item: reference
     }
   },
-  required: [...resource.required, ...discountCodeDraft.required]
+  required: [...resource.required, ...discountCodeDraft.required, 'references']
 };

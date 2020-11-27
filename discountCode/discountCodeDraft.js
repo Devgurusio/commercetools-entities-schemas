@@ -35,12 +35,12 @@ module.exports = {
       type: 'boolean'
     },
     validFrom: {
-      type: dateTime,
+      ...dateTime,
       description:
         'The time from which the discount can be applied on a cart. Before that time the code is invalid.'
     },
     validUntil: {
-      type: dateTime,
+      ...dateTime,
       description:
         'The time until the discount can be applied on a cart. After that time the code is invalid.'
     },
@@ -54,9 +54,7 @@ module.exports = {
       description:
         'The discount code can only be applied maxApplicationsPerCustomer times per customer.'
     },
-    custom: {
-      type: customFieldsDraft
-    }
+    custom: customFieldsDraft
   },
   required: ['code', 'cartDiscounts', 'isActive']
 };
