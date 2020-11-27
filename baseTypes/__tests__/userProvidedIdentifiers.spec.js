@@ -1,7 +1,7 @@
 const Ajv = require('ajv');
 const schema = require('../userProvidedIdentifiers');
 
-describe('message', () => {
+describe('userProvidedIdentifiers', () => {
   let ajv;
   let data;
   let valid;
