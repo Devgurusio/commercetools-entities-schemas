@@ -31,6 +31,7 @@ Reusable commercetools entities schemas definitions
 -   slug
 -   ##### general purpose
 -   message
+-   pagedQueryResult
 -   ##### categories
 -   category
 -   categoryDraft
