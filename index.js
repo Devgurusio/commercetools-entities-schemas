@@ -14,6 +14,7 @@ const message = require('./message');
 const myCustomer = require('./myCustomer');
 const myPayment = require('./myPayment');
 const myShoppingList = require('./myShoppingList');
+const pagedQueryResult = require('./pagedQueryResult');
 const payment = require('./payment');
 const product = require('./product');
 const productDiscount = require('./productDiscount');
@@ -45,6 +46,7 @@ module.exports = {
   myCustomer,
   myPayment,
   myShoppingList,
+  pagedQueryResult,
   payment,
   product,
   productDiscount,
