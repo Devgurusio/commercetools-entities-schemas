@@ -1,5 +1,6 @@
 const apiClient = require('./apiClient');
 const baseTypes = require('./baseTypes');
+const cart = require('./cart');
 const category = require('./category');
 const channel = require('./channel');
 const common = require('./common');
@@ -32,6 +33,7 @@ const zone = require('./zone');
 module.exports = {
   apiClient,
   baseTypes,
+  cart,
   category,
   channel,
   common,
