@@ -1,4 +1,4 @@
-const referenceType = require('../baseTypes/attributeType/referenceType');
+const referenceType = require('./attributeType/referenceType');
 
 module.exports = {
   description: 'A representation of a Key Reference',

@@ -28,6 +28,8 @@ const store = require('./store');
 const subscription = require('./subscription');
 const taxCategory = require('./taxCategory');
 const zone = require('./zone');
+const order = require('./order');
+const cart = require('./cart');
 
 module.exports = {
   apiClient,
@@ -59,5 +61,7 @@ module.exports = {
   store,
   subscription,
   taxCategory,
-  zone
+  zone,
+  order,
+  cart
 };

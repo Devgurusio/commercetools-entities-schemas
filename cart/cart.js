@@ -2,14 +2,13 @@ const address = require('../baseTypes/address');
 const customFields = require('../baseTypes/customFields');
 const money = require('../baseTypes/money');
 const reference = require('../baseTypes/reference');
+const keyReference = require('../baseTypes/keyReference');
 const resource = require('../common/resource');
-const lineItem = require('../shoppingList/lineItem');
+const lineItem = require('./lineItem');
 const cartDraft = require('./cartDraft');
 const discountCodeInfo = require('./discountCodeInfo');
-const keyReference = require('./keyReference');
 const paymentInfo = require('./paymentInfo');
 const shippingInfo = require('./shippingInfo');
-// const shippingRateInput = require("./shippingRateInput");
 const taxedPrice = require('./taxedPrice');
 const customLineItem = require('./customLineItem');
 
