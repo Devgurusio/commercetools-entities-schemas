@@ -60,6 +60,13 @@ Reusable commercetools entities schemas definitions
 -   taxRateDraft
 -   ##### discount
 -   discountCode
+-   ##### cart
+-   cart
+-   lineItem
+-   ##### order
+-   order
+-   orderFromCartDraft
+
 
 <a name="install"></a>
 
