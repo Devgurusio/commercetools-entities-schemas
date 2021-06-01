@@ -66,6 +66,8 @@ Reusable commercetools entities schemas definitions
 -   ##### order
 -   order
 -   orderFromCartDraft
+-   ##### shippingMethod
+-   shippingMethod
 
 
 <a name="install"></a>

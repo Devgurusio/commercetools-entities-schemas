@@ -8,7 +8,7 @@ module.exports = {
       ...reference,
       description: 'Reference to a CartDiscount'
     },
-    discountAmount: baseMoney
+    discountedAmount: baseMoney
   },
-  required: ['discount', 'discountAmount']
+  required: ['discount', 'discountedAmount']
 };
