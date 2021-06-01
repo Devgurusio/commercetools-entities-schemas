@@ -7,7 +7,9 @@ module.exports = {
   properties: {
     type: resourceIdentifier,
     fields: {
-      type: ['string', 'number', 'object', 'array', 'boolean', 'null'],
+      type: ['object'],
+      additionalProperties: true,
+      properties: {},
       description:
         'A valid JSON object, based on the FieldDefinitions of the Type'
     }
