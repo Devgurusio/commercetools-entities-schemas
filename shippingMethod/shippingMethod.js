@@ -16,8 +16,7 @@ module.exports = {
     },
     name: {
       type: 'string',
-      des,
-      cription: 'Shipping method name'
+      description: 'Shipping method name'
     },
     description: {
       type: 'string',
