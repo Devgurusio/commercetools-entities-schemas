@@ -30,6 +30,7 @@ const taxCategory = require('./taxCategory');
 const zone = require('./zone');
 const order = require('./order');
 const cart = require('./cart');
+const shippingMethod = require('./shippingMethod');
 
 module.exports = {
   apiClient,
@@ -63,5 +64,6 @@ module.exports = {
   taxCategory,
   zone,
   order,
-  cart
+  cart,
+  shippingMethod
 };
