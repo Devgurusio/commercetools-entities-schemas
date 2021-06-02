@@ -9,7 +9,7 @@ const lineItemDraft = {
   type: 'object',
   properties: {
     quantity: {
-      type: 'Integer',
+      type: 'integer',
       minimum: 1,
       description: 'Defaults to 1'
     },
