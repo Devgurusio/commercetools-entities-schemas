@@ -63,6 +63,7 @@ Reusable commercetools entities schemas definitions
 -   ##### cart
 -   cart
 -   lineItem
+-   lineItemDraft
 -   ##### order
 -   order
 -   orderFromCartDraft
