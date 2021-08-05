@@ -16,9 +16,7 @@ module.exports = {
       description:
         'A user-defined key that is unique within the given container'
     },
-    value: {
-      type: ['number', 'string', 'boolean', 'array', 'object']
-    },
+    value: {},
     version: { type: 'number' }
   },
   required: ['container', 'key', 'value']

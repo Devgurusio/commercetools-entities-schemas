@@ -7,7 +7,7 @@ module.exports = {
   properties: {
     type: resourceIdentifier,
     fields: {
-      type: ['object'],
+      type: 'object',
       additionalProperties: true,
       properties: {},
       description:
