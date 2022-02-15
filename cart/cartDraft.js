@@ -109,7 +109,7 @@ module.exports = {
     discountCodes: {
       type: 'array',
       description: 'The code of existing DiscountCodes',
-      items: 'string'
+      items: { type: 'string' }
     }
   },
   required: ['currency']
