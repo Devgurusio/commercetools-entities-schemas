@@ -1,3 +1,4 @@
+const key = require('../baseTypes/key');
 const address = require('../baseTypes/address');
 const customFieldsDraft = require('../baseTypes/customFieldsDraft');
 const localizedString = require('../baseTypes/localizedString');
@@ -10,6 +11,7 @@ const taxMode = require('./taxMode');
 const customLineItemDraft = require('./customLineItemDraft');
 const externalTaxRateDraft = require('./externalTaxRateDraft');
 const cartOrigin = require('./cartOrigin');
+const shippingRateInput = require('./shippingRateInput');
 
 module.exports = {
   description: 'Representation of a Cart Draft',
@@ -18,6 +20,7 @@ module.exports = {
       type: 'string',
       description: 'A three-digit currency code as per ISO 4217'
     },
+    key,
     customerId: {
       type: 'string',
       description: 'Id of an existing Customer'
@@ -95,10 +98,7 @@ module.exports = {
       type: 'number',
       description: `The cart will be deleted automatically if it hasn't been modified for the specified amount of days. If not set, the default value configured in the Project is used`
     },
-    /* shippingRateInput: {
-            type: shippingRateInputDraft, // TO COMPLETE
-            description: 'The shippingRateInput is used as an input to select a ShippingRatePriceTier',
-        }, */
+    shippingRateInput,
     origin: {
       ...cartOrigin,
       description: 'The default origin is Customer'

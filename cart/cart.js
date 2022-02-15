@@ -79,10 +79,6 @@ module.exports = {
       description: `The cart will be deleted automatically if it hasn't been modified for the specified amount of days`,
       type: 'number'
     }
-    /* shippingRateInput: { // TO COMPLETE
-            description: 'The shippingRateInput is used as an input to select a ShippingRatePriceTier',
-            type: shippingRateInput,
-        }, */
   },
   required: [
     ...resource.required,
