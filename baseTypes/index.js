@@ -25,6 +25,7 @@ const geoJSONGeometry = require('./geoJSONGeometry');
 const highPrecisionMoney = require('./highPrecisionMoney');
 const image = require('./image');
 const key = require('./key');
+const keyReference = require('./keyReference');
 const lastModifiedBy = require('./lastModifiedBy');
 const localizedEnumValue = require('./localizedEnumValue');
 const localizedString = require('./localizedString');
@@ -77,6 +78,7 @@ module.exports = {
   highPrecisionMoney,
   image,
   key,
+  keyReference,
   lastModifiedBy,
   localizedEnumValue,
   localizedString,
