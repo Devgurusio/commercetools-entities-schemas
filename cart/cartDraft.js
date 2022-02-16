@@ -1,5 +1,5 @@
 const key = require('../baseTypes/key');
-const address = require('../baseTypes/address');
+const addressDraft = require('../baseTypes/addressDraft');
 const customFieldsDraft = require('../baseTypes/customFieldsDraft');
 const localizedString = require('../baseTypes/localizedString');
 const resourceIdentifier = require('../baseTypes/resourceIdentifier');
@@ -73,13 +73,11 @@ module.exports = {
       items: customLineItemDraft
     },
     shippingAddress: {
-      ...address,
+      ...addressDraft,
       description:
         'The shipping address is used to determine the eligible shipping methods and rates as well as the tax rate of the line items'
     },
-    billingAddress: {
-      type: address
-    },
+    billingAddress: addressDraft,
     shippingMethod: {
       ...resourceIdentifier,
       description: 'ResourceIdentifier to a ShippingMethod'
@@ -106,12 +104,12 @@ module.exports = {
     itemShippingAddresses: {
       type: 'array',
       description: 'Array of Addresses',
-      items: address
+      items: addressDraft
     },
     discountCodes: {
       type: 'array',
       description: 'The code of existing DiscountCodes',
-      items: 'string'
+      items: { type: 'string' }
     }
   },
   required: ['currency']
