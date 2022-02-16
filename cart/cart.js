@@ -82,7 +82,6 @@ module.exports = {
   },
   required: [
     ...resource.required,
-    ...cartDraft.required,
     'lineItems',
     'customLineItems',
     'totalPrice',
