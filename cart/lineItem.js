@@ -4,13 +4,13 @@ const localizedString = require('../baseTypes/localizedString');
 const productVariant = require('../baseTypes/productVariant');
 const price = require('../baseTypes/price');
 const money = require('../baseTypes/money');
-
 const reference = require('../baseTypes/reference');
 const taxedItemPrice = require('./taxedItemPrice');
 const itemState = require('./itemState');
 const { taxRate } = require('../taxCategory');
 const discountedLineItemPriceForQuantity = require('./discountedLineItemPriceForQuantity');
 const itemShippingDetails = require('./itemShippingDetails');
+
 module.exports = {
   type: 'object',
   description:
@@ -20,14 +20,15 @@ module.exports = {
       type: 'string',
       description: 'The unique Id of this LineItem'
     },
-    productId: {
+    productId: { type: 'string' },
+    productKey: {
       type: 'string',
-      description: 'ID of an existing Product'
+      description: `User-defined unique identifier for the Product. Only present on Line Items in a Cart when the key is available on that specific Product at the time the Line Item is created or updated on the Cart. On Order resources this field is only present when the key is available on the specific Product at the time the Order is created from the Cart.
+      This field is in general not present on Carts that had no updates until 3 December 2021 and on Orders created before this date.`
     },
     name: {
       ...localizedString,
-      description: `Name of the product.
-        This data is updated in an eventual consistent manner when the product’s name changes`
+      description: 'The product name.'
     },
     productSlug: {
       ...localizedString,
