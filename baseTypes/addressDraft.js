@@ -1,11 +1,20 @@
+const key = require('./key');
+const customFieldsDraft = require('./customFieldsDraft');
+
 module.exports = {
   type: 'object',
   description: 'Address draft object',
   properties: {
-    key: {
+    country: {
       type: 'string',
-      description: 'must match [a-zA-Z0-9_-]{2,256}'
+      description: 'A two-digit country code as per ISO 3166-1 alpha-2'
     },
+    id: {
+      type: 'string',
+      description:
+        'Note: The id is overwritten internally when creating an address for a Customer.'
+    },
+    key,
     title: { type: 'string' },
     salutation: { type: 'string' },
     firstName: { type: 'string' },
@@ -17,10 +26,6 @@ module.exports = {
     city: { type: 'string' },
     region: { type: 'string' },
     state: { type: 'string' },
-    country: {
-      type: 'string',
-      description: 'A two-digit country code as per ISO 3166-1 alpha-2'
-    },
     company: { type: 'string' },
     department: { type: 'string' },
     building: { type: 'string' },
@@ -31,7 +36,8 @@ module.exports = {
     email: { type: 'string' },
     fax: { type: 'string' },
     additionalAddressInfo: { type: 'string' },
-    externalId: { type: 'string' }
+    externalId: { type: 'string' },
+    custom: customFieldsDraft
   },
   required: ['country']
 };
