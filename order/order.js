@@ -23,6 +23,8 @@ const shipmentState = require('./shipmentState');
 const paymentState = require('./paymentState');
 const syncInfo = require('./syncInfo');
 const returnInfo = require('./returnInfo');
+const shippingRateInput = require('../cart/shippingRateInput');
+const cartOrigin = require('../cart/cartOrigin');
 
 module.exports = {
   ...resource,
@@ -63,27 +65,26 @@ module.exports = {
     totalPrice: {
       ...money,
       description:
-        'The sum of all totalPrice fields of the lineItems and customLineItems, as well as the price field of shippingInfo (if it exists)'
+        'The total price of this line item. If the line item is discounted, then the totalPrice is the DiscountedLineItemPriceForQuantity multiplied by quantity. Otherwise the total price is the product price multiplied by the quantity. totalPrice may or may not include the taxes: it depends on the taxRate.includedInPrice property.'
     },
     taxedPrice: taxedPrice,
     shippingAddress: address,
     billingAddress: address,
-    taxMode: {
-      ...taxMode,
-      description: 'The default tax mode is Platform'
-    },
+    taxMode,
     taxRoundingMode: {
       ...roundingMode,
-      description: 'The default tax rounding mode is HalfEven'
+      description:
+        'When calculating taxes for taxedPrice, the selected mode is used for rouding.'
     },
     taxCalculationMode: {
       ...taxCalculationMode,
-      description: 'The default tax calculation mode is LineItemLevel'
+      description:
+        'When calculating taxes for taxedPrice, the selected mode is used for calculating the price with LineItemLevel (horizontally) or UnitPriceLevel (vertically) calculation mode.'
     },
     customerGroup: {
       ...reference,
       description:
-        'Set automatically when the customer is set and the customer is a member of a customer group. Used for product variant price selection'
+        'Set when the customer is set and the customer is a member of a customer group. Used for product variant price selection.'
     },
     country: {
       type: 'string',
@@ -130,14 +131,13 @@ module.exports = {
       description: 'String conforming to IETF language tag',
       type: 'string'
     },
-    inventoryMode: {
-      ...inventoryMode,
-      description: 'Default inventory mode is None'
+    inventoryMode,
+    shippingRateInput: {
+      ...shippingRateInput,
+      description:
+        'The shippingRateInput is used as an input to select a ShippingRatePriceTier.'
     },
-    origin: {
-      type: 'string',
-      enum: ['Customer', 'Merchant']
-    },
+    origin: cartOrigin,
     itemShippingAddresses: {
       type: 'array',
       description:
