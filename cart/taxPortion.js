@@ -9,7 +9,7 @@ module.exports = {
     rate: {
       description: 'A number in the range [0..1]',
       type: 'number',
-      mininum: 0,
+      minimum: 0,
       maximum: 1
     },
     amount: money
