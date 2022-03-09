@@ -5,7 +5,7 @@ module.exports = {
   properties: {
     payments: {
       type: 'array',
-      descrption: 'Array of References to Payments',
+      description: 'Array of References to Payments',
       items: reference
     }
   },
