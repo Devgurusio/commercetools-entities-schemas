@@ -3,9 +3,20 @@ module.exports = {
   description: 'Parameters accepted in CommerceTools queries',
   properties: {
     where: {
-      type: ['array', 'string'],
-      description: 'Query Predicate',
-      items: { type: 'string' }
+      oneOf: [
+        {
+          type: 'array',
+          description: 'Query Predicates',
+          items: {
+            type: 'string',
+            description: 'Query Predicate'
+          }
+        },
+        {
+          type: 'string',
+          description: 'Query Predicate'
+        }
+      ]
     },
     whereOperator: {
       type: 'string',
@@ -13,12 +24,20 @@ module.exports = {
       enum: ['and', 'or']
     },
     expand: {
-      type: ['array', 'string'],
-      description: 'Attributes to expand',
-      items: {
-        type: 'string',
-        description: 'Attribute to expand'
-      }
+      oneOf: [
+        {
+          type: 'array',
+          description: 'Attributes to expand',
+          items: {
+            type: 'string',
+            description: 'Attribute to expand'
+          }
+        },
+        {
+          type: 'string',
+          description: 'Attribute to expand'
+        }
+      ]
     },
     page: {
       type: 'integer',
@@ -34,32 +53,44 @@ module.exports = {
       default: 20
     },
     sort: {
-      type: ['array', 'object'],
-      properties: {
-        by: {
-          type: 'string',
-          description: 'Field to sort by'
-        },
-        direction: {
-          type: 'string',
-          description: 'Sort direction',
-          enum: ['asc', 'desc']
-        }
-      },
-      items: {
-        type: 'object',
-        properties: {
-          by: {
-            type: 'string',
-            description: 'Field to sort by'
-          },
-          direction: {
-            type: 'string',
-            description: 'Sort direction',
-            enum: ['asc', 'desc']
+      oneOf: [
+        {
+          type: 'array',
+          description: 'Sort attributes',
+          items: {
+            type: 'object',
+            properties: {
+              by: {
+                type: 'string',
+                description: 'Field to sort by'
+              },
+              direction: {
+                type: 'string',
+                description: 'Sort direction',
+                enum: ['asc', 'desc'],
+                default: 'asc'
+              }
+            },
+            required: ['by']
           }
+        },
+        {
+          type: 'object',
+          properties: {
+            by: {
+              type: 'string',
+              description: 'Field to sort by'
+            },
+            direction: {
+              type: 'string',
+              description: 'Sort direction',
+              enum: ['asc', 'desc'],
+              default: 'asc'
+            }
+          },
+          required: ['by']
         }
-      }
+      ]
     },
     sortBy: {
       type: 'string',
