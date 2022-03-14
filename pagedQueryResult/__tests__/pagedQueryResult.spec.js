@@ -97,30 +97,6 @@ describe('pagedQueryResult', () => {
       });
     });
 
-    describe('when missing limit property', () => {
-      beforeAll(() => {
-        data = {
-          offset: 0,
-          count: 1,
-          results: [
-            {
-              typeId: 'cart-discount',
-              id: 'd1229e6f-2b79-441e-b419-180311e52754'
-            }
-          ]
-        };
-        ajv = Ajv();
-      });
-
-      beforeEach(() => {
-        valid = ajv.validate(schema, data);
-      });
-
-      test('should not be valid', () => {
-        expect(valid).toBeFalsy();
-      });
-    });
-
     describe('when missing count property', () => {
       beforeAll(() => {
         data = {

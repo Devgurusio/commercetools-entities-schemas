@@ -33,5 +33,5 @@ module.exports = {
         'Object containing supplementary information about the results'
     }
   },
-  required: ['offset', 'limit', 'count', 'results']
+  required: ['offset', 'count', 'results']
 };

@@ -37,6 +37,6 @@ module.exports = {
       additionalProperties: true
     }
   },
-  required: ['offset', 'limit', 'count', 'total', 'results'],
+  required: ['offset', 'count', 'results'],
   additionalProperties: true
 };
