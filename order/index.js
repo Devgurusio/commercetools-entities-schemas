@@ -1,3 +1,4 @@
+const myOrderFromCartDraft = require('./myOrderFromCartDraft');
 const order = require('./order');
 const orderFromCartDraft = require('./orderFromCartDraft');
 const orderState = require('./orderState');
@@ -10,6 +11,7 @@ const shipmentState = require('./shipmentState');
 const syncInfo = require('./syncInfo');
 
 module.exports = {
+  myOrderFromCartDraft,
   order,
   orderFromCartDraft,
   orderState,
