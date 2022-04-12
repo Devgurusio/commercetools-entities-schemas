@@ -4,6 +4,7 @@ const resourceIdentifier = require('../baseTypes/resourceIdentifier');
 const externalTaxRateDraft = require('./externalTaxRateDraft');
 const baseMoney = require('../baseTypes/baseMoney');
 const money = require('../baseTypes/money');
+const itemShippingDetailsDraft = require('./itemShippingDetailsDraft');
 
 const lineItemDraft = {
   type: 'object',
@@ -31,6 +32,7 @@ const lineItemDraft = {
       },
       required: ['price', 'totalPrice']
     },
+    shippingDetails: itemShippingDetailsDraft,
     addedAt: dateTime,
     custom: customFieldsDraft
   }
