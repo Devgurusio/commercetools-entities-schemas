@@ -1,4 +1,4 @@
-const address = require('../baseTypes/address');
+const addressDraft = require('../baseTypes/addressDraft');
 const customFieldsDraft = require('../baseTypes/customFieldsDraft');
 const geoJSONGeometry = require('../baseTypes/geoJSONGeometry');
 const key = require('../baseTypes/key');
@@ -37,7 +37,7 @@ module.exports = {
       description: 'A human-readable description of the channel'
     },
     address: {
-      ...address,
+      ...addressDraft,
       description:
         'The address where this channel is located (e.g. if the channel is a physical store)'
     },
