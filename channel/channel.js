@@ -1,4 +1,5 @@
 const channelDraft = require('./channelDraft');
+const address = require('../baseTypes/address');
 const customFields = require('../baseTypes/customFields');
 const resource = require('../common/resource');
 const reviewRatingStatistics = require('../baseTypes/reviewRatingStatistics');
@@ -10,6 +11,11 @@ module.exports = {
   properties: {
     ...resource.properties,
     ...channelDraft.properties,
+    address: {
+      ...address,
+      description:
+        'The address where this channel is located (e.g. if the channel is a physical store)'
+    },
     roles: {
       ...channelDraft.properties.roles,
       description:
