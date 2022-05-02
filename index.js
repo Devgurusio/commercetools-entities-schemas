@@ -19,6 +19,7 @@ const order = require('./order');
 const pagedQueryResult = require('./pagedQueryResult');
 const payment = require('./payment');
 const product = require('./product');
+const productSelections = require('./product-selections');
 const productDiscount = require('./productDiscount');
 const productProjection = require('./productProjection');
 const productType = require('./productType');
@@ -54,6 +55,7 @@ module.exports = {
   pagedQueryResult,
   payment,
   product,
+  productSelections,
   productDiscount,
   productProjection,
   productType,
