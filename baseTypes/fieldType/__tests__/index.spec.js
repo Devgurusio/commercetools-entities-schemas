@@ -1,4 +1,5 @@
 const Ajv = require('ajv');
+const addFormats = require('ajv-formats');
 const schema = require('../index');
 
 describe('fieldType', () => {
@@ -10,7 +11,8 @@ describe('fieldType', () => {
     describe('when Boolean', () => {
       beforeAll(() => {
         data = { name: 'Boolean' };
-        ajv = Ajv();
+        ajv = new Ajv();
+        addFormats(ajv);
       });
 
       beforeEach(() => {
@@ -25,7 +27,8 @@ describe('fieldType', () => {
     describe('when DateTime', () => {
       beforeAll(() => {
         data = { name: 'DateTime' };
-        ajv = Ajv();
+        ajv = new Ajv();
+        addFormats(ajv);
       });
 
       beforeEach(() => {
@@ -40,7 +43,8 @@ describe('fieldType', () => {
     describe('when Date', () => {
       beforeAll(() => {
         data = { name: 'Date' };
-        ajv = Ajv();
+        ajv = new Ajv();
+        addFormats(ajv);
       });
 
       beforeEach(() => {
@@ -58,7 +62,8 @@ describe('fieldType', () => {
           name: 'Enum',
           values: [{ key: 'key', label: 'label' }]
         };
-        ajv = Ajv();
+        ajv = new Ajv();
+        addFormats(ajv);
       });
 
       beforeEach(() => {
@@ -76,7 +81,8 @@ describe('fieldType', () => {
           name: 'LocalizedEnum',
           values: [{ key: 'key', label: { en: 'label', es: 'etiqueta' } }]
         };
-        ajv = Ajv();
+        ajv = new Ajv();
+        addFormats(ajv);
       });
 
       beforeEach(() => {
@@ -91,7 +97,8 @@ describe('fieldType', () => {
     describe('when LocalizedString', () => {
       beforeAll(() => {
         data = { name: 'LocalizedString' };
-        ajv = Ajv();
+        ajv = new Ajv();
+        addFormats(ajv);
       });
 
       beforeEach(() => {
@@ -106,7 +113,8 @@ describe('fieldType', () => {
     describe('when Money', () => {
       beforeAll(() => {
         data = { name: 'Money' };
-        ajv = Ajv();
+        ajv = new Ajv();
+        addFormats(ajv);
       });
 
       beforeEach(() => {
@@ -121,7 +129,8 @@ describe('fieldType', () => {
     describe('when Number', () => {
       beforeAll(() => {
         data = { name: 'Number' };
-        ajv = Ajv();
+        ajv = new Ajv();
+        addFormats(ajv);
       });
 
       beforeEach(() => {
@@ -139,7 +148,8 @@ describe('fieldType', () => {
           name: 'Reference',
           referenceTypeId: 'cart'
         };
-        ajv = Ajv();
+        ajv = new Ajv();
+        addFormats(ajv);
       });
 
       beforeEach(() => {
@@ -157,7 +167,8 @@ describe('fieldType', () => {
           name: 'Set',
           elementType: { name: 'Boolean' }
         };
-        ajv = Ajv();
+        ajv = new Ajv();
+        addFormats(ajv);
       });
 
       beforeEach(() => {
@@ -172,7 +183,8 @@ describe('fieldType', () => {
     describe('when String', () => {
       beforeAll(() => {
         data = { name: 'String' };
-        ajv = Ajv();
+        ajv = new Ajv();
+        addFormats(ajv);
       });
 
       beforeEach(() => {
@@ -187,7 +199,8 @@ describe('fieldType', () => {
     describe('when Time', () => {
       beforeAll(() => {
         data = { name: 'Time' };
-        ajv = Ajv();
+        ajv = new Ajv();
+        addFormats(ajv);
       });
 
       beforeEach(() => {
@@ -204,7 +217,8 @@ describe('fieldType', () => {
     describe('when name property is not an allowed one', () => {
       beforeAll(() => {
         data = { name: 'NotAllowedName' };
-        ajv = Ajv();
+        ajv = new Ajv();
+        addFormats(ajv);
       });
 
       beforeEach(() => {

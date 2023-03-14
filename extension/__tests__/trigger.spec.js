@@ -1,4 +1,5 @@
 const Ajv = require('ajv');
+const addFormats = require('ajv-formats');
 const schema = require('../trigger');
 
 describe('trigger', () => {
@@ -12,7 +13,8 @@ describe('trigger', () => {
         resourceTypeId: 'cart',
         actions: ['Create', 'Update']
       };
-      ajv = Ajv();
+      ajv = new Ajv();
+      addFormats(ajv);
     });
 
     beforeEach(() => {
@@ -30,7 +32,8 @@ describe('trigger', () => {
         data = {
           actions: ['Create', 'Update']
         };
-        ajv = Ajv();
+        ajv = new Ajv();
+        addFormats(ajv);
       });
 
       beforeEach(() => {
@@ -47,7 +50,8 @@ describe('trigger', () => {
         data = {
           resourceTypeId: 'cart'
         };
-        ajv = Ajv();
+        ajv = new Ajv();
+        addFormats(ajv);
       });
 
       beforeEach(() => {

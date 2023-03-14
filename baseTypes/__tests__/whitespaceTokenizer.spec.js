@@ -1,4 +1,5 @@
 const Ajv = require('ajv');
+const addFormats = require('ajv-formats');
 const schema = require('../whitespaceTokenizer');
 
 describe('whitespaceTokenizer', () => {
@@ -9,7 +10,8 @@ describe('whitespaceTokenizer', () => {
   describe('when success', () => {
     beforeAll(() => {
       data = { type: 'whitespace' };
-      ajv = Ajv();
+      ajv = new Ajv();
+      addFormats(ajv);
     });
 
     beforeEach(() => {
@@ -25,7 +27,8 @@ describe('whitespaceTokenizer', () => {
     describe('when type is not whitespace', () => {
       beforeAll(() => {
         data = { type: 'notAllowedWhitespace' };
-        ajv = Ajv();
+        ajv = new Ajv();
+        addFormats(ajv);
       });
 
       beforeEach(() => {

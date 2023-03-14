@@ -1,4 +1,5 @@
 const Ajv = require('ajv');
+const addFormats = require('ajv-formats');
 const schema = require('../attribute');
 
 describe('attribute', () => {
@@ -13,7 +14,8 @@ describe('attribute', () => {
           name: 'attributeName',
           value: 'string'
         };
-        ajv = Ajv();
+        ajv = new Ajv();
+        addFormats(ajv);
       });
 
       beforeEach(() => {
@@ -31,7 +33,8 @@ describe('attribute', () => {
           name: 'attributeName',
           value: 13
         };
-        ajv = Ajv();
+        ajv = new Ajv();
+        addFormats(ajv);
       });
 
       beforeEach(() => {
@@ -49,7 +52,8 @@ describe('attribute', () => {
           name: 'attributeName',
           value: { key: 'value' }
         };
-        ajv = Ajv();
+        ajv = new Ajv();
+        addFormats(ajv);
       });
 
       beforeEach(() => {
@@ -67,7 +71,8 @@ describe('attribute', () => {
           name: 'attributeName',
           value: [{ key: 'value' }]
         };
-        ajv = Ajv();
+        ajv = new Ajv();
+        addFormats(ajv);
       });
 
       beforeEach(() => {
@@ -85,7 +90,8 @@ describe('attribute', () => {
           name: 'attributeName',
           value: true
         };
-        ajv = Ajv();
+        ajv = new Ajv();
+        addFormats(ajv);
       });
 
       beforeEach(() => {
@@ -104,7 +110,8 @@ describe('attribute', () => {
         data = {
           value: true
         };
-        ajv = Ajv();
+        ajv = new Ajv();
+        addFormats(ajv);
       });
 
       beforeEach(() => {
@@ -121,7 +128,8 @@ describe('attribute', () => {
         data = {
           name: 'attributeName'
         };
-        ajv = Ajv();
+        ajv = new Ajv();
+        addFormats(ajv);
       });
 
       beforeEach(() => {

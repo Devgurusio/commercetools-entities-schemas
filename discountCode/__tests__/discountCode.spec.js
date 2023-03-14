@@ -1,4 +1,5 @@
 const Ajv = require('ajv');
+const addFormats = require('ajv-formats');
 const schema = require('../discountCode');
 
 describe('discountCode', () => {
@@ -29,7 +30,8 @@ describe('discountCode', () => {
             }
           ]
         };
-        ajv = Ajv();
+        ajv = new Ajv({ strict: false });
+        addFormats(ajv);
       });
 
       beforeEach(() => {
@@ -89,7 +91,8 @@ describe('discountCode', () => {
             }
           }
         };
-        ajv = Ajv();
+        ajv = new Ajv({ strict: false });
+        addFormats(ajv);
       });
 
       beforeEach(() => {
@@ -124,7 +127,8 @@ describe('discountCode', () => {
             }
           ]
         };
-        ajv = Ajv();
+        ajv = new Ajv({ strict: false });
+        addFormats(ajv);
       });
 
       beforeEach(() => {
@@ -157,7 +161,8 @@ describe('discountCode', () => {
             }
           ]
         };
-        ajv = Ajv();
+        ajv = new Ajv({ strict: false });
+        addFormats(ajv);
       });
 
       beforeEach(() => {
@@ -185,7 +190,8 @@ describe('discountCode', () => {
             }
           ]
         };
-        ajv = Ajv();
+        ajv = new Ajv({ strict: false });
+        addFormats(ajv);
       });
 
       beforeEach(() => {
@@ -218,7 +224,8 @@ describe('discountCode', () => {
             }
           ]
         };
-        ajv = Ajv();
+        ajv = new Ajv({ strict: false });
+        addFormats(ajv);
       });
 
       beforeEach(() => {
@@ -246,7 +253,8 @@ describe('discountCode', () => {
           ],
           isActive: true
         };
-        ajv = Ajv();
+        ajv = new Ajv({ strict: false });
+        addFormats(ajv);
       });
 
       beforeEach(() => {

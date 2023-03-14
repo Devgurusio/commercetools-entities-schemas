@@ -1,4 +1,5 @@
 const Ajv = require('ajv');
+const addFormats = require('ajv-formats');
 const schema = require('../apiClient');
 
 describe('apiClient', () => {
@@ -14,7 +15,9 @@ describe('apiClient', () => {
           name: 'my-api-client',
           scope: 'scope'
         };
-        ajv = Ajv();
+        ajv = new Ajv();
+
+        addFormats(ajv);
       });
 
       beforeEach(() => {
@@ -36,7 +39,8 @@ describe('apiClient', () => {
           lastUsedAt: '2019-11-19',
           secret: 'secret'
         };
-        ajv = Ajv();
+        ajv = new Ajv();
+        addFormats(ajv);
       });
 
       beforeEach(() => {
@@ -59,7 +63,8 @@ describe('apiClient', () => {
           lastUsedAt: '2019-11-19',
           secret: 'secret'
         };
-        ajv = Ajv();
+        ajv = new Ajv();
+        addFormats(ajv);
       });
 
       beforeEach(() => {
@@ -80,7 +85,8 @@ describe('apiClient', () => {
           lastUsedAt: '2019-11-19',
           secret: 'secret'
         };
-        ajv = Ajv();
+        ajv = new Ajv();
+        addFormats(ajv);
       });
 
       beforeEach(() => {
@@ -101,7 +107,8 @@ describe('apiClient', () => {
           lastUsedAt: '2019-11-19',
           secret: 'secret'
         };
-        ajv = Ajv();
+        ajv = new Ajv();
+        addFormats(ajv);
       });
 
       beforeEach(() => {

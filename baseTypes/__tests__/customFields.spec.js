@@ -1,4 +1,5 @@
 const Ajv = require('ajv');
+const addFormats = require('ajv-formats');
 const schema = require('../customFields');
 
 describe('customFields', () => {
@@ -15,7 +16,8 @@ describe('customFields', () => {
             id: 'f74b4e9f-2c01-4178-9ba5-bf6d6167a597'
           }
         };
-        ajv = Ajv();
+        ajv = new Ajv();
+        addFormats(ajv);
       });
 
       beforeEach(() => {
@@ -38,7 +40,8 @@ describe('customFields', () => {
             description: 'my description'
           }
         };
-        ajv = Ajv();
+        ajv = new Ajv();
+        addFormats(ajv);
       });
 
       beforeEach(() => {
@@ -59,7 +62,8 @@ describe('customFields', () => {
             description: 'my description'
           }
         };
-        ajv = Ajv();
+        ajv = new Ajv();
+        addFormats(ajv);
       });
 
       beforeEach(() => {

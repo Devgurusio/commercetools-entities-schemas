@@ -1,4 +1,5 @@
 const Ajv = require('ajv');
+const addFormats = require('ajv-formats');
 const schema = require('../textInputHint');
 
 describe('textInputHint', () => {
@@ -10,7 +11,8 @@ describe('textInputHint', () => {
     describe('when value is SingleLine', () => {
       beforeAll(() => {
         data = 'SingleLine';
-        ajv = Ajv();
+        ajv = new Ajv();
+        addFormats(ajv);
       });
 
       beforeEach(() => {
@@ -25,7 +27,8 @@ describe('textInputHint', () => {
     describe('when value is MultiLine', () => {
       beforeAll(() => {
         data = 'SingleLine';
-        ajv = Ajv();
+        ajv = new Ajv();
+        addFormats(ajv);
       });
 
       beforeEach(() => {
@@ -42,7 +45,8 @@ describe('textInputHint', () => {
     describe('when value is not an allowed one', () => {
       beforeAll(() => {
         data = 'notAllowedValue';
-        ajv = Ajv();
+        ajv = new Ajv();
+        addFormats(ajv);
       });
 
       beforeEach(() => {

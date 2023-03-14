@@ -1,4 +1,5 @@
 const Ajv = require('ajv');
+const addFormats = require('ajv-formats');
 const schema = require('../shoppingList');
 
 describe('shoppingList', () => {
@@ -36,8 +37,7 @@ describe('shoppingList', () => {
             id: 'f87373fe-dd4b-40c1-acf7-7e503c84118e',
             productId: '14f84c59-7443-47fe-b24c-271bdd6f497a',
             name: {
-              en:
-                '88fbdcaf-40c7-4bd6-8696-70dcea59893a_undefined_a99a08d8-f6e8-4bdd-b0aa-96e7ed211c29_undefined'
+              en: '88fbdcaf-40c7-4bd6-8696-70dcea59893a_undefined_a99a08d8-f6e8-4bdd-b0aa-96e7ed211c29_undefined'
             },
             productType: {
               typeId: 'product-type',
@@ -51,8 +51,7 @@ describe('shoppingList', () => {
             id: '0b66e292-67f0-4855-9744-fac4bb0267da',
             productId: '730e49df-a328-4750-94b3-2d5e4e644cf7',
             name: {
-              en:
-                '88fbdcaf-40c7-4bd6-8696-70dcea59893a_1_6c617e02-71c3-4f90-8c0f-deb8bc0bda2c_3'
+              en: '88fbdcaf-40c7-4bd6-8696-70dcea59893a_1_6c617e02-71c3-4f90-8c0f-deb8bc0bda2c_3'
             },
             productType: {
               typeId: 'product-type',
@@ -66,8 +65,7 @@ describe('shoppingList', () => {
             id: '450f6914-d850-4663-999e-8afc234532bc',
             productId: 'dd5f4b45-7fdc-485c-b9b5-6defb854e314',
             name: {
-              en:
-                '88fbdcaf-40c7-4bd6-8696-70dcea59893a_undefined_9db4e2ee-a187-42a1-8bfd-e7a3d12cf92d_undefined'
+              en: '88fbdcaf-40c7-4bd6-8696-70dcea59893a_undefined_9db4e2ee-a187-42a1-8bfd-e7a3d12cf92d_undefined'
             },
             productType: {
               typeId: 'product-type',
@@ -81,8 +79,7 @@ describe('shoppingList', () => {
             id: '75e712af-ec99-4e9d-85c8-0f045d1a941e',
             productId: 'a836599f-171a-4eba-98d4-7854d00eb72d',
             name: {
-              en:
-                '88fbdcaf-40c7-4bd6-8696-70dcea59893a_undefined_6c617e02-71c3-4f90-8c0f-deb8bc0bda2c_undefined'
+              en: '88fbdcaf-40c7-4bd6-8696-70dcea59893a_undefined_6c617e02-71c3-4f90-8c0f-deb8bc0bda2c_undefined'
             },
             productType: {
               typeId: 'product-type',
@@ -95,7 +92,8 @@ describe('shoppingList', () => {
         ],
         textLineItems: []
       };
-      ajv = Ajv();
+      ajv = new Ajv();
+      addFormats(ajv);
     });
 
     beforeEach(() => {

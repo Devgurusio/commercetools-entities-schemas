@@ -1,4 +1,5 @@
 const Ajv = require('ajv');
+const addFormats = require('ajv-formats');
 const schema = require('../attributeConstraint');
 
 describe('attributeConstraint', () => {
@@ -10,7 +11,8 @@ describe('attributeConstraint', () => {
     describe('when attribute constraint is "None"', () => {
       beforeAll(() => {
         data = 'None';
-        ajv = Ajv();
+        ajv = new Ajv();
+        addFormats(ajv);
       });
 
       beforeEach(() => {
@@ -25,7 +27,8 @@ describe('attributeConstraint', () => {
     describe('when attribute constraint is "Unique"', () => {
       beforeAll(() => {
         data = 'Unique';
-        ajv = Ajv();
+        ajv = new Ajv();
+        addFormats(ajv);
       });
 
       beforeEach(() => {
@@ -40,7 +43,8 @@ describe('attributeConstraint', () => {
     describe('when attribute constraint is "CombinationUnique"', () => {
       beforeAll(() => {
         data = 'CombinationUnique';
-        ajv = Ajv();
+        ajv = new Ajv();
+        addFormats(ajv);
       });
 
       beforeEach(() => {
@@ -55,7 +59,8 @@ describe('attributeConstraint', () => {
     describe('when attribute constraint is "SameForAll"', () => {
       beforeAll(() => {
         data = 'SameForAll';
-        ajv = Ajv();
+        ajv = new Ajv();
+        addFormats(ajv);
       });
 
       beforeEach(() => {
@@ -72,7 +77,8 @@ describe('attributeConstraint', () => {
     describe('when attribute constraint is not an allowed value', () => {
       beforeAll(() => {
         data = 'NonValidConstraint';
-        ajv = Ajv();
+        ajv = new Ajv();
+        addFormats(ajv);
       });
 
       beforeEach(() => {

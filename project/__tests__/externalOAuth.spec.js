@@ -1,4 +1,5 @@
 const Ajv = require('ajv');
+const addFormats = require('ajv-formats');
 const schema = require('../externalOAuth');
 
 describe('externalOAuth', () => {
@@ -12,7 +13,8 @@ describe('externalOAuth', () => {
         url: 'http://localhost:3000',
         authorizationHeader: 'authorizationHeader'
       };
-      ajv = Ajv();
+      ajv = new Ajv();
+      addFormats(ajv);
     });
 
     beforeEach(() => {
@@ -28,7 +30,8 @@ describe('externalOAuth', () => {
     describe('when missing url property', () => {
       beforeAll(() => {
         data = { authorizationHeader: 'authorizationHeader' };
-        ajv = Ajv();
+        ajv = new Ajv();
+        addFormats(ajv);
       });
 
       beforeEach(() => {
@@ -46,7 +49,8 @@ describe('externalOAuth', () => {
           url: 'notAnURI',
           authorizationHeader: 'authorizationHeader'
         };
-        ajv = Ajv();
+        ajv = new Ajv();
+        addFormats(ajv);
       });
 
       beforeEach(() => {
@@ -61,7 +65,8 @@ describe('externalOAuth', () => {
     describe('when missing authorizationHeader property', () => {
       beforeAll(() => {
         data = { url: 'http://localhost:3000' };
-        ajv = Ajv();
+        ajv = new Ajv();
+        addFormats(ajv);
       });
 
       beforeEach(() => {

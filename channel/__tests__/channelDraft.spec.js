@@ -1,4 +1,5 @@
 const Ajv = require('ajv');
+const addFormats = require('ajv-formats');
 const schema = require('../channelDraft');
 
 describe('channelDraft', () => {
@@ -10,7 +11,8 @@ describe('channelDraft', () => {
     describe('when only required fields', () => {
       beforeAll(() => {
         data = { key: 'key' };
-        ajv = Ajv();
+        ajv = new Ajv();
+        addFormats(ajv);
       });
 
       beforeEach(() => {
@@ -68,7 +70,8 @@ describe('channelDraft', () => {
             coordinates: [35.2366173, -6.6724601]
           }
         };
-        ajv = Ajv();
+        ajv = new Ajv();
+        addFormats(ajv);
       });
 
       beforeEach(() => {
@@ -127,7 +130,8 @@ describe('channelDraft', () => {
             coordinates: [35.2366173, -6.6724601]
           }
         };
-        ajv = Ajv();
+        ajv = new Ajv();
+        addFormats(ajv);
       });
 
       beforeEach(() => {

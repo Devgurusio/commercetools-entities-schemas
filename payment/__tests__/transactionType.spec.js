@@ -1,4 +1,5 @@
 const Ajv = require('ajv');
+const addFormats = require('ajv-formats');
 const schema = require('../transactionType');
 
 describe('transactionType', () => {
@@ -10,7 +11,8 @@ describe('transactionType', () => {
     describe('when Authorization', () => {
       beforeAll(() => {
         data = 'Authorization';
-        ajv = Ajv();
+        ajv = new Ajv();
+        addFormats(ajv);
       });
 
       beforeEach(() => {
@@ -25,7 +27,8 @@ describe('transactionType', () => {
     describe('when CancelAuthorization', () => {
       beforeAll(() => {
         data = 'CancelAuthorization';
-        ajv = Ajv();
+        ajv = new Ajv();
+        addFormats(ajv);
       });
 
       beforeEach(() => {
@@ -40,7 +43,8 @@ describe('transactionType', () => {
     describe('when SuChargeccess', () => {
       beforeAll(() => {
         data = 'SuChargeccess';
-        ajv = Ajv();
+        ajv = new Ajv();
+        addFormats(ajv);
       });
 
       beforeEach(() => {
@@ -55,7 +59,8 @@ describe('transactionType', () => {
     describe('when Refund', () => {
       beforeAll(() => {
         data = 'Refund';
-        ajv = Ajv();
+        ajv = new Ajv();
+        addFormats(ajv);
       });
 
       beforeEach(() => {
@@ -70,7 +75,8 @@ describe('transactionType', () => {
     describe('when Chargeback', () => {
       beforeAll(() => {
         data = 'Chargeback';
-        ajv = Ajv();
+        ajv = new Ajv();
+        addFormats(ajv);
       });
 
       beforeEach(() => {
@@ -87,7 +93,8 @@ describe('transactionType', () => {
     describe('when value is not an allowed one', () => {
       beforeAll(() => {
         data = 'nonAllowedValue';
-        ajv = Ajv();
+        ajv = new Ajv();
+        addFormats(ajv);
       });
 
       beforeEach(() => {

@@ -1,4 +1,5 @@
 const Ajv = require('ajv');
+const addFormats = require('ajv-formats');
 const schema = require('../resourceIdentifier');
 
 describe('resourceIdentifier', () => {
@@ -12,7 +13,8 @@ describe('resourceIdentifier', () => {
         data = {
           id: '74d32d79-aa32-44c8-8f2e-74132890310b'
         };
-        ajv = Ajv();
+        ajv = new Ajv();
+        addFormats(ajv);
       });
 
       beforeEach(() => {
@@ -27,7 +29,8 @@ describe('resourceIdentifier', () => {
     describe('when only key field', () => {
       beforeAll(() => {
         data = { key: 'customerKey' };
-        ajv = Ajv();
+        ajv = new Ajv();
+        addFormats(ajv);
       });
 
       beforeEach(() => {
@@ -48,7 +51,8 @@ describe('resourceIdentifier', () => {
           typeId: 'customer',
           key: 'customerKey'
         };
-        ajv = Ajv();
+        ajv = new Ajv();
+        addFormats(ajv);
       });
 
       beforeEach(() => {
@@ -63,7 +67,8 @@ describe('resourceIdentifier', () => {
     describe('when missing id and key properties', () => {
       beforeAll(() => {
         data = { typeId: 'customer' };
-        ajv = Ajv();
+        ajv = new Ajv();
+        addFormats(ajv);
       });
 
       beforeEach(() => {

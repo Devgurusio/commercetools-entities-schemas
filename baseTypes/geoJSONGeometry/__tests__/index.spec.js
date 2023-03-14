@@ -1,4 +1,5 @@
 const Ajv = require('ajv');
+const addFormats = require('ajv-formats');
 const schema = require('../index');
 
 describe('index', () => {
@@ -13,7 +14,8 @@ describe('index', () => {
           type: 'Point',
           coordinates: [35.2366173, -6.6724601]
         };
-        ajv = Ajv();
+        ajv = new Ajv();
+        addFormats(ajv);
       });
 
       beforeEach(() => {
@@ -40,7 +42,8 @@ describe('index', () => {
             ]
           ]
         };
-        ajv = Ajv();
+        ajv = new Ajv();
+        addFormats(ajv);
       });
 
       beforeEach(() => {

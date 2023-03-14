@@ -1,4 +1,5 @@
 const Ajv = require('ajv');
+const addFormats = require('ajv-formats');
 const schema = require('../storeDraft');
 
 describe('storeDraft', () => {
@@ -10,7 +11,8 @@ describe('storeDraft', () => {
     describe('when only required fields', () => {
       beforeAll(() => {
         data = { key: 'key' };
-        ajv = Ajv();
+        ajv = new Ajv();
+        addFormats(ajv);
       });
 
       beforeEach(() => {
@@ -35,7 +37,8 @@ describe('storeDraft', () => {
             { productSelection: { key: 'productSelection' }, active: true }
           ]
         };
-        ajv = Ajv();
+        ajv = new Ajv();
+        addFormats(ajv);
       });
 
       beforeEach(() => {
@@ -59,7 +62,8 @@ describe('storeDraft', () => {
           supplyChannels: [{ key: 'supplyChannel' }],
           productSelections: [{ key: 'productSelection', active: true }]
         };
-        ajv = Ajv();
+        ajv = new Ajv();
+        addFormats(ajv);
       });
 
       beforeEach(() => {

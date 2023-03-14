@@ -1,4 +1,5 @@
 const Ajv = require('ajv');
+const addFormats = require('ajv-formats');
 const schema = require('../index');
 
 describe('attributeType', () => {
@@ -10,7 +11,8 @@ describe('attributeType', () => {
     describe('when Boolean', () => {
       beforeAll(() => {
         data = { name: 'boolean' };
-        ajv = Ajv();
+        ajv = new Ajv();
+        addFormats(ajv);
       });
 
       beforeEach(() => {
@@ -25,7 +27,8 @@ describe('attributeType', () => {
     describe('when datetime', () => {
       beforeAll(() => {
         data = { name: 'datetime' };
-        ajv = Ajv();
+        ajv = new Ajv();
+        addFormats(ajv);
       });
 
       beforeEach(() => {
@@ -40,7 +43,8 @@ describe('attributeType', () => {
     describe('when date', () => {
       beforeAll(() => {
         data = { name: 'date' };
-        ajv = Ajv();
+        ajv = new Ajv();
+        addFormats(ajv);
       });
 
       beforeEach(() => {
@@ -58,7 +62,8 @@ describe('attributeType', () => {
           name: 'enum',
           values: [{ key: 'key', label: 'label' }]
         };
-        ajv = Ajv();
+        ajv = new Ajv();
+        addFormats(ajv);
       });
 
       beforeEach(() => {
@@ -76,7 +81,8 @@ describe('attributeType', () => {
           name: 'lenum',
           values: [{ key: 'key', label: { en: 'label', es: 'etiqueta' } }]
         };
-        ajv = Ajv();
+        ajv = new Ajv();
+        addFormats(ajv);
       });
 
       beforeEach(() => {
@@ -91,7 +97,8 @@ describe('attributeType', () => {
     describe('when ltext', () => {
       beforeAll(() => {
         data = { name: 'ltext' };
-        ajv = Ajv();
+        ajv = new Ajv();
+        addFormats(ajv);
       });
 
       beforeEach(() => {
@@ -106,7 +113,8 @@ describe('attributeType', () => {
     describe('when money', () => {
       beforeAll(() => {
         data = { name: 'money' };
-        ajv = Ajv();
+        ajv = new Ajv();
+        addFormats(ajv);
       });
 
       beforeEach(() => {
@@ -124,7 +132,8 @@ describe('attributeType', () => {
           name: 'nested',
           typeReference: 'cart'
         };
-        ajv = Ajv();
+        ajv = new Ajv();
+        addFormats(ajv);
       });
 
       beforeEach(() => {
@@ -139,7 +148,8 @@ describe('attributeType', () => {
     describe('when number', () => {
       beforeAll(() => {
         data = { name: 'number' };
-        ajv = Ajv();
+        ajv = new Ajv();
+        addFormats(ajv);
       });
 
       beforeEach(() => {
@@ -157,7 +167,8 @@ describe('attributeType', () => {
           name: 'reference',
           referenceTypeId: 'cart'
         };
-        ajv = Ajv();
+        ajv = new Ajv();
+        addFormats(ajv);
       });
 
       beforeEach(() => {
@@ -175,7 +186,8 @@ describe('attributeType', () => {
           name: 'set',
           elementType: { name: 'boolean' }
         };
-        ajv = Ajv();
+        ajv = new Ajv();
+        addFormats(ajv);
       });
 
       beforeEach(() => {
@@ -190,7 +202,8 @@ describe('attributeType', () => {
     describe('when text', () => {
       beforeAll(() => {
         data = { name: 'text' };
-        ajv = Ajv();
+        ajv = new Ajv();
+        addFormats(ajv);
       });
 
       beforeEach(() => {
@@ -205,7 +218,8 @@ describe('attributeType', () => {
     describe('when time', () => {
       beforeAll(() => {
         data = { name: 'time' };
-        ajv = Ajv();
+        ajv = new Ajv();
+        addFormats(ajv);
       });
 
       beforeEach(() => {
@@ -222,7 +236,8 @@ describe('attributeType', () => {
     describe('when name property is not an allowed one', () => {
       beforeAll(() => {
         data = { name: 'NotAllowedName' };
-        ajv = Ajv();
+        ajv = new Ajv();
+        addFormats(ajv);
       });
 
       beforeEach(() => {

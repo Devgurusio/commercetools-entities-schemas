@@ -1,4 +1,5 @@
 const Ajv = require('ajv');
+const addFormats = require('ajv-formats');
 const schema = require('../store');
 
 describe('store', () => {
@@ -16,7 +17,8 @@ describe('store', () => {
           lastModifiedAt: '2017-10-04T14:31:41.643Z',
           key: 'key'
         };
-        ajv = Ajv();
+        ajv = new Ajv();
+        addFormats(ajv);
       });
 
       beforeEach(() => {
@@ -56,7 +58,8 @@ describe('store', () => {
             }
           ]
         };
-        ajv = Ajv();
+        ajv = new Ajv();
+        addFormats(ajv);
       });
 
       beforeEach(() => {
@@ -84,7 +87,8 @@ describe('store', () => {
           supplyChannels: [{ key: 'supplyChannel' }],
           productSelections: [{ key: 'productSelection', active: true }]
         };
-        ajv = Ajv();
+        ajv = new Ajv();
+        addFormats(ajv);
       });
 
       beforeEach(() => {

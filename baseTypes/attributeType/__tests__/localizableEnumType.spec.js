@@ -1,4 +1,5 @@
 const Ajv = require('ajv');
+const addFormats = require('ajv-formats');
 const schema = require('../localizableEnumType');
 
 describe('localizableEnumType', () => {
@@ -10,7 +11,8 @@ describe('localizableEnumType', () => {
     describe('when only required fields', () => {
       beforeAll(() => {
         data = { name: 'lenum' };
-        ajv = Ajv();
+        ajv = new Ajv();
+        addFormats(ajv);
       });
 
       beforeEach(() => {
@@ -28,7 +30,8 @@ describe('localizableEnumType', () => {
           name: 'lenum',
           values: [{ key: 'key', label: { en: 'label', es: 'etiqueta' } }]
         };
-        ajv = Ajv();
+        ajv = new Ajv();
+        addFormats(ajv);
       });
 
       beforeEach(() => {
@@ -47,7 +50,8 @@ describe('localizableEnumType', () => {
         data = {
           values: [{ key: 'key', label: { en: 'label', es: 'etiqueta' } }]
         };
-        ajv = Ajv();
+        ajv = new Ajv();
+        addFormats(ajv);
       });
 
       beforeEach(() => {
@@ -65,7 +69,8 @@ describe('localizableEnumType', () => {
           name: 'NotAllowedName',
           values: [{ key: 'key', label: { en: 'label', es: 'etiqueta' } }]
         };
-        ajv = Ajv();
+        ajv = new Ajv();
+        addFormats(ajv);
       });
 
       beforeEach(() => {
@@ -83,7 +88,8 @@ describe('localizableEnumType', () => {
           name: 'lenum',
           values: [{ key: 'key', label: 'label' }]
         };
-        ajv = Ajv();
+        ajv = new Ajv();
+        addFormats(ajv);
       });
 
       beforeEach(() => {

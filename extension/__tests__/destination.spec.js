@@ -1,4 +1,5 @@
 const Ajv = require('ajv');
+const addFormats = require('ajv-formats');
 const schema = require('../destination');
 
 describe('destination', () => {
@@ -13,7 +14,8 @@ describe('destination', () => {
           type: 'HTTP',
           url: 'http://localhost'
         };
-        ajv = Ajv();
+        ajv = new Ajv();
+        addFormats(ajv);
       });
 
       beforeEach(() => {
@@ -33,7 +35,8 @@ describe('destination', () => {
           accessKey: 'accessKey',
           accessSecret: 'accessSecret'
         };
-        ajv = Ajv();
+        ajv = new Ajv();
+        addFormats(ajv);
       });
 
       beforeEach(() => {
@@ -56,7 +59,8 @@ describe('destination', () => {
           accessKey: 'accessKey',
           accessSecret: 'accessSecret'
         };
-        ajv = Ajv();
+        ajv = new Ajv();
+        addFormats(ajv);
       });
 
       beforeEach(() => {

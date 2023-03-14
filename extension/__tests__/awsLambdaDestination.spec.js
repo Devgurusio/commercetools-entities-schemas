@@ -1,4 +1,5 @@
 const Ajv = require('ajv');
+const addFormats = require('ajv-formats');
 const schema = require('../awsLambdaDestination');
 
 describe('awsLambdaDestination', () => {
@@ -14,7 +15,8 @@ describe('awsLambdaDestination', () => {
         accessKey: 'accessKey',
         accessSecret: 'accessSecret'
       };
-      ajv = Ajv();
+      ajv = new Ajv();
+      addFormats(ajv);
     });
 
     beforeEach(() => {
@@ -34,7 +36,8 @@ describe('awsLambdaDestination', () => {
           accessKey: 'accessKey',
           accessSecret: 'accessSecret'
         };
-        ajv = Ajv();
+        ajv = new Ajv();
+        addFormats(ajv);
       });
 
       beforeEach(() => {
@@ -53,7 +56,8 @@ describe('awsLambdaDestination', () => {
           accessKey: 'accessKey',
           accessSecret: 'accessSecret'
         };
-        ajv = Ajv();
+        ajv = new Ajv();
+        addFormats(ajv);
       });
 
       beforeEach(() => {
@@ -72,7 +76,8 @@ describe('awsLambdaDestination', () => {
           arn: 'arn:aws:lambda:region:accountid:function:functionName',
           accessSecret: 'accessSecret'
         };
-        ajv = Ajv();
+        ajv = new Ajv();
+        addFormats(ajv);
       });
 
       beforeEach(() => {
@@ -91,7 +96,8 @@ describe('awsLambdaDestination', () => {
           arn: 'arn:aws:lambda:region:accountid:function:functionName',
           accessKey: 'accessKey'
         };
-        ajv = Ajv();
+        ajv = new Ajv();
+        addFormats(ajv);
       });
 
       beforeEach(() => {
@@ -111,7 +117,8 @@ describe('awsLambdaDestination', () => {
           accessKey: 'accessKey',
           accessSecret: 'accessSecret'
         };
-        ajv = Ajv();
+        ajv = new Ajv();
+        addFormats(ajv);
       });
 
       beforeEach(() => {

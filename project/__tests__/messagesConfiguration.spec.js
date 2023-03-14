@@ -1,4 +1,5 @@
 const Ajv = require('ajv');
+const addFormats = require('ajv-formats');
 const schema = require('../messagesConfiguration');
 
 describe('messagesConfiguration', () => {
@@ -10,7 +11,8 @@ describe('messagesConfiguration', () => {
     describe('when only required fields', () => {
       beforeAll(() => {
         data = { enabled: true };
-        ajv = Ajv();
+        ajv = new Ajv();
+        addFormats(ajv);
       });
 
       beforeEach(() => {
@@ -28,7 +30,8 @@ describe('messagesConfiguration', () => {
           enabled: true,
           deleteDaysAfterCreation: 15
         };
-        ajv = Ajv();
+        ajv = new Ajv();
+        addFormats(ajv);
       });
 
       beforeEach(() => {
@@ -45,7 +48,8 @@ describe('messagesConfiguration', () => {
     describe('when missing enabled property', () => {
       beforeAll(() => {
         data = { deleteDaysAfterCreation: 15 };
-        ajv = Ajv();
+        ajv = new Ajv();
+        addFormats(ajv);
       });
 
       beforeEach(() => {

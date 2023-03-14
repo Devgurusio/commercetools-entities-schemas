@@ -1,4 +1,5 @@
 const Ajv = require('ajv');
+const addFormats = require('ajv-formats');
 const schema = require('../extension');
 
 describe('extension', () => {
@@ -25,7 +26,8 @@ describe('extension', () => {
           createdAt: '2017-10-04T14:31:41.643Z',
           lastModifiedAt: '2017-10-04T14:31:41.643Z'
         };
-        ajv = Ajv();
+        ajv = new Ajv();
+        addFormats(ajv);
       });
 
       beforeEach(() => {
@@ -70,7 +72,8 @@ describe('extension', () => {
           },
           lastMessageSequenceNumber: 1
         };
-        ajv = Ajv();
+        ajv = new Ajv();
+        addFormats(ajv);
       });
 
       beforeEach(() => {
@@ -116,7 +119,8 @@ describe('extension', () => {
           },
           lastMessageSequenceNumber: 1
         };
-        ajv = Ajv();
+        ajv = new Ajv();
+        addFormats(ajv);
       });
 
       beforeEach(() => {
@@ -160,7 +164,8 @@ describe('extension', () => {
           },
           lastMessageSequenceNumber: 1
         };
-        ajv = Ajv();
+        ajv = new Ajv();
+        addFormats(ajv);
       });
 
       beforeEach(() => {
@@ -204,7 +209,8 @@ describe('extension', () => {
           },
           lastMessageSequenceNumber: 1
         };
-        ajv = Ajv();
+        ajv = new Ajv();
+        addFormats(ajv);
       });
 
       beforeEach(() => {
@@ -248,7 +254,8 @@ describe('extension', () => {
           },
           lastMessageSequenceNumber: 1
         };
-        ajv = Ajv();
+        ajv = new Ajv();
+        addFormats(ajv);
       });
 
       beforeEach(() => {
@@ -289,7 +296,8 @@ describe('extension', () => {
           },
           lastMessageSequenceNumber: 1
         };
-        ajv = Ajv();
+        ajv = new Ajv();
+        addFormats(ajv);
       });
 
       beforeEach(() => {
@@ -328,7 +336,8 @@ describe('extension', () => {
           },
           lastMessageSequenceNumber: 1
         };
-        ajv = Ajv();
+        ajv = new Ajv();
+        addFormats(ajv);
       });
 
       beforeEach(() => {

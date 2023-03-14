@@ -1,4 +1,5 @@
 const Ajv = require('ajv');
+const addFormats = require('ajv-formats');
 const schema = require('../cartClassification');
 
 describe('cartClassification', () => {
@@ -10,7 +11,8 @@ describe('cartClassification', () => {
     describe('when only required fields', () => {
       beforeAll(() => {
         data = { type: 'CartClassification' };
-        ajv = Ajv();
+        ajv = new Ajv();
+        addFormats(ajv);
       });
 
       beforeEach(() => {
@@ -36,7 +38,8 @@ describe('cartClassification', () => {
             }
           ]
         };
-        ajv = Ajv();
+        ajv = new Ajv();
+        addFormats(ajv);
       });
 
       beforeEach(() => {
@@ -63,7 +66,8 @@ describe('cartClassification', () => {
             }
           ]
         };
-        ajv = Ajv();
+        ajv = new Ajv();
+        addFormats(ajv);
       });
 
       beforeEach(() => {
@@ -89,7 +93,8 @@ describe('cartClassification', () => {
             }
           ]
         };
-        ajv = Ajv();
+        ajv = new Ajv();
+        addFormats(ajv);
       });
 
       beforeEach(() => {

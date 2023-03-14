@@ -1,4 +1,5 @@
 const Ajv = require('ajv');
+const addFormats = require('ajv-formats');
 const schema = require('../enumType');
 
 describe('enumType', () => {
@@ -10,7 +11,8 @@ describe('enumType', () => {
     describe('when only required fields', () => {
       beforeAll(() => {
         data = { name: 'enum' };
-        ajv = Ajv();
+        ajv = new Ajv();
+        addFormats(ajv);
       });
 
       beforeEach(() => {
@@ -28,7 +30,8 @@ describe('enumType', () => {
           name: 'enum',
           values: [{ key: 'key', label: 'label' }]
         };
-        ajv = Ajv();
+        ajv = new Ajv();
+        addFormats(ajv);
       });
 
       beforeEach(() => {
@@ -45,7 +48,8 @@ describe('enumType', () => {
     describe('when missing name property', () => {
       beforeAll(() => {
         data = { values: [{ key: 'key', label: 'label' }] };
-        ajv = Ajv();
+        ajv = new Ajv();
+        addFormats(ajv);
       });
 
       beforeEach(() => {
@@ -63,7 +67,8 @@ describe('enumType', () => {
           name: 'NotAllowedName',
           values: [{ key: 'key', label: 'label' }]
         };
-        ajv = Ajv();
+        ajv = new Ajv();
+        addFormats(ajv);
       });
 
       beforeEach(() => {
@@ -81,7 +86,8 @@ describe('enumType', () => {
           name: 'enum',
           values: [{ key: 'key' }]
         };
-        ajv = Ajv();
+        ajv = new Ajv();
+        addFormats(ajv);
       });
 
       beforeEach(() => {

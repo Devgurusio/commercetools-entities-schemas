@@ -1,4 +1,5 @@
 const Ajv = require('ajv');
+const addFormats = require('ajv-formats');
 const schema = require('../setType');
 
 describe('setType', () => {
@@ -12,7 +13,8 @@ describe('setType', () => {
         name: 'Set',
         elementType: { name: 'Boolean' }
       };
-      ajv = Ajv();
+      ajv = new Ajv();
+      addFormats(ajv);
     });
 
     beforeEach(() => {
@@ -28,7 +30,8 @@ describe('setType', () => {
     describe('when missing name property', () => {
       beforeAll(() => {
         data = { elementType: { name: 'String' } };
-        ajv = Ajv();
+        ajv = new Ajv();
+        addFormats(ajv);
       });
 
       beforeEach(() => {
@@ -46,7 +49,8 @@ describe('setType', () => {
           name: 'NotAllowedName',
           elementType: { name: 'String' }
         };
-        ajv = Ajv();
+        ajv = new Ajv();
+        addFormats(ajv);
       });
 
       beforeEach(() => {
@@ -61,7 +65,8 @@ describe('setType', () => {
     describe('when missing referenceTypeId property', () => {
       beforeAll(() => {
         data = { name: 'Set' };
-        ajv = Ajv();
+        ajv = new Ajv();
+        addFormats(ajv);
       });
 
       beforeEach(() => {
@@ -79,7 +84,8 @@ describe('setType', () => {
           name: 'Set',
           elementType: { name: 'NotAllowedName' }
         };
-        ajv = Ajv();
+        ajv = new Ajv();
+        addFormats(ajv);
       });
 
       beforeEach(() => {

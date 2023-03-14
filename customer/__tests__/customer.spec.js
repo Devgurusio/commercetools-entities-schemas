@@ -1,4 +1,5 @@
 const Ajv = require('ajv');
+const addFormats = require('ajv-formats');
 const schema = require('../customer');
 
 describe('customer', () => {
@@ -18,7 +19,8 @@ describe('customer', () => {
           email: 'user@domain.io',
           password: 'password'
         };
-        ajv = Ajv();
+        ajv = new Ajv();
+        addFormats(ajv);
       });
 
       beforeEach(() => {
@@ -107,7 +109,8 @@ describe('customer', () => {
           },
           locale: 'en'
         };
-        ajv = Ajv();
+        ajv = new Ajv();
+        addFormats(ajv);
       });
 
       beforeEach(() => {
@@ -197,7 +200,8 @@ describe('customer', () => {
           },
           locale: 'en'
         };
-        ajv = Ajv();
+        ajv = new Ajv();
+        addFormats(ajv);
       });
 
       beforeEach(() => {
@@ -285,7 +289,8 @@ describe('customer', () => {
           },
           locale: 'en'
         };
-        ajv = Ajv();
+        ajv = new Ajv();
+        addFormats(ajv);
       });
 
       beforeEach(() => {
@@ -373,7 +378,8 @@ describe('customer', () => {
           },
           locale: 'en'
         };
-        ajv = Ajv();
+        ajv = new Ajv();
+        addFormats(ajv);
       });
 
       beforeEach(() => {
@@ -461,7 +467,8 @@ describe('customer', () => {
           },
           locale: 'en'
         };
-        ajv = Ajv();
+        ajv = new Ajv();
+        addFormats(ajv);
       });
 
       beforeEach(() => {
@@ -549,7 +556,8 @@ describe('customer', () => {
           },
           locale: 'en'
         };
-        ajv = Ajv();
+        ajv = new Ajv();
+        addFormats(ajv);
       });
 
       beforeEach(() => {
@@ -637,7 +645,8 @@ describe('customer', () => {
           },
           locale: 'en'
         };
-        ajv = Ajv();
+        ajv = new Ajv();
+        addFormats(ajv);
       });
 
       beforeEach(() => {

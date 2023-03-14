@@ -1,4 +1,5 @@
 const Ajv = require('ajv');
+const addFormats = require('ajv-formats');
 const schema = require('../createdBy');
 
 describe('createdBy', () => {
@@ -14,7 +15,8 @@ describe('createdBy', () => {
           id: '49f30471-80d5-4ade-b14f-dceb76d93d93'
         }
       };
-      ajv = Ajv();
+      ajv = new Ajv();
+      addFormats(ajv);
     });
 
     beforeEach(() => {

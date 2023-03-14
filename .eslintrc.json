@@ -1,20 +1,39 @@
-
 {
-    "root": true,
-    "env": {
-      "es6": true,
-      "jest/globals": true,
-      "node": true
-    },
-    "plugins": [
-      "jest",
-      "prettier"
+  "root": true,
+  "extends": [
+    "eslint:recommended",
+    "plugin:prettier/recommended"
+  ],
+  "plugins": [
+    "prettier",
+    "jest"
+  ],
+  "env": {
+    "es6": true,
+    "jest/globals": true,
+    "node": true
+  },
+  "parserOptions": {
+    "ecmaVersion": 2020
+  },
+  "rules": {
+    "prettier/prettier": "error",
+    "standard/array-bracket-even-spacing": "off",
+    "standard/computed-property-even-spacing": "off",
+    "standard/object-curly-even-spacing": "off",
+    "no-extra-semi": "error",
+    "no-mixed-spaces-and-tabs": "off",
+    "arrow-parens": [
+      2,
+      "as-needed"
     ],
-    "extends": [
-      "plugin:prettier/recommended",
-      "eslint:recommended"
-    ],
-    "parserOptions": {
-      "ecmaVersion": 2018
-    }
-  }
+    "comma-dangle": [
+      "error",
+      "never"
+    ]
+  },
+  "ignorePatterns": [
+    "coverage/*",
+    "node_modules/*"
+  ]
+}

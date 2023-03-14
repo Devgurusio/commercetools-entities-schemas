@@ -1,4 +1,5 @@
 const Ajv = require('ajv');
+const addFormats = require('ajv-formats');
 const schema = require('../productDiscount');
 
 describe('productDiscount', () => {
@@ -23,7 +24,8 @@ describe('productDiscount', () => {
           createdAt: '2017-10-04T14:31:41.643Z',
           lastModifiedAt: '2017-10-04T14:31:41.643Z'
         };
-        ajv = Ajv();
+        ajv = new Ajv({ strict: false });
+        addFormats(ajv);
       });
 
       beforeEach(() => {
@@ -68,7 +70,8 @@ describe('productDiscount', () => {
           },
           lastMessageSequenceNumber: 1
         };
-        ajv = Ajv();
+        ajv = new Ajv({ strict: false });
+        addFormats(ajv);
       });
 
       beforeEach(() => {
@@ -114,7 +117,8 @@ describe('productDiscount', () => {
           },
           lastMessageSequenceNumber: 1
         };
-        ajv = Ajv();
+        ajv = new Ajv({ strict: false });
+        addFormats(ajv);
       });
 
       beforeEach(() => {
@@ -158,7 +162,8 @@ describe('productDiscount', () => {
           },
           lastMessageSequenceNumber: 1
         };
-        ajv = Ajv();
+        ajv = new Ajv({ strict: false });
+        addFormats(ajv);
       });
 
       beforeEach(() => {
@@ -202,7 +207,8 @@ describe('productDiscount', () => {
           },
           lastMessageSequenceNumber: 1
         };
-        ajv = Ajv();
+        ajv = new Ajv({ strict: false });
+        addFormats(ajv);
       });
 
       beforeEach(() => {
@@ -246,7 +252,8 @@ describe('productDiscount', () => {
           },
           lastMessageSequenceNumber: 1
         };
-        ajv = Ajv();
+        ajv = new Ajv({ strict: false });
+        addFormats(ajv);
       });
 
       beforeEach(() => {
@@ -290,7 +297,8 @@ describe('productDiscount', () => {
           },
           lastMessageSequenceNumber: 1
         };
-        ajv = Ajv();
+        ajv = new Ajv({ strict: false });
+        addFormats(ajv);
       });
 
       beforeEach(() => {
@@ -334,7 +342,8 @@ describe('productDiscount', () => {
           },
           lastMessageSequenceNumber: 1
         };
-        ajv = Ajv();
+        ajv = new Ajv({ strict: false });
+        addFormats(ajv);
       });
 
       beforeEach(() => {
@@ -378,7 +387,8 @@ describe('productDiscount', () => {
           },
           lastMessageSequenceNumber: 1
         };
-        ajv = Ajv();
+        ajv = new Ajv({ strict: false });
+        addFormats(ajv);
       });
 
       beforeEach(() => {
@@ -422,7 +432,8 @@ describe('productDiscount', () => {
           },
           lastMessageSequenceNumber: 1
         };
-        ajv = Ajv();
+        ajv = new Ajv({ strict: false });
+        addFormats(ajv);
       });
 
       beforeEach(() => {
@@ -466,7 +477,8 @@ describe('productDiscount', () => {
           },
           lastMessageSequenceNumber: 1
         };
-        ajv = Ajv();
+        ajv = new Ajv({ strict: false });
+        addFormats(ajv);
       });
 
       beforeEach(() => {
@@ -511,7 +523,8 @@ describe('productDiscount', () => {
           },
           lastMessageSequenceNumber: 1
         };
-        ajv = Ajv();
+        ajv = new Ajv({ strict: false });
+        addFormats(ajv);
       });
 
       beforeEach(() => {

@@ -1,4 +1,5 @@
 const Ajv = require('ajv');
+const addFormats = require('ajv-formats');
 const schema = require('../date');
 
 describe('date', () => {
@@ -9,7 +10,8 @@ describe('date', () => {
   describe('when success', () => {
     beforeAll(() => {
       data = '1983-08-17';
-      ajv = Ajv();
+      ajv = new Ajv();
+      addFormats(ajv);
     });
 
     beforeEach(() => {
@@ -25,7 +27,8 @@ describe('date', () => {
     describe('when data has no date format', () => {
       beforeAll(() => {
         data = 'sometext';
-        ajv = Ajv();
+        ajv = new Ajv();
+        addFormats(ajv);
       });
 
       beforeEach(() => {
@@ -40,7 +43,8 @@ describe('date', () => {
     describe('when data is a datetime', () => {
       beforeAll(() => {
         data = '1983-08-17T17:00:00Z';
-        ajv = Ajv();
+        ajv = new Ajv();
+        addFormats(ajv);
       });
 
       beforeEach(() => {

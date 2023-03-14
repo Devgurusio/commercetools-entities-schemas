@@ -1,4 +1,5 @@
 const Ajv = require('ajv');
+const addFormats = require('ajv-formats');
 const schema = require('../highPrecisionMoney');
 
 describe('highPrecisionMoney', () => {
@@ -15,7 +16,8 @@ describe('highPrecisionMoney', () => {
           centAmount: 390,
           fractionDigits: 2
         };
-        ajv = Ajv();
+        ajv = new Ajv();
+        addFormats(ajv);
       });
 
       beforeEach(() => {
@@ -36,7 +38,8 @@ describe('highPrecisionMoney', () => {
           preciseAmount: 3.9,
           fractionDigits: 2
         };
-        ajv = Ajv();
+        ajv = new Ajv();
+        addFormats(ajv);
       });
 
       beforeEach(() => {
@@ -58,7 +61,8 @@ describe('highPrecisionMoney', () => {
           preciseAmount: 3.9,
           fractionDigits: 2
         };
-        ajv = Ajv();
+        ajv = new Ajv();
+        addFormats(ajv);
       });
 
       beforeEach(() => {
@@ -79,7 +83,8 @@ describe('highPrecisionMoney', () => {
           preciseAmount: 3.9,
           fractionDigits: 2
         };
-        ajv = Ajv();
+        ajv = new Ajv();
+        addFormats(ajv);
       });
 
       beforeEach(() => {
@@ -99,7 +104,8 @@ describe('highPrecisionMoney', () => {
           preciseAmount: 3.9,
           fractionDigits: 2
         };
-        ajv = Ajv();
+        ajv = new Ajv();
+        addFormats(ajv);
       });
 
       beforeEach(() => {
@@ -119,7 +125,8 @@ describe('highPrecisionMoney', () => {
           preciseAmount: 3.9,
           fractionDigits: 2
         };
-        ajv = Ajv();
+        ajv = new Ajv();
+        addFormats(ajv);
       });
 
       beforeEach(() => {
@@ -139,7 +146,8 @@ describe('highPrecisionMoney', () => {
           centAmount: 390,
           preciseAmount: 3.9
         };
-        ajv = Ajv();
+        ajv = new Ajv();
+        addFormats(ajv);
       });
 
       beforeEach(() => {

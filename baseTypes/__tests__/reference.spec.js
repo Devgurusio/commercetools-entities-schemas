@@ -1,4 +1,5 @@
 const Ajv = require('ajv');
+const addFormats = require('ajv-formats');
 const schema = require('../reference');
 
 describe('reference', () => {
@@ -13,7 +14,8 @@ describe('reference', () => {
           id: '74d32d79-aa32-44c8-8f2e-74132890310b',
           typeId: 'customer'
         };
-        ajv = Ajv();
+        ajv = new Ajv();
+        addFormats(ajv);
       });
 
       beforeEach(() => {
@@ -48,7 +50,8 @@ describe('reference', () => {
             stores: []
           }
         };
-        ajv = Ajv();
+        ajv = new Ajv();
+        addFormats(ajv);
       });
 
       beforeEach(() => {
@@ -84,7 +87,8 @@ describe('reference', () => {
             stores: []
           }
         };
-        ajv = Ajv();
+        ajv = new Ajv();
+        addFormats(ajv);
       });
 
       beforeEach(() => {
@@ -118,7 +122,8 @@ describe('reference', () => {
             stores: []
           }
         };
-        ajv = Ajv();
+        ajv = new Ajv();
+        addFormats(ajv);
       });
 
       beforeEach(() => {

@@ -1,4 +1,5 @@
 const Ajv = require('ajv');
+const addFormats = require('ajv-formats');
 const schema = require('../point');
 
 describe('point', () => {
@@ -12,7 +13,8 @@ describe('point', () => {
         type: 'Point',
         coordinates: [35.2366173, -6.6724601]
       };
-      ajv = Ajv();
+      ajv = new Ajv();
+      addFormats(ajv);
     });
 
     beforeEach(() => {
@@ -28,7 +30,8 @@ describe('point', () => {
     describe('when missing type property', () => {
       beforeAll(() => {
         data = { coordinates: [35.2366173, -6.6724601] };
-        ajv = Ajv();
+        ajv = new Ajv();
+        addFormats(ajv);
       });
 
       beforeEach(() => {
@@ -43,7 +46,8 @@ describe('point', () => {
     describe('when missing coordinates property', () => {
       beforeAll(() => {
         data = { type: 'Point' };
-        ajv = Ajv();
+        ajv = new Ajv();
+        addFormats(ajv);
       });
 
       beforeEach(() => {
@@ -61,7 +65,8 @@ describe('point', () => {
           type: 'Point',
           coordinates: [35.2366173]
         };
-        ajv = Ajv();
+        ajv = new Ajv();
+        addFormats(ajv);
       });
 
       beforeEach(() => {

@@ -1,4 +1,5 @@
 const Ajv = require('ajv');
+const addFormats = require('ajv-formats');
 const schema = require('../shippingRateInputType');
 
 describe('shippingRateInputType', () => {
@@ -10,7 +11,8 @@ describe('shippingRateInputType', () => {
     describe('when CartValue', () => {
       beforeAll(() => {
         data = { type: 'CartValue' };
-        ajv = Ajv();
+        ajv = new Ajv();
+        addFormats(ajv);
       });
 
       beforeEach(() => {
@@ -36,7 +38,8 @@ describe('shippingRateInputType', () => {
             }
           ]
         };
-        ajv = Ajv();
+        ajv = new Ajv();
+        addFormats(ajv);
       });
 
       beforeEach(() => {
@@ -51,7 +54,8 @@ describe('shippingRateInputType', () => {
     describe('when CartScore', () => {
       beforeAll(() => {
         data = { type: 'CartScore' };
-        ajv = Ajv();
+        ajv = new Ajv();
+        addFormats(ajv);
       });
 
       beforeEach(() => {
@@ -68,7 +72,8 @@ describe('shippingRateInputType', () => {
     describe('when type is not allowed value', () => {
       beforeAll(() => {
         data = { type: 'notAllowedValue' };
-        ajv = Ajv();
+        ajv = new Ajv();
+        addFormats(ajv);
       });
 
       beforeEach(() => {

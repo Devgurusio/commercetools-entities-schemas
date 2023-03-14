@@ -1,4 +1,5 @@
 const Ajv = require('ajv');
+const addFormats = require('ajv-formats');
 const schema = require('../zoneDraft');
 
 describe('zoneDraft', () => {
@@ -10,7 +11,8 @@ describe('zoneDraft', () => {
     describe('when only required fields', () => {
       beforeAll(() => {
         data = { name: 'name' };
-        ajv = Ajv();
+        ajv = new Ajv();
+        addFormats(ajv);
       });
 
       beforeEach(() => {
@@ -30,7 +32,8 @@ describe('zoneDraft', () => {
           description: 'description',
           locations: [{ country: 'US', state: 'CA' }]
         };
-        ajv = Ajv();
+        ajv = new Ajv();
+        addFormats(ajv);
       });
 
       beforeEach(() => {
@@ -51,7 +54,8 @@ describe('zoneDraft', () => {
           description: 'description',
           locations: [{ country: 'US', state: 'CA' }]
         };
-        ajv = Ajv();
+        ajv = new Ajv();
+        addFormats(ajv);
       });
 
       beforeEach(() => {

@@ -1,4 +1,5 @@
 const Ajv = require('ajv');
+const addFormats = require('ajv-formats');
 const schema = require('../transactionState');
 
 describe('transactionState', () => {
@@ -10,7 +11,8 @@ describe('transactionState', () => {
     describe('when Initial', () => {
       beforeAll(() => {
         data = 'Initial';
-        ajv = Ajv();
+        ajv = new Ajv();
+        addFormats(ajv);
       });
 
       beforeEach(() => {
@@ -25,7 +27,8 @@ describe('transactionState', () => {
     describe('when Pending', () => {
       beforeAll(() => {
         data = 'Pending';
-        ajv = Ajv();
+        ajv = new Ajv();
+        addFormats(ajv);
       });
 
       beforeEach(() => {
@@ -40,7 +43,8 @@ describe('transactionState', () => {
     describe('when Success', () => {
       beforeAll(() => {
         data = 'Success';
-        ajv = Ajv();
+        ajv = new Ajv();
+        addFormats(ajv);
       });
 
       beforeEach(() => {
@@ -55,7 +59,8 @@ describe('transactionState', () => {
     describe('when Failure', () => {
       beforeAll(() => {
         data = 'Failure';
-        ajv = Ajv();
+        ajv = new Ajv();
+        addFormats(ajv);
       });
 
       beforeEach(() => {
@@ -72,7 +77,8 @@ describe('transactionState', () => {
     describe('when value is not an allowed one', () => {
       beforeAll(() => {
         data = 'nonAllowedValue';
-        ajv = Ajv();
+        ajv = new Ajv();
+        addFormats(ajv);
       });
 
       beforeEach(() => {

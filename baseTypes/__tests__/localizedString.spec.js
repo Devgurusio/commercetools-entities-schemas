@@ -1,4 +1,5 @@
 const Ajv = require('ajv');
+const addFormats = require('ajv-formats');
 const schema = require('../localizedString');
 
 describe('localizedString', () => {
@@ -13,7 +14,8 @@ describe('localizedString', () => {
         es: 'ejemplo',
         'en-US': 'example'
       };
-      ajv = Ajv();
+      ajv = new Ajv();
+      addFormats(ajv);
     });
 
     beforeEach(() => {
@@ -32,7 +34,8 @@ describe('localizedString', () => {
           en: 'example',
           es: 7
         };
-        ajv = Ajv();
+        ajv = new Ajv();
+        addFormats(ajv);
       });
 
       beforeEach(() => {

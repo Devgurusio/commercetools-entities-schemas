@@ -1,4 +1,5 @@
 const Ajv = require('ajv');
+const addFormats = require('ajv-formats');
 const schema = require('../');
 
 describe('productDiscountValue', () => {
@@ -20,7 +21,8 @@ describe('productDiscountValue', () => {
             }
           ]
         };
-        ajv = Ajv();
+        ajv = new Ajv({ strict: false });
+        addFormats(ajv);
       });
 
       beforeEach(() => {
@@ -37,7 +39,8 @@ describe('productDiscountValue', () => {
         data = {
           type: 'external'
         };
-        ajv = Ajv();
+        ajv = new Ajv({ strict: false });
+        addFormats(ajv);
       });
 
       beforeEach(() => {
@@ -55,7 +58,8 @@ describe('productDiscountValue', () => {
           type: 'relative',
           permyriad: 1000
         };
-        ajv = Ajv();
+        ajv = new Ajv({ strict: false });
+        addFormats(ajv);
       });
 
       beforeEach(() => {
@@ -74,7 +78,8 @@ describe('productDiscountValue', () => {
         data = {
           type: 'invalidType'
         };
-        ajv = Ajv();
+        ajv = new Ajv({ strict: false });
+        addFormats(ajv);
       });
 
       beforeEach(() => {

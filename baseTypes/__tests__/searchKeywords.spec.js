@@ -1,4 +1,5 @@
 const Ajv = require('ajv');
+const addFormats = require('ajv-formats');
 const schema = require('../searchKeywords');
 
 describe('searchKeywords', () => {
@@ -27,7 +28,8 @@ describe('searchKeywords', () => {
           }
         ]
       };
-      ajv = Ajv();
+      ajv = new Ajv();
+      addFormats(ajv);
     });
 
     beforeEach(() => {

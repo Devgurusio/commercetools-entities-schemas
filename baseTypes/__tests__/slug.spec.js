@@ -1,4 +1,5 @@
 const Ajv = require('ajv');
+const addFormats = require('ajv-formats');
 const schema = require('../slug');
 
 describe('slug', () => {
@@ -13,7 +14,8 @@ describe('slug', () => {
         es: 'slug-de-ejemplo',
         'en-US': 'sample-slug'
       };
-      ajv = Ajv();
+      ajv = new Ajv();
+      addFormats(ajv);
     });
 
     beforeEach(() => {
@@ -32,7 +34,8 @@ describe('slug', () => {
           en: 'sample-slug',
           es: 'mal slug'
         };
-        ajv = Ajv();
+        ajv = new Ajv();
+        addFormats(ajv);
       });
 
       beforeEach(() => {

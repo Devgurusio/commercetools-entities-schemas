@@ -1,4 +1,5 @@
 const Ajv = require('ajv');
+const addFormats = require('ajv-formats');
 const schema = require('../addressDraft');
 
 describe('addressDraft', () => {
@@ -12,7 +13,8 @@ describe('addressDraft', () => {
         data = {
           country: 'ES'
         };
-        ajv = Ajv();
+        ajv = new Ajv();
+        addFormats(ajv);
       });
 
       beforeEach(() => {
@@ -51,7 +53,8 @@ describe('addressDraft', () => {
           additionalAddressInfo: 'additionalAddressInfo',
           externalId: 'externalId'
         };
-        ajv = Ajv();
+        ajv = new Ajv();
+        addFormats(ajv);
       });
 
       beforeEach(() => {
@@ -91,7 +94,8 @@ describe('addressDraft', () => {
           additionalAddressInfo: 'additionalAddressInfo',
           externalId: 'externalId'
         };
-        ajv = Ajv();
+        ajv = new Ajv();
+        addFormats(ajv);
       });
 
       beforeEach(() => {

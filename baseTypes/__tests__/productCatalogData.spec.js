@@ -1,4 +1,5 @@
 const Ajv = require('ajv');
+const addFormats = require('ajv-formats');
 const schema = require('../productCatalogData');
 
 describe('productCatalogData', () => {
@@ -38,7 +39,8 @@ describe('productCatalogData', () => {
         },
         hasStagedChanges: false
       };
-      ajv = Ajv();
+      ajv = new Ajv();
+      addFormats(ajv);
     });
 
     beforeEach(() => {
@@ -82,7 +84,8 @@ describe('productCatalogData', () => {
           },
           hasStagedChanges: false
         };
-        ajv = Ajv();
+        ajv = new Ajv();
+        addFormats(ajv);
       });
 
       beforeEach(() => {
@@ -113,7 +116,8 @@ describe('productCatalogData', () => {
           },
           hasStagedChanges: false
         };
-        ajv = Ajv();
+        ajv = new Ajv();
+        addFormats(ajv);
       });
 
       beforeEach(() => {
@@ -144,7 +148,8 @@ describe('productCatalogData', () => {
           },
           hasStagedChanges: false
         };
-        ajv = Ajv();
+        ajv = new Ajv();
+        addFormats(ajv);
       });
 
       beforeEach(() => {
@@ -187,7 +192,8 @@ describe('productCatalogData', () => {
             }
           }
         };
-        ajv = Ajv();
+        ajv = new Ajv();
+        addFormats(ajv);
       });
 
       beforeEach(() => {

@@ -1,4 +1,5 @@
 const Ajv = require('ajv');
+const addFormats = require('ajv-formats');
 const schema = require('../customObjectDraft');
 
 describe('customObjectDraft', () => {
@@ -14,7 +15,8 @@ describe('customObjectDraft', () => {
           key: 'key',
           value: { some: 'value' }
         };
-        ajv = Ajv();
+        ajv = new Ajv();
+        addFormats(ajv);
       });
 
       beforeEach(() => {
@@ -34,7 +36,8 @@ describe('customObjectDraft', () => {
           value: { some: 'value' },
           version: 1
         };
-        ajv = Ajv();
+        ajv = new Ajv();
+        addFormats(ajv);
       });
 
       beforeEach(() => {
@@ -55,7 +58,8 @@ describe('customObjectDraft', () => {
           value: { some: 'value' },
           version: 1
         };
-        ajv = Ajv();
+        ajv = new Ajv();
+        addFormats(ajv);
       });
 
       beforeEach(() => {
@@ -74,7 +78,8 @@ describe('customObjectDraft', () => {
           value: { some: 'value' },
           version: 1
         };
-        ajv = Ajv();
+        ajv = new Ajv();
+        addFormats(ajv);
       });
 
       beforeEach(() => {
@@ -93,7 +98,8 @@ describe('customObjectDraft', () => {
           key: 'key',
           version: 1
         };
-        ajv = Ajv();
+        ajv = new Ajv();
+        addFormats(ajv);
       });
 
       beforeEach(() => {

@@ -1,4 +1,5 @@
 const Ajv = require('ajv');
+const addFormats = require('ajv-formats');
 const schema = require('../external');
 
 describe('external', () => {
@@ -11,7 +12,8 @@ describe('external', () => {
       data = {
         type: 'external'
       };
-      ajv = Ajv();
+      ajv = new Ajv({ strict: false });
+      addFormats(ajv);
     });
 
     beforeEach(() => {
@@ -27,7 +29,8 @@ describe('external', () => {
     describe('when missing type property', () => {
       beforeAll(() => {
         data = {};
-        ajv = Ajv();
+        ajv = new Ajv({ strict: false });
+        addFormats(ajv);
       });
 
       beforeEach(() => {
@@ -44,7 +47,8 @@ describe('external', () => {
         data = {
           type: 'invalidType'
         };
-        ajv = Ajv();
+        ajv = new Ajv({ strict: false });
+        addFormats(ajv);
       });
 
       beforeEach(() => {

@@ -1,4 +1,5 @@
 const Ajv = require('ajv');
+const addFormats = require('ajv-formats');
 const schema = require('../zone');
 
 describe('zone', () => {
@@ -16,7 +17,8 @@ describe('zone', () => {
           lastModifiedAt: '2017-10-04T14:31:41.643Z',
           name: 'name'
         };
-        ajv = Ajv();
+        ajv = new Ajv();
+        addFormats(ajv);
       });
 
       beforeEach(() => {
@@ -40,7 +42,8 @@ describe('zone', () => {
           description: 'description',
           locations: [{ country: 'US', state: 'CA' }]
         };
-        ajv = Ajv();
+        ajv = new Ajv();
+        addFormats(ajv);
       });
 
       beforeEach(() => {
@@ -65,7 +68,8 @@ describe('zone', () => {
           description: 'description',
           locations: [{ country: 'US', state: 'CA' }]
         };
-        ajv = Ajv();
+        ajv = new Ajv();
+        addFormats(ajv);
       });
 
       beforeEach(() => {
@@ -88,7 +92,8 @@ describe('zone', () => {
           description: 'description',
           locations: [{ country: 'US', state: 'CA' }]
         };
-        ajv = Ajv();
+        ajv = new Ajv();
+        addFormats(ajv);
       });
 
       beforeEach(() => {
@@ -111,7 +116,8 @@ describe('zone', () => {
           description: 'description',
           locations: [{ country: 'US', state: 'CA' }]
         };
-        ajv = Ajv();
+        ajv = new Ajv();
+        addFormats(ajv);
       });
 
       beforeEach(() => {
@@ -134,7 +140,8 @@ describe('zone', () => {
           description: 'description',
           locations: [{ country: 'US', state: 'CA' }]
         };
-        ajv = Ajv();
+        ajv = new Ajv();
+        addFormats(ajv);
       });
 
       beforeEach(() => {
@@ -157,7 +164,8 @@ describe('zone', () => {
           description: 'description',
           locations: [{ country: 'US', state: 'CA' }]
         };
-        ajv = Ajv();
+        ajv = new Ajv();
+        addFormats(ajv);
       });
 
       beforeEach(() => {

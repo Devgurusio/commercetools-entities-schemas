@@ -1,4 +1,5 @@
 const Ajv = require('ajv');
+const addFormats = require('ajv-formats');
 const schema = require('../customerDraft');
 
 describe('customerDraft', () => {
@@ -13,7 +14,8 @@ describe('customerDraft', () => {
           email: 'user@domain.io',
           password: 'password'
         };
-        ajv = Ajv();
+        ajv = new Ajv();
+        addFormats(ajv);
       });
 
       beforeEach(() => {
@@ -96,7 +98,8 @@ describe('customerDraft', () => {
           },
           locale: 'en'
         };
-        ajv = Ajv();
+        ajv = new Ajv();
+        addFormats(ajv);
       });
 
       beforeEach(() => {
@@ -180,7 +183,8 @@ describe('customerDraft', () => {
           },
           locale: 'en'
         };
-        ajv = Ajv();
+        ajv = new Ajv();
+        addFormats(ajv);
       });
 
       beforeEach(() => {
@@ -262,7 +266,8 @@ describe('customerDraft', () => {
           },
           locale: 'en'
         };
-        ajv = Ajv();
+        ajv = new Ajv();
+        addFormats(ajv);
       });
 
       beforeEach(() => {

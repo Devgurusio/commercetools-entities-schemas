@@ -1,4 +1,5 @@
 const Ajv = require('ajv');
+const addFormats = require('ajv-formats');
 const schema = require('../customObject');
 
 describe('customObject', () => {
@@ -17,7 +18,8 @@ describe('customObject', () => {
         key: 'key',
         value: { some: 'value' }
       };
-      ajv = Ajv();
+      ajv = new Ajv();
+      addFormats(ajv);
     });
 
     beforeEach(() => {
@@ -40,7 +42,8 @@ describe('customObject', () => {
           key: 'key',
           value: { some: 'value' }
         };
-        ajv = Ajv();
+        ajv = new Ajv();
+        addFormats(ajv);
       });
 
       beforeEach(() => {
@@ -62,7 +65,8 @@ describe('customObject', () => {
           key: 'key',
           value: { some: 'value' }
         };
-        ajv = Ajv();
+        ajv = new Ajv();
+        addFormats(ajv);
       });
 
       beforeEach(() => {
@@ -84,7 +88,8 @@ describe('customObject', () => {
           key: 'key',
           value: { some: 'value' }
         };
-        ajv = Ajv();
+        ajv = new Ajv();
+        addFormats(ajv);
       });
 
       beforeEach(() => {
@@ -106,7 +111,8 @@ describe('customObject', () => {
           key: 'key',
           value: { some: 'value' }
         };
-        ajv = Ajv();
+        ajv = new Ajv();
+        addFormats(ajv);
       });
 
       beforeEach(() => {
@@ -128,7 +134,8 @@ describe('customObject', () => {
           key: 'key',
           value: { some: 'value' }
         };
-        ajv = Ajv();
+        ajv = new Ajv();
+        addFormats(ajv);
       });
 
       beforeEach(() => {
@@ -150,7 +157,8 @@ describe('customObject', () => {
           container: 'container',
           value: { some: 'value' }
         };
-        ajv = Ajv();
+        ajv = new Ajv();
+        addFormats(ajv);
       });
 
       beforeEach(() => {
@@ -172,7 +180,8 @@ describe('customObject', () => {
           container: 'container',
           key: 'key'
         };
-        ajv = Ajv();
+        ajv = new Ajv();
+        addFormats(ajv);
       });
 
       beforeEach(() => {

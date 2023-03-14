@@ -1,4 +1,5 @@
 const Ajv = require('ajv');
+const addFormats = require('ajv-formats');
 const schema = require('../customerSignInResult');
 
 describe('customerSignInResult', () => {
@@ -86,7 +87,8 @@ describe('customerSignInResult', () => {
             locale: 'en'
           }
         };
-        ajv = Ajv();
+        ajv = new Ajv();
+        addFormats(ajv);
       });
 
       beforeEach(() => {
@@ -185,7 +187,8 @@ describe('customerSignInResult', () => {
             lastModifiedAt: '2017-09-28T10:43:18.863Z'
           }
         };
-        ajv = Ajv();
+        ajv = new Ajv();
+        addFormats(ajv);
       });
 
       beforeEach(() => {
@@ -211,7 +214,8 @@ describe('customerSignInResult', () => {
             lastModifiedAt: '2017-09-28T10:43:18.863Z'
           }
         };
-        ajv = Ajv();
+        ajv = new Ajv();
+        addFormats(ajv);
       });
 
       beforeEach(() => {
