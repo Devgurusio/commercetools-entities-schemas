@@ -1,4 +1,5 @@
 const Ajv = require('ajv');
+const addFormats = require('ajv-formats');
 const schema = require('../productDiscountDraft');
 
 describe('productDiscountDraft', () => {
@@ -16,7 +17,8 @@ describe('productDiscountDraft', () => {
           sortOrder: '0.1',
           isActive: true
         };
-        ajv = Ajv();
+        ajv = new Ajv({ strict: false });
+        addFormats(ajv);
       });
 
       beforeEach(() => {
@@ -41,7 +43,8 @@ describe('productDiscountDraft', () => {
           validFrom: '2017-09-20T11:32:32.727Z',
           validUntil: '2017-09-28T10:43:18.863Z'
         };
-        ajv = Ajv();
+        ajv = new Ajv({ strict: false });
+        addFormats(ajv);
       });
 
       beforeEach(() => {
@@ -67,7 +70,8 @@ describe('productDiscountDraft', () => {
           validFrom: '2017-09-20T11:32:32.727Z',
           validUntil: '2017-09-28T10:43:18.863Z'
         };
-        ajv = Ajv();
+        ajv = new Ajv({ strict: false });
+        addFormats(ajv);
       });
 
       beforeEach(() => {
@@ -91,7 +95,8 @@ describe('productDiscountDraft', () => {
           validFrom: '2017-09-20T11:32:32.727Z',
           validUntil: '2017-09-28T10:43:18.863Z'
         };
-        ajv = Ajv();
+        ajv = new Ajv({ strict: false });
+        addFormats(ajv);
       });
 
       beforeEach(() => {
@@ -115,7 +120,8 @@ describe('productDiscountDraft', () => {
           validFrom: '2017-09-20T11:32:32.727Z',
           validUntil: '2017-09-28T10:43:18.863Z'
         };
-        ajv = Ajv();
+        ajv = new Ajv({ strict: false });
+        addFormats(ajv);
       });
 
       beforeEach(() => {
@@ -139,7 +145,8 @@ describe('productDiscountDraft', () => {
           validFrom: '2017-09-20T11:32:32.727Z',
           validUntil: '2017-09-28T10:43:18.863Z'
         };
-        ajv = Ajv();
+        ajv = new Ajv({ strict: false });
+        addFormats(ajv);
       });
 
       beforeEach(() => {
@@ -163,7 +170,8 @@ describe('productDiscountDraft', () => {
           validFrom: '2017-09-20T11:32:32.727Z',
           validUntil: '2017-09-28T10:43:18.863Z'
         };
-        ajv = Ajv();
+        ajv = new Ajv({ strict: false });
+        addFormats(ajv);
       });
 
       beforeEach(() => {
@@ -188,7 +196,8 @@ describe('productDiscountDraft', () => {
           validFrom: '2017-09-20T11:32:32.727Z',
           validUntil: '2017-09-28T10:43:18.863Z'
         };
-        ajv = Ajv();
+        ajv = new Ajv({ strict: false });
+        addFormats(ajv);
       });
 
       beforeEach(() => {

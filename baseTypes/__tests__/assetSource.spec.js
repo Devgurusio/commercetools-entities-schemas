@@ -1,4 +1,5 @@
 const Ajv = require('ajv');
+const addFormats = require('ajv-formats');
 const schema = require('../assetSource');
 
 describe('assetSource', () => {
@@ -12,7 +13,8 @@ describe('assetSource', () => {
         data = {
           uri: 'http://localhost:3000/my-asset'
         };
-        ajv = Ajv();
+        ajv = new Ajv();
+        addFormats(ajv);
       });
 
       beforeEach(() => {
@@ -35,7 +37,8 @@ describe('assetSource', () => {
           },
           contentType: 'image/jpeg'
         };
-        ajv = Ajv();
+        ajv = new Ajv();
+        addFormats(ajv);
       });
 
       beforeEach(() => {
@@ -59,7 +62,8 @@ describe('assetSource', () => {
           },
           contentType: 'image/jpeg'
         };
-        ajv = Ajv();
+        ajv = new Ajv();
+        addFormats(ajv);
       });
 
       beforeEach(() => {

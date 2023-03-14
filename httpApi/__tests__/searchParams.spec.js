@@ -1,4 +1,5 @@
 const Ajv = require('ajv');
+const addFormats = require('ajv-formats');
 const schema = require('../searchParams');
 
 describe('searchParams', () => {
@@ -10,7 +11,8 @@ describe('searchParams', () => {
     describe('when only required fields', () => {
       beforeAll(() => {
         data = {};
-        ajv = Ajv();
+        ajv = new Ajv();
+        addFormats(ajv);
       });
 
       beforeEach(() => {
@@ -30,7 +32,8 @@ describe('searchParams', () => {
           sortBy: 'field',
           sortDirection: 'asc'
         };
-        ajv = Ajv();
+        ajv = new Ajv();
+        addFormats(ajv);
       });
 
       beforeEach(() => {
@@ -52,7 +55,8 @@ describe('searchParams', () => {
           sortBy: 'field',
           sortDirection: 'asc'
         };
-        ajv = Ajv();
+        ajv = new Ajv();
+        addFormats(ajv);
       });
 
       beforeEach(() => {
@@ -72,7 +76,8 @@ describe('searchParams', () => {
           sortBy: 'field',
           sortDirection: 'asc'
         };
-        ajv = Ajv();
+        ajv = new Ajv();
+        addFormats(ajv);
       });
 
       beforeEach(() => {
@@ -92,7 +97,8 @@ describe('searchParams', () => {
           sortBy: 'field',
           sortDirection: 'asc'
         };
-        ajv = Ajv();
+        ajv = new Ajv();
+        addFormats(ajv);
       });
 
       beforeEach(() => {
@@ -112,7 +118,8 @@ describe('searchParams', () => {
           sortBy: 'field',
           sortDirection: 'invalidSortDirection'
         };
-        ajv = Ajv();
+        ajv = new Ajv();
+        addFormats(ajv);
       });
 
       beforeEach(() => {

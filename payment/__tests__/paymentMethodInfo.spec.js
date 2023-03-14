@@ -1,4 +1,5 @@
 const Ajv = require('ajv');
+const addFormats = require('ajv-formats');
 const schema = require('../paymentMethodInfo');
 
 describe('paymentMethodInfo', () => {
@@ -10,7 +11,8 @@ describe('paymentMethodInfo', () => {
     describe('when only required fields', () => {
       beforeAll(() => {
         data = {};
-        ajv = Ajv();
+        ajv = new Ajv();
+        addFormats(ajv);
       });
 
       beforeEach(() => {
@@ -29,7 +31,8 @@ describe('paymentMethodInfo', () => {
           method: 'Credit Card',
           name: { en: 'Credit Card', es: 'Tarjeta de Crédito' }
         };
-        ajv = Ajv();
+        ajv = new Ajv();
+        addFormats(ajv);
       });
 
       beforeEach(() => {

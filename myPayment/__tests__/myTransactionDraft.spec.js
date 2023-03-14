@@ -1,4 +1,5 @@
 const Ajv = require('ajv');
+const addFormats = require('ajv-formats');
 const schema = require('../myTransactionDraft');
 
 describe('myTransactionDraft', () => {
@@ -18,7 +19,8 @@ describe('myTransactionDraft', () => {
             fractionDigits: 2
           }
         };
-        ajv = Ajv();
+        ajv = new Ajv();
+        addFormats(ajv);
       });
 
       beforeEach(() => {
@@ -43,7 +45,8 @@ describe('myTransactionDraft', () => {
           },
           interactionId: 'interactionId'
         };
-        ajv = Ajv();
+        ajv = new Ajv();
+        addFormats(ajv);
       });
 
       beforeEach(() => {
@@ -69,7 +72,8 @@ describe('myTransactionDraft', () => {
           },
           interactionId: 'interactionId'
         };
-        ajv = Ajv();
+        ajv = new Ajv();
+        addFormats(ajv);
       });
 
       beforeEach(() => {
@@ -94,7 +98,8 @@ describe('myTransactionDraft', () => {
           },
           interactionId: 'interactionId'
         };
-        ajv = Ajv();
+        ajv = new Ajv();
+        addFormats(ajv);
       });
 
       beforeEach(() => {
@@ -113,7 +118,8 @@ describe('myTransactionDraft', () => {
           type: 'Authorization',
           interactionId: 'interactionId'
         };
-        ajv = Ajv();
+        ajv = new Ajv();
+        addFormats(ajv);
       });
 
       beforeEach(() => {

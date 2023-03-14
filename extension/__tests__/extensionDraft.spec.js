@@ -1,4 +1,5 @@
 const Ajv = require('ajv');
+const addFormats = require('ajv-formats');
 const schema = require('../extensionDraft');
 
 describe('extensionDraft', () => {
@@ -21,7 +22,8 @@ describe('extensionDraft', () => {
             }
           ]
         };
-        ajv = Ajv();
+        ajv = new Ajv();
+        addFormats(ajv);
       });
 
       beforeEach(() => {
@@ -49,7 +51,8 @@ describe('extensionDraft', () => {
           ],
           timeoutInMs: 2000
         };
-        ajv = Ajv();
+        ajv = new Ajv();
+        addFormats(ajv);
       });
 
       beforeEach(() => {
@@ -75,7 +78,8 @@ describe('extensionDraft', () => {
           ],
           timeoutInMs: 2000
         };
-        ajv = Ajv();
+        ajv = new Ajv();
+        addFormats(ajv);
       });
 
       beforeEach(() => {
@@ -97,7 +101,8 @@ describe('extensionDraft', () => {
           },
           timeoutInMs: 2000
         };
-        ajv = Ajv();
+        ajv = new Ajv();
+        addFormats(ajv);
       });
 
       beforeEach(() => {

@@ -1,4 +1,5 @@
 const Ajv = require('ajv');
+const addFormats = require('ajv-formats');
 const schema = require('../image');
 
 describe('image', () => {
@@ -16,7 +17,8 @@ describe('image', () => {
             h: 480
           }
         };
-        ajv = Ajv();
+        ajv = new Ajv();
+        addFormats(ajv);
       });
 
       beforeEach(() => {
@@ -38,7 +40,8 @@ describe('image', () => {
           },
           label: 'alt text'
         };
-        ajv = Ajv();
+        ajv = new Ajv();
+        addFormats(ajv);
       });
 
       beforeEach(() => {
@@ -61,7 +64,8 @@ describe('image', () => {
           },
           label: 'alt text'
         };
-        ajv = Ajv();
+        ajv = new Ajv();
+        addFormats(ajv);
       });
 
       beforeEach(() => {
@@ -83,7 +87,8 @@ describe('image', () => {
           },
           label: 'alt text'
         };
-        ajv = Ajv();
+        ajv = new Ajv();
+        addFormats(ajv);
       });
 
       beforeEach(() => {
@@ -101,7 +106,8 @@ describe('image', () => {
           url: 'http://localhost:3000/image.jpg',
           label: 'alt text'
         };
-        ajv = Ajv();
+        ajv = new Ajv();
+        addFormats(ajv);
       });
 
       beforeEach(() => {

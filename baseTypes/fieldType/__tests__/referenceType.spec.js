@@ -1,4 +1,5 @@
 const Ajv = require('ajv');
+const addFormats = require('ajv-formats');
 const schema = require('../referenceType');
 
 describe('referenceType', () => {
@@ -12,7 +13,8 @@ describe('referenceType', () => {
         name: 'Reference',
         referenceTypeId: 'cart'
       };
-      ajv = Ajv();
+      ajv = new Ajv();
+      addFormats(ajv);
     });
 
     beforeEach(() => {
@@ -28,7 +30,8 @@ describe('referenceType', () => {
     describe('when missing name property', () => {
       beforeAll(() => {
         data = { referenceTypeId: 'cart' };
-        ajv = Ajv();
+        ajv = new Ajv();
+        addFormats(ajv);
       });
 
       beforeEach(() => {
@@ -46,7 +49,8 @@ describe('referenceType', () => {
           name: 'NotAllowedName',
           referenceTypeId: 'cart'
         };
-        ajv = Ajv();
+        ajv = new Ajv();
+        addFormats(ajv);
       });
 
       beforeEach(() => {
@@ -61,7 +65,8 @@ describe('referenceType', () => {
     describe('when missing referenceTypeId property', () => {
       beforeAll(() => {
         data = { name: 'Reference' };
-        ajv = Ajv();
+        ajv = new Ajv();
+        addFormats(ajv);
       });
 
       beforeEach(() => {

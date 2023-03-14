@@ -1,4 +1,5 @@
 const Ajv = require('ajv');
+const addFormats = require('ajv-formats');
 const schema = require('../project');
 
 describe('project', () => {
@@ -15,7 +16,8 @@ describe('project', () => {
           createdAt: '2017-09-19T17:41:52.494Z',
           name: 'customizer-test'
         };
-        ajv = Ajv();
+        ajv = new Ajv();
+        addFormats(ajv);
       });
 
       beforeEach(() => {
@@ -72,7 +74,8 @@ describe('project', () => {
             authorizationHeader: 'authorizationHeader'
           }
         };
-        ajv = Ajv();
+        ajv = new Ajv();
+        addFormats(ajv);
       });
 
       beforeEach(() => {
@@ -130,7 +133,8 @@ describe('project', () => {
             authorizationHeader: 'authorizationHeader'
           }
         };
-        ajv = Ajv();
+        ajv = new Ajv();
+        addFormats(ajv);
       });
 
       beforeEach(() => {
@@ -186,7 +190,8 @@ describe('project', () => {
             authorizationHeader: 'authorizationHeader'
           }
         };
-        ajv = Ajv();
+        ajv = new Ajv();
+        addFormats(ajv);
       });
 
       beforeEach(() => {
@@ -242,7 +247,8 @@ describe('project', () => {
             authorizationHeader: 'authorizationHeader'
           }
         };
-        ajv = Ajv();
+        ajv = new Ajv();
+        addFormats(ajv);
       });
 
       beforeEach(() => {
@@ -298,7 +304,8 @@ describe('project', () => {
             authorizationHeader: 'authorizationHeader'
           }
         };
-        ajv = Ajv();
+        ajv = new Ajv();
+        addFormats(ajv);
       });
 
       beforeEach(() => {

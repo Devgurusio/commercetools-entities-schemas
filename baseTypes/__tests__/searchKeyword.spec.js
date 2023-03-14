@@ -1,4 +1,5 @@
 const Ajv = require('ajv');
+const addFormats = require('ajv-formats');
 const schema = require('../searchKeyword');
 
 describe('searchKeyword', () => {
@@ -10,7 +11,8 @@ describe('searchKeyword', () => {
     describe('when only required fields', () => {
       beforeAll(() => {
         data = { text: 'text' };
-        ajv = Ajv();
+        ajv = new Ajv();
+        addFormats(ajv);
       });
 
       beforeEach(() => {
@@ -30,7 +32,8 @@ describe('searchKeyword', () => {
             type: 'whitespace'
           }
         };
-        ajv = Ajv();
+        ajv = new Ajv();
+        addFormats(ajv);
       });
 
       beforeEach(() => {
@@ -51,7 +54,8 @@ describe('searchKeyword', () => {
             type: 'whitespace'
           }
         };
-        ajv = Ajv();
+        ajv = new Ajv();
+        addFormats(ajv);
       });
 
       beforeEach(() => {

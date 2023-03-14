@@ -1,4 +1,5 @@
 const Ajv = require('ajv');
+const addFormats = require('ajv-formats');
 const schema = require('../cartValue');
 
 describe('cartValue', () => {
@@ -9,7 +10,8 @@ describe('cartValue', () => {
   describe('when success', () => {
     beforeAll(() => {
       data = { type: 'CartValue' };
-      ajv = Ajv();
+      ajv = new Ajv();
+      addFormats(ajv);
     });
 
     beforeEach(() => {
@@ -25,7 +27,8 @@ describe('cartValue', () => {
     describe('when type is not allowed value', () => {
       beforeAll(() => {
         data = { type: 'notAllowedValue' };
-        ajv = Ajv();
+        ajv = new Ajv();
+        addFormats(ajv);
       });
 
       beforeEach(() => {

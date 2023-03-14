@@ -1,4 +1,5 @@
 const Ajv = require('ajv');
+const addFormats = require('ajv-formats');
 const schema = require('../localizedEnumValue');
 
 describe('localizedEnumValue', () => {
@@ -15,7 +16,8 @@ describe('localizedEnumValue', () => {
           es: 'Etiquieta'
         }
       };
-      ajv = Ajv();
+      ajv = new Ajv();
+      addFormats(ajv);
     });
 
     beforeEach(() => {
@@ -36,7 +38,8 @@ describe('localizedEnumValue', () => {
             es: 'Etiquieta'
           }
         };
-        ajv = Ajv();
+        ajv = new Ajv();
+        addFormats(ajv);
       });
 
       beforeEach(() => {
@@ -53,7 +56,8 @@ describe('localizedEnumValue', () => {
         data = {
           key: 'key'
         };
-        ajv = Ajv();
+        ajv = new Ajv();
+        addFormats(ajv);
       });
 
       beforeEach(() => {

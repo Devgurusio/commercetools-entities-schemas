@@ -1,4 +1,5 @@
 const Ajv = require('ajv');
+const addFormats = require('ajv-formats');
 const schema = require('../pagedQueryResult');
 
 describe('pagedQueryResult', () => {
@@ -20,7 +21,8 @@ describe('pagedQueryResult', () => {
             }
           ]
         };
-        ajv = Ajv();
+        ajv = new Ajv();
+        addFormats(ajv);
       });
 
       beforeEach(() => {
@@ -58,7 +60,8 @@ describe('pagedQueryResult', () => {
             key: 'value'
           }
         };
-        ajv = Ajv();
+        ajv = new Ajv();
+        addFormats(ajv);
       });
 
       beforeEach(() => {
@@ -97,7 +100,8 @@ describe('pagedQueryResult', () => {
             key: 'value'
           }
         };
-        ajv = Ajv();
+        ajv = new Ajv();
+        addFormats(ajv);
       });
 
       beforeEach(() => {
@@ -134,7 +138,8 @@ describe('pagedQueryResult', () => {
             key: 'value'
           }
         };
-        ajv = Ajv();
+        ajv = new Ajv();
+        addFormats(ajv);
       });
 
       beforeEach(() => {
@@ -167,7 +172,8 @@ describe('pagedQueryResult', () => {
             key: 'value'
           }
         };
-        ajv = Ajv();
+        ajv = new Ajv();
+        addFormats(ajv);
       });
 
       beforeEach(() => {

@@ -1,4 +1,5 @@
 const Ajv = require('ajv');
+const addFormats = require('ajv-formats');
 const schema = require('../azureFunctionsAuthentication');
 
 describe('azureFunctionsAuthentication', () => {
@@ -12,7 +13,8 @@ describe('azureFunctionsAuthentication', () => {
         type: 'AzureFunctions',
         key: 'key'
       };
-      ajv = Ajv();
+      ajv = new Ajv();
+      addFormats(ajv);
     });
 
     beforeEach(() => {
@@ -30,7 +32,8 @@ describe('azureFunctionsAuthentication', () => {
         data = {
           key: 'key'
         };
-        ajv = Ajv();
+        ajv = new Ajv();
+        addFormats(ajv);
       });
 
       beforeEach(() => {
@@ -47,7 +50,8 @@ describe('azureFunctionsAuthentication', () => {
         data = {
           type: 'AzureFunctions'
         };
-        ajv = Ajv();
+        ajv = new Ajv();
+        addFormats(ajv);
       });
 
       beforeEach(() => {
@@ -65,7 +69,8 @@ describe('azureFunctionsAuthentication', () => {
           type: 'invalidType',
           headerValue: 'headerValue'
         };
-        ajv = Ajv();
+        ajv = new Ajv();
+        addFormats(ajv);
       });
 
       beforeEach(() => {

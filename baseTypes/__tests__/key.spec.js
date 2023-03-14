@@ -1,4 +1,5 @@
 const Ajv = require('ajv');
+const addFormats = require('ajv-formats');
 const schema = require('../key');
 
 describe('key', () => {
@@ -9,7 +10,8 @@ describe('key', () => {
   describe('when success', () => {
     beforeAll(() => {
       data = 'this-is_Key1';
-      ajv = Ajv();
+      ajv = new Ajv();
+      addFormats(ajv);
     });
 
     beforeEach(() => {
@@ -25,7 +27,8 @@ describe('key', () => {
     describe('when key is shorter than 2 characters', () => {
       beforeAll(() => {
         data = 'a';
-        ajv = Ajv();
+        ajv = new Ajv();
+        addFormats(ajv);
       });
 
       beforeEach(() => {
@@ -41,7 +44,8 @@ describe('key', () => {
       beforeAll(() => {
         data =
           'thisKeyIstooLargeSoItCantBeUsedAsKey_PleaseTryToUseAShorterOne_12345678901234567890123456789012345678901234567890123456789012345678901234567890123456789012345678901234567890123456789012345678901234567891234567890123456789012345678901234567890123456789012345678901234567890';
-        ajv = Ajv();
+        ajv = new Ajv();
+        addFormats(ajv);
       });
 
       beforeEach(() => {
@@ -56,7 +60,8 @@ describe('key', () => {
     describe('when key has non allowed characters', () => {
       beforeAll(() => {
         data = 'bad key';
-        ajv = Ajv();
+        ajv = new Ajv();
+        addFormats(ajv);
       });
 
       beforeEach(() => {

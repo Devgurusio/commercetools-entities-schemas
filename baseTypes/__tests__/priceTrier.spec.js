@@ -1,4 +1,5 @@
 const Ajv = require('ajv');
+const addFormats = require('ajv-formats');
 const schema = require('../priceTier');
 
 describe('priceTier', () => {
@@ -15,7 +16,8 @@ describe('priceTier', () => {
           centAmount: 400
         }
       };
-      ajv = Ajv();
+      ajv = new Ajv();
+      addFormats(ajv);
     });
 
     beforeEach(() => {
@@ -36,7 +38,8 @@ describe('priceTier', () => {
             centAmount: 400
           }
         };
-        ajv = Ajv();
+        ajv = new Ajv();
+        addFormats(ajv);
       });
 
       beforeEach(() => {
@@ -53,7 +56,8 @@ describe('priceTier', () => {
         data = {
           minimumQuantity: 3
         };
-        ajv = Ajv();
+        ajv = new Ajv();
+        addFormats(ajv);
       });
 
       beforeEach(() => {

@@ -1,4 +1,5 @@
 const Ajv = require('ajv');
+const addFormats = require('ajv-formats');
 const schema = require('../assetDimensions');
 
 describe('assetDimensions', () => {
@@ -12,7 +13,8 @@ describe('assetDimensions', () => {
         w: 640,
         h: 480
       };
-      ajv = Ajv();
+      ajv = new Ajv();
+      addFormats(ajv);
     });
 
     beforeEach(() => {
@@ -28,7 +30,8 @@ describe('assetDimensions', () => {
     describe('when missing w property', () => {
       beforeAll(() => {
         data = { h: 480 };
-        ajv = Ajv();
+        ajv = new Ajv();
+        addFormats(ajv);
       });
 
       beforeEach(() => {
@@ -43,7 +46,8 @@ describe('assetDimensions', () => {
     describe('when missing h property', () => {
       beforeAll(() => {
         data = { w: 640 };
-        ajv = Ajv();
+        ajv = new Ajv();
+        addFormats(ajv);
       });
 
       beforeEach(() => {

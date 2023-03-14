@@ -1,4 +1,5 @@
 const Ajv = require('ajv');
+const addFormats = require('ajv-formats');
 const schema = require('../authorizationHeader');
 
 describe('authorizationHeader', () => {
@@ -12,7 +13,8 @@ describe('authorizationHeader', () => {
         type: 'AuthorizationHeader',
         headerValue: 'headerValue'
       };
-      ajv = Ajv();
+      ajv = new Ajv();
+      addFormats(ajv);
     });
 
     beforeEach(() => {
@@ -30,7 +32,8 @@ describe('authorizationHeader', () => {
         data = {
           headerValue: 'headerValue'
         };
-        ajv = Ajv();
+        ajv = new Ajv();
+        addFormats(ajv);
       });
 
       beforeEach(() => {
@@ -47,7 +50,8 @@ describe('authorizationHeader', () => {
         data = {
           type: 'AuthorizationHeader'
         };
-        ajv = Ajv();
+        ajv = new Ajv();
+        addFormats(ajv);
       });
 
       beforeEach(() => {
@@ -65,7 +69,8 @@ describe('authorizationHeader', () => {
           type: 'invalidType',
           headerValue: 'headerValue'
         };
-        ajv = Ajv();
+        ajv = new Ajv();
+        addFormats(ajv);
       });
 
       beforeEach(() => {

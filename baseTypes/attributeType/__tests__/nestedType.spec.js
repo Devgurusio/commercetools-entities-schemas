@@ -1,4 +1,5 @@
 const Ajv = require('ajv');
+const addFormats = require('ajv-formats');
 const schema = require('../nestedType');
 
 describe('nestedType', () => {
@@ -12,7 +13,8 @@ describe('nestedType', () => {
         name: 'nested',
         typeReference: 'cart'
       };
-      ajv = Ajv();
+      ajv = new Ajv();
+      addFormats(ajv);
     });
 
     beforeEach(() => {
@@ -28,7 +30,8 @@ describe('nestedType', () => {
     describe('when missing name property', () => {
       beforeAll(() => {
         data = { typeReference: 'cart' };
-        ajv = Ajv();
+        ajv = new Ajv();
+        addFormats(ajv);
       });
 
       beforeEach(() => {
@@ -46,7 +49,8 @@ describe('nestedType', () => {
           name: 'NotAllowedName',
           typeReference: 'cart'
         };
-        ajv = Ajv();
+        ajv = new Ajv();
+        addFormats(ajv);
       });
 
       beforeEach(() => {
@@ -61,7 +65,8 @@ describe('nestedType', () => {
     describe('when missing typeReference property', () => {
       beforeAll(() => {
         data = { name: 'nested' };
-        ajv = Ajv();
+        ajv = new Ajv();
+        addFormats(ajv);
       });
 
       beforeEach(() => {

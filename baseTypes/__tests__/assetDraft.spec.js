@@ -1,4 +1,5 @@
 const Ajv = require('ajv');
+const addFormats = require('ajv-formats');
 const schema = require('../assetDraft');
 
 describe('assetDraft', () => {
@@ -23,7 +24,8 @@ describe('assetDraft', () => {
           ],
           name: { en: 'asset name', es: 'nombre del asset' }
         };
-        ajv = Ajv();
+        ajv = new Ajv();
+        addFormats(ajv);
       });
 
       beforeEach(() => {
@@ -62,7 +64,8 @@ describe('assetDraft', () => {
             }
           }
         };
-        ajv = Ajv();
+        ajv = new Ajv();
+        addFormats(ajv);
       });
 
       beforeEach(() => {
@@ -92,7 +95,8 @@ describe('assetDraft', () => {
             }
           }
         };
-        ajv = Ajv();
+        ajv = new Ajv();
+        addFormats(ajv);
       });
 
       beforeEach(() => {
@@ -121,7 +125,8 @@ describe('assetDraft', () => {
             }
           }
         };
-        ajv = Ajv();
+        ajv = new Ajv();
+        addFormats(ajv);
       });
 
       beforeEach(() => {
@@ -159,7 +164,8 @@ describe('assetDraft', () => {
             }
           }
         };
-        ajv = Ajv();
+        ajv = new Ajv();
+        addFormats(ajv);
       });
 
       beforeEach(() => {

@@ -1,4 +1,5 @@
 const Ajv = require('ajv');
+const addFormats = require('ajv-formats');
 const schema = require('../attributeDraft');
 
 describe('attributeDraft', () => {
@@ -22,7 +23,8 @@ describe('attributeDraft', () => {
           displayGroup: 'Other'
         }
       };
-      ajv = Ajv();
+      ajv = new Ajv();
+      addFormats(ajv);
     });
 
     beforeEach(() => {
@@ -50,7 +52,8 @@ describe('attributeDraft', () => {
             displayGroup: 'Other'
           }
         };
-        ajv = Ajv();
+        ajv = new Ajv();
+        addFormats(ajv);
       });
 
       beforeEach(() => {
@@ -65,7 +68,8 @@ describe('attributeDraft', () => {
     describe('when missing value property', () => {
       beforeAll(() => {
         data = { name: 'attributeName' };
-        ajv = Ajv();
+        ajv = new Ajv();
+        addFormats(ajv);
       });
 
       beforeEach(() => {

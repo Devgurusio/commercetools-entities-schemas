@@ -1,4 +1,5 @@
 const Ajv = require('ajv');
+const addFormats = require('ajv-formats');
 const schema = require('../type');
 
 describe('type', () => {
@@ -17,7 +18,8 @@ describe('type', () => {
           key: 'key',
           name: { en: 'name', es: 'nombre' }
         };
-        ajv = Ajv();
+        ajv = new Ajv();
+        addFormats(ajv);
       });
 
       beforeEach(() => {
@@ -50,7 +52,8 @@ describe('type', () => {
             }
           ]
         };
-        ajv = Ajv();
+        ajv = new Ajv();
+        addFormats(ajv);
       });
 
       beforeEach(() => {
@@ -84,7 +87,8 @@ describe('type', () => {
             }
           ]
         };
-        ajv = Ajv();
+        ajv = new Ajv();
+        addFormats(ajv);
       });
 
       beforeEach(() => {
@@ -116,7 +120,8 @@ describe('type', () => {
             }
           ]
         };
-        ajv = Ajv();
+        ajv = new Ajv();
+        addFormats(ajv);
       });
 
       beforeEach(() => {
@@ -148,7 +153,8 @@ describe('type', () => {
             }
           ]
         };
-        ajv = Ajv();
+        ajv = new Ajv();
+        addFormats(ajv);
       });
 
       beforeEach(() => {
@@ -180,7 +186,8 @@ describe('type', () => {
             }
           ]
         };
-        ajv = Ajv();
+        ajv = new Ajv();
+        addFormats(ajv);
       });
 
       beforeEach(() => {
@@ -212,7 +219,8 @@ describe('type', () => {
             }
           ]
         };
-        ajv = Ajv();
+        ajv = new Ajv();
+        addFormats(ajv);
       });
 
       beforeEach(() => {
@@ -244,7 +252,8 @@ describe('type', () => {
             }
           ]
         };
-        ajv = Ajv();
+        ajv = new Ajv();
+        addFormats(ajv);
       });
 
       beforeEach(() => {

@@ -1,4 +1,5 @@
 const Ajv = require('ajv');
+const addFormats = require('ajv-formats');
 const schema = require('../productSelectionSetting');
 
 describe('productSelectionSetting', () => {
@@ -15,7 +16,8 @@ describe('productSelectionSetting', () => {
             id: 'productSelection'
           }
         };
-        ajv = Ajv();
+        ajv = new Ajv();
+        addFormats(ajv);
       });
 
       beforeEach(() => {
@@ -36,7 +38,8 @@ describe('productSelectionSetting', () => {
           },
           active: true
         };
-        ajv = Ajv();
+        ajv = new Ajv();
+        addFormats(ajv);
       });
 
       beforeEach(() => {
@@ -53,7 +56,8 @@ describe('productSelectionSetting', () => {
     describe('when missing productSelection', () => {
       beforeAll(() => {
         data = { active: false };
-        ajv = Ajv();
+        ajv = new Ajv();
+        addFormats(ajv);
       });
 
       beforeEach(() => {

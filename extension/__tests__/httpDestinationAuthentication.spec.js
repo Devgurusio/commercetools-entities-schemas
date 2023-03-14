@@ -1,4 +1,5 @@
 const Ajv = require('ajv');
+const addFormats = require('ajv-formats');
 const schema = require('../httpDestinationAuthentication');
 
 describe('httpDestinationAuthentication', () => {
@@ -13,7 +14,8 @@ describe('httpDestinationAuthentication', () => {
           type: 'AuthorizationHeader',
           headerValue: 'headerValue'
         };
-        ajv = Ajv();
+        ajv = new Ajv();
+        addFormats(ajv);
       });
 
       beforeEach(() => {
@@ -31,7 +33,8 @@ describe('httpDestinationAuthentication', () => {
           type: 'AzureFunctions',
           key: 'key'
         };
-        ajv = Ajv();
+        ajv = new Ajv();
+        addFormats(ajv);
       });
 
       beforeEach(() => {
@@ -50,7 +53,8 @@ describe('httpDestinationAuthentication', () => {
         data = {
           type: 'invalidType'
         };
-        ajv = Ajv();
+        ajv = new Ajv();
+        addFormats(ajv);
       });
 
       beforeEach(() => {

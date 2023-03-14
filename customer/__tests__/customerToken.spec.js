@@ -1,4 +1,5 @@
 const Ajv = require('ajv');
+const addFormats = require('ajv-formats');
 const schema = require('../customerToken');
 
 describe('customerToken', () => {
@@ -16,7 +17,8 @@ describe('customerToken', () => {
         expiresAt: '2017-09-28T10:43:18.863Z',
         value: 'tokenValue'
       };
-      ajv = Ajv();
+      ajv = new Ajv();
+      addFormats(ajv);
     });
 
     beforeEach(() => {
@@ -38,7 +40,8 @@ describe('customerToken', () => {
           expiresAt: '2017-09-28T10:43:18.863Z',
           value: 'tokenValue'
         };
-        ajv = Ajv();
+        ajv = new Ajv();
+        addFormats(ajv);
       });
 
       beforeEach(() => {
@@ -59,7 +62,8 @@ describe('customerToken', () => {
           expiresAt: '2017-09-28T10:43:18.863Z',
           value: 'tokenValue'
         };
-        ajv = Ajv();
+        ajv = new Ajv();
+        addFormats(ajv);
       });
 
       beforeEach(() => {
@@ -80,7 +84,8 @@ describe('customerToken', () => {
           expiresAt: '2017-09-28T10:43:18.863Z',
           value: 'tokenValue'
         };
-        ajv = Ajv();
+        ajv = new Ajv();
+        addFormats(ajv);
       });
 
       beforeEach(() => {
@@ -101,7 +106,8 @@ describe('customerToken', () => {
           expiresAt: '2017-09-28T10:43:18.863Z',
           value: 'tokenValue'
         };
-        ajv = Ajv();
+        ajv = new Ajv();
+        addFormats(ajv);
       });
 
       beforeEach(() => {
@@ -122,7 +128,8 @@ describe('customerToken', () => {
           lastModifiedAt: '2017-09-28T10:43:18.863Z',
           value: 'tokenValue'
         };
-        ajv = Ajv();
+        ajv = new Ajv();
+        addFormats(ajv);
       });
 
       beforeEach(() => {
@@ -143,7 +150,8 @@ describe('customerToken', () => {
           lastModifiedAt: '2017-09-28T10:43:18.863Z',
           expiresAt: '2017-09-28T10:43:18.863Z'
         };
-        ajv = Ajv();
+        ajv = new Ajv();
+        addFormats(ajv);
       });
 
       beforeEach(() => {

@@ -1,4 +1,5 @@
 const Ajv = require('ajv');
+const addFormats = require('ajv-formats');
 const schema = require('../customTokenizer');
 
 describe('customTokenizer', () => {
@@ -10,7 +11,8 @@ describe('customTokenizer', () => {
     describe('when only required fields', () => {
       beforeAll(() => {
         data = { type: 'custom' };
-        ajv = Ajv();
+        ajv = new Ajv();
+        addFormats(ajv);
       });
 
       beforeEach(() => {
@@ -28,7 +30,8 @@ describe('customTokenizer', () => {
           type: 'custom',
           inputs: ['customToken1', 'customToken2']
         };
-        ajv = Ajv();
+        ajv = new Ajv();
+        addFormats(ajv);
       });
 
       beforeEach(() => {
@@ -47,7 +50,8 @@ describe('customTokenizer', () => {
         data = {
           inputs: ['customToken1', 'customToken2']
         };
-        ajv = Ajv();
+        ajv = new Ajv();
+        addFormats(ajv);
       });
 
       beforeEach(() => {
@@ -65,7 +69,8 @@ describe('customTokenizer', () => {
           type: { type: 'notAllowedType' },
           inputs: ['customToken1', 'customToken2']
         };
-        ajv = Ajv();
+        ajv = new Ajv();
+        addFormats(ajv);
       });
 
       beforeEach(() => {
@@ -83,7 +88,8 @@ describe('customTokenizer', () => {
           type: 'custom',
           inputs: 'customToken1'
         };
-        ajv = Ajv();
+        ajv = new Ajv();
+        addFormats(ajv);
       });
 
       beforeEach(() => {
@@ -101,7 +107,8 @@ describe('customTokenizer', () => {
           type: 'custom',
           inputs: [1]
         };
-        ajv = Ajv();
+        ajv = new Ajv();
+        addFormats(ajv);
       });
 
       beforeEach(() => {

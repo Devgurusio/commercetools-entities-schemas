@@ -1,4 +1,5 @@
 const Ajv = require('ajv');
+const addFormats = require('ajv-formats');
 const schema = require('../baseMoney');
 
 describe('baseMoney', () => {
@@ -17,7 +18,8 @@ describe('baseMoney', () => {
         });
 
         beforeAll(() => {
-          ajv = Ajv();
+          ajv = new Ajv();
+          addFormats(ajv);
         });
 
         beforeEach(() => {
@@ -40,7 +42,8 @@ describe('baseMoney', () => {
         });
 
         beforeAll(() => {
-          ajv = Ajv();
+          ajv = new Ajv();
+          addFormats(ajv);
         });
 
         beforeEach(() => {
@@ -65,7 +68,8 @@ describe('baseMoney', () => {
         });
 
         beforeAll(() => {
-          ajv = Ajv();
+          ajv = new Ajv();
+          addFormats(ajv);
         });
 
         beforeEach(() => {
@@ -89,7 +93,8 @@ describe('baseMoney', () => {
         });
 
         beforeAll(() => {
-          ajv = Ajv();
+          ajv = new Ajv();
+          addFormats(ajv);
         });
 
         beforeEach(() => {
@@ -110,7 +115,8 @@ describe('baseMoney', () => {
         currencyCode: 'EUR',
         centAmount: 4200
       };
-      ajv = Ajv();
+      ajv = new Ajv();
+      addFormats(ajv);
     });
 
     beforeEach(() => {

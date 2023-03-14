@@ -1,4 +1,5 @@
 const Ajv = require('ajv');
+const addFormats = require('ajv-formats');
 const schema = require('../localizedStringType');
 
 describe('localizedStringType', () => {
@@ -9,7 +10,8 @@ describe('localizedStringType', () => {
   describe('when success', () => {
     beforeAll(() => {
       data = { name: 'LocalizedString' };
-      ajv = Ajv();
+      ajv = new Ajv();
+      addFormats(ajv);
     });
 
     beforeEach(() => {
@@ -25,7 +27,8 @@ describe('localizedStringType', () => {
     describe('when missing name property', () => {
       beforeAll(() => {
         data = {};
-        ajv = Ajv();
+        ajv = new Ajv();
+        addFormats(ajv);
       });
 
       beforeEach(() => {
@@ -40,7 +43,8 @@ describe('localizedStringType', () => {
     describe('when name property is not an allowed one', () => {
       beforeAll(() => {
         data = { name: 'NotAllowedName' };
-        ajv = Ajv();
+        ajv = new Ajv();
+        addFormats(ajv);
       });
 
       beforeEach(() => {

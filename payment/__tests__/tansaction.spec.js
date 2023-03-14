@@ -1,4 +1,5 @@
 const Ajv = require('ajv');
+const addFormats = require('ajv-formats');
 const schema = require('../transaction');
 
 describe('transaction', () => {
@@ -19,7 +20,8 @@ describe('transaction', () => {
             fractionDigits: 2
           }
         };
-        ajv = Ajv();
+        ajv = new Ajv();
+        addFormats(ajv);
       });
 
       beforeEach(() => {
@@ -46,7 +48,8 @@ describe('transaction', () => {
           interactionId: 'interactionId',
           state: 'Initial'
         };
-        ajv = Ajv();
+        ajv = new Ajv();
+        addFormats(ajv);
       });
 
       beforeEach(() => {
@@ -74,7 +77,8 @@ describe('transaction', () => {
           interactionId: 'interactionId',
           state: 'Initial'
         };
-        ajv = Ajv();
+        ajv = new Ajv();
+        addFormats(ajv);
       });
 
       beforeEach(() => {
@@ -100,7 +104,8 @@ describe('transaction', () => {
           interactionId: 'interactionId',
           state: 'Initial'
         };
-        ajv = Ajv();
+        ajv = new Ajv();
+        addFormats(ajv);
       });
 
       beforeEach(() => {
@@ -127,7 +132,8 @@ describe('transaction', () => {
           interactionId: 'interactionId',
           state: 'Initial'
         };
-        ajv = Ajv();
+        ajv = new Ajv();
+        addFormats(ajv);
       });
 
       beforeEach(() => {
@@ -148,7 +154,8 @@ describe('transaction', () => {
           interactionId: 'interactionId',
           state: 'Initial'
         };
-        ajv = Ajv();
+        ajv = new Ajv();
+        addFormats(ajv);
       });
 
       beforeEach(() => {
@@ -175,7 +182,8 @@ describe('transaction', () => {
           interactionId: 'interactionId',
           state: 'notAllowedType'
         };
-        ajv = Ajv();
+        ajv = new Ajv();
+        addFormats(ajv);
       });
 
       beforeEach(() => {

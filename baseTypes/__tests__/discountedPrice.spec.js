@@ -1,4 +1,5 @@
 const Ajv = require('ajv');
+const addFormats = require('ajv-formats');
 const schema = require('../discountedPrice');
 
 describe('discountedPrice', () => {
@@ -18,7 +19,8 @@ describe('discountedPrice', () => {
           id: '7217f75f-5931-42f0-8029-9dd51513c221'
         }
       };
-      ajv = Ajv();
+      ajv = new Ajv();
+      addFormats(ajv);
     });
 
     beforeEach(() => {
@@ -39,7 +41,8 @@ describe('discountedPrice', () => {
             id: '7217f75f-5931-42f0-8029-9dd51513c221'
           }
         };
-        ajv = Ajv();
+        ajv = new Ajv();
+        addFormats(ajv);
       });
 
       beforeEach(() => {
@@ -59,7 +62,8 @@ describe('discountedPrice', () => {
             centAmount: 4200
           }
         };
-        ajv = Ajv();
+        ajv = new Ajv();
+        addFormats(ajv);
       });
 
       beforeEach(() => {

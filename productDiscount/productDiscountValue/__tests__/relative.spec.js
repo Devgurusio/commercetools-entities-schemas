@@ -1,4 +1,5 @@
 const Ajv = require('ajv');
+const addFormats = require('ajv-formats');
 const schema = require('../relative');
 
 describe('relative', () => {
@@ -12,7 +13,8 @@ describe('relative', () => {
         type: 'relative',
         permyriad: 1000
       };
-      ajv = Ajv();
+      ajv = new Ajv({ strict: false });
+      addFormats(ajv);
     });
 
     beforeEach(() => {
@@ -30,7 +32,8 @@ describe('relative', () => {
         data = {
           permyriad: 1000
         };
-        ajv = Ajv();
+        ajv = new Ajv({ strict: false });
+        addFormats(ajv);
       });
 
       beforeEach(() => {
@@ -47,7 +50,8 @@ describe('relative', () => {
         data = {
           type: 'relative'
         };
-        ajv = Ajv();
+        ajv = new Ajv({ strict: false });
+        addFormats(ajv);
       });
 
       beforeEach(() => {
@@ -65,7 +69,8 @@ describe('relative', () => {
           type: 'invalidType',
           permyriad: 1000
         };
-        ajv = Ajv();
+        ajv = new Ajv({ strict: false });
+        addFormats(ajv);
       });
 
       beforeEach(() => {

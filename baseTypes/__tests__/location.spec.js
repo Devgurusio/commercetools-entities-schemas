@@ -1,4 +1,5 @@
 const Ajv = require('ajv');
+const addFormats = require('ajv-formats');
 const schema = require('../location');
 
 describe('location', () => {
@@ -12,7 +13,8 @@ describe('location', () => {
         data = {
           country: 'ES'
         };
-        ajv = Ajv();
+        ajv = new Ajv();
+        addFormats(ajv);
       });
 
       beforeEach(() => {
@@ -30,7 +32,8 @@ describe('location', () => {
           country: 'ES',
           state: 'NY'
         };
-        ajv = Ajv();
+        ajv = new Ajv();
+        addFormats(ajv);
       });
 
       beforeEach(() => {
@@ -49,7 +52,8 @@ describe('location', () => {
         data = {
           state: 'NY'
         };
-        ajv = Ajv();
+        ajv = new Ajv();
+        addFormats(ajv);
       });
 
       beforeEach(() => {

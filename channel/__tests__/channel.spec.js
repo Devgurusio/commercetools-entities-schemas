@@ -1,4 +1,5 @@
 const Ajv = require('ajv');
+const addFormats = require('ajv-formats');
 const schema = require('../channel');
 
 describe('channel', () => {
@@ -16,7 +17,8 @@ describe('channel', () => {
           lastModifiedAt: '2017-10-04T14:31:41.643Z',
           key: 'key'
         };
-        ajv = Ajv();
+        ajv = new Ajv();
+        addFormats(ajv);
       });
 
       beforeEach(() => {
@@ -78,7 +80,8 @@ describe('channel', () => {
             coordinates: [35.2366173, -6.6724601]
           }
         };
-        ajv = Ajv();
+        ajv = new Ajv();
+        addFormats(ajv);
       });
 
       beforeEach(() => {
@@ -141,7 +144,8 @@ describe('channel', () => {
             coordinates: [35.2366173, -6.6724601]
           }
         };
-        ajv = Ajv();
+        ajv = new Ajv();
+        addFormats(ajv);
       });
 
       beforeEach(() => {
@@ -202,7 +206,8 @@ describe('channel', () => {
             coordinates: [35.2366173, -6.6724601]
           }
         };
-        ajv = Ajv();
+        ajv = new Ajv();
+        addFormats(ajv);
       });
 
       beforeEach(() => {
@@ -263,7 +268,8 @@ describe('channel', () => {
             coordinates: [35.2366173, -6.6724601]
           }
         };
-        ajv = Ajv();
+        ajv = new Ajv();
+        addFormats(ajv);
       });
 
       beforeEach(() => {
@@ -324,7 +330,8 @@ describe('channel', () => {
             coordinates: [35.2366173, -6.6724601]
           }
         };
-        ajv = Ajv();
+        ajv = new Ajv();
+        addFormats(ajv);
       });
 
       beforeEach(() => {
@@ -385,7 +392,8 @@ describe('channel', () => {
             coordinates: [35.2366173, -6.6724601]
           }
         };
-        ajv = Ajv();
+        ajv = new Ajv();
+        addFormats(ajv);
       });
 
       beforeEach(() => {

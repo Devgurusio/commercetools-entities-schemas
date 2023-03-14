@@ -1,4 +1,5 @@
 const Ajv = require('ajv');
+const addFormats = require('ajv-formats');
 const schema = require('../absolute');
 
 describe('absolute', () => {
@@ -19,7 +20,8 @@ describe('absolute', () => {
           }
         ]
       };
-      ajv = Ajv();
+      ajv = new Ajv({ strict: false });
+      addFormats(ajv);
     });
 
     beforeEach(() => {
@@ -44,7 +46,8 @@ describe('absolute', () => {
             }
           ]
         };
-        ajv = Ajv();
+        ajv = new Ajv({ strict: false });
+        addFormats(ajv);
       });
 
       beforeEach(() => {
@@ -61,7 +64,8 @@ describe('absolute', () => {
         data = {
           type: 'absolute'
         };
-        ajv = Ajv();
+        ajv = new Ajv({ strict: false });
+        addFormats(ajv);
       });
 
       beforeEach(() => {
@@ -86,7 +90,8 @@ describe('absolute', () => {
             }
           ]
         };
-        ajv = Ajv();
+        ajv = new Ajv({ strict: false });
+        addFormats(ajv);
       });
 
       beforeEach(() => {

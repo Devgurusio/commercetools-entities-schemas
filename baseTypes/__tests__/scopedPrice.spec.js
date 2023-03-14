@@ -1,4 +1,5 @@
 const Ajv = require('ajv');
+const addFormats = require('ajv-formats');
 const schema = require('../scopedPrice');
 
 describe('scopedPrice', () => {
@@ -20,7 +21,8 @@ describe('scopedPrice', () => {
             centAmount: 400
           }
         };
-        ajv = Ajv();
+        ajv = new Ajv();
+        addFormats(ajv);
       });
 
       beforeEach(() => {
@@ -75,7 +77,8 @@ describe('scopedPrice', () => {
             }
           }
         };
-        ajv = Ajv();
+        ajv = new Ajv();
+        addFormats(ajv);
       });
 
       beforeEach(() => {
@@ -131,7 +134,8 @@ describe('scopedPrice', () => {
             }
           }
         };
-        ajv = Ajv();
+        ajv = new Ajv();
+        addFormats(ajv);
       });
 
       beforeEach(() => {
@@ -182,7 +186,8 @@ describe('scopedPrice', () => {
             }
           }
         };
-        ajv = Ajv();
+        ajv = new Ajv();
+        addFormats(ajv);
       });
 
       beforeEach(() => {
@@ -233,7 +238,8 @@ describe('scopedPrice', () => {
             }
           }
         };
-        ajv = Ajv();
+        ajv = new Ajv();
+        addFormats(ajv);
       });
 
       beforeEach(() => {

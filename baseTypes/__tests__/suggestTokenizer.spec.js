@@ -1,4 +1,5 @@
 const Ajv = require('ajv');
+const addFormats = require('ajv-formats');
 const schema = require('../suggestTokenizer');
 
 describe('suggestTokenizer', () => {
@@ -11,7 +12,8 @@ describe('suggestTokenizer', () => {
       describe('when only required fields', () => {
         beforeAll(() => {
           data = { type: 'custom' };
-          ajv = Ajv();
+          ajv = new Ajv();
+          addFormats(ajv);
         });
 
         beforeEach(() => {
@@ -29,7 +31,8 @@ describe('suggestTokenizer', () => {
             type: 'custom',
             inputs: ['input1', 'imput2']
           };
-          ajv = Ajv();
+          ajv = new Ajv();
+          addFormats(ajv);
         });
 
         beforeEach(() => {
@@ -45,7 +48,8 @@ describe('suggestTokenizer', () => {
     describe('when whitespace tokenizer', () => {
       beforeAll(() => {
         data = { type: 'whitespace' };
-        ajv = Ajv();
+        ajv = new Ajv();
+        addFormats(ajv);
       });
 
       beforeEach(() => {
@@ -62,7 +66,8 @@ describe('suggestTokenizer', () => {
     describe('when type is not custom or whitespace', () => {
       beforeAll(() => {
         data = { type: 'notAllowedWhitespace' };
-        ajv = Ajv();
+        ajv = new Ajv();
+        addFormats(ajv);
       });
 
       beforeEach(() => {

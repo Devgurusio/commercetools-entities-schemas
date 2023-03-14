@@ -1,4 +1,5 @@
 const Ajv = require('ajv');
+const addFormats = require('ajv-formats');
 const schema = require('../httpDestination');
 
 describe('httpDestination', () => {
@@ -13,7 +14,8 @@ describe('httpDestination', () => {
           type: 'HTTP',
           url: 'http://localhost'
         };
-        ajv = Ajv();
+        ajv = new Ajv();
+        addFormats(ajv);
       });
 
       beforeEach(() => {
@@ -36,7 +38,8 @@ describe('httpDestination', () => {
               headerValue: 'headerValue'
             }
           };
-          ajv = Ajv();
+          ajv = new Ajv();
+          addFormats(ajv);
         });
 
         beforeEach(() => {
@@ -58,7 +61,8 @@ describe('httpDestination', () => {
               key: 'key'
             }
           };
-          ajv = Ajv();
+          ajv = new Ajv();
+          addFormats(ajv);
         });
 
         beforeEach(() => {
@@ -78,7 +82,8 @@ describe('httpDestination', () => {
         data = {
           url: 'http://localhost'
         };
-        ajv = Ajv();
+        ajv = new Ajv();
+        addFormats(ajv);
       });
 
       beforeEach(() => {
@@ -95,7 +100,8 @@ describe('httpDestination', () => {
         data = {
           type: 'HTTP'
         };
-        ajv = Ajv();
+        ajv = new Ajv();
+        addFormats(ajv);
       });
 
       beforeEach(() => {
@@ -113,7 +119,8 @@ describe('httpDestination', () => {
           type: 'invalidType',
           url: 'http://localhost'
         };
-        ajv = Ajv();
+        ajv = new Ajv();
+        addFormats(ajv);
       });
 
       beforeEach(() => {
@@ -136,7 +143,8 @@ describe('httpDestination', () => {
             key: 'key'
           }
         };
-        ajv = Ajv();
+        ajv = new Ajv();
+        addFormats(ajv);
       });
 
       beforeEach(() => {

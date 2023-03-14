@@ -1,4 +1,5 @@
 const Ajv = require('ajv');
+const addFormats = require('ajv-formats');
 const schema = require('../enumValue');
 
 describe('enumValue', () => {
@@ -12,7 +13,8 @@ describe('enumValue', () => {
         key: 'key',
         label: 'label'
       };
-      ajv = Ajv();
+      ajv = new Ajv();
+      addFormats(ajv);
     });
 
     beforeEach(() => {
@@ -30,7 +32,8 @@ describe('enumValue', () => {
         data = {
           label: 'label'
         };
-        ajv = Ajv();
+        ajv = new Ajv();
+        addFormats(ajv);
       });
 
       beforeEach(() => {
@@ -47,7 +50,8 @@ describe('enumValue', () => {
         data = {
           key: 'key'
         };
-        ajv = Ajv();
+        ajv = new Ajv();
+        addFormats(ajv);
       });
 
       beforeEach(() => {

@@ -1,4 +1,5 @@
 const Ajv = require('ajv');
+const addFormats = require('ajv-formats');
 const schema = require('../paymentDraft');
 
 describe('paymentDraft', () => {
@@ -17,7 +18,8 @@ describe('paymentDraft', () => {
             fractionDigits: 2
           }
         };
-        ajv = Ajv();
+        ajv = new Ajv();
+        addFormats(ajv);
       });
 
       beforeEach(() => {
@@ -93,7 +95,8 @@ describe('paymentDraft', () => {
             }
           ]
         };
-        ajv = Ajv();
+        ajv = new Ajv();
+        addFormats(ajv);
       });
 
       beforeEach(() => {
@@ -165,7 +168,8 @@ describe('paymentDraft', () => {
             }
           ]
         };
-        ajv = Ajv();
+        ajv = new Ajv();
+        addFormats(ajv);
       });
 
       beforeEach(() => {

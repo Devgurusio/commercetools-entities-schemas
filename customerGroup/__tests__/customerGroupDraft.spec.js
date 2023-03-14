@@ -1,4 +1,5 @@
 const Ajv = require('ajv');
+const addFormats = require('ajv-formats');
 const schema = require('../customerGroupDraft');
 
 describe('customerGroupDraft', () => {
@@ -10,7 +11,8 @@ describe('customerGroupDraft', () => {
     describe('when only required fields', () => {
       beforeAll(() => {
         data = { groupName: 'groupName' };
-        ajv = Ajv();
+        ajv = new Ajv();
+        addFormats(ajv);
       });
 
       beforeEach(() => {
@@ -37,7 +39,8 @@ describe('customerGroupDraft', () => {
             }
           }
         };
-        ajv = Ajv();
+        ajv = new Ajv();
+        addFormats(ajv);
       });
 
       beforeEach(() => {
@@ -65,7 +68,8 @@ describe('customerGroupDraft', () => {
             }
           }
         };
-        ajv = Ajv();
+        ajv = new Ajv();
+        addFormats(ajv);
       });
 
       beforeEach(() => {

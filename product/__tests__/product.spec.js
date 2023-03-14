@@ -1,4 +1,5 @@
 const Ajv = require('ajv');
+const addFormats = require('ajv-formats');
 const schema = require('../product');
 
 describe('product', () => {
@@ -58,32 +59,28 @@ describe('product', () => {
               prices: [],
               images: [
                 {
-                  url:
-                    'https://2f1d769a82b31863dfb1-18fbb8f644d7cf23387d5276ade94aa9.ssl.cf1.rackcdn.com/chipotle_loomstate-7-o83dH5_x.jpg',
+                  url: 'https://2f1d769a82b31863dfb1-18fbb8f644d7cf23387d5276ade94aa9.ssl.cf1.rackcdn.com/chipotle_loomstate-7-o83dH5_x.jpg',
                   dimensions: {
                     w: 640,
                     h: 450
                   }
                 },
                 {
-                  url:
-                    'https://2f1d769a82b31863dfb1-18fbb8f644d7cf23387d5276ade94aa9.ssl.cf1.rackcdn.com/chipotle_loomstate-7-WxVGX_4x.jpg',
+                  url: 'https://2f1d769a82b31863dfb1-18fbb8f644d7cf23387d5276ade94aa9.ssl.cf1.rackcdn.com/chipotle_loomstate-7-WxVGX_4x.jpg',
                   dimensions: {
                     w: 640,
                     h: 450
                   }
                 },
                 {
-                  url:
-                    'https://2f1d769a82b31863dfb1-18fbb8f644d7cf23387d5276ade94aa9.ssl.cf1.rackcdn.com/chipotle_loomstate-7-5ZmCiie-.jpg',
+                  url: 'https://2f1d769a82b31863dfb1-18fbb8f644d7cf23387d5276ade94aa9.ssl.cf1.rackcdn.com/chipotle_loomstate-7-5ZmCiie-.jpg',
                   dimensions: {
                     w: 640,
                     h: 450
                   }
                 },
                 {
-                  url:
-                    'https://2f1d769a82b31863dfb1-18fbb8f644d7cf23387d5276ade94aa9.ssl.cf1.rackcdn.com/chipotle_loomstate-7-oUQL1f14.jpg',
+                  url: 'https://2f1d769a82b31863dfb1-18fbb8f644d7cf23387d5276ade94aa9.ssl.cf1.rackcdn.com/chipotle_loomstate-7-oUQL1f14.jpg',
                   dimensions: {
                     w: 640,
                     h: 450
@@ -106,16 +103,14 @@ describe('product', () => {
                 prices: [],
                 images: [
                   {
-                    url:
-                      'https://2f1d769a82b31863dfb1-18fbb8f644d7cf23387d5276ade94aa9.ssl.cf1.rackcdn.com/chipotle_loomstate_o-AAQJiqI1.jpg',
+                    url: 'https://2f1d769a82b31863dfb1-18fbb8f644d7cf23387d5276ade94aa9.ssl.cf1.rackcdn.com/chipotle_loomstate_o-AAQJiqI1.jpg',
                     dimensions: {
                       w: 640,
                       h: 450
                     }
                   },
                   {
-                    url:
-                      'https://2f1d769a82b31863dfb1-18fbb8f644d7cf23387d5276ade94aa9.ssl.cf1.rackcdn.com/chipotle_loomstate_o-lKqSQ6Bm.jpg',
+                    url: 'https://2f1d769a82b31863dfb1-18fbb8f644d7cf23387d5276ade94aa9.ssl.cf1.rackcdn.com/chipotle_loomstate_o-lKqSQ6Bm.jpg',
                     dimensions: {
                       w: 640,
                       h: 450
@@ -137,24 +132,21 @@ describe('product', () => {
                 prices: [],
                 images: [
                   {
-                    url:
-                      'https://2f1d769a82b31863dfb1-18fbb8f644d7cf23387d5276ade94aa9.ssl.cf1.rackcdn.com/loomstate_chipotle_c-D5HEMfV5.jpg',
+                    url: 'https://2f1d769a82b31863dfb1-18fbb8f644d7cf23387d5276ade94aa9.ssl.cf1.rackcdn.com/loomstate_chipotle_c-D5HEMfV5.jpg',
                     dimensions: {
                       w: 640,
                       h: 450
                     }
                   },
                   {
-                    url:
-                      'https://2f1d769a82b31863dfb1-18fbb8f644d7cf23387d5276ade94aa9.ssl.cf1.rackcdn.com/loomstate_chipotle_c-RdUIDRIc.jpg',
+                    url: 'https://2f1d769a82b31863dfb1-18fbb8f644d7cf23387d5276ade94aa9.ssl.cf1.rackcdn.com/loomstate_chipotle_c-RdUIDRIc.jpg',
                     dimensions: {
                       w: 640,
                       h: 450
                     }
                   },
                   {
-                    url:
-                      'https://2f1d769a82b31863dfb1-18fbb8f644d7cf23387d5276ade94aa9.ssl.cf1.rackcdn.com/loomstate_chipotle_c-x56NRg5k.jpg',
+                    url: 'https://2f1d769a82b31863dfb1-18fbb8f644d7cf23387d5276ade94aa9.ssl.cf1.rackcdn.com/loomstate_chipotle_c-x56NRg5k.jpg',
                     dimensions: {
                       w: 640,
                       h: 450
@@ -176,32 +168,28 @@ describe('product', () => {
                 prices: [],
                 images: [
                   {
-                    url:
-                      'https://2f1d769a82b31863dfb1-18fbb8f644d7cf23387d5276ade94aa9.ssl.cf1.rackcdn.com/loomstate_chipotle_f-SdSur86I.jpg',
+                    url: 'https://2f1d769a82b31863dfb1-18fbb8f644d7cf23387d5276ade94aa9.ssl.cf1.rackcdn.com/loomstate_chipotle_f-SdSur86I.jpg',
                     dimensions: {
                       w: 640,
                       h: 450
                     }
                   },
                   {
-                    url:
-                      'https://2f1d769a82b31863dfb1-18fbb8f644d7cf23387d5276ade94aa9.ssl.cf1.rackcdn.com/loomstate_chipotle_f-w_qfEsTG.jpg',
+                    url: 'https://2f1d769a82b31863dfb1-18fbb8f644d7cf23387d5276ade94aa9.ssl.cf1.rackcdn.com/loomstate_chipotle_f-w_qfEsTG.jpg',
                     dimensions: {
                       w: 640,
                       h: 450
                     }
                   },
                   {
-                    url:
-                      'https://2f1d769a82b31863dfb1-18fbb8f644d7cf23387d5276ade94aa9.ssl.cf1.rackcdn.com/loomstate_chipotle_f-YqH7uKGQ.jpg',
+                    url: 'https://2f1d769a82b31863dfb1-18fbb8f644d7cf23387d5276ade94aa9.ssl.cf1.rackcdn.com/loomstate_chipotle_f-YqH7uKGQ.jpg',
                     dimensions: {
                       w: 640,
                       h: 450
                     }
                   },
                   {
-                    url:
-                      'https://2f1d769a82b31863dfb1-18fbb8f644d7cf23387d5276ade94aa9.ssl.cf1.rackcdn.com/loomstate_chipotle_f-_1MUn7zX.jpg',
+                    url: 'https://2f1d769a82b31863dfb1-18fbb8f644d7cf23387d5276ade94aa9.ssl.cf1.rackcdn.com/loomstate_chipotle_f-_1MUn7zX.jpg',
                     dimensions: {
                       w: 640,
                       h: 450
@@ -223,32 +211,28 @@ describe('product', () => {
                 prices: [],
                 images: [
                   {
-                    url:
-                      'https://2f1d769a82b31863dfb1-18fbb8f644d7cf23387d5276ade94aa9.ssl.cf1.rackcdn.com/chipotle_loomstate_o-sB54iPBb.jpg',
+                    url: 'https://2f1d769a82b31863dfb1-18fbb8f644d7cf23387d5276ade94aa9.ssl.cf1.rackcdn.com/chipotle_loomstate_o-sB54iPBb.jpg',
                     dimensions: {
                       w: 640,
                       h: 450
                     }
                   },
                   {
-                    url:
-                      'https://2f1d769a82b31863dfb1-18fbb8f644d7cf23387d5276ade94aa9.ssl.cf1.rackcdn.com/chipotle_loomstate_o-fFzTbSsW.jpg',
+                    url: 'https://2f1d769a82b31863dfb1-18fbb8f644d7cf23387d5276ade94aa9.ssl.cf1.rackcdn.com/chipotle_loomstate_o-fFzTbSsW.jpg',
                     dimensions: {
                       w: 640,
                       h: 450
                     }
                   },
                   {
-                    url:
-                      'https://2f1d769a82b31863dfb1-18fbb8f644d7cf23387d5276ade94aa9.ssl.cf1.rackcdn.com/chipotle_loomstate_o-fII9YyJ3.jpg',
+                    url: 'https://2f1d769a82b31863dfb1-18fbb8f644d7cf23387d5276ade94aa9.ssl.cf1.rackcdn.com/chipotle_loomstate_o-fII9YyJ3.jpg',
                     dimensions: {
                       w: 640,
                       h: 450
                     }
                   },
                   {
-                    url:
-                      'https://2f1d769a82b31863dfb1-18fbb8f644d7cf23387d5276ade94aa9.ssl.cf1.rackcdn.com/chipotle_loomstate_o-ftv-WJIO.jpg',
+                    url: 'https://2f1d769a82b31863dfb1-18fbb8f644d7cf23387d5276ade94aa9.ssl.cf1.rackcdn.com/chipotle_loomstate_o-ftv-WJIO.jpg',
                     dimensions: {
                       w: 640,
                       h: 450
@@ -270,32 +254,28 @@ describe('product', () => {
                 prices: [],
                 images: [
                   {
-                    url:
-                      'https://2f1d769a82b31863dfb1-18fbb8f644d7cf23387d5276ade94aa9.ssl.cf1.rackcdn.com/loomstate_chipotle_r-cXKJmD2h.jpg',
+                    url: 'https://2f1d769a82b31863dfb1-18fbb8f644d7cf23387d5276ade94aa9.ssl.cf1.rackcdn.com/loomstate_chipotle_r-cXKJmD2h.jpg',
                     dimensions: {
                       w: 640,
                       h: 450
                     }
                   },
                   {
-                    url:
-                      'https://2f1d769a82b31863dfb1-18fbb8f644d7cf23387d5276ade94aa9.ssl.cf1.rackcdn.com/loomstate_chipotle_r-joNQ1EBO.jpg',
+                    url: 'https://2f1d769a82b31863dfb1-18fbb8f644d7cf23387d5276ade94aa9.ssl.cf1.rackcdn.com/loomstate_chipotle_r-joNQ1EBO.jpg',
                     dimensions: {
                       w: 640,
                       h: 450
                     }
                   },
                   {
-                    url:
-                      'https://2f1d769a82b31863dfb1-18fbb8f644d7cf23387d5276ade94aa9.ssl.cf1.rackcdn.com/loomstate_chipotle_r-BUAIku4V.jpg',
+                    url: 'https://2f1d769a82b31863dfb1-18fbb8f644d7cf23387d5276ade94aa9.ssl.cf1.rackcdn.com/loomstate_chipotle_r-BUAIku4V.jpg',
                     dimensions: {
                       w: 640,
                       h: 450
                     }
                   },
                   {
-                    url:
-                      'https://2f1d769a82b31863dfb1-18fbb8f644d7cf23387d5276ade94aa9.ssl.cf1.rackcdn.com/loomstate_chipotle_r-T2zLRbt8.jpg',
+                    url: 'https://2f1d769a82b31863dfb1-18fbb8f644d7cf23387d5276ade94aa9.ssl.cf1.rackcdn.com/loomstate_chipotle_r-T2zLRbt8.jpg',
                     dimensions: {
                       w: 640,
                       h: 450
@@ -317,32 +297,28 @@ describe('product', () => {
                 prices: [],
                 images: [
                   {
-                    url:
-                      'https://2f1d769a82b31863dfb1-18fbb8f644d7cf23387d5276ade94aa9.ssl.cf1.rackcdn.com/loomstate_chipotle_d-fShNXDtq.jpg',
+                    url: 'https://2f1d769a82b31863dfb1-18fbb8f644d7cf23387d5276ade94aa9.ssl.cf1.rackcdn.com/loomstate_chipotle_d-fShNXDtq.jpg',
                     dimensions: {
                       w: 640,
                       h: 450
                     }
                   },
                   {
-                    url:
-                      'https://2f1d769a82b31863dfb1-18fbb8f644d7cf23387d5276ade94aa9.ssl.cf1.rackcdn.com/loomstate_chipotle_d-St-MoygF.jpg',
+                    url: 'https://2f1d769a82b31863dfb1-18fbb8f644d7cf23387d5276ade94aa9.ssl.cf1.rackcdn.com/loomstate_chipotle_d-St-MoygF.jpg',
                     dimensions: {
                       w: 640,
                       h: 450
                     }
                   },
                   {
-                    url:
-                      'https://2f1d769a82b31863dfb1-18fbb8f644d7cf23387d5276ade94aa9.ssl.cf1.rackcdn.com/loomstate_chipotle_d-gqbb8qsR.jpg',
+                    url: 'https://2f1d769a82b31863dfb1-18fbb8f644d7cf23387d5276ade94aa9.ssl.cf1.rackcdn.com/loomstate_chipotle_d-gqbb8qsR.jpg',
                     dimensions: {
                       w: 640,
                       h: 450
                     }
                   },
                   {
-                    url:
-                      'https://2f1d769a82b31863dfb1-18fbb8f644d7cf23387d5276ade94aa9.ssl.cf1.rackcdn.com/loomstate_chipotle_d-N2pii-UQ.jpg',
+                    url: 'https://2f1d769a82b31863dfb1-18fbb8f644d7cf23387d5276ade94aa9.ssl.cf1.rackcdn.com/loomstate_chipotle_d-N2pii-UQ.jpg',
                     dimensions: {
                       w: 640,
                       h: 450
@@ -364,32 +340,28 @@ describe('product', () => {
                 prices: [],
                 images: [
                   {
-                    url:
-                      'https://2f1d769a82b31863dfb1-18fbb8f644d7cf23387d5276ade94aa9.ssl.cf1.rackcdn.com/loomstate_chipotle_I-R_hVCbVH.jpg',
+                    url: 'https://2f1d769a82b31863dfb1-18fbb8f644d7cf23387d5276ade94aa9.ssl.cf1.rackcdn.com/loomstate_chipotle_I-R_hVCbVH.jpg',
                     dimensions: {
                       w: 640,
                       h: 450
                     }
                   },
                   {
-                    url:
-                      'https://2f1d769a82b31863dfb1-18fbb8f644d7cf23387d5276ade94aa9.ssl.cf1.rackcdn.com/loomstate_chipotle_I-u3Dkl5_x.jpg',
+                    url: 'https://2f1d769a82b31863dfb1-18fbb8f644d7cf23387d5276ade94aa9.ssl.cf1.rackcdn.com/loomstate_chipotle_I-u3Dkl5_x.jpg',
                     dimensions: {
                       w: 640,
                       h: 450
                     }
                   },
                   {
-                    url:
-                      'https://2f1d769a82b31863dfb1-18fbb8f644d7cf23387d5276ade94aa9.ssl.cf1.rackcdn.com/loomstate_chipotle_I-IV3ipYDV.jpg',
+                    url: 'https://2f1d769a82b31863dfb1-18fbb8f644d7cf23387d5276ade94aa9.ssl.cf1.rackcdn.com/loomstate_chipotle_I-IV3ipYDV.jpg',
                     dimensions: {
                       w: 640,
                       h: 450
                     }
                   },
                   {
-                    url:
-                      'https://2f1d769a82b31863dfb1-18fbb8f644d7cf23387d5276ade94aa9.ssl.cf1.rackcdn.com/loomstate_chipotle_I-Sg8xf-mp.jpg',
+                    url: 'https://2f1d769a82b31863dfb1-18fbb8f644d7cf23387d5276ade94aa9.ssl.cf1.rackcdn.com/loomstate_chipotle_I-Sg8xf-mp.jpg',
                     dimensions: {
                       w: 640,
                       h: 450
@@ -411,16 +383,14 @@ describe('product', () => {
                 prices: [],
                 images: [
                   {
-                    url:
-                      'https://2f1d769a82b31863dfb1-18fbb8f644d7cf23387d5276ade94aa9.ssl.cf1.rackcdn.com/cmg.naturtal.apron.6-4fciGhSC.jpg',
+                    url: 'https://2f1d769a82b31863dfb1-18fbb8f644d7cf23387d5276ade94aa9.ssl.cf1.rackcdn.com/cmg.naturtal.apron.6-4fciGhSC.jpg',
                     dimensions: {
                       w: 640,
                       h: 450
                     }
                   },
                   {
-                    url:
-                      'https://2f1d769a82b31863dfb1-18fbb8f644d7cf23387d5276ade94aa9.ssl.cf1.rackcdn.com/cmg.naturtal.apron.c-FwHTh9Lz.jpg',
+                    url: 'https://2f1d769a82b31863dfb1-18fbb8f644d7cf23387d5276ade94aa9.ssl.cf1.rackcdn.com/cmg.naturtal.apron.c-FwHTh9Lz.jpg',
                     dimensions: {
                       w: 640,
                       h: 450
@@ -442,8 +412,7 @@ describe('product', () => {
                 prices: [],
                 images: [
                   {
-                    url:
-                      'https://2f1d769a82b31863dfb1-18fbb8f644d7cf23387d5276ade94aa9.ssl.cf1.rackcdn.com/loomstate_chipotle_f-l4FQDGkb.jpg',
+                    url: 'https://2f1d769a82b31863dfb1-18fbb8f644d7cf23387d5276ade94aa9.ssl.cf1.rackcdn.com/loomstate_chipotle_f-l4FQDGkb.jpg',
                     dimensions: {
                       w: 640,
                       h: 450
@@ -465,8 +434,7 @@ describe('product', () => {
                 prices: [],
                 images: [
                   {
-                    url:
-                      'https://2f1d769a82b31863dfb1-18fbb8f644d7cf23387d5276ade94aa9.ssl.cf1.rackcdn.com/chipotle_farmteam_ho-xJwILlux.jpg',
+                    url: 'https://2f1d769a82b31863dfb1-18fbb8f644d7cf23387d5276ade94aa9.ssl.cf1.rackcdn.com/chipotle_farmteam_ho-xJwILlux.jpg',
                     dimensions: {
                       w: 640,
                       h: 450
@@ -483,32 +451,28 @@ describe('product', () => {
                 prices: [],
                 images: [
                   {
-                    url:
-                      'https://2f1d769a82b31863dfb1-18fbb8f644d7cf23387d5276ade94aa9.ssl.cf1.rackcdn.com/loomstate_chipotle_I-JRLLqzYz.jpg',
+                    url: 'https://2f1d769a82b31863dfb1-18fbb8f644d7cf23387d5276ade94aa9.ssl.cf1.rackcdn.com/loomstate_chipotle_I-JRLLqzYz.jpg',
                     dimensions: {
                       w: 640,
                       h: 450
                     }
                   },
                   {
-                    url:
-                      'https://2f1d769a82b31863dfb1-18fbb8f644d7cf23387d5276ade94aa9.ssl.cf1.rackcdn.com/loomstate_chipotle_I--vgCHZan.jpg',
+                    url: 'https://2f1d769a82b31863dfb1-18fbb8f644d7cf23387d5276ade94aa9.ssl.cf1.rackcdn.com/loomstate_chipotle_I--vgCHZan.jpg',
                     dimensions: {
                       w: 640,
                       h: 450
                     }
                   },
                   {
-                    url:
-                      'https://2f1d769a82b31863dfb1-18fbb8f644d7cf23387d5276ade94aa9.ssl.cf1.rackcdn.com/loomstate_chipotle_I-PPtMnSre.jpg',
+                    url: 'https://2f1d769a82b31863dfb1-18fbb8f644d7cf23387d5276ade94aa9.ssl.cf1.rackcdn.com/loomstate_chipotle_I-PPtMnSre.jpg',
                     dimensions: {
                       w: 640,
                       h: 450
                     }
                   },
                   {
-                    url:
-                      'https://2f1d769a82b31863dfb1-18fbb8f644d7cf23387d5276ade94aa9.ssl.cf1.rackcdn.com/loomstate_chipotle_I-GLFgPecQ.jpg',
+                    url: 'https://2f1d769a82b31863dfb1-18fbb8f644d7cf23387d5276ade94aa9.ssl.cf1.rackcdn.com/loomstate_chipotle_I-GLFgPecQ.jpg',
                     dimensions: {
                       w: 640,
                       h: 450
@@ -530,24 +494,21 @@ describe('product', () => {
                 prices: [],
                 images: [
                   {
-                    url:
-                      'https://2f1d769a82b31863dfb1-18fbb8f644d7cf23387d5276ade94aa9.ssl.cf1.rackcdn.com/cmg_water_bottle_met-UvozjGkq.jpg',
+                    url: 'https://2f1d769a82b31863dfb1-18fbb8f644d7cf23387d5276ade94aa9.ssl.cf1.rackcdn.com/cmg_water_bottle_met-UvozjGkq.jpg',
                     dimensions: {
                       w: 640,
                       h: 450
                     }
                   },
                   {
-                    url:
-                      'https://2f1d769a82b31863dfb1-18fbb8f644d7cf23387d5276ade94aa9.ssl.cf1.rackcdn.com/cmg_water_bottle_640-FGRGSC-D.jpg',
+                    url: 'https://2f1d769a82b31863dfb1-18fbb8f644d7cf23387d5276ade94aa9.ssl.cf1.rackcdn.com/cmg_water_bottle_640-FGRGSC-D.jpg',
                     dimensions: {
                       w: 640,
                       h: 450
                     }
                   },
                   {
-                    url:
-                      'https://2f1d769a82b31863dfb1-18fbb8f644d7cf23387d5276ade94aa9.ssl.cf1.rackcdn.com/cmg_water_bottle_met-kAAkcaok.jpg',
+                    url: 'https://2f1d769a82b31863dfb1-18fbb8f644d7cf23387d5276ade94aa9.ssl.cf1.rackcdn.com/cmg_water_bottle_met-kAAkcaok.jpg',
                     dimensions: {
                       w: 640,
                       h: 450
@@ -569,24 +530,21 @@ describe('product', () => {
                 prices: [],
                 images: [
                   {
-                    url:
-                      'https://2f1d769a82b31863dfb1-18fbb8f644d7cf23387d5276ade94aa9.ssl.cf1.rackcdn.com/diadechipotle.tween.-1mB3QYUD.jpg',
+                    url: 'https://2f1d769a82b31863dfb1-18fbb8f644d7cf23387d5276ade94aa9.ssl.cf1.rackcdn.com/diadechipotle.tween.-1mB3QYUD.jpg',
                     dimensions: {
                       w: 540,
                       h: 380
                     }
                   },
                   {
-                    url:
-                      'https://2f1d769a82b31863dfb1-18fbb8f644d7cf23387d5276ade94aa9.ssl.cf1.rackcdn.com/dias.tween.crop-FCdWRH6N.jpg',
+                    url: 'https://2f1d769a82b31863dfb1-18fbb8f644d7cf23387d5276ade94aa9.ssl.cf1.rackcdn.com/dias.tween.crop-FCdWRH6N.jpg',
                     dimensions: {
                       w: 540,
                       h: 380
                     }
                   },
                   {
-                    url:
-                      'https://2f1d769a82b31863dfb1-18fbb8f644d7cf23387d5276ade94aa9.ssl.cf1.rackcdn.com/diadechipotle.tween.-LZtgTgCH.jpg',
+                    url: 'https://2f1d769a82b31863dfb1-18fbb8f644d7cf23387d5276ade94aa9.ssl.cf1.rackcdn.com/diadechipotle.tween.-LZtgTgCH.jpg',
                     dimensions: {
                       w: 640,
                       h: 450
@@ -608,8 +566,7 @@ describe('product', () => {
                 prices: [],
                 images: [
                   {
-                    url:
-                      'https://2f1d769a82b31863dfb1-18fbb8f644d7cf23387d5276ade94aa9.ssl.cf1.rackcdn.com/loomstate_chipotle_c-EeB2Y9pu.jpg',
+                    url: 'https://2f1d769a82b31863dfb1-18fbb8f644d7cf23387d5276ade94aa9.ssl.cf1.rackcdn.com/loomstate_chipotle_c-EeB2Y9pu.jpg',
                     dimensions: {
                       w: 640,
                       h: 450
@@ -631,8 +588,7 @@ describe('product', () => {
                 prices: [],
                 images: [
                   {
-                    url:
-                      'https://2f1d769a82b31863dfb1-18fbb8f644d7cf23387d5276ade94aa9.ssl.cf1.rackcdn.com/loomstate_chipotle_c-_ctlHGh2.jpg',
+                    url: 'https://2f1d769a82b31863dfb1-18fbb8f644d7cf23387d5276ade94aa9.ssl.cf1.rackcdn.com/loomstate_chipotle_c-_ctlHGh2.jpg',
                     dimensions: {
                       w: 640,
                       h: 450
@@ -654,8 +610,7 @@ describe('product', () => {
                 prices: [],
                 images: [
                   {
-                    url:
-                      'https://2f1d769a82b31863dfb1-18fbb8f644d7cf23387d5276ade94aa9.ssl.cf1.rackcdn.com/loomstate_chipotle_f-T5oFf6dx.jpg',
+                    url: 'https://2f1d769a82b31863dfb1-18fbb8f644d7cf23387d5276ade94aa9.ssl.cf1.rackcdn.com/loomstate_chipotle_f-T5oFf6dx.jpg',
                     dimensions: {
                       w: 640,
                       h: 450
@@ -677,8 +632,7 @@ describe('product', () => {
                 prices: [],
                 images: [
                   {
-                    url:
-                      'https://2f1d769a82b31863dfb1-18fbb8f644d7cf23387d5276ade94aa9.ssl.cf1.rackcdn.com/loomstate_chipotle_v-lk9HnauD.jpg',
+                    url: 'https://2f1d769a82b31863dfb1-18fbb8f644d7cf23387d5276ade94aa9.ssl.cf1.rackcdn.com/loomstate_chipotle_v-lk9HnauD.jpg',
                     dimensions: {
                       w: 640,
                       h: 450
@@ -700,32 +654,28 @@ describe('product', () => {
                 prices: [],
                 images: [
                   {
-                    url:
-                      'https://2f1d769a82b31863dfb1-18fbb8f644d7cf23387d5276ade94aa9.ssl.cf1.rackcdn.com/cmg.toddler.growrow.-Bx564j-_.jpg',
+                    url: 'https://2f1d769a82b31863dfb1-18fbb8f644d7cf23387d5276ade94aa9.ssl.cf1.rackcdn.com/cmg.toddler.growrow.-Bx564j-_.jpg',
                     dimensions: {
                       w: 640,
                       h: 450
                     }
                   },
                   {
-                    url:
-                      'https://2f1d769a82b31863dfb1-18fbb8f644d7cf23387d5276ade94aa9.ssl.cf1.rackcdn.com/cmg.toddler.growrow.-qVjb3y6X.jpg',
+                    url: 'https://2f1d769a82b31863dfb1-18fbb8f644d7cf23387d5276ade94aa9.ssl.cf1.rackcdn.com/cmg.toddler.growrow.-qVjb3y6X.jpg',
                     dimensions: {
                       w: 640,
                       h: 450
                     }
                   },
                   {
-                    url:
-                      'https://2f1d769a82b31863dfb1-18fbb8f644d7cf23387d5276ade94aa9.ssl.cf1.rackcdn.com/cmg.toddler.growrow.-PHLV9lJ_.jpg',
+                    url: 'https://2f1d769a82b31863dfb1-18fbb8f644d7cf23387d5276ade94aa9.ssl.cf1.rackcdn.com/cmg.toddler.growrow.-PHLV9lJ_.jpg',
                     dimensions: {
                       w: 640,
                       h: 450
                     }
                   },
                   {
-                    url:
-                      'https://2f1d769a82b31863dfb1-18fbb8f644d7cf23387d5276ade94aa9.ssl.cf1.rackcdn.com/cmg.toddler.growrow.-3NgI1iNn.jpg',
+                    url: 'https://2f1d769a82b31863dfb1-18fbb8f644d7cf23387d5276ade94aa9.ssl.cf1.rackcdn.com/cmg.toddler.growrow.-3NgI1iNn.jpg',
                     dimensions: {
                       w: 640,
                       h: 450
@@ -747,24 +697,21 @@ describe('product', () => {
                 prices: [],
                 images: [
                   {
-                    url:
-                      'https://2f1d769a82b31863dfb1-18fbb8f644d7cf23387d5276ade94aa9.ssl.cf1.rackcdn.com/cmg.child.apron.1280-bF6mCJyP.jpg',
+                    url: 'https://2f1d769a82b31863dfb1-18fbb8f644d7cf23387d5276ade94aa9.ssl.cf1.rackcdn.com/cmg.child.apron.1280-bF6mCJyP.jpg',
                     dimensions: {
                       w: 640,
                       h: 450
                     }
                   },
                   {
-                    url:
-                      'https://2f1d769a82b31863dfb1-18fbb8f644d7cf23387d5276ade94aa9.ssl.cf1.rackcdn.com/cmg.child.apron.640x-QR1UqEj_.jpg',
+                    url: 'https://2f1d769a82b31863dfb1-18fbb8f644d7cf23387d5276ade94aa9.ssl.cf1.rackcdn.com/cmg.child.apron.640x-QR1UqEj_.jpg',
                     dimensions: {
                       w: 640,
                       h: 450
                     }
                   },
                   {
-                    url:
-                      'https://2f1d769a82b31863dfb1-18fbb8f644d7cf23387d5276ade94aa9.ssl.cf1.rackcdn.com/cmg.child.apron..clo-xei_uwii.jpg',
+                    url: 'https://2f1d769a82b31863dfb1-18fbb8f644d7cf23387d5276ade94aa9.ssl.cf1.rackcdn.com/cmg.child.apron..clo-xei_uwii.jpg',
                     dimensions: {
                       w: 640,
                       h: 450
@@ -786,32 +733,28 @@ describe('product', () => {
                 prices: [],
                 images: [
                   {
-                    url:
-                      'https://2f1d769a82b31863dfb1-18fbb8f644d7cf23387d5276ade94aa9.ssl.cf1.rackcdn.com/piglet.kids.front-rKio1bKK.jpg',
+                    url: 'https://2f1d769a82b31863dfb1-18fbb8f644d7cf23387d5276ade94aa9.ssl.cf1.rackcdn.com/piglet.kids.front-rKio1bKK.jpg',
                     dimensions: {
                       w: 540,
                       h: 380
                     }
                   },
                   {
-                    url:
-                      'https://2f1d769a82b31863dfb1-18fbb8f644d7cf23387d5276ade94aa9.ssl.cf1.rackcdn.com/piglet.kids.crop-rtRF4ALC.jpg',
+                    url: 'https://2f1d769a82b31863dfb1-18fbb8f644d7cf23387d5276ade94aa9.ssl.cf1.rackcdn.com/piglet.kids.crop-rtRF4ALC.jpg',
                     dimensions: {
                       w: 540,
                       h: 380
                     }
                   },
                   {
-                    url:
-                      'https://2f1d769a82b31863dfb1-18fbb8f644d7cf23387d5276ade94aa9.ssl.cf1.rackcdn.com/Piglet-Kids-Detail-fGXkuHml.jpg',
+                    url: 'https://2f1d769a82b31863dfb1-18fbb8f644d7cf23387d5276ade94aa9.ssl.cf1.rackcdn.com/Piglet-Kids-Detail-fGXkuHml.jpg',
                     dimensions: {
                       w: 540,
                       h: 380
                     }
                   },
                   {
-                    url:
-                      'https://2f1d769a82b31863dfb1-18fbb8f644d7cf23387d5276ade94aa9.ssl.cf1.rackcdn.com/Piglet-Kids-back-7p48ePuh.jpg',
+                    url: 'https://2f1d769a82b31863dfb1-18fbb8f644d7cf23387d5276ade94aa9.ssl.cf1.rackcdn.com/Piglet-Kids-back-7p48ePuh.jpg',
                     dimensions: {
                       w: 540,
                       h: 380
@@ -833,24 +776,21 @@ describe('product', () => {
                 prices: [],
                 images: [
                   {
-                    url:
-                      'https://2f1d769a82b31863dfb1-18fbb8f644d7cf23387d5276ade94aa9.ssl.cf1.rackcdn.com/chipotle68.plain.twe-KWsSvd_n.jpg',
+                    url: 'https://2f1d769a82b31863dfb1-18fbb8f644d7cf23387d5276ade94aa9.ssl.cf1.rackcdn.com/chipotle68.plain.twe-KWsSvd_n.jpg',
                     dimensions: {
                       w: 540,
                       h: 380
                     }
                   },
                   {
-                    url:
-                      'https://2f1d769a82b31863dfb1-18fbb8f644d7cf23387d5276ade94aa9.ssl.cf1.rackcdn.com/chipotle.ripples.cro-vYk56lHn.jpg',
+                    url: 'https://2f1d769a82b31863dfb1-18fbb8f644d7cf23387d5276ade94aa9.ssl.cf1.rackcdn.com/chipotle.ripples.cro-vYk56lHn.jpg',
                     dimensions: {
                       w: 540,
                       h: 380
                     }
                   },
                   {
-                    url:
-                      'https://2f1d769a82b31863dfb1-18fbb8f644d7cf23387d5276ade94aa9.ssl.cf1.rackcdn.com/chipotle68.plain.twe-WTWKAynJ.jpg',
+                    url: 'https://2f1d769a82b31863dfb1-18fbb8f644d7cf23387d5276ade94aa9.ssl.cf1.rackcdn.com/chipotle68.plain.twe-WTWKAynJ.jpg',
                     dimensions: {
                       w: 640,
                       h: 450
@@ -872,32 +812,28 @@ describe('product', () => {
                 prices: [],
                 images: [
                   {
-                    url:
-                      'https://2f1d769a82b31863dfb1-18fbb8f644d7cf23387d5276ade94aa9.ssl.cf1.rackcdn.com/cmg.youth.sketchstac-0_EnF0ID.jpg',
+                    url: 'https://2f1d769a82b31863dfb1-18fbb8f644d7cf23387d5276ade94aa9.ssl.cf1.rackcdn.com/cmg.youth.sketchstac-0_EnF0ID.jpg',
                     dimensions: {
                       w: 640,
                       h: 450
                     }
                   },
                   {
-                    url:
-                      'https://2f1d769a82b31863dfb1-18fbb8f644d7cf23387d5276ade94aa9.ssl.cf1.rackcdn.com/cmg.youth.sketchstac-ySysH6bW.jpg',
+                    url: 'https://2f1d769a82b31863dfb1-18fbb8f644d7cf23387d5276ade94aa9.ssl.cf1.rackcdn.com/cmg.youth.sketchstac-ySysH6bW.jpg',
                     dimensions: {
                       w: 640,
                       h: 450
                     }
                   },
                   {
-                    url:
-                      'https://2f1d769a82b31863dfb1-18fbb8f644d7cf23387d5276ade94aa9.ssl.cf1.rackcdn.com/cmg.youth.sketchstac-L9uf9DQh.jpg',
+                    url: 'https://2f1d769a82b31863dfb1-18fbb8f644d7cf23387d5276ade94aa9.ssl.cf1.rackcdn.com/cmg.youth.sketchstac-L9uf9DQh.jpg',
                     dimensions: {
                       w: 640,
                       h: 450
                     }
                   },
                   {
-                    url:
-                      'https://2f1d769a82b31863dfb1-18fbb8f644d7cf23387d5276ade94aa9.ssl.cf1.rackcdn.com/cmg.youth.sketchstac-sJ8kGoiw.jpg',
+                    url: 'https://2f1d769a82b31863dfb1-18fbb8f644d7cf23387d5276ade94aa9.ssl.cf1.rackcdn.com/cmg.youth.sketchstac-sJ8kGoiw.jpg',
                     dimensions: {
                       w: 640,
                       h: 450
@@ -919,24 +855,21 @@ describe('product', () => {
                 prices: [],
                 images: [
                   {
-                    url:
-                      'https://2f1d769a82b31863dfb1-18fbb8f644d7cf23387d5276ade94aa9.ssl.cf1.rackcdn.com/sprayface.tween.fron-4lxpPW5K.jpg',
+                    url: 'https://2f1d769a82b31863dfb1-18fbb8f644d7cf23387d5276ade94aa9.ssl.cf1.rackcdn.com/sprayface.tween.fron-4lxpPW5K.jpg',
                     dimensions: {
                       w: 540,
                       h: 380
                     }
                   },
                   {
-                    url:
-                      'https://2f1d769a82b31863dfb1-18fbb8f644d7cf23387d5276ade94aa9.ssl.cf1.rackcdn.com/sprayface.tween.crop-eXa-h91H.jpg',
+                    url: 'https://2f1d769a82b31863dfb1-18fbb8f644d7cf23387d5276ade94aa9.ssl.cf1.rackcdn.com/sprayface.tween.crop-eXa-h91H.jpg',
                     dimensions: {
                       w: 640,
                       h: 450
                     }
                   },
                   {
-                    url:
-                      'https://2f1d769a82b31863dfb1-18fbb8f644d7cf23387d5276ade94aa9.ssl.cf1.rackcdn.com/sprayface.tween.back-k_XCScSs.jpg',
+                    url: 'https://2f1d769a82b31863dfb1-18fbb8f644d7cf23387d5276ade94aa9.ssl.cf1.rackcdn.com/sprayface.tween.back-k_XCScSs.jpg',
                     dimensions: {
                       w: 540,
                       h: 380
@@ -958,32 +891,28 @@ describe('product', () => {
                 prices: [],
                 images: [
                   {
-                    url:
-                      'https://2f1d769a82b31863dfb1-18fbb8f644d7cf23387d5276ade94aa9.ssl.cf1.rackcdn.com/cmg.youth.spraymedal-47V3CCIt.jpg',
+                    url: 'https://2f1d769a82b31863dfb1-18fbb8f644d7cf23387d5276ade94aa9.ssl.cf1.rackcdn.com/cmg.youth.spraymedal-47V3CCIt.jpg',
                     dimensions: {
                       w: 640,
                       h: 450
                     }
                   },
                   {
-                    url:
-                      'https://2f1d769a82b31863dfb1-18fbb8f644d7cf23387d5276ade94aa9.ssl.cf1.rackcdn.com/cmg.youth.spraymedal-jkUg41BD.jpg',
+                    url: 'https://2f1d769a82b31863dfb1-18fbb8f644d7cf23387d5276ade94aa9.ssl.cf1.rackcdn.com/cmg.youth.spraymedal-jkUg41BD.jpg',
                     dimensions: {
                       w: 640,
                       h: 450
                     }
                   },
                   {
-                    url:
-                      'https://2f1d769a82b31863dfb1-18fbb8f644d7cf23387d5276ade94aa9.ssl.cf1.rackcdn.com/cmg.youth.spraymedal-BUrOnLvZ.jpg',
+                    url: 'https://2f1d769a82b31863dfb1-18fbb8f644d7cf23387d5276ade94aa9.ssl.cf1.rackcdn.com/cmg.youth.spraymedal-BUrOnLvZ.jpg',
                     dimensions: {
                       w: 640,
                       h: 450
                     }
                   },
                   {
-                    url:
-                      'https://2f1d769a82b31863dfb1-18fbb8f644d7cf23387d5276ade94aa9.ssl.cf1.rackcdn.com/cmg.youth.spraymedal-9-KT_7YJ.jpg',
+                    url: 'https://2f1d769a82b31863dfb1-18fbb8f644d7cf23387d5276ade94aa9.ssl.cf1.rackcdn.com/cmg.youth.spraymedal-9-KT_7YJ.jpg',
                     dimensions: {
                       w: 640,
                       h: 450
@@ -1005,40 +934,35 @@ describe('product', () => {
                 prices: [],
                 images: [
                   {
-                    url:
-                      'https://2f1d769a82b31863dfb1-18fbb8f644d7cf23387d5276ade94aa9.ssl.cf1.rackcdn.com/CMG.ChipotleIsMyLife-ua6KadDC.jpg',
+                    url: 'https://2f1d769a82b31863dfb1-18fbb8f644d7cf23387d5276ade94aa9.ssl.cf1.rackcdn.com/CMG.ChipotleIsMyLife-ua6KadDC.jpg',
                     dimensions: {
                       w: 640,
                       h: 450
                     }
                   },
                   {
-                    url:
-                      'https://2f1d769a82b31863dfb1-18fbb8f644d7cf23387d5276ade94aa9.ssl.cf1.rackcdn.com/CMG.Boorito.01.1280x-oQAkMhrv.jpg',
+                    url: 'https://2f1d769a82b31863dfb1-18fbb8f644d7cf23387d5276ade94aa9.ssl.cf1.rackcdn.com/CMG.Boorito.01.1280x-oQAkMhrv.jpg',
                     dimensions: {
                       w: 640,
                       h: 450
                     }
                   },
                   {
-                    url:
-                      'https://2f1d769a82b31863dfb1-18fbb8f644d7cf23387d5276ade94aa9.ssl.cf1.rackcdn.com/CMG.IHeartBurritos.1-J47xHGwZ.jpg',
+                    url: 'https://2f1d769a82b31863dfb1-18fbb8f644d7cf23387d5276ade94aa9.ssl.cf1.rackcdn.com/CMG.IHeartBurritos.1-J47xHGwZ.jpg',
                     dimensions: {
                       w: 640,
                       h: 450
                     }
                   },
                   {
-                    url:
-                      'https://2f1d769a82b31863dfb1-18fbb8f644d7cf23387d5276ade94aa9.ssl.cf1.rackcdn.com/CMG.WouldRather.1280-z-SoWXRd.jpg',
+                    url: 'https://2f1d769a82b31863dfb1-18fbb8f644d7cf23387d5276ade94aa9.ssl.cf1.rackcdn.com/CMG.WouldRather.1280-z-SoWXRd.jpg',
                     dimensions: {
                       w: 640,
                       h: 450
                     }
                   },
                   {
-                    url:
-                      'https://2f1d769a82b31863dfb1-18fbb8f644d7cf23387d5276ade94aa9.ssl.cf1.rackcdn.com/CMG.Boorito.02.1280x-Hp3-jWmo.jpg',
+                    url: 'https://2f1d769a82b31863dfb1-18fbb8f644d7cf23387d5276ade94aa9.ssl.cf1.rackcdn.com/CMG.Boorito.02.1280x-Hp3-jWmo.jpg',
                     dimensions: {
                       w: 640,
                       h: 450
@@ -1060,16 +984,14 @@ describe('product', () => {
                 prices: [],
                 images: [
                   {
-                    url:
-                      'https://2f1d769a82b31863dfb1-18fbb8f644d7cf23387d5276ade94aa9.ssl.cf1.rackcdn.com/CMG.Tabasco.Scorpion-RfjZXJHg.jpg',
+                    url: 'https://2f1d769a82b31863dfb1-18fbb8f644d7cf23387d5276ade94aa9.ssl.cf1.rackcdn.com/CMG.Tabasco.Scorpion-RfjZXJHg.jpg',
                     dimensions: {
                       w: 640,
                       h: 450
                     }
                   },
                   {
-                    url:
-                      'https://2f1d769a82b31863dfb1-18fbb8f644d7cf23387d5276ade94aa9.ssl.cf1.rackcdn.com/CMG.Scorpion.03.640x-33z7GsGu.jpg',
+                    url: 'https://2f1d769a82b31863dfb1-18fbb8f644d7cf23387d5276ade94aa9.ssl.cf1.rackcdn.com/CMG.Scorpion.03.640x-33z7GsGu.jpg',
                     dimensions: {
                       w: 640,
                       h: 450
@@ -1091,32 +1013,28 @@ describe('product', () => {
                 prices: [],
                 images: [
                   {
-                    url:
-                      'https://2f1d769a82b31863dfb1-18fbb8f644d7cf23387d5276ade94aa9.ssl.cf1.rackcdn.com/chipotle.medallion.w-3_Y487iD.jpg',
+                    url: 'https://2f1d769a82b31863dfb1-18fbb8f644d7cf23387d5276ade94aa9.ssl.cf1.rackcdn.com/chipotle.medallion.w-3_Y487iD.jpg',
                     dimensions: {
                       w: 540,
                       h: 380
                     }
                   },
                   {
-                    url:
-                      'https://2f1d769a82b31863dfb1-18fbb8f644d7cf23387d5276ade94aa9.ssl.cf1.rackcdn.com/medallion.womens.cro-XPN_uy2b.jpg',
+                    url: 'https://2f1d769a82b31863dfb1-18fbb8f644d7cf23387d5276ade94aa9.ssl.cf1.rackcdn.com/medallion.womens.cro-XPN_uy2b.jpg',
                     dimensions: {
                       w: 540,
                       h: 380
                     }
                   },
                   {
-                    url:
-                      'https://2f1d769a82b31863dfb1-18fbb8f644d7cf23387d5276ade94aa9.ssl.cf1.rackcdn.com/Chipotle-Medallion-W-TJ6jUJEH.jpg',
+                    url: 'https://2f1d769a82b31863dfb1-18fbb8f644d7cf23387d5276ade94aa9.ssl.cf1.rackcdn.com/Chipotle-Medallion-W-TJ6jUJEH.jpg',
                     dimensions: {
                       w: 540,
                       h: 380
                     }
                   },
                   {
-                    url:
-                      'https://2f1d769a82b31863dfb1-18fbb8f644d7cf23387d5276ade94aa9.ssl.cf1.rackcdn.com/chipotle.medallion.w-22oT5g11.jpg',
+                    url: 'https://2f1d769a82b31863dfb1-18fbb8f644d7cf23387d5276ade94aa9.ssl.cf1.rackcdn.com/chipotle.medallion.w-22oT5g11.jpg',
                     dimensions: {
                       w: 540,
                       h: 380
@@ -1173,32 +1091,28 @@ describe('product', () => {
               prices: [],
               images: [
                 {
-                  url:
-                    'https://2f1d769a82b31863dfb1-18fbb8f644d7cf23387d5276ade94aa9.ssl.cf1.rackcdn.com/chipotle_loomstate-7-o83dH5_x.jpg',
+                  url: 'https://2f1d769a82b31863dfb1-18fbb8f644d7cf23387d5276ade94aa9.ssl.cf1.rackcdn.com/chipotle_loomstate-7-o83dH5_x.jpg',
                   dimensions: {
                     w: 640,
                     h: 450
                   }
                 },
                 {
-                  url:
-                    'https://2f1d769a82b31863dfb1-18fbb8f644d7cf23387d5276ade94aa9.ssl.cf1.rackcdn.com/chipotle_loomstate-7-WxVGX_4x.jpg',
+                  url: 'https://2f1d769a82b31863dfb1-18fbb8f644d7cf23387d5276ade94aa9.ssl.cf1.rackcdn.com/chipotle_loomstate-7-WxVGX_4x.jpg',
                   dimensions: {
                     w: 640,
                     h: 450
                   }
                 },
                 {
-                  url:
-                    'https://2f1d769a82b31863dfb1-18fbb8f644d7cf23387d5276ade94aa9.ssl.cf1.rackcdn.com/chipotle_loomstate-7-5ZmCiie-.jpg',
+                  url: 'https://2f1d769a82b31863dfb1-18fbb8f644d7cf23387d5276ade94aa9.ssl.cf1.rackcdn.com/chipotle_loomstate-7-5ZmCiie-.jpg',
                   dimensions: {
                     w: 640,
                     h: 450
                   }
                 },
                 {
-                  url:
-                    'https://2f1d769a82b31863dfb1-18fbb8f644d7cf23387d5276ade94aa9.ssl.cf1.rackcdn.com/chipotle_loomstate-7-oUQL1f14.jpg',
+                  url: 'https://2f1d769a82b31863dfb1-18fbb8f644d7cf23387d5276ade94aa9.ssl.cf1.rackcdn.com/chipotle_loomstate-7-oUQL1f14.jpg',
                   dimensions: {
                     w: 640,
                     h: 450
@@ -1221,16 +1135,14 @@ describe('product', () => {
                 prices: [],
                 images: [
                   {
-                    url:
-                      'https://2f1d769a82b31863dfb1-18fbb8f644d7cf23387d5276ade94aa9.ssl.cf1.rackcdn.com/chipotle_loomstate_o-AAQJiqI1.jpg',
+                    url: 'https://2f1d769a82b31863dfb1-18fbb8f644d7cf23387d5276ade94aa9.ssl.cf1.rackcdn.com/chipotle_loomstate_o-AAQJiqI1.jpg',
                     dimensions: {
                       w: 640,
                       h: 450
                     }
                   },
                   {
-                    url:
-                      'https://2f1d769a82b31863dfb1-18fbb8f644d7cf23387d5276ade94aa9.ssl.cf1.rackcdn.com/chipotle_loomstate_o-lKqSQ6Bm.jpg',
+                    url: 'https://2f1d769a82b31863dfb1-18fbb8f644d7cf23387d5276ade94aa9.ssl.cf1.rackcdn.com/chipotle_loomstate_o-lKqSQ6Bm.jpg',
                     dimensions: {
                       w: 640,
                       h: 450
@@ -1252,24 +1164,21 @@ describe('product', () => {
                 prices: [],
                 images: [
                   {
-                    url:
-                      'https://2f1d769a82b31863dfb1-18fbb8f644d7cf23387d5276ade94aa9.ssl.cf1.rackcdn.com/loomstate_chipotle_c-D5HEMfV5.jpg',
+                    url: 'https://2f1d769a82b31863dfb1-18fbb8f644d7cf23387d5276ade94aa9.ssl.cf1.rackcdn.com/loomstate_chipotle_c-D5HEMfV5.jpg',
                     dimensions: {
                       w: 640,
                       h: 450
                     }
                   },
                   {
-                    url:
-                      'https://2f1d769a82b31863dfb1-18fbb8f644d7cf23387d5276ade94aa9.ssl.cf1.rackcdn.com/loomstate_chipotle_c-RdUIDRIc.jpg',
+                    url: 'https://2f1d769a82b31863dfb1-18fbb8f644d7cf23387d5276ade94aa9.ssl.cf1.rackcdn.com/loomstate_chipotle_c-RdUIDRIc.jpg',
                     dimensions: {
                       w: 640,
                       h: 450
                     }
                   },
                   {
-                    url:
-                      'https://2f1d769a82b31863dfb1-18fbb8f644d7cf23387d5276ade94aa9.ssl.cf1.rackcdn.com/loomstate_chipotle_c-x56NRg5k.jpg',
+                    url: 'https://2f1d769a82b31863dfb1-18fbb8f644d7cf23387d5276ade94aa9.ssl.cf1.rackcdn.com/loomstate_chipotle_c-x56NRg5k.jpg',
                     dimensions: {
                       w: 640,
                       h: 450
@@ -1291,32 +1200,28 @@ describe('product', () => {
                 prices: [],
                 images: [
                   {
-                    url:
-                      'https://2f1d769a82b31863dfb1-18fbb8f644d7cf23387d5276ade94aa9.ssl.cf1.rackcdn.com/loomstate_chipotle_f-SdSur86I.jpg',
+                    url: 'https://2f1d769a82b31863dfb1-18fbb8f644d7cf23387d5276ade94aa9.ssl.cf1.rackcdn.com/loomstate_chipotle_f-SdSur86I.jpg',
                     dimensions: {
                       w: 640,
                       h: 450
                     }
                   },
                   {
-                    url:
-                      'https://2f1d769a82b31863dfb1-18fbb8f644d7cf23387d5276ade94aa9.ssl.cf1.rackcdn.com/loomstate_chipotle_f-w_qfEsTG.jpg',
+                    url: 'https://2f1d769a82b31863dfb1-18fbb8f644d7cf23387d5276ade94aa9.ssl.cf1.rackcdn.com/loomstate_chipotle_f-w_qfEsTG.jpg',
                     dimensions: {
                       w: 640,
                       h: 450
                     }
                   },
                   {
-                    url:
-                      'https://2f1d769a82b31863dfb1-18fbb8f644d7cf23387d5276ade94aa9.ssl.cf1.rackcdn.com/loomstate_chipotle_f-YqH7uKGQ.jpg',
+                    url: 'https://2f1d769a82b31863dfb1-18fbb8f644d7cf23387d5276ade94aa9.ssl.cf1.rackcdn.com/loomstate_chipotle_f-YqH7uKGQ.jpg',
                     dimensions: {
                       w: 640,
                       h: 450
                     }
                   },
                   {
-                    url:
-                      'https://2f1d769a82b31863dfb1-18fbb8f644d7cf23387d5276ade94aa9.ssl.cf1.rackcdn.com/loomstate_chipotle_f-_1MUn7zX.jpg',
+                    url: 'https://2f1d769a82b31863dfb1-18fbb8f644d7cf23387d5276ade94aa9.ssl.cf1.rackcdn.com/loomstate_chipotle_f-_1MUn7zX.jpg',
                     dimensions: {
                       w: 640,
                       h: 450
@@ -1338,32 +1243,28 @@ describe('product', () => {
                 prices: [],
                 images: [
                   {
-                    url:
-                      'https://2f1d769a82b31863dfb1-18fbb8f644d7cf23387d5276ade94aa9.ssl.cf1.rackcdn.com/chipotle_loomstate_o-sB54iPBb.jpg',
+                    url: 'https://2f1d769a82b31863dfb1-18fbb8f644d7cf23387d5276ade94aa9.ssl.cf1.rackcdn.com/chipotle_loomstate_o-sB54iPBb.jpg',
                     dimensions: {
                       w: 640,
                       h: 450
                     }
                   },
                   {
-                    url:
-                      'https://2f1d769a82b31863dfb1-18fbb8f644d7cf23387d5276ade94aa9.ssl.cf1.rackcdn.com/chipotle_loomstate_o-fFzTbSsW.jpg',
+                    url: 'https://2f1d769a82b31863dfb1-18fbb8f644d7cf23387d5276ade94aa9.ssl.cf1.rackcdn.com/chipotle_loomstate_o-fFzTbSsW.jpg',
                     dimensions: {
                       w: 640,
                       h: 450
                     }
                   },
                   {
-                    url:
-                      'https://2f1d769a82b31863dfb1-18fbb8f644d7cf23387d5276ade94aa9.ssl.cf1.rackcdn.com/chipotle_loomstate_o-fII9YyJ3.jpg',
+                    url: 'https://2f1d769a82b31863dfb1-18fbb8f644d7cf23387d5276ade94aa9.ssl.cf1.rackcdn.com/chipotle_loomstate_o-fII9YyJ3.jpg',
                     dimensions: {
                       w: 640,
                       h: 450
                     }
                   },
                   {
-                    url:
-                      'https://2f1d769a82b31863dfb1-18fbb8f644d7cf23387d5276ade94aa9.ssl.cf1.rackcdn.com/chipotle_loomstate_o-ftv-WJIO.jpg',
+                    url: 'https://2f1d769a82b31863dfb1-18fbb8f644d7cf23387d5276ade94aa9.ssl.cf1.rackcdn.com/chipotle_loomstate_o-ftv-WJIO.jpg',
                     dimensions: {
                       w: 640,
                       h: 450
@@ -1385,32 +1286,28 @@ describe('product', () => {
                 prices: [],
                 images: [
                   {
-                    url:
-                      'https://2f1d769a82b31863dfb1-18fbb8f644d7cf23387d5276ade94aa9.ssl.cf1.rackcdn.com/loomstate_chipotle_r-cXKJmD2h.jpg',
+                    url: 'https://2f1d769a82b31863dfb1-18fbb8f644d7cf23387d5276ade94aa9.ssl.cf1.rackcdn.com/loomstate_chipotle_r-cXKJmD2h.jpg',
                     dimensions: {
                       w: 640,
                       h: 450
                     }
                   },
                   {
-                    url:
-                      'https://2f1d769a82b31863dfb1-18fbb8f644d7cf23387d5276ade94aa9.ssl.cf1.rackcdn.com/loomstate_chipotle_r-joNQ1EBO.jpg',
+                    url: 'https://2f1d769a82b31863dfb1-18fbb8f644d7cf23387d5276ade94aa9.ssl.cf1.rackcdn.com/loomstate_chipotle_r-joNQ1EBO.jpg',
                     dimensions: {
                       w: 640,
                       h: 450
                     }
                   },
                   {
-                    url:
-                      'https://2f1d769a82b31863dfb1-18fbb8f644d7cf23387d5276ade94aa9.ssl.cf1.rackcdn.com/loomstate_chipotle_r-BUAIku4V.jpg',
+                    url: 'https://2f1d769a82b31863dfb1-18fbb8f644d7cf23387d5276ade94aa9.ssl.cf1.rackcdn.com/loomstate_chipotle_r-BUAIku4V.jpg',
                     dimensions: {
                       w: 640,
                       h: 450
                     }
                   },
                   {
-                    url:
-                      'https://2f1d769a82b31863dfb1-18fbb8f644d7cf23387d5276ade94aa9.ssl.cf1.rackcdn.com/loomstate_chipotle_r-T2zLRbt8.jpg',
+                    url: 'https://2f1d769a82b31863dfb1-18fbb8f644d7cf23387d5276ade94aa9.ssl.cf1.rackcdn.com/loomstate_chipotle_r-T2zLRbt8.jpg',
                     dimensions: {
                       w: 640,
                       h: 450
@@ -1432,32 +1329,28 @@ describe('product', () => {
                 prices: [],
                 images: [
                   {
-                    url:
-                      'https://2f1d769a82b31863dfb1-18fbb8f644d7cf23387d5276ade94aa9.ssl.cf1.rackcdn.com/loomstate_chipotle_d-fShNXDtq.jpg',
+                    url: 'https://2f1d769a82b31863dfb1-18fbb8f644d7cf23387d5276ade94aa9.ssl.cf1.rackcdn.com/loomstate_chipotle_d-fShNXDtq.jpg',
                     dimensions: {
                       w: 640,
                       h: 450
                     }
                   },
                   {
-                    url:
-                      'https://2f1d769a82b31863dfb1-18fbb8f644d7cf23387d5276ade94aa9.ssl.cf1.rackcdn.com/loomstate_chipotle_d-St-MoygF.jpg',
+                    url: 'https://2f1d769a82b31863dfb1-18fbb8f644d7cf23387d5276ade94aa9.ssl.cf1.rackcdn.com/loomstate_chipotle_d-St-MoygF.jpg',
                     dimensions: {
                       w: 640,
                       h: 450
                     }
                   },
                   {
-                    url:
-                      'https://2f1d769a82b31863dfb1-18fbb8f644d7cf23387d5276ade94aa9.ssl.cf1.rackcdn.com/loomstate_chipotle_d-gqbb8qsR.jpg',
+                    url: 'https://2f1d769a82b31863dfb1-18fbb8f644d7cf23387d5276ade94aa9.ssl.cf1.rackcdn.com/loomstate_chipotle_d-gqbb8qsR.jpg',
                     dimensions: {
                       w: 640,
                       h: 450
                     }
                   },
                   {
-                    url:
-                      'https://2f1d769a82b31863dfb1-18fbb8f644d7cf23387d5276ade94aa9.ssl.cf1.rackcdn.com/loomstate_chipotle_d-N2pii-UQ.jpg',
+                    url: 'https://2f1d769a82b31863dfb1-18fbb8f644d7cf23387d5276ade94aa9.ssl.cf1.rackcdn.com/loomstate_chipotle_d-N2pii-UQ.jpg',
                     dimensions: {
                       w: 640,
                       h: 450
@@ -1479,32 +1372,28 @@ describe('product', () => {
                 prices: [],
                 images: [
                   {
-                    url:
-                      'https://2f1d769a82b31863dfb1-18fbb8f644d7cf23387d5276ade94aa9.ssl.cf1.rackcdn.com/loomstate_chipotle_I-R_hVCbVH.jpg',
+                    url: 'https://2f1d769a82b31863dfb1-18fbb8f644d7cf23387d5276ade94aa9.ssl.cf1.rackcdn.com/loomstate_chipotle_I-R_hVCbVH.jpg',
                     dimensions: {
                       w: 640,
                       h: 450
                     }
                   },
                   {
-                    url:
-                      'https://2f1d769a82b31863dfb1-18fbb8f644d7cf23387d5276ade94aa9.ssl.cf1.rackcdn.com/loomstate_chipotle_I-u3Dkl5_x.jpg',
+                    url: 'https://2f1d769a82b31863dfb1-18fbb8f644d7cf23387d5276ade94aa9.ssl.cf1.rackcdn.com/loomstate_chipotle_I-u3Dkl5_x.jpg',
                     dimensions: {
                       w: 640,
                       h: 450
                     }
                   },
                   {
-                    url:
-                      'https://2f1d769a82b31863dfb1-18fbb8f644d7cf23387d5276ade94aa9.ssl.cf1.rackcdn.com/loomstate_chipotle_I-IV3ipYDV.jpg',
+                    url: 'https://2f1d769a82b31863dfb1-18fbb8f644d7cf23387d5276ade94aa9.ssl.cf1.rackcdn.com/loomstate_chipotle_I-IV3ipYDV.jpg',
                     dimensions: {
                       w: 640,
                       h: 450
                     }
                   },
                   {
-                    url:
-                      'https://2f1d769a82b31863dfb1-18fbb8f644d7cf23387d5276ade94aa9.ssl.cf1.rackcdn.com/loomstate_chipotle_I-Sg8xf-mp.jpg',
+                    url: 'https://2f1d769a82b31863dfb1-18fbb8f644d7cf23387d5276ade94aa9.ssl.cf1.rackcdn.com/loomstate_chipotle_I-Sg8xf-mp.jpg',
                     dimensions: {
                       w: 640,
                       h: 450
@@ -1526,16 +1415,14 @@ describe('product', () => {
                 prices: [],
                 images: [
                   {
-                    url:
-                      'https://2f1d769a82b31863dfb1-18fbb8f644d7cf23387d5276ade94aa9.ssl.cf1.rackcdn.com/cmg.naturtal.apron.6-4fciGhSC.jpg',
+                    url: 'https://2f1d769a82b31863dfb1-18fbb8f644d7cf23387d5276ade94aa9.ssl.cf1.rackcdn.com/cmg.naturtal.apron.6-4fciGhSC.jpg',
                     dimensions: {
                       w: 640,
                       h: 450
                     }
                   },
                   {
-                    url:
-                      'https://2f1d769a82b31863dfb1-18fbb8f644d7cf23387d5276ade94aa9.ssl.cf1.rackcdn.com/cmg.naturtal.apron.c-FwHTh9Lz.jpg',
+                    url: 'https://2f1d769a82b31863dfb1-18fbb8f644d7cf23387d5276ade94aa9.ssl.cf1.rackcdn.com/cmg.naturtal.apron.c-FwHTh9Lz.jpg',
                     dimensions: {
                       w: 640,
                       h: 450
@@ -1557,8 +1444,7 @@ describe('product', () => {
                 prices: [],
                 images: [
                   {
-                    url:
-                      'https://2f1d769a82b31863dfb1-18fbb8f644d7cf23387d5276ade94aa9.ssl.cf1.rackcdn.com/loomstate_chipotle_f-l4FQDGkb.jpg',
+                    url: 'https://2f1d769a82b31863dfb1-18fbb8f644d7cf23387d5276ade94aa9.ssl.cf1.rackcdn.com/loomstate_chipotle_f-l4FQDGkb.jpg',
                     dimensions: {
                       w: 640,
                       h: 450
@@ -1580,8 +1466,7 @@ describe('product', () => {
                 prices: [],
                 images: [
                   {
-                    url:
-                      'https://2f1d769a82b31863dfb1-18fbb8f644d7cf23387d5276ade94aa9.ssl.cf1.rackcdn.com/chipotle_farmteam_ho-xJwILlux.jpg',
+                    url: 'https://2f1d769a82b31863dfb1-18fbb8f644d7cf23387d5276ade94aa9.ssl.cf1.rackcdn.com/chipotle_farmteam_ho-xJwILlux.jpg',
                     dimensions: {
                       w: 640,
                       h: 450
@@ -1598,32 +1483,28 @@ describe('product', () => {
                 prices: [],
                 images: [
                   {
-                    url:
-                      'https://2f1d769a82b31863dfb1-18fbb8f644d7cf23387d5276ade94aa9.ssl.cf1.rackcdn.com/loomstate_chipotle_I-JRLLqzYz.jpg',
+                    url: 'https://2f1d769a82b31863dfb1-18fbb8f644d7cf23387d5276ade94aa9.ssl.cf1.rackcdn.com/loomstate_chipotle_I-JRLLqzYz.jpg',
                     dimensions: {
                       w: 640,
                       h: 450
                     }
                   },
                   {
-                    url:
-                      'https://2f1d769a82b31863dfb1-18fbb8f644d7cf23387d5276ade94aa9.ssl.cf1.rackcdn.com/loomstate_chipotle_I--vgCHZan.jpg',
+                    url: 'https://2f1d769a82b31863dfb1-18fbb8f644d7cf23387d5276ade94aa9.ssl.cf1.rackcdn.com/loomstate_chipotle_I--vgCHZan.jpg',
                     dimensions: {
                       w: 640,
                       h: 450
                     }
                   },
                   {
-                    url:
-                      'https://2f1d769a82b31863dfb1-18fbb8f644d7cf23387d5276ade94aa9.ssl.cf1.rackcdn.com/loomstate_chipotle_I-PPtMnSre.jpg',
+                    url: 'https://2f1d769a82b31863dfb1-18fbb8f644d7cf23387d5276ade94aa9.ssl.cf1.rackcdn.com/loomstate_chipotle_I-PPtMnSre.jpg',
                     dimensions: {
                       w: 640,
                       h: 450
                     }
                   },
                   {
-                    url:
-                      'https://2f1d769a82b31863dfb1-18fbb8f644d7cf23387d5276ade94aa9.ssl.cf1.rackcdn.com/loomstate_chipotle_I-GLFgPecQ.jpg',
+                    url: 'https://2f1d769a82b31863dfb1-18fbb8f644d7cf23387d5276ade94aa9.ssl.cf1.rackcdn.com/loomstate_chipotle_I-GLFgPecQ.jpg',
                     dimensions: {
                       w: 640,
                       h: 450
@@ -1645,24 +1526,21 @@ describe('product', () => {
                 prices: [],
                 images: [
                   {
-                    url:
-                      'https://2f1d769a82b31863dfb1-18fbb8f644d7cf23387d5276ade94aa9.ssl.cf1.rackcdn.com/cmg_water_bottle_met-UvozjGkq.jpg',
+                    url: 'https://2f1d769a82b31863dfb1-18fbb8f644d7cf23387d5276ade94aa9.ssl.cf1.rackcdn.com/cmg_water_bottle_met-UvozjGkq.jpg',
                     dimensions: {
                       w: 640,
                       h: 450
                     }
                   },
                   {
-                    url:
-                      'https://2f1d769a82b31863dfb1-18fbb8f644d7cf23387d5276ade94aa9.ssl.cf1.rackcdn.com/cmg_water_bottle_640-FGRGSC-D.jpg',
+                    url: 'https://2f1d769a82b31863dfb1-18fbb8f644d7cf23387d5276ade94aa9.ssl.cf1.rackcdn.com/cmg_water_bottle_640-FGRGSC-D.jpg',
                     dimensions: {
                       w: 640,
                       h: 450
                     }
                   },
                   {
-                    url:
-                      'https://2f1d769a82b31863dfb1-18fbb8f644d7cf23387d5276ade94aa9.ssl.cf1.rackcdn.com/cmg_water_bottle_met-kAAkcaok.jpg',
+                    url: 'https://2f1d769a82b31863dfb1-18fbb8f644d7cf23387d5276ade94aa9.ssl.cf1.rackcdn.com/cmg_water_bottle_met-kAAkcaok.jpg',
                     dimensions: {
                       w: 640,
                       h: 450
@@ -1684,24 +1562,21 @@ describe('product', () => {
                 prices: [],
                 images: [
                   {
-                    url:
-                      'https://2f1d769a82b31863dfb1-18fbb8f644d7cf23387d5276ade94aa9.ssl.cf1.rackcdn.com/diadechipotle.tween.-1mB3QYUD.jpg',
+                    url: 'https://2f1d769a82b31863dfb1-18fbb8f644d7cf23387d5276ade94aa9.ssl.cf1.rackcdn.com/diadechipotle.tween.-1mB3QYUD.jpg',
                     dimensions: {
                       w: 540,
                       h: 380
                     }
                   },
                   {
-                    url:
-                      'https://2f1d769a82b31863dfb1-18fbb8f644d7cf23387d5276ade94aa9.ssl.cf1.rackcdn.com/dias.tween.crop-FCdWRH6N.jpg',
+                    url: 'https://2f1d769a82b31863dfb1-18fbb8f644d7cf23387d5276ade94aa9.ssl.cf1.rackcdn.com/dias.tween.crop-FCdWRH6N.jpg',
                     dimensions: {
                       w: 540,
                       h: 380
                     }
                   },
                   {
-                    url:
-                      'https://2f1d769a82b31863dfb1-18fbb8f644d7cf23387d5276ade94aa9.ssl.cf1.rackcdn.com/diadechipotle.tween.-LZtgTgCH.jpg',
+                    url: 'https://2f1d769a82b31863dfb1-18fbb8f644d7cf23387d5276ade94aa9.ssl.cf1.rackcdn.com/diadechipotle.tween.-LZtgTgCH.jpg',
                     dimensions: {
                       w: 640,
                       h: 450
@@ -1723,8 +1598,7 @@ describe('product', () => {
                 prices: [],
                 images: [
                   {
-                    url:
-                      'https://2f1d769a82b31863dfb1-18fbb8f644d7cf23387d5276ade94aa9.ssl.cf1.rackcdn.com/loomstate_chipotle_c-EeB2Y9pu.jpg',
+                    url: 'https://2f1d769a82b31863dfb1-18fbb8f644d7cf23387d5276ade94aa9.ssl.cf1.rackcdn.com/loomstate_chipotle_c-EeB2Y9pu.jpg',
                     dimensions: {
                       w: 640,
                       h: 450
@@ -1746,8 +1620,7 @@ describe('product', () => {
                 prices: [],
                 images: [
                   {
-                    url:
-                      'https://2f1d769a82b31863dfb1-18fbb8f644d7cf23387d5276ade94aa9.ssl.cf1.rackcdn.com/loomstate_chipotle_c-_ctlHGh2.jpg',
+                    url: 'https://2f1d769a82b31863dfb1-18fbb8f644d7cf23387d5276ade94aa9.ssl.cf1.rackcdn.com/loomstate_chipotle_c-_ctlHGh2.jpg',
                     dimensions: {
                       w: 640,
                       h: 450
@@ -1769,8 +1642,7 @@ describe('product', () => {
                 prices: [],
                 images: [
                   {
-                    url:
-                      'https://2f1d769a82b31863dfb1-18fbb8f644d7cf23387d5276ade94aa9.ssl.cf1.rackcdn.com/loomstate_chipotle_f-T5oFf6dx.jpg',
+                    url: 'https://2f1d769a82b31863dfb1-18fbb8f644d7cf23387d5276ade94aa9.ssl.cf1.rackcdn.com/loomstate_chipotle_f-T5oFf6dx.jpg',
                     dimensions: {
                       w: 640,
                       h: 450
@@ -1792,8 +1664,7 @@ describe('product', () => {
                 prices: [],
                 images: [
                   {
-                    url:
-                      'https://2f1d769a82b31863dfb1-18fbb8f644d7cf23387d5276ade94aa9.ssl.cf1.rackcdn.com/loomstate_chipotle_v-lk9HnauD.jpg',
+                    url: 'https://2f1d769a82b31863dfb1-18fbb8f644d7cf23387d5276ade94aa9.ssl.cf1.rackcdn.com/loomstate_chipotle_v-lk9HnauD.jpg',
                     dimensions: {
                       w: 640,
                       h: 450
@@ -1815,32 +1686,28 @@ describe('product', () => {
                 prices: [],
                 images: [
                   {
-                    url:
-                      'https://2f1d769a82b31863dfb1-18fbb8f644d7cf23387d5276ade94aa9.ssl.cf1.rackcdn.com/cmg.toddler.growrow.-Bx564j-_.jpg',
+                    url: 'https://2f1d769a82b31863dfb1-18fbb8f644d7cf23387d5276ade94aa9.ssl.cf1.rackcdn.com/cmg.toddler.growrow.-Bx564j-_.jpg',
                     dimensions: {
                       w: 640,
                       h: 450
                     }
                   },
                   {
-                    url:
-                      'https://2f1d769a82b31863dfb1-18fbb8f644d7cf23387d5276ade94aa9.ssl.cf1.rackcdn.com/cmg.toddler.growrow.-qVjb3y6X.jpg',
+                    url: 'https://2f1d769a82b31863dfb1-18fbb8f644d7cf23387d5276ade94aa9.ssl.cf1.rackcdn.com/cmg.toddler.growrow.-qVjb3y6X.jpg',
                     dimensions: {
                       w: 640,
                       h: 450
                     }
                   },
                   {
-                    url:
-                      'https://2f1d769a82b31863dfb1-18fbb8f644d7cf23387d5276ade94aa9.ssl.cf1.rackcdn.com/cmg.toddler.growrow.-PHLV9lJ_.jpg',
+                    url: 'https://2f1d769a82b31863dfb1-18fbb8f644d7cf23387d5276ade94aa9.ssl.cf1.rackcdn.com/cmg.toddler.growrow.-PHLV9lJ_.jpg',
                     dimensions: {
                       w: 640,
                       h: 450
                     }
                   },
                   {
-                    url:
-                      'https://2f1d769a82b31863dfb1-18fbb8f644d7cf23387d5276ade94aa9.ssl.cf1.rackcdn.com/cmg.toddler.growrow.-3NgI1iNn.jpg',
+                    url: 'https://2f1d769a82b31863dfb1-18fbb8f644d7cf23387d5276ade94aa9.ssl.cf1.rackcdn.com/cmg.toddler.growrow.-3NgI1iNn.jpg',
                     dimensions: {
                       w: 640,
                       h: 450
@@ -1862,24 +1729,21 @@ describe('product', () => {
                 prices: [],
                 images: [
                   {
-                    url:
-                      'https://2f1d769a82b31863dfb1-18fbb8f644d7cf23387d5276ade94aa9.ssl.cf1.rackcdn.com/cmg.child.apron.1280-bF6mCJyP.jpg',
+                    url: 'https://2f1d769a82b31863dfb1-18fbb8f644d7cf23387d5276ade94aa9.ssl.cf1.rackcdn.com/cmg.child.apron.1280-bF6mCJyP.jpg',
                     dimensions: {
                       w: 640,
                       h: 450
                     }
                   },
                   {
-                    url:
-                      'https://2f1d769a82b31863dfb1-18fbb8f644d7cf23387d5276ade94aa9.ssl.cf1.rackcdn.com/cmg.child.apron.640x-QR1UqEj_.jpg',
+                    url: 'https://2f1d769a82b31863dfb1-18fbb8f644d7cf23387d5276ade94aa9.ssl.cf1.rackcdn.com/cmg.child.apron.640x-QR1UqEj_.jpg',
                     dimensions: {
                       w: 640,
                       h: 450
                     }
                   },
                   {
-                    url:
-                      'https://2f1d769a82b31863dfb1-18fbb8f644d7cf23387d5276ade94aa9.ssl.cf1.rackcdn.com/cmg.child.apron..clo-xei_uwii.jpg',
+                    url: 'https://2f1d769a82b31863dfb1-18fbb8f644d7cf23387d5276ade94aa9.ssl.cf1.rackcdn.com/cmg.child.apron..clo-xei_uwii.jpg',
                     dimensions: {
                       w: 640,
                       h: 450
@@ -1901,32 +1765,28 @@ describe('product', () => {
                 prices: [],
                 images: [
                   {
-                    url:
-                      'https://2f1d769a82b31863dfb1-18fbb8f644d7cf23387d5276ade94aa9.ssl.cf1.rackcdn.com/piglet.kids.front-rKio1bKK.jpg',
+                    url: 'https://2f1d769a82b31863dfb1-18fbb8f644d7cf23387d5276ade94aa9.ssl.cf1.rackcdn.com/piglet.kids.front-rKio1bKK.jpg',
                     dimensions: {
                       w: 540,
                       h: 380
                     }
                   },
                   {
-                    url:
-                      'https://2f1d769a82b31863dfb1-18fbb8f644d7cf23387d5276ade94aa9.ssl.cf1.rackcdn.com/piglet.kids.crop-rtRF4ALC.jpg',
+                    url: 'https://2f1d769a82b31863dfb1-18fbb8f644d7cf23387d5276ade94aa9.ssl.cf1.rackcdn.com/piglet.kids.crop-rtRF4ALC.jpg',
                     dimensions: {
                       w: 540,
                       h: 380
                     }
                   },
                   {
-                    url:
-                      'https://2f1d769a82b31863dfb1-18fbb8f644d7cf23387d5276ade94aa9.ssl.cf1.rackcdn.com/Piglet-Kids-Detail-fGXkuHml.jpg',
+                    url: 'https://2f1d769a82b31863dfb1-18fbb8f644d7cf23387d5276ade94aa9.ssl.cf1.rackcdn.com/Piglet-Kids-Detail-fGXkuHml.jpg',
                     dimensions: {
                       w: 540,
                       h: 380
                     }
                   },
                   {
-                    url:
-                      'https://2f1d769a82b31863dfb1-18fbb8f644d7cf23387d5276ade94aa9.ssl.cf1.rackcdn.com/Piglet-Kids-back-7p48ePuh.jpg',
+                    url: 'https://2f1d769a82b31863dfb1-18fbb8f644d7cf23387d5276ade94aa9.ssl.cf1.rackcdn.com/Piglet-Kids-back-7p48ePuh.jpg',
                     dimensions: {
                       w: 540,
                       h: 380
@@ -1948,24 +1808,21 @@ describe('product', () => {
                 prices: [],
                 images: [
                   {
-                    url:
-                      'https://2f1d769a82b31863dfb1-18fbb8f644d7cf23387d5276ade94aa9.ssl.cf1.rackcdn.com/chipotle68.plain.twe-KWsSvd_n.jpg',
+                    url: 'https://2f1d769a82b31863dfb1-18fbb8f644d7cf23387d5276ade94aa9.ssl.cf1.rackcdn.com/chipotle68.plain.twe-KWsSvd_n.jpg',
                     dimensions: {
                       w: 540,
                       h: 380
                     }
                   },
                   {
-                    url:
-                      'https://2f1d769a82b31863dfb1-18fbb8f644d7cf23387d5276ade94aa9.ssl.cf1.rackcdn.com/chipotle.ripples.cro-vYk56lHn.jpg',
+                    url: 'https://2f1d769a82b31863dfb1-18fbb8f644d7cf23387d5276ade94aa9.ssl.cf1.rackcdn.com/chipotle.ripples.cro-vYk56lHn.jpg',
                     dimensions: {
                       w: 540,
                       h: 380
                     }
                   },
                   {
-                    url:
-                      'https://2f1d769a82b31863dfb1-18fbb8f644d7cf23387d5276ade94aa9.ssl.cf1.rackcdn.com/chipotle68.plain.twe-WTWKAynJ.jpg',
+                    url: 'https://2f1d769a82b31863dfb1-18fbb8f644d7cf23387d5276ade94aa9.ssl.cf1.rackcdn.com/chipotle68.plain.twe-WTWKAynJ.jpg',
                     dimensions: {
                       w: 640,
                       h: 450
@@ -1987,32 +1844,28 @@ describe('product', () => {
                 prices: [],
                 images: [
                   {
-                    url:
-                      'https://2f1d769a82b31863dfb1-18fbb8f644d7cf23387d5276ade94aa9.ssl.cf1.rackcdn.com/cmg.youth.sketchstac-0_EnF0ID.jpg',
+                    url: 'https://2f1d769a82b31863dfb1-18fbb8f644d7cf23387d5276ade94aa9.ssl.cf1.rackcdn.com/cmg.youth.sketchstac-0_EnF0ID.jpg',
                     dimensions: {
                       w: 640,
                       h: 450
                     }
                   },
                   {
-                    url:
-                      'https://2f1d769a82b31863dfb1-18fbb8f644d7cf23387d5276ade94aa9.ssl.cf1.rackcdn.com/cmg.youth.sketchstac-ySysH6bW.jpg',
+                    url: 'https://2f1d769a82b31863dfb1-18fbb8f644d7cf23387d5276ade94aa9.ssl.cf1.rackcdn.com/cmg.youth.sketchstac-ySysH6bW.jpg',
                     dimensions: {
                       w: 640,
                       h: 450
                     }
                   },
                   {
-                    url:
-                      'https://2f1d769a82b31863dfb1-18fbb8f644d7cf23387d5276ade94aa9.ssl.cf1.rackcdn.com/cmg.youth.sketchstac-L9uf9DQh.jpg',
+                    url: 'https://2f1d769a82b31863dfb1-18fbb8f644d7cf23387d5276ade94aa9.ssl.cf1.rackcdn.com/cmg.youth.sketchstac-L9uf9DQh.jpg',
                     dimensions: {
                       w: 640,
                       h: 450
                     }
                   },
                   {
-                    url:
-                      'https://2f1d769a82b31863dfb1-18fbb8f644d7cf23387d5276ade94aa9.ssl.cf1.rackcdn.com/cmg.youth.sketchstac-sJ8kGoiw.jpg',
+                    url: 'https://2f1d769a82b31863dfb1-18fbb8f644d7cf23387d5276ade94aa9.ssl.cf1.rackcdn.com/cmg.youth.sketchstac-sJ8kGoiw.jpg',
                     dimensions: {
                       w: 640,
                       h: 450
@@ -2034,24 +1887,21 @@ describe('product', () => {
                 prices: [],
                 images: [
                   {
-                    url:
-                      'https://2f1d769a82b31863dfb1-18fbb8f644d7cf23387d5276ade94aa9.ssl.cf1.rackcdn.com/sprayface.tween.fron-4lxpPW5K.jpg',
+                    url: 'https://2f1d769a82b31863dfb1-18fbb8f644d7cf23387d5276ade94aa9.ssl.cf1.rackcdn.com/sprayface.tween.fron-4lxpPW5K.jpg',
                     dimensions: {
                       w: 540,
                       h: 380
                     }
                   },
                   {
-                    url:
-                      'https://2f1d769a82b31863dfb1-18fbb8f644d7cf23387d5276ade94aa9.ssl.cf1.rackcdn.com/sprayface.tween.crop-eXa-h91H.jpg',
+                    url: 'https://2f1d769a82b31863dfb1-18fbb8f644d7cf23387d5276ade94aa9.ssl.cf1.rackcdn.com/sprayface.tween.crop-eXa-h91H.jpg',
                     dimensions: {
                       w: 640,
                       h: 450
                     }
                   },
                   {
-                    url:
-                      'https://2f1d769a82b31863dfb1-18fbb8f644d7cf23387d5276ade94aa9.ssl.cf1.rackcdn.com/sprayface.tween.back-k_XCScSs.jpg',
+                    url: 'https://2f1d769a82b31863dfb1-18fbb8f644d7cf23387d5276ade94aa9.ssl.cf1.rackcdn.com/sprayface.tween.back-k_XCScSs.jpg',
                     dimensions: {
                       w: 540,
                       h: 380
@@ -2073,32 +1923,28 @@ describe('product', () => {
                 prices: [],
                 images: [
                   {
-                    url:
-                      'https://2f1d769a82b31863dfb1-18fbb8f644d7cf23387d5276ade94aa9.ssl.cf1.rackcdn.com/cmg.youth.spraymedal-47V3CCIt.jpg',
+                    url: 'https://2f1d769a82b31863dfb1-18fbb8f644d7cf23387d5276ade94aa9.ssl.cf1.rackcdn.com/cmg.youth.spraymedal-47V3CCIt.jpg',
                     dimensions: {
                       w: 640,
                       h: 450
                     }
                   },
                   {
-                    url:
-                      'https://2f1d769a82b31863dfb1-18fbb8f644d7cf23387d5276ade94aa9.ssl.cf1.rackcdn.com/cmg.youth.spraymedal-jkUg41BD.jpg',
+                    url: 'https://2f1d769a82b31863dfb1-18fbb8f644d7cf23387d5276ade94aa9.ssl.cf1.rackcdn.com/cmg.youth.spraymedal-jkUg41BD.jpg',
                     dimensions: {
                       w: 640,
                       h: 450
                     }
                   },
                   {
-                    url:
-                      'https://2f1d769a82b31863dfb1-18fbb8f644d7cf23387d5276ade94aa9.ssl.cf1.rackcdn.com/cmg.youth.spraymedal-BUrOnLvZ.jpg',
+                    url: 'https://2f1d769a82b31863dfb1-18fbb8f644d7cf23387d5276ade94aa9.ssl.cf1.rackcdn.com/cmg.youth.spraymedal-BUrOnLvZ.jpg',
                     dimensions: {
                       w: 640,
                       h: 450
                     }
                   },
                   {
-                    url:
-                      'https://2f1d769a82b31863dfb1-18fbb8f644d7cf23387d5276ade94aa9.ssl.cf1.rackcdn.com/cmg.youth.spraymedal-9-KT_7YJ.jpg',
+                    url: 'https://2f1d769a82b31863dfb1-18fbb8f644d7cf23387d5276ade94aa9.ssl.cf1.rackcdn.com/cmg.youth.spraymedal-9-KT_7YJ.jpg',
                     dimensions: {
                       w: 640,
                       h: 450
@@ -2120,40 +1966,35 @@ describe('product', () => {
                 prices: [],
                 images: [
                   {
-                    url:
-                      'https://2f1d769a82b31863dfb1-18fbb8f644d7cf23387d5276ade94aa9.ssl.cf1.rackcdn.com/CMG.ChipotleIsMyLife-ua6KadDC.jpg',
+                    url: 'https://2f1d769a82b31863dfb1-18fbb8f644d7cf23387d5276ade94aa9.ssl.cf1.rackcdn.com/CMG.ChipotleIsMyLife-ua6KadDC.jpg',
                     dimensions: {
                       w: 640,
                       h: 450
                     }
                   },
                   {
-                    url:
-                      'https://2f1d769a82b31863dfb1-18fbb8f644d7cf23387d5276ade94aa9.ssl.cf1.rackcdn.com/CMG.Boorito.01.1280x-oQAkMhrv.jpg',
+                    url: 'https://2f1d769a82b31863dfb1-18fbb8f644d7cf23387d5276ade94aa9.ssl.cf1.rackcdn.com/CMG.Boorito.01.1280x-oQAkMhrv.jpg',
                     dimensions: {
                       w: 640,
                       h: 450
                     }
                   },
                   {
-                    url:
-                      'https://2f1d769a82b31863dfb1-18fbb8f644d7cf23387d5276ade94aa9.ssl.cf1.rackcdn.com/CMG.IHeartBurritos.1-J47xHGwZ.jpg',
+                    url: 'https://2f1d769a82b31863dfb1-18fbb8f644d7cf23387d5276ade94aa9.ssl.cf1.rackcdn.com/CMG.IHeartBurritos.1-J47xHGwZ.jpg',
                     dimensions: {
                       w: 640,
                       h: 450
                     }
                   },
                   {
-                    url:
-                      'https://2f1d769a82b31863dfb1-18fbb8f644d7cf23387d5276ade94aa9.ssl.cf1.rackcdn.com/CMG.WouldRather.1280-z-SoWXRd.jpg',
+                    url: 'https://2f1d769a82b31863dfb1-18fbb8f644d7cf23387d5276ade94aa9.ssl.cf1.rackcdn.com/CMG.WouldRather.1280-z-SoWXRd.jpg',
                     dimensions: {
                       w: 640,
                       h: 450
                     }
                   },
                   {
-                    url:
-                      'https://2f1d769a82b31863dfb1-18fbb8f644d7cf23387d5276ade94aa9.ssl.cf1.rackcdn.com/CMG.Boorito.02.1280x-Hp3-jWmo.jpg',
+                    url: 'https://2f1d769a82b31863dfb1-18fbb8f644d7cf23387d5276ade94aa9.ssl.cf1.rackcdn.com/CMG.Boorito.02.1280x-Hp3-jWmo.jpg',
                     dimensions: {
                       w: 640,
                       h: 450
@@ -2175,16 +2016,14 @@ describe('product', () => {
                 prices: [],
                 images: [
                   {
-                    url:
-                      'https://2f1d769a82b31863dfb1-18fbb8f644d7cf23387d5276ade94aa9.ssl.cf1.rackcdn.com/CMG.Tabasco.Scorpion-RfjZXJHg.jpg',
+                    url: 'https://2f1d769a82b31863dfb1-18fbb8f644d7cf23387d5276ade94aa9.ssl.cf1.rackcdn.com/CMG.Tabasco.Scorpion-RfjZXJHg.jpg',
                     dimensions: {
                       w: 640,
                       h: 450
                     }
                   },
                   {
-                    url:
-                      'https://2f1d769a82b31863dfb1-18fbb8f644d7cf23387d5276ade94aa9.ssl.cf1.rackcdn.com/CMG.Scorpion.03.640x-33z7GsGu.jpg',
+                    url: 'https://2f1d769a82b31863dfb1-18fbb8f644d7cf23387d5276ade94aa9.ssl.cf1.rackcdn.com/CMG.Scorpion.03.640x-33z7GsGu.jpg',
                     dimensions: {
                       w: 640,
                       h: 450
@@ -2206,32 +2045,28 @@ describe('product', () => {
                 prices: [],
                 images: [
                   {
-                    url:
-                      'https://2f1d769a82b31863dfb1-18fbb8f644d7cf23387d5276ade94aa9.ssl.cf1.rackcdn.com/chipotle.medallion.w-3_Y487iD.jpg',
+                    url: 'https://2f1d769a82b31863dfb1-18fbb8f644d7cf23387d5276ade94aa9.ssl.cf1.rackcdn.com/chipotle.medallion.w-3_Y487iD.jpg',
                     dimensions: {
                       w: 540,
                       h: 380
                     }
                   },
                   {
-                    url:
-                      'https://2f1d769a82b31863dfb1-18fbb8f644d7cf23387d5276ade94aa9.ssl.cf1.rackcdn.com/medallion.womens.cro-XPN_uy2b.jpg',
+                    url: 'https://2f1d769a82b31863dfb1-18fbb8f644d7cf23387d5276ade94aa9.ssl.cf1.rackcdn.com/medallion.womens.cro-XPN_uy2b.jpg',
                     dimensions: {
                       w: 540,
                       h: 380
                     }
                   },
                   {
-                    url:
-                      'https://2f1d769a82b31863dfb1-18fbb8f644d7cf23387d5276ade94aa9.ssl.cf1.rackcdn.com/Chipotle-Medallion-W-TJ6jUJEH.jpg',
+                    url: 'https://2f1d769a82b31863dfb1-18fbb8f644d7cf23387d5276ade94aa9.ssl.cf1.rackcdn.com/Chipotle-Medallion-W-TJ6jUJEH.jpg',
                     dimensions: {
                       w: 540,
                       h: 380
                     }
                   },
                   {
-                    url:
-                      'https://2f1d769a82b31863dfb1-18fbb8f644d7cf23387d5276ade94aa9.ssl.cf1.rackcdn.com/chipotle.medallion.w-22oT5g11.jpg',
+                    url: 'https://2f1d769a82b31863dfb1-18fbb8f644d7cf23387d5276ade94aa9.ssl.cf1.rackcdn.com/chipotle.medallion.w-22oT5g11.jpg',
                     dimensions: {
                       w: 540,
                       h: 380
@@ -2274,7 +2109,8 @@ describe('product', () => {
         },
         lastVariantId: 29
       };
-      ajv = Ajv();
+      ajv = new Ajv();
+      addFormats(ajv);
     });
 
     beforeEach(() => {

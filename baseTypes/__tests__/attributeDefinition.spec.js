@@ -1,4 +1,5 @@
 const Ajv = require('ajv');
+const addFormats = require('ajv-formats');
 const schema = require('../attributeDefinition');
 
 describe('attributeDefinition', () => {
@@ -15,7 +16,8 @@ describe('attributeDefinition', () => {
           label: { en: 'Customizable with accessory variant' },
           isRequired: true
         };
-        ajv = Ajv();
+        ajv = new Ajv();
+        addFormats(ajv);
       });
 
       beforeEach(() => {
@@ -40,7 +42,8 @@ describe('attributeDefinition', () => {
           isSearchable: true,
           displayGroup: 'Other'
         };
-        ajv = Ajv();
+        ajv = new Ajv();
+        addFormats(ajv);
       });
 
       beforeEach(() => {
@@ -66,7 +69,8 @@ describe('attributeDefinition', () => {
           isSearchable: true,
           displayGroup: 'Other'
         };
-        ajv = Ajv();
+        ajv = new Ajv();
+        addFormats(ajv);
       });
 
       beforeEach(() => {
@@ -90,7 +94,8 @@ describe('attributeDefinition', () => {
           isSearchable: true,
           displayGroup: 'Other'
         };
-        ajv = Ajv();
+        ajv = new Ajv();
+        addFormats(ajv);
       });
 
       beforeEach(() => {
@@ -114,7 +119,8 @@ describe('attributeDefinition', () => {
           isSearchable: true,
           displayGroup: 'Other'
         };
-        ajv = Ajv();
+        ajv = new Ajv();
+        addFormats(ajv);
       });
 
       beforeEach(() => {
@@ -138,7 +144,8 @@ describe('attributeDefinition', () => {
           isSearchable: true,
           displayGroup: 'Other'
         };
-        ajv = Ajv();
+        ajv = new Ajv();
+        addFormats(ajv);
       });
 
       beforeEach(() => {

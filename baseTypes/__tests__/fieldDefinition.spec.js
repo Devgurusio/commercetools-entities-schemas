@@ -1,4 +1,5 @@
 const Ajv = require('ajv');
+const addFormats = require('ajv-formats');
 const schema = require('../fieldDefinition');
 
 describe('fieldDefinition', () => {
@@ -14,7 +15,8 @@ describe('fieldDefinition', () => {
           name: 'test-fieldDefinition',
           label: { en: 'Test Field Definition ' }
         };
-        ajv = Ajv();
+        ajv = new Ajv();
+        addFormats(ajv);
       });
 
       beforeEach(() => {
@@ -35,7 +37,8 @@ describe('fieldDefinition', () => {
           required: false,
           inputHint: 'SingleLine'
         };
-        ajv = Ajv();
+        ajv = new Ajv();
+        addFormats(ajv);
       });
 
       beforeEach(() => {
@@ -57,7 +60,8 @@ describe('fieldDefinition', () => {
           required: false,
           inputHint: 'SingleLine'
         };
-        ajv = Ajv();
+        ajv = new Ajv();
+        addFormats(ajv);
       });
 
       beforeEach(() => {
@@ -78,7 +82,8 @@ describe('fieldDefinition', () => {
           required: false,
           inputHint: 'SingleLine'
         };
-        ajv = Ajv();
+        ajv = new Ajv();
+        addFormats(ajv);
       });
 
       beforeEach(() => {
@@ -98,7 +103,8 @@ describe('fieldDefinition', () => {
           required: false,
           inputHint: 'SingleLine'
         };
-        ajv = Ajv();
+        ajv = new Ajv();
+        addFormats(ajv);
       });
 
       beforeEach(() => {
@@ -118,7 +124,8 @@ describe('fieldDefinition', () => {
           required: false,
           inputHint: 'SingleLine'
         };
-        ajv = Ajv();
+        ajv = new Ajv();
+        addFormats(ajv);
       });
 
       beforeEach(() => {

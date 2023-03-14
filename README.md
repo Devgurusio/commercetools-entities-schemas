@@ -4,7 +4,7 @@ Reusable commercetools entities schemas definitions
 
 ## Docs
 
--   ##### baseTypes
+-   ### baseTypes
 -   address
 -   addressDraft
 -   asset
@@ -29,47 +29,46 @@ Reusable commercetools entities schemas definitions
 -   key
 -   price
 -   slug
--   ##### general purpose
+-   ### general purpose
 -   message
 -   pagedQueryResult
--   ##### categories
+-   ### categories
 -   category
 -   categoryDraft
--   ##### channel
+-   ### channel
 -   channel
 -   channelDraft
--   ##### customer
+-   ### customer
 -   customer
 -   customerDraft
 -   customerSignInResult
 -   customerToken
--   ##### customerGroup
+-   ### customerGroup
 -   customerGroup
 -   customerGroupDraft
--   ##### httpApi
+-   ### httpApi
 -   pagedQueryResult
 -   searchParams
--   ##### store
+-   ### store
 -   store
 -   storeDraft
--   ##### taxCategory
+-   ### taxCategory
 -   subRate
 -   taxCategory
 -   taxCategoryDraft
 -   taxRate
 -   taxRateDraft
--   ##### discount
+-   ### discount
 -   discountCode
--   ##### cart
+-   ### cart
 -   cart
 -   lineItem
 -   lineItemDraft
--   ##### order
+-   ### order
 -   order
 -   orderFromCartDraft
--   ##### shippingMethod
+-   ### shippingMethod
 -   shippingMethod
-
 
 <a name="install"></a>
 

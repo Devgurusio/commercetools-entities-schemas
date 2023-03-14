@@ -1,4 +1,5 @@
 const Ajv = require('ajv');
+const addFormats = require('ajv-formats');
 const schema = require('../userProvidedIdentifiers');
 
 describe('userProvidedIdentifiers', () => {
@@ -20,7 +21,8 @@ describe('userProvidedIdentifiers', () => {
             es: 'ejemplo'
           }
         };
-        ajv = Ajv();
+        ajv = new Ajv();
+        addFormats(ajv);
       });
 
       beforeEach(() => {
@@ -37,7 +39,8 @@ describe('userProvidedIdentifiers', () => {
     describe('when any field', () => {
       beforeAll(() => {
         data = {};
-        ajv = Ajv();
+        ajv = new Ajv();
+        addFormats(ajv);
       });
 
       beforeEach(() => {

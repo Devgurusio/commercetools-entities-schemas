@@ -1,4 +1,5 @@
 const Ajv = require('ajv');
+const addFormats = require('ajv-formats');
 const schema = require('../categoryOrderHints');
 
 describe('categoryOrderHints', () => {
@@ -9,7 +10,8 @@ describe('categoryOrderHints', () => {
   describe('when success', () => {
     beforeAll(() => {
       data = { category1: '0.9', category2: '0.2' };
-      ajv = Ajv();
+      ajv = new Ajv();
+      addFormats(ajv);
     });
 
     beforeEach(() => {
@@ -24,7 +26,8 @@ describe('categoryOrderHints', () => {
   describe('when error', () => {
     beforeAll(() => {
       data = { category1: 9 };
-      ajv = Ajv();
+      ajv = new Ajv();
+      addFormats(ajv);
     });
 
     beforeEach(() => {

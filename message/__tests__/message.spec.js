@@ -1,4 +1,5 @@
 const Ajv = require('ajv');
+const addFormats = require('ajv-formats');
 const schema = require('../message');
 
 describe('message', () => {
@@ -35,7 +36,8 @@ describe('message', () => {
           resourceVersion: 1,
           type: 'msg'
         };
-        ajv = Ajv();
+        ajv = new Ajv();
+        addFormats(ajv);
       });
 
       beforeEach(() => {
@@ -86,7 +88,8 @@ describe('message', () => {
           },
           type: 'msg'
         };
-        ajv = Ajv();
+        ajv = new Ajv();
+        addFormats(ajv);
       });
 
       beforeEach(() => {
@@ -127,7 +130,8 @@ describe('message', () => {
           resourceVersion: 1,
           type: 'msg'
         };
-        ajv = Ajv();
+        ajv = new Ajv();
+        addFormats(ajv);
       });
 
       beforeEach(() => {
@@ -163,7 +167,8 @@ describe('message', () => {
           resourceVersion: 1,
           type: 'msg'
         };
-        ajv = Ajv();
+        ajv = new Ajv();
+        addFormats(ajv);
       });
 
       beforeEach(() => {
@@ -202,7 +207,8 @@ describe('message', () => {
           },
           type: 'msg'
         };
-        ajv = Ajv();
+        ajv = new Ajv();
+        addFormats(ajv);
       });
 
       beforeEach(() => {
@@ -241,7 +247,8 @@ describe('message', () => {
           },
           resourceVersion: 1
         };
-        ajv = Ajv();
+        ajv = new Ajv();
+        addFormats(ajv);
       });
 
       beforeEach(() => {

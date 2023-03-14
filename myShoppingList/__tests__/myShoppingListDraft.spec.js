@@ -1,4 +1,5 @@
 const Ajv = require('ajv');
+const addFormats = require('ajv-formats');
 const schema = require('../myShoppingListDraft');
 
 describe('myShoppingListDraft', () => {
@@ -15,7 +16,8 @@ describe('myShoppingListDraft', () => {
             es: 'Mi lista de la compra'
           }
         };
-        ajv = Ajv();
+        ajv = new Ajv();
+        addFormats(ajv);
       });
 
       beforeEach(() => {
@@ -85,7 +87,8 @@ describe('myShoppingListDraft', () => {
           },
           deleteDaysAfterLastModification: 30
         };
-        ajv = Ajv();
+        ajv = new Ajv();
+        addFormats(ajv);
       });
 
       beforeEach(() => {
@@ -153,7 +156,8 @@ describe('myShoppingListDraft', () => {
           },
           deleteDaysAfterLastModification: 30
         };
-        ajv = Ajv();
+        ajv = new Ajv();
+        addFormats(ajv);
       });
 
       beforeEach(() => {
