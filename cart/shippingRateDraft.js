@@ -2,6 +2,7 @@ const money = require('../baseTypes/money');
 const shippingRatePriceTier = require('./shippingRatePriceTier');
 
 module.exports = {
+  type: 'object',
   description: 'Representation for a Shipping Info',
   properties: {
     price: money,

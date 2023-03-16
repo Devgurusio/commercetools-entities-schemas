@@ -10,6 +10,7 @@ const itemState = require('./itemState');
 const taxedItemPrice = require('./taxedItemPrice');
 
 module.exports = {
+  type: 'object',
   description: 'A representation of a Custom Line Item',
   properties: {
     id: {

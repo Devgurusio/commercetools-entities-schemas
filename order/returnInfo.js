@@ -2,6 +2,7 @@ const returnItem = require('./returnItem');
 const dateTime = require('../baseTypes/dateTime');
 
 module.exports = {
+  type: 'object',
   description: 'Stores information about returns connected to this order.',
   properties: {
     items: {

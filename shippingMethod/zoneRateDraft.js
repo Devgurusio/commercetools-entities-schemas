@@ -2,6 +2,7 @@ const resourceIdentifier = require('../baseTypes/resourceIdentifier');
 const shippingRateDraft = require('../cart/shippingRateDraft');
 
 module.exports = {
+  type: 'object',
   properties: {
     zone: {
       ...resourceIdentifier,

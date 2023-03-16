@@ -2,6 +2,7 @@ const reference = require('../baseTypes/reference');
 const discountCodeState = require('./discountCodeState');
 
 module.exports = {
+  type: 'object',
   description: 'Representation of a Discount Code Info',
   properties: {
     discountCode: {

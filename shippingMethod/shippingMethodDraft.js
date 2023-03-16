@@ -6,6 +6,7 @@ const customFieldsDraft = require('../baseTypes/customFieldsDraft');
 const zoneRateDraft = require('./zoneRateDraft');
 
 module.exports = {
+  type: 'object',
   description: 'Representation of a Shipping Method Draft',
   properties: {
     name: {

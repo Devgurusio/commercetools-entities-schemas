@@ -1,4 +1,5 @@
 module.exports = {
+  type: 'object',
   description: 'A representation of a Key Reference',
   properties: {
     typeId: {

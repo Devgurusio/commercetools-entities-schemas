@@ -4,6 +4,7 @@ const deliveryItem = require('./deliveryItem');
 const parcel = require('./parcel');
 
 module.exports = {
+  type: 'object',
   description: 'Representation of a Delivery',
   properties: {
     id: {

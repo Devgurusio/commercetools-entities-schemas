@@ -2,6 +2,7 @@ const reference = require('../baseTypes/reference');
 const dateTime = require('../baseTypes/dateTime');
 
 module.exports = {
+  type: 'object',
   description:
     'Stores information about order synchronization activities (like export or import).',
   properties: {

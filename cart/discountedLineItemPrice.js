@@ -2,6 +2,7 @@ const baseMoney = require('../baseTypes/baseMoney');
 const discountedLineItemPortion = require('./discountedLineItemPortion');
 
 module.exports = {
+  type: 'object',
   description: 'Representation of a Discounted Line Item Price',
   properties: {
     value: baseMoney,

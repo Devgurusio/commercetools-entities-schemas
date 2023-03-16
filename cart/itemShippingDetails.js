@@ -1,6 +1,7 @@
 const itemShippingTarget = require('./itemShippingTarget');
 
 module.exports = {
+  type: 'object',
   description: 'Representation for an Item Shipping Details',
   properties: {
     targets: {

@@ -1,4 +1,5 @@
 module.exports = {
+  type: 'object',
   description: 'Representation of a Delivery Item',
   properties: {
     id: {
