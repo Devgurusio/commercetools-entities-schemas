@@ -14,6 +14,7 @@ const cartOrigin = require('./cartOrigin');
 const shippingRateInput = require('./shippingRateInput');
 
 module.exports = {
+  type: 'object',
   description: 'Representation of a Cart Draft',
   properties: {
     currency: {

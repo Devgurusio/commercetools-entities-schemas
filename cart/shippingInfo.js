@@ -8,6 +8,7 @@ const shippingRate = require('./shippingRate');
 const taxedItemPrice = require('./taxedItemPrice');
 
 module.exports = {
+  type: 'object',
   description: 'Representation of a Shipping Info',
   properties: {
     shippingMethodName: {

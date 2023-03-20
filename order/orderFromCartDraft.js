@@ -5,6 +5,7 @@ const shipmentState = require('./shipmentState');
 const paymentState = require('./paymentState');
 
 module.exports = {
+  type: 'object',
   properties: {
     cart: {
       ...resourceIdentifier,

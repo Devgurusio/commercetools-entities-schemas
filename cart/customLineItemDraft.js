@@ -6,6 +6,7 @@ const externalTaxRateDraft = require('./externalTaxRateDraft');
 const itemShippingDetailsDraft = require('./itemShippingDetailsDraft');
 
 module.exports = {
+  type: 'object',
   description: 'Representation of a Custom Line Item Draft',
   properties: {
     name: localizedString,

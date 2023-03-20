@@ -1,4 +1,5 @@
 module.exports = {
+  type: 'object',
   description: 'Representation of an Item Shipping Target',
   properties: {
     addressKey: {

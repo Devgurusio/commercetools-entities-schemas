@@ -4,6 +4,7 @@ const parcelMeasurements = require('./parcelMeasurements');
 const trackingData = require('./trackingData');
 
 module.exports = {
+  type: 'object',
   description: 'Representation of a Parcel',
   properties: {
     id: {

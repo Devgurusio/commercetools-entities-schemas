@@ -3,6 +3,7 @@ const returnPaymentState = require('./returnPaymentState');
 const returnShipmentState = require('./returnShipmentState');
 
 module.exports = {
+  type: 'object',
   description:
     'Entry for a returned LineItem as LineItemReturnItem or CustomLineItem as CustomLineItemReturnItem.',
   properties: {

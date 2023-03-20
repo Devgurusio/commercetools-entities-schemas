@@ -1,4 +1,5 @@
 module.exports = {
+  type: 'object',
   description: 'Representation for a Tracking Data',
   properties: {
     trackingId: {

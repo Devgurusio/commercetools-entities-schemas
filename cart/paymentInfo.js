@@ -1,6 +1,7 @@
 const reference = require('../baseTypes/reference');
 
 module.exports = {
+  type: 'object',
   description: 'Representation of a Payment Info',
   properties: {
     payments: {

@@ -1,6 +1,7 @@
 const money = require('../baseTypes/money');
 
 module.exports = {
+  type: 'object',
   description: 'Representation of a Tax Portion',
   properties: {
     name: {

@@ -1,6 +1,7 @@
 const subRate = require('../taxCategory/subRate');
 
 module.exports = {
+  type: 'object',
   description: 'Representation of an External Tax Rate Draft',
   properties: {
     name: {
