@@ -3,38 +3,21 @@ module.exports = {
   description: 'Parameters accepted in CommerceTools queries',
   properties: {
     expand: {
-      oneOf: [
-        {
-          type: 'array',
-          description: 'Attributes to expand',
-          items: {
-            type: 'string',
-            description: 'Attribute to expand'
-          }
-        },
-        {
-          type: 'string',
-          description: 'Attribute to expand'
-        }
-      ]
+      type: 'array',
+      description: 'Attributes to expand',
+      items: {
+        type: 'string',
+        description: 'Attribute to expand'
+      }
     },
     sort: {
-      oneOf: [
-        {
-          type: 'array',
-          description: 'Sort attribute',
-          items: {
-            type: 'string',
-            description: `Sort attribute.
-              I.E: createdAt asc`
-          }
-        },
-        {
-          type: 'string',
-          description: `Sort attribute.
-              I.E: createdAt asc`
-        }
-      ]
+      type: 'array',
+      description: 'Sort attribute',
+      items: {
+        type: 'string',
+        description: `Sort attribute.
+          I.E: createdAt asc`
+      }
     },
     limit: {
       type: 'integer',
@@ -49,20 +32,12 @@ module.exports = {
       minimum: 0
     },
     where: {
-      oneOf: [
-        {
-          type: 'array',
-          description: 'Query Predicates',
-          items: {
-            type: 'string',
-            description: 'Query Predicate'
-          }
-        },
-        {
-          type: 'string',
-          description: 'Query Predicate'
-        }
-      ]
+      type: 'array',
+      description: 'Query Predicates',
+      items: {
+        type: 'string',
+        description: 'Query Predicate'
+      }
     },
     whereOperator: {
       type: 'string',
