@@ -4,6 +4,6 @@ const cartValue = require('../project/cartValue');
 
 module.exports = {
   description: 'Representation of a Shipping Rate Price Tier',
-  type: 'string',
+  type: 'object',
   oneOf: [cartValue, cartClassification, cartScore]
 };
